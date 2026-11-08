@@ -10,6 +10,8 @@ import { issueView, issuesIndexView } from "./views/issues";
 import { methodView } from "./views/method";
 import { searchView } from "./views/search";
 import { sourceView } from "./views/source";
+import { aboutView } from "./views/about";
+import { sendMessage } from "./lib/contact";
 import { sourceById } from "./data/sources";
 import { chapterById } from "./data/chapters";
 import { themeById } from "./data/themes";
@@ -81,6 +83,9 @@ function paint(): void {
   } else if (route.name === "method") {
     title = "Sources — SikhHub";
     body = methodView();
+  } else if (route.name === "about" || route.name === "contact") {
+    title = "Dr. Jasdeep Sidhu — SikhHub";
+    body = aboutView();
   } else if (route.name === "search") {
     title = "Search — SikhHub";
     body = searchView(route.q);
@@ -90,8 +95,9 @@ function paint(): void {
   }
 
   root.innerHTML = shell(route, title, body);
-  if (location.hash) {
-    const el = document.getElementById(location.hash.slice(1));
+  const hash = location.hash.slice(1) || (route.name === "contact" ? "contact" : "");
+  if (hash) {
+    const el = document.getElementById(hash);
     el?.scrollIntoView({ block: "start" });
   } else {
     window.scrollTo(0, 0);
@@ -130,8 +136,44 @@ root.addEventListener("submit", (event) => {
     const q = String(new FormData(form).get("q") ?? "");
     const main = root.querySelector("main");
     if (main) main.innerHTML = libraryView(currentKind(), q);
+  } else if (form.matches("[data-contact-form]")) {
+    event.preventDefault();
+    void handleContact(form);
   }
 });
+
+async function handleContact(form: HTMLFormElement): Promise<void> {
+  const status = form.querySelector<HTMLElement>("[data-contact-status]");
+  const button = form.querySelector<HTMLButtonElement>("button[type=submit]");
+  const data = new FormData(form);
+  if (button) button.disabled = true;
+  if (status) {
+    status.hidden = false;
+    status.classList.remove("is-error", "is-ok");
+    status.textContent = "Sending…";
+  }
+  try {
+    const result = await sendMessage({
+      name: String(data.get("name") ?? ""),
+      email: String(data.get("email") ?? ""),
+      topic: String(data.get("topic") ?? "Message"),
+      message: String(data.get("message") ?? ""),
+      website: String(data.get("website") ?? ""),
+    });
+    if (status) {
+      status.classList.add(result.ok ? "is-ok" : "is-error");
+      status.textContent = result.message;
+    }
+    if (result.ok) form.reset();
+  } catch {
+    if (status) {
+      status.classList.add("is-error");
+      status.textContent = "The message could not be sent. Please wait a moment and try again.";
+    }
+  } finally {
+    if (button) button.disabled = false;
+  }
+}
 
 document.addEventListener("click", (event) => {
   const target = event.target as HTMLElement | null;

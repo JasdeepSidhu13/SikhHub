@@ -18,4 +18,6 @@ export const routes = {
   issues: "/issues",
   issue: (id: string) => `/issues/${id}`,
   search: "/search",
+  about: "/about",
+  contact: "/about#contact",
 } as const;

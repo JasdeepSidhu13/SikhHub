@@ -11,6 +11,8 @@ export type Route =
   | { name: "issue"; id: string }
   | { name: "method" }
   | { name: "search"; q: string }
+  | { name: "about" }
+  | { name: "contact" }
   | { name: "notfound" };
 
 export function currentPath(): string {
@@ -34,6 +36,8 @@ export function parseRoute(): Route {
   if (parts[0] === "issues" && parts.length === 1) return { name: "issues" };
   if (parts[0] === "issues" && parts[1]) return { name: "issue", id: parts[1] };
   if (parts[0] === "method") return { name: "method" };
+  if (parts[0] === "about") return { name: "about" };
+  if (parts[0] === "contact") return { name: "contact" };
   if (parts[0] === "search") return { name: "search", q };
   return { name: "notfound" };
 }

@@ -55,6 +55,11 @@ export const media = {
     alt: "Palace of Assembly, Chandigarh, the capital still withheld from Punjab",
     credit: "Palace of Assembly, Chandigarh. Wikimedia Commons.",
   },
+  jasdeep: {
+    src: "/media/jasdeep-sidhu.jpg",
+    alt: "Dr. Jasdeep Sidhu, founder of SikhHub",
+    credit: "Dr. Jasdeep Sidhu, founder of SikhHub.",
+  },
   pheruman: {
     src: "/media/pheruman.jpg",
     alt: "Studio portrait of Shaheed Darshan Singh Pheruman",

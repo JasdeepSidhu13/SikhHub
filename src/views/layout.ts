@@ -28,6 +28,7 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
           ${navItem(routes.history, "History", on("narrative") || on("chapter"))}
           ${navItem(routes.chronology, "Chronology", on("timeline"))}
           ${navItem(routes.documents, "Documents", on("library") || on("source"))}
+          ${navItem(routes.about, "About", on("about") || on("contact"))}
           <button class="search-btn" type="button" data-search>Search</button>
         </nav>
       </div>
@@ -51,13 +52,14 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
         <div>
           <h2>Evidence</h2>
           <ul>
+            <li><a href="${href(routes.about)}">Dr. Jasdeep Sidhu</a></li>
+            <li><a href="${href(routes.contact)}">Write to SikhHub</a></li>
             <li><a href="${href("/method")}">How sources are classified</a></li>
             <li><a href="${href(routes.search)}">Search</a></li>
-            <li><a href="https://github.com/JasdeepSidhu13/SikhHub">GitHub repository</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-inner fine">SikhHub is a static archive. Nothing here replaces the linked originals. Hosted on GitHub Pages.</div>
+      <div class="footer-inner fine">SikhHub is a non-profit archive founded by Dr. Jasdeep Sidhu. Nothing here replaces the linked originals.</div>
     </footer>
   `;
 }
