@@ -314,7 +314,7 @@
       <div class="wrap founder-home">
         <img src="${g(l.jasdeep.src)}" alt="${i(l.jasdeep.alt)}" />
         <div>
-          <p class="kicker"><span class="org">SikhHub</span> · a non-profit archive</p>
+          <p class="founder-kicker"><span class="org">SikhHub</span> · non-profit archive</p>
           <h2>A public record, independently kept</h2>
           <p><span class="org">SikhHub</span> was established so that Sikh political history would be read with its documents attached — independent of rumour and of the official account. Questions, corrections, and papers for the archive are invited.</p>
           <div class="hero-actions">
@@ -634,7 +634,7 @@
           <p>Its purpose is education. Its method is evidence. Corrections, original documents, and family papers are invited. The archive is only as complete as the record it is given.</p>
         </div>
         <aside class="founder-aside">
-          <p class="kicker"><span class="org">SikhHub</span></p>
+          <p class="founder-kicker"><span class="org">SikhHub</span></p>
           <p class="founder-aside-lead">Non-profit · independent · sourced</p>
           <ul>
             <li>Sikh political history, 1920–2025</li>
