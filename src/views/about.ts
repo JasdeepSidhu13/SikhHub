@@ -14,12 +14,12 @@ export function aboutView(): string {
           </figcaption>
         </figure>
         <div class="founder-copy">
-          <p class="kicker">SikhHub · a non-profit archive</p>
+          <p class="founder-kicker"><span class="org">sikhhub</span> · non-profit archive</p>
           <h1>Dr. Jasdeep Sidhu</h1>
-          <p class="founder-role">Founder and director, SikhHub</p>
-          <p class="lede">The official story called a genocide a riot. A capital is still withheld. Police walked the parikrama in shoes in 1955. SikhHub exists so that record cannot be mislaid again.</p>
+          <p class="founder-role">Founder and director</p>
+          <p class="lede">Dr. Jasdeep Sidhu founded <span class="org">sikhhub</span> to place Sikh history in public view — not as a slogan, and not as the official account, but as a sourced record a reader can open, cite, and teach.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="${href("/about")}#contact">Write to SikhHub</a>
+            <a class="btn btn-primary" href="${href("/about")}#contact">Write to sikhhub</a>
             <a class="btn btn-ghost" href="${href(routes.issues)}">Open the record</a>
           </div>
         </div>
@@ -29,8 +29,8 @@ export function aboutView(): string {
     <section class="quote-band">
       <div class="wrap">
         <blockquote>
-          A people who do not keep their own papers will be remembered by someone else’s.
-          <cite>The purpose of this archive</cite>
+          A nation may bury a people twice: once in the earth, and once in the record. This archive was founded so that the second burial does not succeed.
+          <cite>Dr. Jasdeep Sidhu, founder of sikhhub</cite>
         </blockquote>
       </div>
     </section>
@@ -41,7 +41,7 @@ export function aboutView(): string {
           <article>
             <p class="kicker">01</p>
             <h2>Awareness</h2>
-            <p>SikhHub is a non-profit organisation founded to raise public awareness of Sikh political history — gurdwara reform, Partition, Punjabi Suba, June 1984, the 1984 Sikh genocide, and the Punjab disappearances — in a form a general reader can follow.</p>
+            <p><span class="org">sikhhub</span> is a non-profit organisation established to raise public awareness of Sikh political history — gurdwara reform, Partition, Punjabi Suba, June 1984, the 1984 Sikh genocide, and the Punjab disappearances — in a form a general reader can follow and a teacher can assign.</p>
           </article>
           <article>
             <p class="kicker">02</p>
@@ -51,7 +51,7 @@ export function aboutView(): string {
           <article>
             <p class="kicker">03</p>
             <h2>Transmission</h2>
-            <p>The work is for those who did not live these years, and for families who did. A schoolboy in a well, a seventy-four-day fast, police in the Guru’s house: these are not ornaments. They are the ledger.</p>
+            <p>The work is for those who did not live these years, and for families who did. Names, dates, and papers are kept so that memory is not left to permission, and so that the next generation inherits a record rather than a rumour.</p>
           </article>
         </div>
       </div>
@@ -61,13 +61,13 @@ export function aboutView(): string {
       <div class="wrap founder-bio">
         <div>
           <p class="kicker">The founder</p>
-          <h2>A physicist. An archive. A public trust.</h2>
-          <p>Dr. Jasdeep Sidhu is a physicist. He took a Ph.D. in physics at the University of Florida in 2020, after an M.S. at San Francisco State University and a B.S. in engineering physics at the University of California, Berkeley. He has worked as a researcher in condensed-matter theory and as a scientist in machine learning. He is a NASA/JPL scholar.</p>
-          <p>He built SikhHub as a non-profit public archive so that Sikh history would not have to be argued from memory alone. The site is not a memoir and not a party brief. It is a sourced record, 1920–2025, that a reader can check.</p>
-          <p>Corrections, original documents, and family papers are invited. The archive is only as complete as the evidence it is given.</p>
+          <h2>Scholarship in the service of a public record</h2>
+          <p>Dr. Jasdeep Sidhu is a physicist. He received his Ph.D. in physics from the University of Florida in 2020, following an M.S. from San Francisco State University and a B.S. in engineering physics from the University of California, Berkeley. He is a NASA/JPL scholar, and has worked in condensed-matter theory and in machine learning.</p>
+          <p>He established <span class="org">sikhhub</span> as an independent non-profit so that Sikh political history would be available to the public in a form equal to its gravity: documented, chronological, and independent of the versions that have been taught in their place. The archive covers the century from the gurdwara reform of the 1920s through Partition, Punjabi Suba, June 1984, the 1984 Sikh genocide, and the Punjab disappearances.</p>
+          <p>Its purpose is education. Its method is evidence. Corrections, original documents, and family papers are invited. The archive is only as complete as the record it is given.</p>
         </div>
         <aside class="founder-aside">
-          <p class="kicker">SikhHub</p>
+          <p class="kicker"><span class="org">sikhhub</span></p>
           <p class="founder-aside-lead">Non-profit · independent · sourced</p>
           <ul>
             <li>Founded by Dr. Jasdeep Sidhu</li>

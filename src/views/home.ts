@@ -191,12 +191,12 @@ export function homeView(): string {
       <div class="wrap founder-home">
         <img src="${asset(media.jasdeep.src)}" alt="${esc(media.jasdeep.alt)}" />
         <div>
-          <p class="kicker">A non-profit archive</p>
+          <p class="kicker"><span class="org">sikhhub</span> · a non-profit archive</p>
           <h2>Founded by Dr. Jasdeep Sidhu</h2>
-          <p>SikhHub was built so Sikh political history would be read with its documents attached — not as a rumour, and not as the official story. Questions, corrections, and papers for the archive are invited.</p>
+          <p>Dr. Jasdeep Sidhu established <span class="org">sikhhub</span> so that Sikh political history would be read with its documents attached — a public record, independent of rumour and of the official account. Questions, corrections, and papers for the archive are invited.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="${href(routes.about)}">About the founder</a>
-            <a class="btn btn-ghost" href="${href(routes.contact)}">Write to SikhHub</a>
+            <a class="btn btn-ghost" href="${href(routes.contact)}">Write to sikhhub</a>
           </div>
         </div>
       </div>

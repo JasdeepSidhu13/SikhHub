@@ -33,7 +33,7 @@ export async function sendMessage(payload: ContactPayload): Promise<{ ok: boolea
       email,
       topic,
       message,
-      _subject: `SikhHub · ${topic || "Message"}`,
+      _subject: `sikhhub · ${topic || "Message"}`,
       _template: "table",
       _captcha: "false",
     }),

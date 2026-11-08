@@ -20,7 +20,7 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
       <div class="header-inner">
         <a class="brand" href="${href("/")}">
           <img class="brand-mark" src="${khanda}" alt="" width="36" height="36"/>
-          <div class="brand-name">SikhHub<span>1920–2025</span></div>
+          <div class="brand-name">sikhhub<span>1920–2025</span></div>
         </a>
         <button class="menu-toggle" type="button" data-menu>Menu</button>
         <nav class="nav" data-nav>
@@ -37,7 +37,7 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
     <footer class="footer">
       <div class="footer-inner footer-grid">
         <div>
-          <h2>SikhHub</h2>
+          <h2 class="org">sikhhub</h2>
           <p>Sikh political history from gurdwara reform through the 1984 Sikh genocide and the Punjab disappearances. Judgments, letters, statutes, and photographs — labelled for what they are.</p>
         </div>
         <div>
@@ -53,13 +53,13 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
           <h2>Evidence</h2>
           <ul>
             <li><a href="${href(routes.about)}">Dr. Jasdeep Sidhu</a></li>
-            <li><a href="${href(routes.contact)}">Write to SikhHub</a></li>
+            <li><a href="${href(routes.contact)}">Write to sikhhub</a></li>
             <li><a href="${href("/method")}">How sources are classified</a></li>
             <li><a href="${href(routes.search)}">Search</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-inner fine">SikhHub is a non-profit archive founded by Dr. Jasdeep Sidhu. Nothing here replaces the linked originals.</div>
+      <div class="footer-inner fine"><span class="org">sikhhub</span> is a non-profit archive founded by Dr. Jasdeep Sidhu. Nothing here replaces the linked originals.</div>
     </footer>
   `;
 }

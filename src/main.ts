@@ -84,7 +84,7 @@ function paint(): void {
     title = "Sources — SikhHub";
     body = methodView();
   } else if (route.name === "about" || route.name === "contact") {
-    title = "Dr. Jasdeep Sidhu — SikhHub";
+    title = "Dr. Jasdeep Sidhu — sikhhub";
     body = aboutView();
   } else if (route.name === "search") {
     title = "Search — SikhHub";

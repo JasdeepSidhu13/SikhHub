@@ -57,8 +57,8 @@ export const media = {
   },
   jasdeep: {
     src: "/media/jasdeep-sidhu.jpg",
-    alt: "Dr. Jasdeep Sidhu, founder of SikhHub",
-    credit: "Dr. Jasdeep Sidhu, founder of SikhHub.",
+    alt: "Dr. Jasdeep Sidhu, founder of sikhhub",
+    credit: "Dr. Jasdeep Sidhu, founder of sikhhub.",
   },
   pheruman: {
     src: "/media/pheruman.jpg",
