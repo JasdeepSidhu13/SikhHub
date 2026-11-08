@@ -19,7 +19,7 @@ export function libraryView(kind = "all", q = ""): string {
       <div class="wrap">
         <p class="kicker">Library</p>
         <h1 class="page-title">Research articles, books, papers, judgments, images</h1>
-        <p class="lede-page">A growing catalogue of originals. Filter by evidence type. Every title is an outbound link. Add more by appending a record in <code>src/data/sources.ts</code> — the site is built to scale that way.</p>
+        <p class="lede-page">Each title opens a one-page brief: what the record is, the key points, and then a link for further exploration of the original. Filter by evidence type. Add more by appending a record in <code>src/data/sources.ts</code>.</p>
       </div>
     </div>
     <section class="section">

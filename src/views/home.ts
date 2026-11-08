@@ -4,10 +4,19 @@ import { sources } from "../data/sources";
 import { themes } from "../data/themes";
 import { esc } from "../lib/html";
 import { href } from "../lib/paths";
-import { kindChip } from "./layout";
+import { sourceCard } from "./layout";
+import { figure, genocideInfographic } from "./infographics";
+import { media } from "../data/media";
 
 export function homeView(): string {
-  const featured = ["delhi-hc-2018", "cwmg-66", "sarsfield", "hrw-killers", "anandpur-satp", "cad-21-nov"]
+  const featured = [
+    "archive-1984",
+    "delhi-hc-2018",
+    "sarsfield",
+    "hrw-killers",
+    "anandpur-satp",
+    "cad-21-nov",
+  ]
     .map((id) => sources.find((s) => s.id === id))
     .filter(Boolean);
 
@@ -16,7 +25,7 @@ export function homeView(): string {
       <div class="hero-inner">
         <p class="kicker">Colonial Punjab to modern India · through 2025</p>
         <h1>Our liberty has not come.</h1>
-        <p class="lede">SikhHub is a sourced educational archive of Sikh struggles over faith, language and power: gurdwara reform, the fight to be recognised as a distinct Panth, Partition’s unfinished citizenship, a state without its capital, Blue Star, November 1984, and the long wait for an accounting.</p>
+        <p class="lede">SikhHub is a sourced educational archive of Sikh struggles over faith, language and power: gurdwara reform, the fight to be recognised as a distinct Panth, Partition’s unfinished citizenship, a state without its capital, Blue Star, the 1984 Sikh genocide, and the long wait for an accounting.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="${href("/narrative")}">Read the narrative</a>
           <a class="btn btn-ghost" href="${href("/library")}">Open the library</a>
@@ -65,26 +74,19 @@ export function homeView(): string {
 
     <section class="section">
       <div class="wrap">
+        ${figure(media.witnesses, "Widows of Sikhs killed in Delhi during the 1984 Sikh genocide.")}
+        ${genocideInfographic()}
+        <p style="margin:1rem 0 2.4rem"><a class="btn btn-navy" href="${href("/issues/november-1984")}">Open the 1984 Sikh genocide dossier</a></p>
         <div class="section-head">
           <div>
             <p class="kicker">Evidence, labelled</p>
             <h2>Featured sources</h2>
-            <p>Court judgments, Collected Works, the Anandpur text, HRW/Ensaaf, Master Tara Singh’s 1946 foreword. Every card opens the original.</p>
+            <p>Each card opens a one-page brief — key facts, an excerpt where we have one — then a link to the original for further exploration.</p>
           </div>
           <a class="btn btn-navy" href="${href("/library")}">Browse all sources</a>
         </div>
         <div class="card-grid">
-          ${featured
-            .map(
-              (s) => `
-            <a class="source-card ext" href="${esc(s!.url)}" rel="noopener noreferrer" target="_blank">
-              ${kindChip(s!.kind)}
-              <h4>${esc(s!.title)}</h4>
-              <p>${esc(s!.note)}</p>
-              <div class="meta">${esc(s!.creator)}</div>
-            </a>`,
-            )
-            .join("")}
+          ${featured.map((s) => sourceCard(s!)).join("")}
         </div>
       </div>
     </section>

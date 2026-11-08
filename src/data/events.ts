@@ -587,7 +587,7 @@ export const events: TimelineEvent[] = [
     summary:
       "Two of Indira Gandhi's Sikh bodyguards assassinated her. In the following days, mobs targeted Sikhs, their homes, businesses and gurdwaras across Delhi and other cities.",
     significance:
-      "The assassination is a fact. It does not license, explain away, or legally mitigate the organised mass killings that followed. The Delhi High Court later said those killings were engineered by political actors with police assistance.",
+      "The assassination is a fact. It does not license, explain away, or legally mitigate the 1984 Sikh genocide that followed. The Delhi High Court later said those killings were engineered by political actors with police assistance.",
     evidence: "High Court 2018 judgment; Nanavati Commission.",
     sourceIds: ["delhi-hc-2018", "nanavati"],
     themeIds: ["november-1984"],
@@ -597,17 +597,17 @@ export const events: TimelineEvent[] = [
     id: "november-1984",
     date: "1–4 November 1984",
     sort: "1984-11-01",
-    title: "November 1984 mass killings",
+    title: "1984 Sikh genocide",
     period: "1984–1985",
     chapterId: "bluestar",
     summary:
-      "Mobs targeted Sikhs in Delhi and elsewhere. In 2018 the Delhi High Court described the mass killings as crimes against humanity and attributed their organisation to political actors assisted by law-enforcement agencies. Official death counts have been contested; thousands were killed, thousands of women widowed, and gurdwaras burned.",
+      "Organised mobs, incited by Congress politicians and aided by the police, killed Sikhs across Delhi and other cities from 1–4 November. Homes and shops were marked in advance. The Delhi High Court described the killings as crimes against humanity. Justice R. K. Gauba recorded that genocide had been proved. Independent estimates, including Geoffrey Robertson QC, put the dead at about eight thousand.",
     significance:
-      "This is not “riots” in the sense of spontaneous communal clash. It is the judicial finding of organised mass crime. Justice was delayed for decades.",
+      "This was the 1984 Sikh genocide — not a riot. The word is required. Official framing as “riots” hid lists, kerosene, and police assistance. Justice was delayed for decades.",
     evidence: "Delhi High Court, 17 December 2018, §367.1; Nanavati; HRW.",
-    sourceIds: ["delhi-hc-2018", "livelaw-cah", "nanavati", "hrw-1984", "archive-1984"],
+    sourceIds: ["delhi-hc-2018", "livelaw-cah", "nanavati", "hrw-1984", "archive-1984", "who-are-guilty"],
     themeIds: ["november-1984", "state-violence"],
-    tags: ["1984", "crimes against humanity"],
+    tags: ["1984", "Sikh genocide", "crimes against humanity"],
   },
   {
     id: "accord-1985",
@@ -649,7 +649,7 @@ export const events: TimelineEvent[] = [
     period: "1985–2025",
     chapterId: "accounting",
     summary:
-      "The Delhi High Court reversed Sajjan Kumar's acquittal and convicted him for conspiracy and abetment in the November 1984 killings of five Sikhs and the burning of a gurdwara in Palam Colony. The Court held that the mass killings answered the description of crimes against humanity.",
+      "The Delhi High Court reversed Sajjan Kumar's acquittal and convicted him for conspiracy and abetment in the 1984 Sikh genocide killings of five Sikhs and the burning of a gurdwara in Palam Colony. The Court held that the killings answered the description of crimes against humanity.",
     significance:
       "A judicial characterisation, not a slogan. It names political organisation and police assistance.",
     evidence: "Judgment PDF, 17 December 2018.",
@@ -665,7 +665,7 @@ export const events: TimelineEvent[] = [
     period: "1985–2025",
     chapterId: "accounting",
     summary:
-      "A Delhi court sentenced former Congress MP Sajjan Kumar to life imprisonment for the November 1984 murders of Jaswant Singh and his son Tarundeep Singh. He was already serving the 2018 life term. More than forty years separated the killings from this sentence.",
+      "A Delhi court sentenced former Congress MP Sajjan Kumar to life imprisonment for the 1984 Sikh genocide murders of Jaswant Singh and his son Tarundeep Singh. He was already serving the 2018 life term. More than forty years separated the killings from this sentence.",
     significance:
       "Partial, late accountability for a handful of cases is not a full accounting. It is evidence both that the record can still be proved and that the wait was the policy.",
     evidence: "The Indian Express, 25 February 2025; The Hindu.",

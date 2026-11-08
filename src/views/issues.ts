@@ -3,6 +3,7 @@ import { esc } from "../lib/html";
 import { href } from "../lib/paths";
 import { chaptersFor, eventsFor, sourcesFor } from "../lib/lookup";
 import { sourceCard } from "./layout";
+import { genocideGallery, genocideInfographic } from "./infographics";
 
 export function issuesIndexView(): string {
   return `
@@ -10,7 +11,7 @@ export function issuesIndexView(): string {
       <div class="wrap">
         <p class="kicker">Issues</p>
         <h1 class="page-title">Educate yourself by theme</h1>
-        <p class="lede-page">The same history, cut by the questions Sikhs have actually had to live: shrine control, identity, language, the Constitution, Chandigarh, rivers, Blue Star, November 1984, disappearances.</p>
+        <p class="lede-page">The same history, cut by the questions Sikhs have actually had to live: shrine control, identity, language, the Constitution, Chandigarh, rivers, Blue Star, the 1984 Sikh genocide, disappearances.</p>
       </div>
     </div>
     <section class="section">
@@ -47,6 +48,7 @@ export function issueView(id: string): string | null {
     <section class="section">
       <div class="wrap split">
         <article class="prose">
+          ${id === "november-1984" ? `${genocideInfographic()}${genocideGallery()}` : ""}
           <h2>A Sikh reading</h2>
           <p>${esc(theme.sikhReading)}</p>
           <aside class="callout"><strong>What the evidence is</strong><p>${esc(theme.evidence)}</p></aside>

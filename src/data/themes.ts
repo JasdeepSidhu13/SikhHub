@@ -157,12 +157,12 @@ export const themes: Theme[] = [
   },
   {
     id: "november-1984",
-    title: "November 1984",
-    kicker: "Crimes against humanity",
+    title: "1984 Sikh genocide",
+    kicker: "Genocide",
     summary:
-      "After Indira Gandhi's assassination, organised mobs killed Sikhs. In 2018 the Delhi High Court named the killings crimes against humanity. In 2025 a further life sentence arrived — forty years late.",
+      "After Indira Gandhi’s assassination, organised mobs carried out the 1984 Sikh genocide. The Delhi High Court named the killings crimes against humanity. Justice Gauba recorded that genocide had been proved. In 2025 a further life sentence arrived — forty years late.",
     sikhReading:
-      "These were not riots. The High Court found political organisation and police assistance. Widows, burned gurdwaras, and decades of acquittals are the civic record. Late convictions of one politician do not close it.",
+      "Call it by its name: the 1984 Sikh genocide. It was not a riot. Homes were marked, kerosene was stocked, police stood aside or joined in. The High Court found political organisation and police assistance. Widows, burned gurdwaras, and decades of acquittals are the civic record. Late convictions of one politician do not close it.",
     evidence: "Delhi HC 17 Dec 2018 §367.1; Nanavati Commission; HRW; Indian Express / The Hindu, Feb 2025.",
     chapterIds: ["bluestar", "accounting"],
     sourceIds: [
@@ -172,6 +172,7 @@ export const themes: Theme[] = [
       "hrw-1984",
       "express-sajjan-2025",
       "archive-1984",
+      "who-are-guilty",
     ],
     eventIds: ["november-1984", "sajjan-2018", "sajjan-2025"],
   },

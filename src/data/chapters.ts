@@ -270,7 +270,7 @@ export const chapters: Chapter[] = [
     years: "1973–1985",
     question: "When negotiations over Chandigarh, rivers and autonomy fail, what does an army assault on the Akal Takht settle — and what does it ignite?",
     summary:
-      "The Anandpur Sahib Resolution put state autonomy at the centre of the Akali programme. Blue Star devastated the Akal Takht. November 1984 was later judged a crime against humanity. The 1985 Accord repeated the Chandigarh promise and did not keep it.",
+      "The Anandpur Sahib Resolution put state autonomy at the centre of the Akali programme. Blue Star devastated the Akal Takht. The 1984 Sikh genocide was later judged a crime against humanity. The 1985 Accord repeated the Chandigarh promise and did not keep it.",
     blocks: [
       {
         type: "p",
@@ -287,7 +287,7 @@ export const chapters: Chapter[] = [
       },
       {
         type: "h2",
-        text: "June and November 1984",
+        text: "June 1984 and the Sikh genocide",
       },
       {
         type: "p",
@@ -295,7 +295,7 @@ export const chapters: Chapter[] = [
       },
       {
         type: "p",
-        text: "On 31 October, two of Indira Gandhi's Sikh bodyguards assassinated her. In the following days, mobs targeted Sikhs, their homes, businesses and gurdwaras. In its 2018 judgment, the Delhi High Court described the November mass killings as crimes against humanity and attributed their organisation to political actors assisted by law-enforcement agencies. That is a judicial finding, not a pamphlet phrase.",
+        text: "On 31 October, two of Indira Gandhi's Sikh bodyguards assassinated her. In the following days the 1984 Sikh genocide began: organised mobs targeted Sikhs, their homes, businesses and gurdwaras, using prepared lists, kerosene, and police cover. In its 2018 judgment, the Delhi High Court described the killings as crimes against humanity, engineered by political actors assisted by law-enforcement agencies. Justice R. K. Gauba recorded that genocide had been proved. That is a judicial finding, not a pamphlet phrase. The official word “riots” is a mischaracterisation the archive and the courts have both rejected.",
       },
       {
         type: "h2",
@@ -307,7 +307,7 @@ export const chapters: Chapter[] = [
       },
       {
         type: "p",
-        text: "Human Rights Watch also documented murders and other serious abuses by militants, including attacks on Hindu and Sikh civilians. A Sikh accounting that tells the truth about state crime does not need to deny militant crime. It does need to refuse the official story that Blue Star and November 1984 were unfortunate side-effects of a security problem that began in 1981.",
+        text: "Human Rights Watch also documented murders and other serious abuses by militants, including attacks on Hindu and Sikh civilians. A Sikh accounting that tells the truth about state crime does not need to deny militant crime. It does need to refuse the official story that Blue Star and the 1984 Sikh genocide were unfortunate side-effects of a security problem that began in 1981.",
       },
     ],
     sourceIds: [
@@ -323,6 +323,7 @@ export const chapters: Chapter[] = [
       "hrw-1984",
       "livelaw-cah",
       "archive-1984",
+      "who-are-guilty",
       "1984-living-history",
       "commons-akal-takht",
       "sgpc-x",
@@ -366,7 +367,7 @@ export const chapters: Chapter[] = [
       },
       {
         type: "p",
-        text: "In a separate line of cases, a Delhi court sentenced former Congress MP Sajjan Kumar to life imprisonment in February 2025 for murders committed during the November 1984 anti-Sikh violence. He was already serving the life term imposed by the Delhi High Court in 2018. More than forty years separated the killings from that second sentence. Partial, late convictions are not a full accounting. They are proof that the facts can still be proved — and that delay was the ordinary working of the system.",
+        text: "In a separate line of cases, a Delhi court sentenced former Congress MP Sajjan Kumar to life imprisonment in February 2025 for murders committed during the 1984 Sikh genocide. He was already serving the life term imposed by the Delhi High Court in 2018. More than forty years separated the killings from that second sentence. Partial, late convictions are not a full accounting. They are proof that the facts can still be proved — and that delay was the ordinary working of the system.",
       },
       {
         type: "quote",
@@ -389,6 +390,7 @@ export const chapters: Chapter[] = [
       "hindu-sajjan-2025",
       "nanavati",
       "archive-1984",
+      "who-are-guilty",
       "ensaaf-x",
       "1984-living-history",
     ],

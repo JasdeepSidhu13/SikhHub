@@ -17,7 +17,7 @@ export function methodView(): string {
     <section class="section">
       <div class="wrap split">
         <article class="prose">
-          <p>SikhHub exists so a reader can educate themselves on the issues in the sourced narrative — shrine control, the definition of Sikhism, Partition and citizenship, Punjabi Suba, autonomy and 1984, disappearances — without being asked to take a slogan on trust. Click through. Read the judgment. Read Gandhi in his own volumes. Read Master Tara Singh’s foreword. Read Hukam Singh in the Assembly. Read the High Court on November 1984.</p>
+          <p>SikhHub exists so a reader can educate themselves on the issues in the sourced narrative — shrine control, the definition of Sikhism, Partition and citizenship, Punjabi Suba, autonomy, the 1984 Sikh genocide, disappearances — without being asked to take a slogan on trust. Click through. Read the judgment. Read Gandhi in his own volumes. Read Master Tara Singh’s foreword. Read Hukam Singh in the Assembly. Read the High Court on the 1984 Sikh genocide.</p>
           <h2>What “Sikh perspective with evidence” means here</h2>
           <p>It means the questions are Sikh questions: who owns the shrine, who has the right to define the religion, what “secularism” did to minority safeguards, why a linguistic state arrived without its capital, what an army did to the Akal Takht, why cremation registers had to be audited by families. It does not mean inventing quotations or collapsing militant crime into state crime, or the reverse. Human Rights Watch documented both. This archive links both.</p>
           <h2>Known gaps, left visible</h2>
