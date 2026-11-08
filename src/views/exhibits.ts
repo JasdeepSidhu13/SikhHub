@@ -42,7 +42,32 @@ export function memorialCard(story: Story): string {
     </div>`;
 }
 
-export function storyFeature(story: Story, reverse = false): string {
+function ctaButton(story: Story, currentPath?: string): string {
+  const loops = Boolean(currentPath && (story.href === currentPath || story.href.endsWith(currentPath)));
+  const dest = loops && story.further ? story.further.href : story.href;
+  const label = loops && story.further ? story.further.cta : story.cta;
+  if (loops && !story.further) return "";
+  const external = dest.startsWith("http");
+  const url = external ? dest : href(dest);
+  const attrs = external ? ' rel="noopener noreferrer" target="_blank"' : "";
+  return `<p><a class="btn btn-navy${external ? " ext" : ""}" href="${esc(url)}"${attrs}>${esc(label)}</a></p>`;
+}
+
+export function furtherLinks(items: Array<{ href: string; title: string; note: string }>): string {
+  return `
+    <div class="further-grid">
+      ${items
+        .map((item) => {
+          const external = item.href.startsWith("http");
+          const url = external ? item.href : href(item.href);
+          const attrs = external ? ' rel="noopener noreferrer" target="_blank"' : "";
+          return `<a class="card" href="${esc(url)}"${attrs}><h3>${esc(item.title)}</h3><p>${esc(item.note)}</p></a>`;
+        })
+        .join("")}
+    </div>`;
+}
+
+export function storyFeature(story: Story, reverse = false, currentPath?: string): string {
   const mediaBlock = story.image
     ? `<figure class="photo${story.memorial?.native ? " is-portrait" : ""}${story.representation ? " is-representation" : ""}">
          <img src="${esc(asset(story.image))}" alt="${esc(story.imageAlt ?? story.title)}" />
@@ -68,7 +93,7 @@ export function storyFeature(story: Story, reverse = false): string {
             ? `<blockquote class="pull">${esc(story.quote.text)}<cite>${esc(story.quote.cite)}</cite></blockquote>`
             : ""
         }
-        <p><a class="btn btn-navy" href="${href(story.href)}">${esc(story.cta)}</a></p>
+        ${ctaButton(story, currentPath)}
       </div>
     </article>`;
 }

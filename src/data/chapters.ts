@@ -378,6 +378,8 @@ export const chapters: Chapter[] = [
       "hrw-dead-silence",
       "hrw-1984",
       "ensaaf",
+      "ensaaf-stories",
+      "ensaaf-voices",
       "delhi-hc-2018",
       "express-sajjan-2025",
       "hindu-sajjan-2025",
@@ -386,7 +388,7 @@ export const chapters: Chapter[] = [
       "who-are-guilty",
       "1984-living-history"
     ],
-    eventIds: ["khalra", "sajjan-2018", "sajjan-2025", "accord-1985", "november-1984"],
+    eventIds: ["khalra", "cremation-records-1995", "cbi-cremations-1996", "sajjan-2018", "sajjan-2025", "accord-1985", "november-1984"],
     themeIds: ["disappearances", "november-1984", "state-violence"],
   }
 ];

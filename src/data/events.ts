@@ -642,6 +642,38 @@ export const events: TimelineEvent[] = [
     tags: ["Khalra", "cremations"],
   },
   {
+    id: "cremation-records-1995",
+    date: "16 January 1995",
+    sort: "1995-01-16",
+    title: "Khalra and Dhillon release the Amritsar cremation records",
+    period: "1985–2025",
+    chapterId: "accounting",
+    summary:
+      "Jaswant Singh Khalra and Jaspal Singh Dhillon released official documents from three crematoria in Amritsar district showing thousands of bodies secretly cremated as unidentified or unclaimed. They said the same pattern would be found in the rest of Punjab.",
+    significance:
+      "The state’s own firewood and cremation receipts became the proof families had been denied. Eight months later the police abducted Khalra.",
+    evidence: "CCDP / Reduced to Ashes; HRW/Ensaaf Protecting the Killers.",
+    sourceIds: ["hrw-killers", "ensaaf", "ensaaf-stories"],
+    themeIds: ["disappearances"],
+    tags: ["Khalra", "cremations"],
+  },
+  {
+    id: "cbi-cremations-1996",
+    date: "9 December 1996",
+    sort: "1996-12-09",
+    title: "CBI reports 2,097 illegal cremations in Amritsar",
+    period: "1985–2025",
+    chapterId: "accounting",
+    summary:
+      "After the Supreme Court ordered an inquiry into Khalra’s findings, the CBI listed 2,097 illegal cremations at three grounds in Amritsar district — then one of thirteen districts. The report was sealed. Khalra had spoken of more than 6,000 in that district alone.",
+    significance:
+      "The state admitted the method. It did not account for the people. Victim families were kept out of the later NHRC process.",
+    evidence: "Supreme Court record of the CBI report; HRW/Ensaaf 2007.",
+    sourceIds: ["hrw-killers", "ensaaf"],
+    themeIds: ["disappearances", "state-violence"],
+    tags: ["CBI", "cremations"],
+  },
+  {
     id: "sajjan-2018",
     date: "17 December 2018",
     sort: "2018-12-17",

@@ -108,6 +108,41 @@ export function pherumanInfographic(): string {
   `;
 }
 
+export function disappearancesInfographic(): string {
+  return `
+    <section class="infographic" aria-label="Punjab disappearances, 1984–1995">
+      <p class="kicker">1984–1995</p>
+      <h2>Alive or dead?</h2>
+      <p class="ig-lead">After Blue Star and the 1984 Sikh genocide, Punjab Police ran a decade of abduction, torture, fake encounters, and secret cremations. Families were left to ask a question the state still will not answer. Ensaaf’s method continues Khalra’s: name the dead from the papers, and from the people who remain.</p>
+      <div class="ig-stats">
+        <div class="ig-stat"><b>2,097</b><span>illegal cremations India admitted in Amritsar district</span></div>
+        <div class="ig-stat"><b>4,466</b><span>unlawful killings Ensaaf has documented</span></div>
+        <div class="ig-stat"><b>848</b><span>enforced disappearances Ensaaf has documented</span></div>
+        <div class="ig-stat"><b>~25,000</b><span>taken by violence — Ensaaf’s working figure, still a fraction</span></div>
+      </div>
+      <ol class="ig-days">
+        <li><time>16 Jan 1995</time> Khalra and Dhillon release official cremation-ground records from three grounds in Amritsar. The dead are listed unidentified, unclaimed.</li>
+        <li><time>6 Sep 1995</time> Punjab Police abduct Jaswant Singh Khalra. He is tortured for weeks, killed in late October, and dumped in the Harike canal.</li>
+        <li><time>Dec 1996</time> The CBI, ordered by the Supreme Court, reports 2,097 illegal cremations in that one district. The report is sealed. Victim families are kept out.</li>
+        <li><time>Now</time> Killers of Khalra have been convicted. The thousands he named have not been accounted for. Enforced disappearance continues until the fate of the person is told.</li>
+      </ol>
+      <p class="figure-credit">Figures from the CBI report quoted by the Supreme Court (2,097); HRW/Ensaaf, <em>Protecting the Killers</em> (2007); and Ensaaf’s public documentation (4,466 killings, 848 disappearances). Khalra spoke of more than 6,000 cremations in Amritsar district alone.</p>
+    </section>
+  `;
+}
+
+export function disappearancesGallery(): string {
+  return `
+    <div class="gallery">
+      ${figure(media.ensaafMother, "A survivor holds the portrait of a relative the police took.")}
+      ${figure(media.gurmeetKaur, "Gurmeet Kaur, abducted from her home in 1992. The papers called it an encounter.")}
+      ${figure(media.nirmalSingh, "A family holds the photograph they have left.")}
+      ${figure(media.charanjitKaur, "Charanjit Kaur’s son, shot by police on his way from school.")}
+    </div>
+    <p class="figure-credit">Photographs via <a href="https://www.ensaaf.org/article/our-voices-matter" rel="noopener noreferrer" target="_blank">Ensaaf, Our Voices Matter</a> and <a href="https://www.ensaaf.org/stories" rel="noopener noreferrer" target="_blank">Ensaaf stories</a>. Shared by survivors.</p>
+  `;
+}
+
 export function genocideGallery(): string {
   return `
     <div class="gallery">

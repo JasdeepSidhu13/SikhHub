@@ -182,13 +182,13 @@ export const themes: Theme[] = [
     title: "Disappearances and cremation grounds",
     kicker: "Punjab 1980s–90s",
     summary:
-      "Khalra and Dhillon reconstructed secret cremations from government registers. Khalra was abducted and murdered. His killers were convicted; the thousands of dead remain largely unaccounted for.",
+      "From 1984 to 1995 Punjab Police abducted, tortured, and secretly cremated thousands. Khalra read the cremation registers. They murdered him. Families are still asking: alive or dead?",
     sikhReading:
-      "The method is the indictment: families had to audit the state's own firewood purchases and cremation receipts. When the investigator was killed, the state confirmed what the registers already showed. Accounting is still unfinished.",
-    evidence: "HRW/Ensaaf Protecting the Killers; Dead Silence; Ensaaf; government admission of 2,097 illegal cremations in Amritsar.",
+      "The method is the indictment: families had to audit the state's own firewood purchases and cremation receipts. Children were shot in front of their houses. Mothers were taken and listed as encounters. When the investigator was killed, the state confirmed what the registers already showed. Accounting is still unfinished.",
+    evidence: "HRW/Ensaaf Protecting the Killers; Dead Silence; Ensaaf documentation (4,466 unlawful killings, 848 disappearances); CBI admission of 2,097 illegal cremations in Amritsar.",
     chapterIds: ["accounting"],
-    sourceIds: ["hrw-killers", "hrw-dead-silence", "ensaaf"],
-    eventIds: ["khalra"],
+    sourceIds: ["hrw-killers", "hrw-dead-silence", "ensaaf", "ensaaf-stories", "ensaaf-voices"],
+    eventIds: ["khalra", "cremation-records-1995", "cbi-cremations-1996"],
   },
   {
     id: "state-violence",

@@ -187,19 +187,5 @@ export function homeView(): string {
       </div>
     </section>
 
-    <section class="section section-dark">
-      <div class="wrap founder-home">
-        <img src="${asset(media.jasdeep.src)}" alt="${esc(media.jasdeep.alt)}" />
-        <div>
-          <p class="founder-kicker"><span class="org">SikhHub</span> · non-profit archive</p>
-          <h2>A public record, independently kept</h2>
-          <p><span class="org">SikhHub</span> was established so that Sikh political history would be read with its documents attached — independent of rumour and of the official account. Questions, corrections, and papers for the archive are invited.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="${href(routes.about)}">About</a>
-            <a class="btn btn-ghost" href="${href(routes.contact)}">Write to SikhHub</a>
-          </div>
-        </div>
-      </div>
-    </section>
   `;
 }

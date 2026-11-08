@@ -233,6 +233,13 @@ button, input, select, textarea { font: inherit; }
   background: linear-gradient(180deg, #efe8d8, var(--cream));
 }
 
+.further-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 2rem 0 0.4rem;
+}
+.further-grid .card h3 { font-size: 1.15rem; }
 .chapter-grid, .issue-grid, .card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1124,7 +1131,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 .contact-status.is-error { color: #f0b4a4; }
 
 @media (max-width: 880px) {
-  .stats, .chapter-grid, .issue-grid, .split, .method-grid, .footer-grid, .card-grid,
+  .stats, .chapter-grid, .issue-grid, .split, .method-grid, .footer-grid, .card-grid, .further-grid,
   .ig-stats, .ig-map, .gallery, .poster-grid, .story, .story.is-reverse, .split-exhibits, .chapter-strip,
   .founder-hero-grid, .founder-pillars, .founder-bio, .founder-home, .contact-grid {
     grid-template-columns: 1fr;

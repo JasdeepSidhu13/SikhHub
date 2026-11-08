@@ -15,6 +15,7 @@ export interface Story {
   memorial?: { name: string; fact: string; sub: string; native?: string };
   href: string;
   cta: string;
+  further?: { href: string; cta: string };
 }
 
 export const stories: Story[] = [
@@ -40,6 +41,7 @@ export const stories: Story[] = [
     imageCredit: media.causeway.credit,
     href: "/issues/state-violence",
     cta: "Open the 1955 raid",
+    further: { href: "/documents/express-1955", cta: "The Indian Express reconstruction" },
   },
   {
     id: "kaka-inderjit",
@@ -69,6 +71,7 @@ export const stories: Story[] = [
     },
     href: "/issues/punjabi-suba",
     cta: "Open Punjabi Suba",
+    further: { href: "/documents/kaka-pdl", cta: "The Panjab Digital Library catalogue" },
   },
   {
     id: "pheruman",
@@ -97,6 +100,7 @@ export const stories: Story[] = [
     },
     href: "/issues/chandigarh",
     cta: "Open the withheld capital",
+    further: { href: "/documents/pheruman-hindu", cta: "The Hindu, 29 October 1969" },
   },
   {
     id: "hukam-singh",
@@ -114,6 +118,7 @@ export const stories: Story[] = [
     },
     href: "/issues/assurances",
     cta: "Read the constitutional dissent",
+    further: { href: "/documents/cad-21-nov", cta: "The Assembly record, 21 November 1949" },
   },
   {
     id: "nankana",
@@ -130,19 +135,63 @@ export const stories: Story[] = [
     imageCredit: media.jaito.credit,
     href: "/issues/shrine-control",
     cta: "Open the Guru’s house",
+    further: { href: "/documents/nankana-sikhitihas", cta: "The Nankana record" },
   },
   {
     id: "khalra",
     kicker: "Punjab disappearances",
     title: "He audited the state’s cremation receipts. Then the police murdered him.",
-    years: "1995",
+    years: "January–October 1995",
     lede:
       "Jaswant Singh Khalra and Jaspal Singh Dhillon reconstructed thousands of secret cremations in Amritsar district from government registers. India later admitted 2,097 illegal cremations in that district alone.",
     body: [
-      "Punjab police abducted Khalra in 1995 and killed him. His killers were convicted. The thousands of dead named in those registers remain largely unaccounted for. Families had to keep the state’s own books because the state would not.",
+      "In January 1995 they released copies of official papers from three crematoria in Amritsar — then one of thirteen districts. The dead had been listed as unidentified or unclaimed. Khalra said a survey of the missing, read against those receipts, showed what families had already known: the police were disappearing people and burning the evidence.",
+      "He was abducted by Punjab police on 6 September 1995, tortured for weeks, killed in late October, and dumped in the Harike canal. His killers were later convicted. The thousands of dead in those registers remain largely unaccounted for. Families had to keep the state’s own books because the state would not.",
     ],
+    quote: {
+      text: "Security agencies in Punjab had secretly cremated thousands of bodies after labelling them as unidentified and unclaimed.",
+      cite: "Jaswant Singh Khalra and Jaspal Singh Dhillon, press release on the Amritsar cremation records, 16 January 1995",
+    },
+    image: media.khalra.src,
+    imageAlt: media.khalra.alt,
+    imageCredit: media.khalra.credit,
     href: "/issues/disappearances",
     cta: "Open the disappearances record",
+    further: { href: "https://www.ensaaf.org/stories", cta: "Ensaaf survivor stories" },
+  },
+  {
+    id: "gurmeet-kaur",
+    kicker: "1992",
+    title: "They took a mother of two from her home. The papers called it an encounter.",
+    years: "1992",
+    lede:
+      "In 1992 Punjab Police abducted Gurmeet Kaur, a mother of two, from her house and killed her two weeks later. Newspapers reported an “encounter.” Her family still does not know what was done with her body.",
+    body: [
+      "Ensaaf recorded this from survivors who had never spoken to civil society. They asked for a memorial to everyone the police killed or disappeared. The cover-up was the method: abduction, a false encounter in the press, no body returned.",
+    ],
+    image: media.gurmeetKaur.src,
+    imageAlt: media.gurmeetKaur.alt,
+    imageCredit: media.gurmeetKaur.credit,
+    href: "/issues/disappearances",
+    cta: "Open the disappearances record",
+    further: { href: "https://www.ensaaf.org/article/our-voices-matter", cta: "Ensaaf: Our Voices Matter" },
+  },
+  {
+    id: "nirmal-singh",
+    kicker: "1992",
+    title: "He was twelve. Police shot him in front of his house.",
+    years: "1992",
+    lede:
+      "Nirmal Singh was twelve when Punjab Police killed him in crossfire in front of his home. His parents and brother watched. Ensaaf recorded that they still want compensation for a child who never came back in.",
+    body: [
+      "The decade after 1984 was not only the killing of young men labelled militants. Children were shot. Mothers were abducted. A ten-year-old on his way from school was gunned down. Families were left with a photograph in the palm, or with nothing.",
+    ],
+    image: media.nirmalSingh.src,
+    imageAlt: media.nirmalSingh.alt,
+    imageCredit: media.nirmalSingh.credit,
+    href: "/issues/disappearances",
+    cta: "Open the disappearances record",
+    further: { href: "https://www.ensaaf.org/article/our-voices-matter", cta: "Ensaaf: Our Voices Matter" },
   },
 ];
 
@@ -176,7 +225,7 @@ export const keyIssues = [
   },
   {
     id: "disappearances",
-    image: "/media/1984-1-nov.png",
+    image: "/media/ensaaf-mother.jpg",
     overlay: "The registers",
   },
 ] as const;

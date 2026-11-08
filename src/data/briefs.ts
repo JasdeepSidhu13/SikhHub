@@ -78,6 +78,23 @@ export const briefs: Record<string, SourceBrief> = {
     whyItMatters:
       "Families had to reconstruct the state’s own firewood and cremation receipts. That method is the indictment. Conviction of Khalra’s killers is not an accounting for the thousands he named.",
   },
+  "ensaaf-stories": {
+    keyPoints: [
+      "Ensaaf’s stories page holds documentaries and interviews with families of people Punjab Police killed or disappeared between 1984 and 1995.",
+      "It includes Khalra’s last international speech, the shooting of Kulwant Singh, Charanjit Kaur’s ten-year-old son, and Paramjit Kaur Khalra’s call for a truth commission.",
+      "The testimonies are first-person. They are not a substitute for the cremation registers; they are what the registers left unnamed.",
+    ],
+    whyItMatters:
+      "The disappearances page in this archive is a door. The people who lived it are on Ensaaf’s record, in their own voices.",
+  },
+  "ensaaf-voices": {
+    keyPoints: [
+      "In 2010 Ensaaf spoke with hundreds of survivors in Punjab. Many had never spoken to civil society.",
+      "Our Voices Matter compiles photographs families shared: Gurmeet Kaur, Nirmal Singh (twelve years old), Jagir Kaur, and others the police listed as encounters.",
+    ],
+    whyItMatters:
+      "A secret cremation is designed so there is no face. These photographs are what the families would not let the state erase.",
+  },
   "cwmg-66": {
     keyPoints: [
       "On 3 August 1937 Gandhi wrote privately to Nehru about a language essay.",

@@ -60,6 +60,31 @@ export const media = {
     alt: "Portrait of the founder of SikhHub",
     credit: "Founder of SikhHub.",
   },
+  khalra: {
+    src: "/media/khalra.jpg",
+    alt: "Jaswant Singh Khalra speaking, shortly before Punjab Police abducted and murdered him",
+    credit: "Jaswant Singh Khalra. Still from his last international speech. Via Ensaaf.",
+  },
+  gurmeetKaur: {
+    src: "/media/gurmeet-kaur.jpg",
+    alt: "Gurmeet Kaur, abducted from her home by Punjab Police in 1992 and killed two weeks later",
+    credit: "Gurmeet Kaur. Photograph shared by survivors. Via Ensaaf, Our Voices Matter.",
+  },
+  nirmalSingh: {
+    src: "/media/nirmal-singh.jpg",
+    alt: "A family in Punjab holds the only photograph they kept of the disappeared",
+    credit: "A family holds the photograph they have left. Via Ensaaf.",
+  },
+  ensaafMother: {
+    src: "/media/ensaaf-mother.jpg",
+    alt: "A Sikh woman in Punjab holding a painted portrait of a disappeared relative",
+    credit: "A survivor holds the portrait of a relative killed or disappeared by Punjab Police. Via Ensaaf.",
+  },
+  charanjitKaur: {
+    src: "/media/charanjit-kaur.jpg",
+    alt: "Mourners with a Sikh boy shot by Punjab Police on his way from school",
+    credit: "Charanjit Kaur’s son, gunned down by police on his way from school. Via Ensaaf.",
+  },
   kaka: {
     src: "/media/kaka-inderjit.jpg",
     alt: "Artist’s representation of a twelve-year-old Sikh schoolboy of the Punjabi Suba years",

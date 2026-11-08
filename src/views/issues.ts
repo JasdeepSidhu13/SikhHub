@@ -6,6 +6,8 @@ import { asset, href, routes } from "../lib/paths";
 import { chaptersFor, eventsFor, sourcesFor } from "../lib/lookup";
 import { sourceCard } from "./layout";
 import {
+  disappearancesGallery,
+  disappearancesInfographic,
   genocideGallery,
   genocideInfographic,
   pherumanInfographic,
@@ -14,11 +16,12 @@ import {
   reorgInfographic,
   figure,
 } from "./infographics";
-import { clipping, letter, storyFeature } from "./exhibits";
+import { clipping, furtherLinks, letter, storyFeature } from "./exhibits";
 
 const featuredIds = new Set<string>(keyIssues.map((k) => k.id));
 
 function extras(id: string): string {
+  const here = `/issues/${id}`;
   if (id === "november-1984") {
     return `${genocideInfographic()}${genocideGallery()}`;
   }
@@ -28,11 +31,11 @@ function extras(id: string): string {
   if (id === "punjabi-suba") {
     const raid1955 = stories.find((s) => s.id === "golden-temple-1955")!;
     const kaka = stories.find((s) => s.id === "kaka-inderjit")!;
-    return `${figure(media.tara, "Master Tara Singh, Tarn Taran, March 1956 — the political face of Punjabi Suba.")}${storyFeature(raid1955)}${raid1955Infographic()}${storyFeature(kaka)}${reorgInfographic()}`;
+    return `${figure(media.tara, "Master Tara Singh, Tarn Taran, March 1956 — the political face of Punjabi Suba.")}${storyFeature(raid1955, false, here)}${raid1955Infographic()}${storyFeature(kaka, false, here)}${reorgInfographic()}`;
   }
   if (id === "chandigarh") {
     const pheruman = stories.find((s) => s.id === "pheruman")!;
-    return `${figure(media.chandigarh, "Palace of Assembly, Chandigarh — the capital he died for, still a Union Territory.")}${pherumanInfographic()}${storyFeature(pheruman)}${clipping({
+    return `${figure(media.chandigarh, "Palace of Assembly, Chandigarh — the capital he died for, still a Union Territory.")}${pherumanInfographic()}${storyFeature(pheruman, false, here)}${clipping({
       masthead: "The Hindu",
       date: "29 October 1969",
       headline: "Hartal to mourn Pheruman",
@@ -51,11 +54,11 @@ function extras(id: string): string {
   if (id === "shrine-control") {
     const nankana = stories.find((s) => s.id === "nankana")!;
     const raid1955 = stories.find((s) => s.id === "golden-temple-1955")!;
-    return `${figure(media.harmandir, "Sri Harmandir Sahib — the house whose management the Panth took from mahants.")}${storyFeature(nankana)}${storyFeature(raid1955)}${raid1955Gallery()}`;
+    return `${figure(media.harmandir, "Sri Harmandir Sahib — the house whose management the Panth took from mahants.")}${storyFeature(nankana, false, here)}${storyFeature(raid1955, false, here)}${raid1955Gallery()}`;
   }
   if (id === "state-violence") {
     const raid1955 = stories.find((s) => s.id === "golden-temple-1955")!;
-    return `${raid1955Infographic()}${raid1955Gallery()}${storyFeature(raid1955)}${clipping({
+    return `${raid1955Infographic()}${raid1955Gallery()}${storyFeature(raid1955, false, here)}${clipping({
       masthead: "The Indian Express",
       date: "4 July 2021",
       headline: "Police entered Darbar Sahib in shoes",
@@ -66,7 +69,30 @@ function extras(id: string): string {
   }
   if (id === "disappearances") {
     const khalra = stories.find((s) => s.id === "khalra")!;
-    return storyFeature(khalra);
+    const gurmeet = stories.find((s) => s.id === "gurmeet-kaur")!;
+    const nirmal = stories.find((s) => s.id === "nirmal-singh")!;
+    return `${disappearancesInfographic()}${figure(media.ensaafMother, "A survivor holds the portrait of a relative Punjab Police took. The question is still alive or dead.")}${storyFeature(khalra, false, here)}${storyFeature(gurmeet, false, here)}${storyFeature(nirmal, true, here)}${disappearancesGallery()}${furtherLinks([
+      {
+        href: "https://www.ensaaf.org/stories",
+        title: "Ensaaf stories",
+        note: "Documentaries and interviews: Khalra’s last speech, Kulwant Singh, Charanjit Kaur, Paramjit Kaur Khalra, and the families who remain.",
+      },
+      {
+        href: "https://www.ensaaf.org/article/our-voices-matter",
+        title: "Our Voices Matter",
+        note: "Photographs survivors shared with Ensaaf: Gurmeet Kaur, Nirmal Singh, Jagir Kaur, and others the police listed as encounters.",
+      },
+      {
+        href: "https://interviews.ensaaf.org/",
+        title: "Video testimonies",
+        note: "Oral-history interviews filmed in Punjab with families of the unlawfully killed and the disappeared.",
+      },
+      {
+        href: "/documents/hrw-killers",
+        title: "Protecting the Killers",
+        note: "Human Rights Watch and Ensaaf, 2007: the method of the cremation registers, Khalra’s murder, and the sealed CBI list of 2,097.",
+      },
+    ])}`;
   }
   if (id === "identity-hinduism" || id === "gurmukhi") {
     return letter({
@@ -154,10 +180,10 @@ export function issueView(id: string): string | null {
       ${extra ? `<div class="wrap exhibit-band">${extra}</div>` : ""}
       <div class="wrap split">
         <article class="prose">
-          <h2>What this means</h2>
+          <h2>The case</h2>
           <p>${esc(theme.sikhReading)}</p>
           <aside class="callout"><strong>The evidence</strong><p>${esc(theme.evidence)}</p></aside>
-          <h2>In the chronology</h2>
+          <h2>Dated events</h2>
           <div class="event-mini">
             ${evs
               .map(
@@ -166,7 +192,7 @@ export function issueView(id: string): string | null {
               )
               .join("")}
           </div>
-          <h2>Related history</h2>
+          <h2>History chapters</h2>
           <div class="event-mini">
             ${chs
               .map(
