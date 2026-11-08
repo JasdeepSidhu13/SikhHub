@@ -44,11 +44,15 @@ export function memorialCard(story: Story): string {
 
 export function storyFeature(story: Story, reverse = false): string {
   const mediaBlock = story.image
-    ? `<figure class="photo${story.memorial?.native ? " is-portrait" : ""}">
+    ? `<figure class="photo${story.memorial?.native ? " is-portrait" : ""}${story.representation ? " is-representation" : ""}">
          <img src="${esc(asset(story.image))}" alt="${esc(story.imageAlt ?? story.title)}" />
          ${
            story.memorial?.native
-             ? `<figcaption class="portrait-caption"><span class="memorial-native">${esc(story.memorial.native)}</span>${esc(story.memorial.name)}</figcaption>`
+             ? `<figcaption class="portrait-caption">${
+                 story.representation
+                   ? `<span class="rep-label">Representation · not his photograph</span>`
+                   : ""
+               }<span class="memorial-native">${esc(story.memorial.native)}</span>${esc(story.memorial.name)}</figcaption>`
              : ""
          }
          <p class="figure-credit">${esc(story.imageCredit ?? "")}</p>

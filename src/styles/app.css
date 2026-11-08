@@ -542,6 +542,19 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   margin: 0 0 0.2rem;
   color: var(--navy);
 }
+.rep-label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--kesari-deep);
+  margin: 0 0 0.45rem;
+}
+.photo.is-portrait.is-representation img {
+  max-width: min(100%, 360px);
+  max-height: 560px;
+}
 .figure-credit {
   margin: 0;
   padding: 0.35rem 1rem 0.85rem;

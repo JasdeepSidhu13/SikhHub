@@ -60,6 +60,12 @@ export const media = {
     alt: "Portrait of the founder of SikhHub",
     credit: "Founder of SikhHub.",
   },
+  kaka: {
+    src: "/media/kaka-inderjit.jpg",
+    alt: "An artist’s representation of a twelve-year-old Sikh schoolboy, standing in for Kaka Inderjit Singh",
+    credit:
+      "Artist’s representation of a twelve-year-old Sikh schoolboy of the Punjabi Suba years. This is not a photograph of Kaka Inderjit Singh. Panjab Digital Library catalogues a portrait (PH-014088).",
+  },
   pheruman: {
     src: "/media/pheruman.jpg",
     alt: "Studio portrait of Shaheed Darshan Singh Pheruman",

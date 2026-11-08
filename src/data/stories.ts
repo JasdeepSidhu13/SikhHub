@@ -11,6 +11,7 @@ export interface Story {
   image?: string;
   imageAlt?: string;
   imageCredit?: string;
+  representation?: boolean;
   memorial?: { name: string; fact: string; sub: string; native?: string };
   href: string;
   cta: string;
@@ -56,8 +57,13 @@ export const stories: Story[] = [
       text: "If Guru Gobind Singh’s children can be shaheeds, why can’t I?",
       cite: "Kaka Inderjit Singh, as remembered in Sikh tradition of the Karnal killing",
     },
+    image: media.kaka.src,
+    imageAlt: media.kaka.alt,
+    imageCredit: media.kaka.credit,
+    representation: true,
     memorial: {
       name: "Kaka Inderjit Singh",
+      native: "ਕਾਕਾ ਇੰਦਰਜੀਤ ਸਿੰਘ",
       fact: "12 years old",
       sub: "Karnal · 21 September 1960 · first shaheed of Punjabi Suba",
     },
