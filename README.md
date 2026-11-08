@@ -30,11 +30,13 @@ npm run preview
 
 ## GitHub Pages
 
-A workflow in `.github/workflows/pages.yml` builds the site and deploys it with GitHub Actions.
+The built site lives on the `gh-pages` branch. You do **not** need the Actions tab.
 
-1. In the repository: **Settings → Pages → Build and deployment → Source: GitHub Actions**
-2. Merge to `main` (or run the workflow manually)
-3. The site is served at `https://<user>.github.io/SikhHub/`
+1. Open **the repository** Pages settings (not your profile settings):  
+   https://github.com/JasdeepSidhu13/SikhHub/settings/pages
+2. Under **Build and deployment**, set **Source** to **Deploy from a branch** (not GitHub Actions, not Add a domain).
+3. Branch: **gh-pages**. Folder: **/ (root)**. Click **Save**.
+4. Wait a minute, then open https://jasdeepsidhu13.github.io/SikhHub/
 
 The production build uses the base path `/SikhHub/`. Local `npm run dev` uses `/`.
 
