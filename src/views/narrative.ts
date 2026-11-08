@@ -4,6 +4,8 @@ import { esc } from "../lib/html";
 import { href } from "../lib/paths";
 import { eventsFor, sourcesFor, themesFor } from "../lib/lookup";
 import { sourceCard } from "./layout";
+import { figure, genocideInfographic, reorgInfographic } from "./infographics";
+import { media } from "../data/media";
 
 function renderBlock(block: Block): string {
   if (block.type === "p") return `<p>${esc(block.text)}</p>`;
@@ -66,6 +68,10 @@ export function chapterView(id: string): string | null {
     <section class="section">
       <div class="wrap split">
         <article class="prose">
+          ${id === "shrine" ? figure(media.harmandir, "Sri Harmandir Sahib, the Guru's house whose management the Panth fought to take from mahants.") : ""}
+          ${id === "suba" ? reorgInfographic() : ""}
+          ${id === "bluestar" ? `${figure(media.witnesses, "Widows of the 1984 Sikh genocide in Delhi.")}${genocideInfographic()}` : ""}
+          ${id === "accounting" ? figure(media.day1, "1 November 1984 — the second day of the Sikh genocide, as reconstructed by the 1984 Sikh Archive.") : ""}
           ${chapter.blocks.map(renderBlock).join("")}
           <p class="note">Read the linked sources. Community remembrance and later histories are labelled as such in the library.</p>
         </article>

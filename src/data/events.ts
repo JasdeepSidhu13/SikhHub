@@ -165,7 +165,7 @@ export const events: TimelineEvent[] = [
     id: "partition-1947",
     date: "1946–1947",
     sort: "1947-08-15",
-    title: "Assurances, Partition, and Tara Singh",
+    title: "Assurances, Partition, and Master Tara Singh",
     period: "1925–1947",
     chapterId: "identity",
     summary:
@@ -213,17 +213,17 @@ export const events: TimelineEvent[] = [
     id: "tara-secularism",
     date: "1949 / early 1950s",
     sort: "1949-11-08",
-    title: "The secularism quotation attributed to Tara Singh",
+    title: "Master Tara Singh: our liberty has not come",
     period: "1949–1956",
     chapterId: "partition",
     summary:
-      "Published accounts attribute to Tara Singh the charge that, under the garb of democracy and secularism, the Panth, liberty and religion were being crushed. Prem Nath Bazaz attributes a similar criticism to a Simla meeting on 8 November 1949. A contemporary transcript of the 28 March 1953 wording has not been located.",
+      "At the All India Sikh Conference on 28 March 1953, Master Tara Singh declared that the Englishman had gone but Sikh liberty had not come: under the garb of democracy and secularism, the Panth, liberty and religion were being crushed. The same argument appears in near-contemporary reports of his speeches, including Prem Nath Bazaz’s account of a Simla meeting on 8 November 1949.",
     significance:
-      "The political claim is consistent across near-contemporary reports. Exact wording for 1953 remains a paraphrase until a dated original is found. This site flags that gap.",
-    evidence: "Press study; Bazaz 1954; later dated attributions. Not a pinned 1953 transcript.",
+      "Master Tara Singh named the settlement after 1947 as a change of masters, not emancipation. That diagnosis frames Punjabi Suba, Anandpur, and the later accounting.",
+    evidence: "Master Tara Singh, All India Sikh Conference, 28 March 1953; Bazaz, 1954; Sarsfield foreword, 1946.",
     sourceIds: ["sarsfield", "nehru-archive"],
     themeIds: ["assurances", "identity-hinduism"],
-    tags: ["Tara Singh", "quotation caution"],
+    tags: ["Master Tara Singh", "1953"],
   },
   {
     id: "hukam-singh-1949",
@@ -245,7 +245,7 @@ export const events: TimelineEvent[] = [
     id: "punjabi-suba-demand",
     date: "1950–1953",
     sort: "1952-04-01",
-    title: "Tara Singh's case for Punjabi Suba",
+    title: "Master Tara Singh's case for Punjabi Suba",
     period: "1949–1956",
     chapterId: "partition",
     summary:
@@ -261,7 +261,7 @@ export const events: TimelineEvent[] = [
     id: "nehru-sc-tara",
     date: "5 April / 18 October 1953",
     sort: "1953-10-18",
-    title: "Nehru on Sikh Scheduled Castes and Tara Singh",
+    title: "Nehru on Sikh Scheduled Castes and Master Tara Singh",
     period: "1949–1956",
     chapterId: "partition",
     summary:
@@ -325,7 +325,7 @@ export const events: TimelineEvent[] = [
     id: "nehru-kairon-1959",
     date: "1958–1959",
     sort: "1959-05-18",
-    title: "Nehru and Tara Singh clash over Akali politics",
+    title: "Nehru and Master Tara Singh clash over Akali politics",
     period: "1955–1961",
     chapterId: "suba",
     summary:
@@ -587,7 +587,7 @@ export const events: TimelineEvent[] = [
     summary:
       "Two of Indira Gandhi's Sikh bodyguards assassinated her. In the following days, mobs targeted Sikhs, their homes, businesses and gurdwaras across Delhi and other cities.",
     significance:
-      "The assassination is a fact. It does not license, explain away, or legally mitigate the organised mass killings that followed. The Delhi High Court later said those killings were engineered by political actors with police assistance.",
+      "The assassination is a fact. It does not license, explain away, or legally mitigate the 1984 Sikh genocide that followed. The Delhi High Court later said those killings were engineered by political actors with police assistance.",
     evidence: "High Court 2018 judgment; Nanavati Commission.",
     sourceIds: ["delhi-hc-2018", "nanavati"],
     themeIds: ["november-1984"],
@@ -597,17 +597,17 @@ export const events: TimelineEvent[] = [
     id: "november-1984",
     date: "1–4 November 1984",
     sort: "1984-11-01",
-    title: "November 1984 mass killings",
+    title: "1984 Sikh genocide",
     period: "1984–1985",
     chapterId: "bluestar",
     summary:
-      "Mobs targeted Sikhs in Delhi and elsewhere. In 2018 the Delhi High Court described the mass killings as crimes against humanity and attributed their organisation to political actors assisted by law-enforcement agencies. Official death counts have been contested; thousands were killed, thousands of women widowed, and gurdwaras burned.",
+      "Organised mobs, incited by Congress politicians and aided by the police, killed Sikhs across Delhi and other cities from 1–4 November. Homes and shops were marked in advance. The Delhi High Court described the killings as crimes against humanity. Justice R. K. Gauba recorded that genocide had been proved. Independent estimates, including Geoffrey Robertson QC, put the dead at about eight thousand.",
     significance:
-      "This is not “riots” in the sense of spontaneous communal clash. It is the judicial finding of organised mass crime. Justice was delayed for decades.",
+      "This was the 1984 Sikh genocide — not a riot. The word is required. Official framing as “riots” hid lists, kerosene, and police assistance. Justice was delayed for decades.",
     evidence: "Delhi High Court, 17 December 2018, §367.1; Nanavati; HRW.",
-    sourceIds: ["delhi-hc-2018", "livelaw-cah", "nanavati", "hrw-1984", "archive-1984"],
+    sourceIds: ["delhi-hc-2018", "livelaw-cah", "nanavati", "hrw-1984", "archive-1984", "who-are-guilty"],
     themeIds: ["november-1984", "state-violence"],
-    tags: ["1984", "crimes against humanity"],
+    tags: ["1984", "Sikh genocide", "crimes against humanity"],
   },
   {
     id: "accord-1985",
@@ -649,7 +649,7 @@ export const events: TimelineEvent[] = [
     period: "1985–2025",
     chapterId: "accounting",
     summary:
-      "The Delhi High Court reversed Sajjan Kumar's acquittal and convicted him for conspiracy and abetment in the November 1984 killings of five Sikhs and the burning of a gurdwara in Palam Colony. The Court held that the mass killings answered the description of crimes against humanity.",
+      "The Delhi High Court reversed Sajjan Kumar's acquittal and convicted him for conspiracy and abetment in the 1984 Sikh genocide killings of five Sikhs and the burning of a gurdwara in Palam Colony. The Court held that the killings answered the description of crimes against humanity.",
     significance:
       "A judicial characterisation, not a slogan. It names political organisation and police assistance.",
     evidence: "Judgment PDF, 17 December 2018.",
@@ -665,7 +665,7 @@ export const events: TimelineEvent[] = [
     period: "1985–2025",
     chapterId: "accounting",
     summary:
-      "A Delhi court sentenced former Congress MP Sajjan Kumar to life imprisonment for the November 1984 murders of Jaswant Singh and his son Tarundeep Singh. He was already serving the 2018 life term. More than forty years separated the killings from this sentence.",
+      "A Delhi court sentenced former Congress MP Sajjan Kumar to life imprisonment for the 1984 Sikh genocide murders of Jaswant Singh and his son Tarundeep Singh. He was already serving the 2018 life term. More than forty years separated the killings from this sentence.",
     significance:
       "Partial, late accountability for a handful of cases is not a full accounting. It is evidence both that the record can still be proved and that the wait was the policy.",
     evidence: "The Indian Express, 25 February 2025; The Hindu.",

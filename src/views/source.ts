@@ -1,0 +1,70 @@
+import { briefs } from "../data/briefs";
+import { sourceById, sources } from "../data/sources";
+import { KIND_LABEL } from "../data/types";
+import { chaptersFor, themesFor } from "../lib/lookup";
+import { esc } from "../lib/html";
+import { asset, href } from "../lib/paths";
+import { kindChip } from "./layout";
+
+export function sourceView(id: string): string | null {
+  const source = sourceById[id];
+  if (!source) return null;
+  const brief = briefs[id];
+  const chs = chaptersFor(source.chapterIds);
+  const ths = themesFor(source.themeIds);
+  const related = sources.filter((s) => s.id !== id && s.kind === source.kind).slice(0, 4);
+
+  return `
+    <div class="page-hero">
+      <div class="wrap">
+        <p class="kicker">Source brief</p>
+        <p>${kindChip(source.kind)} <span class="meta-inline">${esc(KIND_LABEL[source.kind])}</span></p>
+        <h1 class="page-title">${esc(source.title)}</h1>
+        <p class="lede-page">${esc(source.creator)}${source.year ? ` · ${esc(source.year)}` : ""}</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="wrap split">
+        <article class="prose">
+          ${
+            brief?.image
+              ? `<figure class="photo"><img src="${esc(asset(brief.image))}" alt="${esc(brief.imageAlt ?? source.title)}" />
+                 <p class="figure-credit">${esc(brief.imageCredit ?? "")}</p></figure>`
+              : ""
+          }
+          <h2>What this record is</h2>
+          <p>${esc(source.note)}</p>
+          ${
+            brief
+              ? `<h2>Key information</h2><ul>${brief.keyPoints.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>
+                 <aside class="callout"><strong>Why it matters</strong><p>${esc(brief.whyItMatters)}</p></aside>`
+              : `<aside class="callout"><strong>Why it is in the library</strong><p>${esc(source.note)}</p></aside>`
+          }
+          ${
+            brief?.excerpt
+              ? `<blockquote class="pull">${esc(brief.excerpt)}<cite>${esc(brief.excerptCite ?? "")}</cite></blockquote>`
+              : ""
+          }
+          <p>
+            <a class="btn btn-primary ext" href="${esc(source.url)}" rel="noopener noreferrer" target="_blank">Further exploration — open the original</a>
+          </p>
+        </article>
+        <aside class="side">
+          <h3>In this archive</h3>
+          <div class="event-mini">
+            ${chs.map((c) => `<a href="${href(`/narrative/${c.id}`)}"><h4>Chapter ${esc(c.number)}</h4><p>${esc(c.title)}</p></a>`).join("")}
+            ${ths.map((t) => `<a href="${href(`/issues/${t.id}`)}"><h4>${esc(t.title)}</h4><p>${esc(t.kicker)}</p></a>`).join("")}
+          </div>
+          ${
+            related.length
+              ? `<h3 style="margin-top:1.6rem">Same type of record</h3>
+                 <div class="event-mini">${related
+                   .map((s) => `<a href="${href(`/library/${s.id}`)}"><h4>${esc(s.title)}</h4><p>${esc(s.creator)}</p></a>`)
+                   .join("")}</div>`
+              : ""
+          }
+        </aside>
+      </div>
+    </section>
+  `;
+}

@@ -1,7 +1,9 @@
+import { briefs } from "../data/briefs";
+import type { Source } from "../data/types";
 import { KIND_LABEL } from "../data/types";
 import type { SourceKind } from "../data/types";
 import { esc } from "../lib/html";
-import { href } from "../lib/paths";
+import { asset, href } from "../lib/paths";
 import type { Route } from "../lib/router";
 import khanda from "../assets/khanda.svg?url";
 
@@ -24,7 +26,7 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
         <nav class="nav" data-nav>
           ${navItem("/narrative", "Narrative", on("narrative") || on("chapter"))}
           ${navItem("/timeline", "Timeline", on("timeline"))}
-          ${navItem("/library", "Library", on("library"))}
+          ${navItem("/library", "Library", on("library") || on("source"))}
           ${navItem("/issues", "Issues", on("issues") || on("issue"))}
           ${navItem("/method", "Method", on("method"))}
           <button class="search-btn" type="button" data-search>Search</button>
@@ -36,7 +38,7 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
       <div class="footer-inner footer-grid">
         <div>
           <h2>SikhHub</h2>
-          <p>An educational archive of Sikh struggles over faith, language and power — from gurdwara reform to the unfinished accounting of 1984 and the Punjab disappearances. Primary documents, court records, and named histories, labelled for what they are.</p>
+          <p>An educational archive of Sikh struggles over faith, language and power — from gurdwara reform to the 1984 Sikh genocide and the Punjab disappearances. Primary documents, court records, and named histories, labelled for what they are.</p>
         </div>
         <div>
           <h2>Read</h2>
@@ -65,13 +67,15 @@ export function kindChip(kind: SourceKind): string {
   return `<span class="kind kind-${kind}">${esc(KIND_LABEL[kind])}</span>`;
 }
 
-export function sourceCard(source: { id: string; title: string; creator: string; year?: string; kind: SourceKind; url: string; note: string }): string {
+export function sourceCard(source: Source): string {
+  const brief = briefs[source.id];
   return `
-    <a class="source-card ext" href="${esc(source.url)}" rel="noopener noreferrer" target="_blank">
+    <a class="source-card" href="${href(`/library/${source.id}`)}">
+      ${brief?.image ? `<img class="source-thumb" src="${esc(asset(brief.image))}" alt="" />` : ""}
       ${kindChip(source.kind)}
       <h4>${esc(source.title)}</h4>
       <p>${esc(source.note)}</p>
-      <div class="meta">${esc(source.creator)}${source.year ? ` · ${esc(source.year)}` : ""}</div>
+      <div class="meta">${esc(source.creator)}${source.year ? ` · ${esc(source.year)}` : ""} · Brief, then original</div>
     </a>
   `;
 }

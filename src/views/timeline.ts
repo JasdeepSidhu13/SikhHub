@@ -45,7 +45,7 @@ export function timelineView(period = "all"): string {
                       ${srcs
                         .map(
                           (s) =>
-                            `<a class="source-card ext" href="${esc(s.url)}" rel="noopener noreferrer" target="_blank">${kindChip(s.kind)} <h4>${esc(s.title)}</h4></a>`,
+                            `<a class="source-card" href="${href(`/library/${s.id}`)}">${kindChip(s.kind)} <h4>${esc(s.title)}</h4></a>`,
                         )
                         .join("")}
                     </div>

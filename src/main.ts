@@ -9,6 +9,8 @@ import { libraryView } from "./views/library";
 import { issueView, issuesIndexView } from "./views/issues";
 import { methodView } from "./views/method";
 import { searchView } from "./views/search";
+import { sourceView } from "./views/source";
+import { sourceById } from "./data/sources";
 import { chapterById } from "./data/chapters";
 import { themeById } from "./data/themes";
 
@@ -55,6 +57,15 @@ function paint(): void {
   } else if (route.name === "library") {
     title = "Library — SikhHub";
     body = libraryView("all", "");
+  } else if (route.name === "source") {
+    const view = sourceView(route.id);
+    if (!view) {
+      title = "Not found — SikhHub";
+      body = notFound();
+    } else {
+      title = `${sourceById[route.id]?.title ?? "Source"} — SikhHub`;
+      body = view;
+    }
   } else if (route.name === "issues") {
     title = "Issues — SikhHub";
     body = issuesIndexView();
