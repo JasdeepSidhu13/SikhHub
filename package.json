@@ -1,0 +1,16 @@
+{
+  "name": "sikhhub",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "SikhHub — a sourced educational archive of Sikh political history, 1920–2025.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  }
+}
