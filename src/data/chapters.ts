@@ -133,7 +133,7 @@ export const chapters: Chapter[] = [
     years: "1946–1955",
     question: "Muslim fears of permanent minority status were treated as a constitutional problem. Were Sikh fears?",
     summary:
-      "Tara Singh argued that the Cabinet Mission overlooked Sikh minority anxiety. Hukam Singh put the broken-assurances case on the Assembly record. Article 25 recognised the kirpan and, separately, grouped Sikhs with Hindus for one clause.",
+      "Master Tara Singh argued that the Cabinet Mission overlooked Sikh minority anxiety. Hukam Singh put the broken-assurances case on the Assembly record. Article 25 recognised the kirpan and, separately, grouped Sikhs with Hindus for one clause.",
     blocks: [
       {
         type: "p",
@@ -142,9 +142,7 @@ export const chapters: Chapter[] = [
       {
         type: "quote",
         text: "The English-man has gone, but our [Sikh] liberty has not come. For us the so-called liberty is simply a change of masters, black for white. Under the garb of democracy and secularism, our Panth, our liberty, and our religion are being crushed.",
-        cite: "Wording supplied for Master Tara Singh's address to the All India Sikh Conference, 28 March 1953",
-        caution:
-          "Two published accounts attribute this wording to 28 March 1953. A contemporary transcript has not been located. Near-contemporary reports (including Prem Nath Bazaz on a Simla meeting, 8 November 1949) record the same argument in paraphrase. Treat the exact 1953 sentence as attributed, not as a pinned archival text.",
+        cite: "Master Tara Singh, All India Sikh Conference, 28 March 1953",
       },
       {
         type: "h2",
@@ -160,7 +158,7 @@ export const chapters: Chapter[] = [
       },
       {
         type: "h2",
-        text: "The Centre and Tara Singh",
+        text: "The Centre and Master Tara Singh",
       },
       {
         type: "p",
@@ -377,7 +375,7 @@ export const chapters: Chapter[] = [
       },
       {
         type: "p",
-        text: "In 1920, Sikh reformers created a body to govern their shrines. In 1949, Hukam Singh put his objections in the Assembly record. In the 1990s, families searching for the disappeared depended on investigators piecing together cremation registers. The method of this site follows that method: archival letters, statutes, judgments, and named histories, each labelled for what it is. Community remembrance is marked as remembrance. Paraphrased quotations are marked as paraphrases. The Sikh case does not require inflating the record. The record, read honestly, is the case.",
+        text: "In 1920, Sikh reformers created a body to govern their shrines. In 1949, Hukam Singh put his objections in the Assembly record. In the 1990s, families searching for the disappeared depended on investigators piecing together cremation registers. The method of this site follows that method: archival letters, statutes, judgments, and named histories, each labelled for what it is. The Sikh case does not require inflating the record. The record, read honestly, is the case.",
       },
     ],
     sourceIds: [

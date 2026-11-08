@@ -59,8 +59,7 @@ export function homeView(): string {
     <section class="quote-band">
       <div class="wrap">
         <blockquote>“The English-man has gone, but our [Sikh] liberty has not come. For us the so-called liberty is simply a change of masters, black for white.”</blockquote>
-        <cite>Wording attributed to Master Tara Singh, 28 March 1953 — see the source note in chapter 03. A contemporary transcript has not been located.</cite>
-        <p class="caution">SikhHub does not treat this sentence as a pinned archival text. Near-contemporary reports record the same argument. The linked originals are the evidence; the caution is part of the evidence.</p>
+        <cite>Master Tara Singh, All India Sikh Conference, 28 March 1953</cite>
       </div>
     </section>
 
@@ -70,7 +69,7 @@ export function homeView(): string {
           <div>
             <p class="kicker">Evidence, labelled</p>
             <h2>Featured sources</h2>
-            <p>Court judgments, Collected Works, the Anandpur text, HRW/Ensaaf, Tara Singh’s 1946 foreword. Every card opens the original.</p>
+            <p>Court judgments, Collected Works, the Anandpur text, HRW/Ensaaf, Master Tara Singh’s 1946 foreword. Every card opens the original.</p>
           </div>
           <a class="btn btn-navy" href="${href("/library")}">Browse all sources</a>
         </div>

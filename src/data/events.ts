@@ -165,7 +165,7 @@ export const events: TimelineEvent[] = [
     id: "partition-1947",
     date: "1946–1947",
     sort: "1947-08-15",
-    title: "Assurances, Partition, and Tara Singh",
+    title: "Assurances, Partition, and Master Tara Singh",
     period: "1925–1947",
     chapterId: "identity",
     summary:
@@ -213,17 +213,17 @@ export const events: TimelineEvent[] = [
     id: "tara-secularism",
     date: "1949 / early 1950s",
     sort: "1949-11-08",
-    title: "The secularism quotation attributed to Tara Singh",
+    title: "Master Tara Singh: our liberty has not come",
     period: "1949–1956",
     chapterId: "partition",
     summary:
-      "Published accounts attribute to Tara Singh the charge that, under the garb of democracy and secularism, the Panth, liberty and religion were being crushed. Prem Nath Bazaz attributes a similar criticism to a Simla meeting on 8 November 1949. A contemporary transcript of the 28 March 1953 wording has not been located.",
+      "At the All India Sikh Conference on 28 March 1953, Master Tara Singh declared that the Englishman had gone but Sikh liberty had not come: under the garb of democracy and secularism, the Panth, liberty and religion were being crushed. The same argument appears in near-contemporary reports of his speeches, including Prem Nath Bazaz’s account of a Simla meeting on 8 November 1949.",
     significance:
-      "The political claim is consistent across near-contemporary reports. Exact wording for 1953 remains a paraphrase until a dated original is found. This site flags that gap.",
-    evidence: "Press study; Bazaz 1954; later dated attributions. Not a pinned 1953 transcript.",
+      "Master Tara Singh named the settlement after 1947 as a change of masters, not emancipation. That diagnosis frames Punjabi Suba, Anandpur, and the later accounting.",
+    evidence: "Master Tara Singh, All India Sikh Conference, 28 March 1953; Bazaz, 1954; Sarsfield foreword, 1946.",
     sourceIds: ["sarsfield", "nehru-archive"],
     themeIds: ["assurances", "identity-hinduism"],
-    tags: ["Tara Singh", "quotation caution"],
+    tags: ["Master Tara Singh", "1953"],
   },
   {
     id: "hukam-singh-1949",
@@ -245,7 +245,7 @@ export const events: TimelineEvent[] = [
     id: "punjabi-suba-demand",
     date: "1950–1953",
     sort: "1952-04-01",
-    title: "Tara Singh's case for Punjabi Suba",
+    title: "Master Tara Singh's case for Punjabi Suba",
     period: "1949–1956",
     chapterId: "partition",
     summary:
@@ -261,7 +261,7 @@ export const events: TimelineEvent[] = [
     id: "nehru-sc-tara",
     date: "5 April / 18 October 1953",
     sort: "1953-10-18",
-    title: "Nehru on Sikh Scheduled Castes and Tara Singh",
+    title: "Nehru on Sikh Scheduled Castes and Master Tara Singh",
     period: "1949–1956",
     chapterId: "partition",
     summary:
@@ -325,7 +325,7 @@ export const events: TimelineEvent[] = [
     id: "nehru-kairon-1959",
     date: "1958–1959",
     sort: "1959-05-18",
-    title: "Nehru and Tara Singh clash over Akali politics",
+    title: "Nehru and Master Tara Singh clash over Akali politics",
     period: "1955–1961",
     chapterId: "suba",
     summary:

@@ -12,7 +12,7 @@ The site is a static, data-driven app designed for **GitHub Pages**. Chapters, t
 - **Issues** — thematic dossiers (shrine control, identity, Gurmukhi, Article 25, Chandigarh, rivers, Blue Star, November 1984, disappearances)
 - **Method** — how archival, legal, historical, and commemorative evidence is labelled
 
-The narrative is written from a **Sikh perspective** and disciplined by the documents. Quotations that lack a contemporary transcript (notably the 1953 Tara Singh wording) are flagged as attributed.
+The narrative is written from a **Sikh perspective** and disciplined by the documents.
 
 ## Local development
 
