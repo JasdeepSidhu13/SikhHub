@@ -62,9 +62,8 @@ export const media = {
   },
   kaka: {
     src: "/media/kaka-inderjit.jpg",
-    alt: "An artist’s representation of a twelve-year-old Sikh schoolboy, standing in for Kaka Inderjit Singh",
-    credit:
-      "Artist’s representation of a twelve-year-old Sikh schoolboy of the Punjabi Suba years. This is not a photograph of Kaka Inderjit Singh. Panjab Digital Library catalogues a portrait (PH-014088).",
+    alt: "Artist’s representation of a twelve-year-old Sikh schoolboy of the Punjabi Suba years",
+    credit: "Artist’s representation of a twelve-year-old Sikh schoolboy of the Punjabi Suba years.",
   },
   pheruman: {
     src: "/media/pheruman.jpg",
