@@ -630,7 +630,7 @@ export const events: TimelineEvent[] = [
     date: "1995",
     sort: "1995-09-06",
     title: "Abduction and murder of Jaswant Singh Khalra",
-    period: "1985–2025",
+    period: "1985–2026",
     chapterId: "accounting",
     summary:
       "Khalra and Jaspal Singh Dhillon used official cremation records to investigate what happened to missing people. They exposed thousands of secret cremations in Amritsar district alone. Punjab police abducted and murdered Khalra in 1995. His killers were eventually convicted. The Indian government later admitted illegally cremating 2,097 people in Amritsar.",
@@ -646,7 +646,7 @@ export const events: TimelineEvent[] = [
     date: "16 January 1995",
     sort: "1995-01-16",
     title: "Khalra and Dhillon release the Amritsar cremation records",
-    period: "1985–2025",
+    period: "1985–2026",
     chapterId: "accounting",
     summary:
       "Jaswant Singh Khalra and Jaspal Singh Dhillon released official documents from three crematoria in Amritsar district showing thousands of bodies secretly cremated as unidentified or unclaimed. They said the same pattern would be found in the rest of Punjab.",
@@ -662,7 +662,7 @@ export const events: TimelineEvent[] = [
     date: "9 December 1996",
     sort: "1996-12-09",
     title: "CBI reports 2,097 illegal cremations in Amritsar",
-    period: "1985–2025",
+    period: "1985–2026",
     chapterId: "accounting",
     summary:
       "After the Supreme Court ordered an inquiry into Khalra’s findings, the CBI listed 2,097 illegal cremations at three grounds in Amritsar district — then one of thirteen districts. The report was sealed. Khalra had spoken of more than 6,000 in that district alone.",
@@ -678,7 +678,7 @@ export const events: TimelineEvent[] = [
     date: "17 December 2018",
     sort: "2018-12-17",
     title: "Delhi High Court: crimes against humanity",
-    period: "1985–2025",
+    period: "1985–2026",
     chapterId: "accounting",
     summary:
       "The Delhi High Court reversed Sajjan Kumar's acquittal and convicted him for conspiracy and abetment in the 1984 Sikh genocide killings of five Sikhs and the burning of a gurdwara in Palam Colony. The Court held that the killings answered the description of crimes against humanity.",
@@ -694,7 +694,7 @@ export const events: TimelineEvent[] = [
     date: "25 February 2025",
     sort: "2025-02-25",
     title: "Second life sentence in a 1984 murder case",
-    period: "1985–2025",
+    period: "1985–2026",
     chapterId: "accounting",
     summary:
       "A Delhi court sentenced former Congress MP Sajjan Kumar to life imprisonment for the 1984 Sikh genocide murders of Jaswant Singh and his son Tarundeep Singh. He was already serving the 2018 life term. More than forty years separated the killings from this sentence.",
@@ -715,5 +715,5 @@ export const periods = [
   "1962–1970",
   "1973–1983",
   "1984–1985",
-  "1985–2025"
+  "1985–2026"
 ];

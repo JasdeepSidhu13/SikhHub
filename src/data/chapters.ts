@@ -341,8 +341,8 @@ export const chapters: Chapter[] = [
     id: "accounting",
     number: "06",
     title: "The long wait for an accounting",
-    kicker: "1985–2025",
-    years: "1985–2025",
+    kicker: "1985–2026",
+    years: "1985–2026",
     question: "If families and investigators had to reconstruct cremation registers themselves, what kind of republic was keeping the books?",
     summary:
       "HRW documented disappearances, torture and executions in Punjab, and militant abuses. Khalra was murdered for using cremation records. A 2025 life sentence in a 1984 case arrived more than forty years late.",
@@ -366,7 +366,7 @@ export const chapters: Chapter[] = [
       {
         type: "quote",
         text: "Across those decades, people demanding an accounting repeatedly had to put the evidence on the record themselves.",
-        cite: "The pattern from 1920 to 2025",
+        cite: "The pattern from 1920 to 2026",
       },
       {
         type: "p",

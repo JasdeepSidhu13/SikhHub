@@ -24,7 +24,7 @@ export function homeView(): string {
     <section class="hero hero-impact">
       <img class="hero-bg" src="${asset(media.witnesses.src)}" alt="" />
       <div class="hero-inner">
-        <p class="kicker">Sikh political history · 1920–2025</p>
+        <p class="kicker">Sikh political history · 1920–2026</p>
         <h1>It was not a riot. It was genocide.</h1>
         <p class="lede">A capital withheld. A constitution they would not sign. Police in shoes in the Guru’s house in 1955. A schoolboy thrown in a well for a banned slogan. A freedom fighter dead on the seventy-fourth day of a fast. Then June 1984, and the 1984 Sikh genocide. The documents are here.</p>
         <div class="hero-actions">
@@ -168,7 +168,7 @@ export function homeView(): string {
       <div class="wrap">
         <div class="section-head">
           <div>
-            <h2>1920 to 2025, in order</h2>
+            <h2>1920 to 2026, in order</h2>
             <p>Six chapters. Same facts as the dossiers, told as a single ledger.</p>
           </div>
           <a class="btn btn-navy" href="${href(routes.history)}">Open the history</a>

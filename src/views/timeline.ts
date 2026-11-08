@@ -10,7 +10,7 @@ export function timelineView(period = "all"): string {
   return `
     <div class="page-hero">
       <div class="wrap">
-        <h1 class="page-title">Chronology, 1920–2025</h1>
+        <h1 class="page-title">Chronology, 1920–2026</h1>
         <p class="lede-page">Dated events of gurdwara reform, Punjabi Suba, Blue Star, the 1984 Sikh genocide, and the search for an accounting.</p>
       </div>
     </div>

@@ -69,7 +69,7 @@ export function aboutView(): string {
           <p class="founder-kicker"><span class="org">SikhHub</span></p>
           <p class="founder-aside-lead">Non-profit · independent · sourced</p>
           <ul>
-            <li>Sikh political history, 1920–2025</li>
+            <li>Sikh political history, 1920–2026</li>
             <li>Judgments, letters, photographs, chronology</li>
             <li>No admission charged · no login required</li>
           </ul>

@@ -26,7 +26,7 @@ export function narrativeIndexView(): string {
   return `
     <div class="page-hero">
       <div class="wrap">
-        <h1 class="page-title">History, 1920–2025</h1>
+        <h1 class="page-title">History, 1920–2026</h1>
         <p class="lede-page">From mahant control of the Guru’s house to a 2025 life sentence in a 1984 Sikh genocide case. Six chapters, written from a Sikh standpoint and held to the documents.</p>
       </div>
     </div>

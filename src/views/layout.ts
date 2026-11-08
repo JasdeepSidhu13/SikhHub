@@ -20,7 +20,7 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
       <div class="header-inner">
         <a class="brand" href="${href("/")}">
           <img class="brand-mark" src="${khanda}" alt="" width="36" height="36"/>
-          <div class="brand-name">SikhHub<span>1920–2025</span></div>
+          <div class="brand-name">SikhHub<span>1920–2026</span></div>
         </a>
         <button class="menu-toggle" type="button" data-menu>Menu</button>
         <nav class="nav" data-nav>
@@ -44,7 +44,7 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
           <h2>Read</h2>
           <ul>
             <li><a href="${href(routes.issues)}">Key issues</a></li>
-            <li><a href="${href(routes.history)}">History, 1920–2025</a></li>
+            <li><a href="${href(routes.history)}">History, 1920–2026</a></li>
             <li><a href="${href(routes.chronology)}">Chronology</a></li>
             <li><a href="${href(routes.documents)}">Documents</a></li>
           </ul>
