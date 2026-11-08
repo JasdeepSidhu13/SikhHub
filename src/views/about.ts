@@ -66,7 +66,7 @@ export function aboutView(): string {
           <p>Its purpose is education. Its method is evidence. Corrections, original documents, and family papers are invited. The archive is only as complete as the record it is given.</p>
         </div>
         <aside class="founder-aside">
-          <p class="kicker"><span class="org">SikhHub</span></p>
+          <p class="founder-kicker"><span class="org">SikhHub</span></p>
           <p class="founder-aside-lead">Non-profit · independent · sourced</p>
           <ul>
             <li>Sikh political history, 1920–2025</li>

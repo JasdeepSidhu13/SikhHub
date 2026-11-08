@@ -974,7 +974,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 .founder-kicker {
   font-family: var(--mono);
   font-size: 0.78rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.04em;
   color: var(--gold);
   margin: 0 0 1rem;
 }
@@ -998,7 +998,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 }
 .kicker .org,
 .founder-kicker .org {
-  letter-spacing: 0.02em;
+  letter-spacing: inherit;
 }
 .founder-copy .lede {
   font-size: 1.18rem;
@@ -1036,7 +1036,8 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   border-radius: var(--radius);
   padding: 1.5rem 1.4rem 1.4rem;
 }
-.founder-aside .kicker { color: var(--gold); }
+.founder-aside .kicker,
+.founder-aside .founder-kicker { color: var(--gold); }
 .founder-aside-lead {
   font-family: var(--serif);
   font-size: 1.35rem;

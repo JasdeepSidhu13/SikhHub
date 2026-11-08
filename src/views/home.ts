@@ -191,7 +191,7 @@ export function homeView(): string {
       <div class="wrap founder-home">
         <img src="${asset(media.jasdeep.src)}" alt="${esc(media.jasdeep.alt)}" />
         <div>
-          <p class="kicker"><span class="org">SikhHub</span> · a non-profit archive</p>
+          <p class="founder-kicker"><span class="org">SikhHub</span> · non-profit archive</p>
           <h2>A public record, independently kept</h2>
           <p><span class="org">SikhHub</span> was established so that Sikh political history would be read with its documents attached — independent of rumour and of the official account. Questions, corrections, and papers for the archive are invited.</p>
           <div class="hero-actions">
