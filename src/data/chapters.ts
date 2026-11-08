@@ -148,11 +148,15 @@ export const chapters: Chapter[] = [
       },
       {
         type: "h2",
-        text: "The Centre and Master Tara Singh",
+        text: "Police in the Guru’s house, 1955",
       },
       {
         type: "p",
-        text: "In October 1953 Nehru asked Home Minister K. N. Katju to consider barring Tara Singh from Delhi and arresting him if he attempted entry. Nehru also favoured limiting the question of Sikh Scheduled Caste recognition to Punjab. On the night of 3–4 July 1955, Punjab Police raided premises in the Golden Temple complex and fired tear gas into the parikrama during the Punjabi Suba agitation. The archival letter establishes Nehru's position on Tara Singh. The accounts of the raid identify a Punjab Police operation under Chief Minister Bhim Sen Sachar; they do not establish that Nehru personally ordered it.",
+        text: "In October 1953 Nehru asked Home Minister K. N. Katju to consider barring Tara Singh from Delhi and arresting him if he attempted entry. On 6 April 1955 the Amritsar magistrate banned the slogan Punjabi Suba Zindabad. Master Tara Singh courted arrest on 10 May. About twelve thousand men and women were jailed in sixty-four days.",
+      },
+      {
+        type: "p",
+        text: "On the night of 3–4 July, Punjab Police under DIG Ashwani Kumar and Chief Minister Bhim Sen Sachar entered Sri Harmandir Sahib in shoes. They arrested the Head Granthi and the Akal Takht Jathedar at home. They raided Guru Ram Das Sarai and took hundreds of sleeping pilgrims away in trucks. They stopped the langar and took the utensils. At midday they fired tear gas into the parikrama; some shells fell in the sarovar. The Tribune called it the first police action at the Golden Temple in independent India. Sangat Singh called it the first sacrilege by a Congress government since independence. The Akali Dal said at least two Sikhs were killed by police fire. No judicial inquiry followed. Sachar later apologised at the Akal Takht.",
       },
       {
         type: "callout",
@@ -168,7 +172,9 @@ export const chapters: Chapter[] = [
       "theprint-hukam",
       "sikhitihas-constitution",
       "nehru-katju-1953",
-      "sikhitihas-1955"
+      "sikhitihas-1955",
+      "express-1955",
+      "commons-aerial",
       ],
     eventIds: [
       "partition-1947",
@@ -229,6 +235,8 @@ export const chapters: Chapter[] = [
       "punjab-reorg",
       "truth-punjab",
       "sikhitihas-1955",
+      "express-1955",
+      "commons-aerial",
       "kaka-pdl",
       "pheruman-sikhitihas",
       "pheruman-hindu",

@@ -5,7 +5,15 @@ import { esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
 import { chaptersFor, eventsFor, sourcesFor } from "../lib/lookup";
 import { sourceCard } from "./layout";
-import { genocideGallery, genocideInfographic, pherumanInfographic, reorgInfographic, figure } from "./infographics";
+import {
+  genocideGallery,
+  genocideInfographic,
+  pherumanInfographic,
+  raid1955Gallery,
+  raid1955Infographic,
+  reorgInfographic,
+  figure,
+} from "./infographics";
 import { clipping, letter, storyFeature } from "./exhibits";
 
 const featuredIds = new Set<string>(keyIssues.map((k) => k.id));
@@ -18,8 +26,9 @@ function extras(id: string): string {
     return `${figure(media.granth, "A handwritten Guru Granth Sahib manuscript hit by a bullet during Operation Blue Star.")}${figure(media.akal, "The Akal Takht, seat of Sikh temporal authority, in the Harmandir Sahib complex.")}`;
   }
   if (id === "punjabi-suba") {
+    const raid1955 = stories.find((s) => s.id === "golden-temple-1955")!;
     const kaka = stories.find((s) => s.id === "kaka-inderjit")!;
-    return `${figure(media.tara, "Master Tara Singh, Tarn Taran, March 1956 — the political face of Punjabi Suba.")}${storyFeature(kaka)}${reorgInfographic()}`;
+    return `${figure(media.tara, "Master Tara Singh, Tarn Taran, March 1956 — the political face of Punjabi Suba.")}${storyFeature(raid1955)}${raid1955Infographic()}${storyFeature(kaka)}${reorgInfographic()}`;
   }
   if (id === "chandigarh") {
     const pheruman = stories.find((s) => s.id === "pheruman")!;
@@ -41,7 +50,19 @@ function extras(id: string): string {
   }
   if (id === "shrine-control") {
     const nankana = stories.find((s) => s.id === "nankana")!;
-    return `${figure(media.harmandir, "Sri Harmandir Sahib — the house whose management the Panth took from mahants.")}${storyFeature(nankana)}`;
+    const raid1955 = stories.find((s) => s.id === "golden-temple-1955")!;
+    return `${figure(media.harmandir, "Sri Harmandir Sahib — the house whose management the Panth took from mahants.")}${storyFeature(nankana)}${storyFeature(raid1955)}${raid1955Gallery()}`;
+  }
+  if (id === "state-violence") {
+    const raid1955 = stories.find((s) => s.id === "golden-temple-1955")!;
+    return `${raid1955Infographic()}${raid1955Gallery()}${storyFeature(raid1955)}${clipping({
+      masthead: "The Indian Express",
+      date: "4 July 2021",
+      headline: "Police entered Darbar Sahib in shoes",
+      deck: "4 a.m., 4 July 1955. DIG Ashwani Kumar led the raid. Langar stopped. Tear gas in the parikrama.",
+      body: "It was at 4 am on July 4, 1955 that Deputy Inspector General of Police Ashwani Kumar led the police with shoes on inside the Golden Temple premises. The community kitchen was captured and langar was stopped. Police also took away utensils. Guru Ramdas inn was also raided and head priests of Golden Temple were arrested. Police used teargas shells in parikarma of Golden Temple.",
+      cite: "Kamaldeep Singh Brar, The Indian Express, reconstructing the 4 July 1955 police action.",
+    })}`;
   }
   if (id === "disappearances") {
     const khalra = stories.find((s) => s.id === "khalra")!;

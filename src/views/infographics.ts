@@ -51,6 +51,41 @@ export function figure(item: { src: string; alt: string; credit: string }, capti
   `;
 }
 
+export function raid1955Infographic(): string {
+  return `
+    <section class="infographic" aria-label="Police raid on Harmandir Sahib, 3–4 July 1955">
+      <p class="kicker">3–4 July 1955</p>
+      <h2>The first police action at the Golden Temple in independent India</h2>
+      <p class="ig-lead">Punjab Police, under DIG Ashwani Kumar and Chief Minister Bhim Sen Sachar, entered Sri Harmandir Sahib in shoes, stopped the langar, and fired tear gas into the parikrama and the sarovar. The Tribune named it the first such action since independence. Sangat Singh called it the first sacrilege by a Congress government.</p>
+      <div class="ig-stats">
+        <div class="ig-stat"><b>Shoes</b><span>on the marble of the Guru’s house</span></div>
+        <div class="ig-stat"><b>Tear gas</b><span>in the parikrama and the sarovar</span></div>
+        <div class="ig-stat"><b>~12,000</b><span>jailed in the 64-day morcha</span></div>
+        <div class="ig-stat"><b>No inquiry</b><span>Sachar later apologised at the Akal Takht</span></div>
+      </div>
+      <ol class="ig-days">
+        <li><time>Midnight</time> Head Granthi Giani Bhupinder Singh and Akal Takht Jathedar Giani Achhar Singh are arrested at their homes.</li>
+        <li><time>3–4 a.m.</time> Armed police raid Guru Ram Das Sarai. Hundreds of sleeping pilgrims and jatha members are taken away in trucks. SGPC and Akali offices are emptied.</li>
+        <li><time>Dawn</time> DIG Ashwani Kumar leads police into the complex in shoes. Langar is stopped. Utensils are taken. The main gate is closed.</li>
+        <li><time>Midday</time> Police advance on Manji Sahib with lathis, guns and tear gas. Thousands of Sikhs sit down in their path. Shells fall in the parikrama and in the holy tank.</li>
+      </ol>
+      <p class="figure-credit">Sequence from the SGPC history of the 1955 morcha, Gurmit Singh, J. S. Grewal, The Tribune, and the Indian Express reconstruction of 4 July 2021. Police put that day’s arrests at 237. The Akali Dal said at least two Sikhs were killed by fire.</p>
+    </section>
+  `;
+}
+
+export function raid1955Gallery(): string {
+  return `
+    <div class="gallery">
+      ${figure(media.aerial, "The complex police entered: Harmandir Sahib, the sarovar, and the parikrama.")}
+      ${figure(media.causeway, "The marble path. On 4 July 1955 police walked it in shoes.")}
+      ${figure(media.akalSquare, "The square before the Akal Takht, about 1924. Its Jathedar was arrested at home before the raid.")}
+      ${figure(media.harmandir, "Sri Harmandir Sahib. Tear-gas shells fell in the tank that holds this house.")}
+    </div>
+    <p class="figure-credit">Historic photographs of the shrine. Contemporaneous action photographs of the 1955 raid are not in the public commons; the SGPC later displayed the tear-gas shells themselves at Manji Sahib.</p>
+  `;
+}
+
 export function pherumanInfographic(): string {
   return `
     <section class="infographic" aria-label="Darshan Singh Pheruman's 74-day fast">

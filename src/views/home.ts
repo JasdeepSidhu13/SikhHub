@@ -6,13 +6,14 @@ import { media } from "../data/media";
 import { esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
 import { sourceCard } from "./layout";
-import { figure, genocideInfographic } from "./infographics";
+import { figure, genocideInfographic, raid1955Infographic } from "./infographics";
 import { clipping, letter, storyFeature } from "./exhibits";
 
 export function homeView(): string {
   const featuredDocs = ["delhi-hc-2018", "cad-21-nov", "cwmg-66", "archive-1984", "sarsfield", "hrw-killers"]
     .map((id) => sources.find((s) => s.id === id))
     .filter(Boolean);
+  const raid1955 = stories.find((s) => s.id === "golden-temple-1955")!;
   const kaka = stories.find((s) => s.id === "kaka-inderjit")!;
   const pheruman = stories.find((s) => s.id === "pheruman")!;
   const hukam = stories.find((s) => s.id === "hukam-singh")!;
@@ -25,7 +26,7 @@ export function homeView(): string {
       <div class="hero-inner">
         <p class="kicker">Sikh political history · 1920–2025</p>
         <h1>It was not a riot. It was genocide.</h1>
-        <p class="lede">A capital withheld. A constitution they would not sign. A schoolboy thrown in a well for a banned slogan. A freedom fighter dead on the seventy-fourth day of a fast. Then June 1984, and the 1984 Sikh genocide. The documents are here.</p>
+        <p class="lede">A capital withheld. A constitution they would not sign. Police in shoes in the Guru’s house in 1955. A schoolboy thrown in a well for a banned slogan. A freedom fighter dead on the seventy-fourth day of a fast. Then June 1984, and the 1984 Sikh genocide. The documents are here.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="${href(routes.issues)}">The record</a>
           <a class="btn btn-ghost" href="${href(routes.issue("november-1984"))}">1984 Sikh genocide</a>
@@ -63,6 +64,21 @@ export function homeView(): string {
     </section>
 
     <section class="section section-dark">
+      <div class="wrap">
+        ${storyFeature(raid1955)}
+        ${raid1955Infographic()}
+        ${clipping({
+          masthead: "The Indian Express",
+          date: "4 July 2021 · reconstructing 4 July 1955",
+          headline: "Police entered Darbar Sahib in shoes",
+          deck: "Langar stopped. Utensils taken. Tear gas in the parikrama. Head priests arrested.",
+          body: "It was at 4 am on July 4, 1955 that Deputy Inspector General of Police Ashwani Kumar led the police with shoes on inside the Golden Temple premises. The community kitchen was captured and langar was stopped. Police also took away utensils. Guru Ramdas inn was also raided and head priests of Golden Temple were arrested.",
+          cite: "Kamaldeep Singh Brar, The Indian Express.",
+        })}
+      </div>
+    </section>
+
+    <section class="section">
       <div class="wrap">
         ${storyFeature(kaka)}
       </div>

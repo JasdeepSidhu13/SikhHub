@@ -577,6 +577,30 @@ export const sources: Source[] = [
     themeIds: ["bluestar-1984"],
     tags: ["Blue Star", "photograph"],
   },
+  {
+    id: "express-1955",
+    title: "What led to the 1955 police action at the Golden Temple?",
+    creator: "The Indian Express",
+    year: "2021",
+    kind: "press",
+    url: "https://indianexpress.com/article/explained/explained-what-led-to-the-1955-police-action-at-golden-temple-7388367/",
+    note: "Reconstruction of 4 July 1955: DIG Ashwani Kumar led police in shoes into Harmandir Sahib, stopped langar, raided Guru Ram Das Sarai, arrested head priests, and used tear gas in the parikrama. Police put that day’s arrests at 237; about 12,000 were jailed in the 64-day morcha.",
+    chapterIds: ["partition", "suba"],
+    themeIds: ["state-violence", "punjabi-suba", "shrine-control"],
+    tags: ["1955", "Golden Temple", "Punjabi Suba"],
+  },
+  {
+    id: "commons-aerial",
+    title: "Aerial view of the Golden Temple complex, c. 1920s–30s",
+    creator: "Wikimedia Commons",
+    year: "c. 1920s–30s",
+    kind: "media",
+    url: "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_Golden_Temple,_Amritsar._A_view_of_the_temple,_tank_and_surrounding_area,_circa_1920's–30's.jpg",
+    note: "Historic aerial photograph of Harmandir Sahib, the sarovar, and the parikrama — the ground police entered on 3–4 July 1955.",
+    chapterIds: ["partition", "suba"],
+    themeIds: ["state-violence", "shrine-control"],
+    tags: ["photograph", "Golden Temple"],
+  },
 ];
 
 export const sourceById = Object.fromEntries(sources.map((s) => [s.id, s]));

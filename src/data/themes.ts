@@ -17,7 +17,9 @@ export const themes: Theme[] = [
       "sahni-archive",
       "gurdwaras-act",
       "nankana-sikhitihas",
-      "jaito-photo"
+      "jaito-photo",
+      "sikhitihas-1955",
+      "express-1955",
     ],
     eventIds: ["mahant-era", "sgpc-formed", "nankana", "keys-jaito"],
   },
@@ -99,8 +101,8 @@ export const themes: Theme[] = [
       "After Partition, Punjabi Suba was the remaining territorial expression of Sikh security in India. Nehru's private letters show that even an SGPC electoral mandate would not move him. The 1966 Act is therefore both a victory and a truncation.",
     evidence: "Nehru–Kairon correspondence; Punjab Reorganisation Act; Regional Formula; census studies.",
     chapterIds: ["suba"],
-    sourceIds: ["punjab-reorg", "sikhitihas-1955", "kaka-pdl", "commons-tara"],
-    eventIds: ["punjabi-suba-demand", "kaka-inderjit", "reorg-act", "nehru-kairon-1959"],
+    sourceIds: ["punjab-reorg", "sikhitihas-1955", "express-1955", "kaka-pdl", "commons-tara"],
+    eventIds: ["punjabi-suba-demand", "golden-temple-1955", "kaka-inderjit", "reorg-act", "nehru-kairon-1959"],
   },
   {
     id: "chandigarh",
@@ -198,7 +200,7 @@ export const themes: Theme[] = [
       "Not every episode is the same crime. The site's method is to name the actor: mahant and hired men; Punjab Police under Sachar; the Army; political mobs with police assistance; Punjab Police in the 1990s. Pattern is not a conspiracy theory. It is a timeline.",
     evidence: "Each episode is sourced in its chapter. Do not flatten them; read them in order.",
     chapterIds: ["shrine", "partition", "suba", "bluestar", "accounting"],
-    sourceIds: ["nankana-sikhitihas", "sikhitihas-1955", "delhi-hc-2018", "hrw-killers"],
+    sourceIds: ["nankana-sikhitihas", "sikhitihas-1955", "express-1955", "commons-aerial", "delhi-hc-2018", "hrw-killers"],
     eventIds: ["nankana", "golden-temple-1955", "blue-star", "november-1984", "khalra"],
   }
 ];

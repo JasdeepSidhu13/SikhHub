@@ -55,4 +55,19 @@ export const media = {
     alt: "Palace of Assembly, Chandigarh, the capital still withheld from Punjab",
     credit: "Palace of Assembly, Chandigarh. Wikimedia Commons.",
   },
+  aerial: {
+    src: "/media/harmandir-aerial.jpg",
+    alt: "Aerial view of Sri Harmandir Sahib, the sarovar, and the parikrama, early twentieth century",
+    credit: "Aerial view of the Golden Temple complex, c. 1920s–30s. Wikimedia Commons. The parikrama and sarovar into which police later fired tear gas, 3–4 July 1955.",
+  },
+  causeway: {
+    src: "/media/parikrama-causeway.jpg",
+    alt: "Pilgrims on the marble causeway to Sri Harmandir Sahib",
+    credit: "Pilgrims on the causeway to Harmandir Sahib. Wikimedia Commons. On 4 July 1955 police entered this complex in shoes.",
+  },
+  akalSquare: {
+    src: "/media/akal-square-1924.jpg",
+    alt: "The square in front of the Akal Takht, about 1924",
+    credit: "Square before the Akal Takht, c. 1924. Wikimedia Commons. In 1955 the Head Granthi and the Jathedar were arrested at their homes before the raid.",
+  },
 } as const satisfies Record<string, MediaItem>;

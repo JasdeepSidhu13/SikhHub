@@ -229,6 +229,28 @@ export const briefs: Record<string, SourceBrief> = {
     imageAlt: "Guru Granth Sahib manuscript hit by a bullet during Operation Blue Star",
     imageCredit: "Wikimedia Commons.",
   },
+  "sikhitihas-1955": {
+    keyPoints: [
+      "Night of 3–4 July 1955: Punjab Police raided Guru Ram Das Sarai and the SGPC offices and fired tear gas into the Golden Temple parikrama.",
+      "DIG Ashwani Kumar is named as the officer in charge; Chief Minister Bhim Sen Sachar’s government held the state.",
+      "The Head Granthi and the Akal Takht Jathedar were arrested at home. Sleeping pilgrims were taken in trucks. Langar was stopped.",
+      "The Tribune called it the first police action at the Golden Temple in independent India. Sachar later apologised at the Akal Takht.",
+    ],
+    whyItMatters:
+      "Blue Star was not the first state entry. 1955 is the dress rehearsal: shoes on marble, gas in the holy tank, priests in custody.",
+  },
+  "express-1955": {
+    keyPoints: [
+      "4 a.m., 4 July 1955: DIG Ashwani Kumar led police with shoes on inside the Golden Temple.",
+      "Langar was captured and stopped. Utensils were taken. Guru Ram Das Sarai was raided. Head priests were arrested.",
+      "Tear-gas shells were used in the parikrama. Police put that day’s arrests at 237. About 12,000 were jailed in the slogan-ban morcha.",
+    ],
+    whyItMatters:
+      "A clear, dated reconstruction of how Sikhs were treated in their own shrine for shouting the name of a linguistic state.",
+    excerpt:
+      "It was at 4 am on July 4, 1955 that Deputy Inspector General of Police Ashwani Kumar led the police with shoes on inside the Golden Temple premises.",
+    excerptCite: "The Indian Express, 4 July 2021",
+  },
   "jaito-photo": {
     keyPoints: [
       "About 1924: the 12th Shahidi Jatha takes blessing at the Akal Takht during the Jaito Morcha.",
