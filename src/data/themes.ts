@@ -114,7 +114,7 @@ export const themes: Theme[] = [
       "Pheruman died on a fast for this. The Rajiv–Longowal Accord put a date on it. The date passed. A capital withheld is not a misunderstanding. It is a sequence of written commitments that were not performed.",
     evidence: "Punjab Reorganisation Act; Home Ministry 1969–70 (1970 announcement); Rajiv–Longowal Accord text.",
     chapterIds: ["suba", "bluestar"],
-    sourceIds: ["punjab-reorg", "longowal-accord", "truth-punjab", "pheruman-hindu", "pheruman-sikhitihas"],
+    sourceIds: ["punjab-reorg", "longowal-accord", "truth-punjab", "pheruman-hindu", "pheruman-sikhitihas", "pheruman-portrait"],
     eventIds: ["reorg-act", "pheruman", "chandigarh-1970", "accord-1985"],
   },
   {

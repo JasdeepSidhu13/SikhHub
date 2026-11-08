@@ -193,6 +193,18 @@ export const briefs: Record<string, SourceBrief> = {
       "Hartal was observed throughout Punjab today in memory of Mr. Darshan Singh Pheruman, who died in Amritsar yesterday on the 74th day of his fast for the inclusion of Chandigarh in Punjab.",
     excerptCite: "The Hindu, 29 October 1969",
   },
+  "pheruman-portrait": {
+    keyPoints: [
+      "The only widely circulated photograph of Darshan Singh Pheruman is a studio portrait of unknown date and photographer.",
+      "Wikipedia hosts the same scan as an identification image. No freely licensed original is in the public commons.",
+    ],
+    whyItMatters:
+      "A man who died on the 74th day of a fast is still missing from most official commemorations of Punjabi Suba. The face should be on the record.",
+    image: "/media/pheruman.jpg",
+    imageAlt: "Studio portrait of Shaheed Darshan Singh Pheruman",
+    imageCredit:
+      "Darshan Singh Pheruman. Photographer unknown. Identification portrait circulated in Sikh biographical sources.",
+  },
   "pheruman-sikhitihas": {
     keyPoints: [
       "Pheruman led a shahidi jatha at Jaito in 1924, sat in the Rajya Sabha, and died on 27 October 1969 after 74 days without food.",

@@ -241,6 +241,7 @@ export const chapters: Chapter[] = [
       "pheruman-sikhitihas",
       "pheruman-hindu",
       "pheruman-express",
+      "pheruman-portrait",
       "commons-tara",
     ],
     eventIds: [

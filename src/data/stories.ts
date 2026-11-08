@@ -11,7 +11,7 @@ export interface Story {
   image?: string;
   imageAlt?: string;
   imageCredit?: string;
-  memorial?: { name: string; fact: string; sub: string };
+  memorial?: { name: string; fact: string; sub: string; native?: string };
   href: string;
   cta: string;
 }
@@ -80,9 +80,15 @@ export const stories: Story[] = [
       text: "A Sikh is bound by what he says in Ardas before his Guru.",
       cite: "Darshan Singh Pheruman, letter to the Prime Minister, 27 October 1969",
     },
-    image: media.chandigarh.src,
-    imageAlt: media.chandigarh.alt,
-    imageCredit: media.chandigarh.credit,
+    image: media.pheruman.src,
+    imageAlt: media.pheruman.alt,
+    imageCredit: media.pheruman.credit,
+    memorial: {
+      name: "Darshan Singh Pheruman",
+      native: "ਸ਼ਹੀਦ ਦਰਸ਼ਨ ਸਿੰਘ ਫੇਰੂਮਾਨ",
+      fact: "74 days without food",
+      sub: "1885–1969 · Jaito jatha leader · Rajya Sabha · fasted unto death for Chandigarh",
+    },
     href: "/issues/chandigarh",
     cta: "Open the withheld capital",
   },

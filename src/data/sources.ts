@@ -506,6 +506,18 @@ export const sources: Source[] = [
     tags: ["image", "Jaito"],
   },
   {
+    id: "pheruman-portrait",
+    title: "Studio portrait of Darshan Singh Pheruman",
+    creator: "Unknown photographer",
+    year: "n.d.",
+    kind: "media",
+    url: "https://en.wikipedia.org/wiki/File:Darshan_Singh_Pheruman.jpg",
+    note: "The widely circulated identification portrait of Pheruman. Photographer and original publication date are unknown. Wikipedia hosts the same scan under a non-free identification rationale.",
+    chapterIds: ["suba"],
+    themeIds: ["chandigarh", "punjabi-suba"],
+    tags: ["Pheruman", "photograph"],
+  },
+  {
     id: "pheruman-sikhitihas",
     title: "Shaheed Darshan Singh Pheruman",
     creator: "Sikhitihas",

@@ -55,6 +55,12 @@ export const media = {
     alt: "Palace of Assembly, Chandigarh, the capital still withheld from Punjab",
     credit: "Palace of Assembly, Chandigarh. Wikimedia Commons.",
   },
+  pheruman: {
+    src: "/media/pheruman.jpg",
+    alt: "Studio portrait of Shaheed Darshan Singh Pheruman",
+    credit:
+      "Darshan Singh Pheruman. Photographer unknown. Identification portrait circulated in Sikh biographical sources; the original publication date is not recorded.",
+  },
   aerial: {
     src: "/media/harmandir-aerial.jpg",
     alt: "Aerial view of Sri Harmandir Sahib, the sarovar, and the parikrama, early twentieth century",

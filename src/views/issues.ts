@@ -32,7 +32,7 @@ function extras(id: string): string {
   }
   if (id === "chandigarh") {
     const pheruman = stories.find((s) => s.id === "pheruman")!;
-    return `${pherumanInfographic()}${storyFeature(pheruman)}${clipping({
+    return `${figure(media.chandigarh, "Palace of Assembly, Chandigarh — the capital he died for, still a Union Territory.")}${pherumanInfographic()}${storyFeature(pheruman)}${clipping({
       masthead: "The Hindu",
       date: "29 October 1969",
       headline: "Hartal to mourn Pheruman",

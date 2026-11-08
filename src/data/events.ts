@@ -429,7 +429,7 @@ export const events: TimelineEvent[] = [
     significance:
       "A freedom fighter died for a capital the 1966 Act had withheld. The 1970 announcement and the 1985 Accord repeated the promise. It was not kept.",
     evidence: "The Hindu, 29 October 1969; Sikhitihas biography; Fauja Singh; Ganda Singh.",
-    sourceIds: ["pheruman-hindu", "pheruman-sikhitihas", "pheruman-express", "truth-punjab"],
+    sourceIds: ["pheruman-hindu", "pheruman-sikhitihas", "pheruman-express", "pheruman-portrait", "truth-punjab"],
     themeIds: ["chandigarh", "punjabi-suba"],
     tags: ["Pheruman", "Chandigarh"],
   },

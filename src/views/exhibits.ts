@@ -33,8 +33,9 @@ export function memorialCard(story: Story): string {
   if (!story.memorial) return "";
   const m = story.memorial;
   return `
-    <div class="memorial" aria-label="${esc(m.name)}">
+    <div class="memorial${m.native ? " is-portrait" : ""}" aria-label="${esc(m.name)}">
       <p class="memorial-kicker">${esc(story.kicker)}</p>
+      ${m.native ? `<p class="memorial-native">${esc(m.native)}</p>` : ""}
       <p class="memorial-name">${esc(m.name)}</p>
       <p class="memorial-fact">${esc(m.fact)}</p>
       <p class="memorial-sub">${esc(m.sub)}</p>
@@ -43,8 +44,13 @@ export function memorialCard(story: Story): string {
 
 export function storyFeature(story: Story, reverse = false): string {
   const mediaBlock = story.image
-    ? `<figure class="photo">
+    ? `<figure class="photo${story.memorial?.native ? " is-portrait" : ""}">
          <img src="${esc(asset(story.image))}" alt="${esc(story.imageAlt ?? story.title)}" />
+         ${
+           story.memorial?.native
+             ? `<figcaption class="portrait-caption"><span class="memorial-native">${esc(story.memorial.native)}</span>${esc(story.memorial.name)}</figcaption>`
+             : ""
+         }
          <p class="figure-credit">${esc(story.imageCredit ?? "")}</p>
        </figure>`
     : memorialCard(story);

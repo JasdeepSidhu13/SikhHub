@@ -510,10 +510,37 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   border: 1px solid var(--rule);
 }
 .photo img { width: 100%; height: auto; max-height: 420px; object-fit: cover; }
+.photo.is-portrait {
+  background: #0c1218;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photo.is-portrait img {
+  width: auto;
+  max-width: min(100%, 320px);
+  max-height: 520px;
+  object-fit: contain;
+  margin: 1.4rem auto 0;
+}
 .photo figcaption {
   background: var(--paper);
   padding: 0.75rem 1rem 0.2rem;
   font-size: 0.95rem;
+}
+.portrait-caption {
+  width: 100%;
+  text-align: center;
+  background: var(--paper);
+  padding: 0.9rem 1rem 0.15rem;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+}
+.portrait-caption .memorial-native {
+  display: block;
+  font-size: 1.05rem;
+  margin: 0 0 0.2rem;
+  color: var(--navy);
 }
 .figure-credit {
   margin: 0;
@@ -807,6 +834,22 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   font-size: 0.72rem;
   color: var(--gold);
   margin: 0 0 1.4rem;
+}
+.memorial.is-portrait {
+  min-height: 420px;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2.4rem 1.5rem 2rem;
+}
+.memorial.is-portrait .memorial-kicker { margin-bottom: auto; }
+.memorial-native {
+  font-family: "Noto Sans Gurmukhi", var(--serif), sans-serif;
+  font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+  font-weight: 600;
+  color: var(--gold-soft);
+  margin: 0 0 0.45rem;
+  line-height: 1.35;
 }
 .memorial-name {
   font-family: var(--serif);
