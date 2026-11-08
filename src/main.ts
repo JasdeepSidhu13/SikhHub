@@ -24,7 +24,7 @@ function notFound(): string {
       <div class="wrap">
         <p class="kicker">404</p>
         <h1 class="page-title">This page is not in the archive</h1>
-        <p class="lede-page">The path does not match a chapter, issue, or tool. Start from the narrative or search.</p>
+        <p class="lede-page">The path does not match an issue, chapter, or document.</p>
         <p><a class="btn btn-navy" href="${href("/")}">Back to SikhHub</a></p>
       </div>
     </div>
@@ -37,10 +37,10 @@ function paint(): void {
   let body = "";
 
   if (route.name === "home") {
-    title = "SikhHub — sourced Sikh history, 1920–2025";
+    title = "SikhHub — 1984 Sikh genocide, Punjabi Suba, and the record";
     body = homeView();
   } else if (route.name === "narrative") {
-    title = "Narrative — SikhHub";
+    title = "History — SikhHub";
     body = narrativeIndexView();
   } else if (route.name === "chapter") {
     const view = chapterView(route.id);
@@ -52,10 +52,10 @@ function paint(): void {
       body = view;
     }
   } else if (route.name === "timeline") {
-    title = "Timeline — SikhHub";
+    title = "Chronology — SikhHub";
     body = timelineView("all");
   } else if (route.name === "library") {
-    title = "Library — SikhHub";
+    title = "Documents — SikhHub";
     body = libraryView("all", "");
   } else if (route.name === "source") {
     const view = sourceView(route.id);
@@ -67,7 +67,7 @@ function paint(): void {
       body = view;
     }
   } else if (route.name === "issues") {
-    title = "Issues — SikhHub";
+    title = "The record — SikhHub";
     body = issuesIndexView();
   } else if (route.name === "issue") {
     const view = issueView(route.id);
@@ -79,7 +79,7 @@ function paint(): void {
       body = view;
     }
   } else if (route.name === "method") {
-    title = "Method — SikhHub";
+    title = "Sources — SikhHub";
     body = methodView();
   } else if (route.name === "search") {
     title = "Search — SikhHub";

@@ -60,11 +60,10 @@ export const briefs: Record<string, SourceBrief> = {
     whyItMatters:
       "The title is not a later slogan. In 1946 a Sikh leader put ‘betrayal’ on the page before independence, and the settlement that followed did not answer it.",
   },
-  "anandpur-satp": {
+  "anandpur-pdf": {
     keyPoints: [
       "The Anandpur Sahib Resolution (1973, with later Ludhiana stages) is the Akali programme of greater state autonomy, Chandigarh, river waters, territory, and Sikh religious institutions.",
-      "The Longowal-authenticated English text is the version to read; later polemics often cite different drafts.",
-      "The 1985 Rajiv–Longowal Accord itself recorded the Akali claim that Anandpur was within the Constitution and meant a more federal union.",
+      "The 1985 Rajiv–Longowal Accord recorded the Akali claim that Anandpur was within the Constitution and meant a more federal union.",
     ],
     whyItMatters:
       "Anandpur is unfinished 1966 business — a capital withheld, rivers centralised — not a secession pamphlet. Official white papers that start in 1981 skip this text.",
@@ -182,5 +181,62 @@ export const briefs: Record<string, SourceBrief> = {
     ],
     whyItMatters:
       "A contemporary investigation, not a later memoir. The 1984 Sikh Archive hosts a copy. Later courts walked a path this report opened.",
+  },
+  "pheruman-hindu": {
+    keyPoints: [
+      "29 October 1969: The Hindu reported a hartal across Punjab after Darshan Singh Pheruman died on the 74th day of his fast.",
+      "The demand was Chandigarh for Punjab. Government offices closed. The army was alerted as a “routine precaution.”",
+    ],
+    whyItMatters:
+      "A contemporaneous newspaper, not a later pamphlet. The capital he died for is still a Union Territory.",
+    excerpt:
+      "Hartal was observed throughout Punjab today in memory of Mr. Darshan Singh Pheruman, who died in Amritsar yesterday on the 74th day of his fast for the inclusion of Chandigarh in Punjab.",
+    excerptCite: "The Hindu, 29 October 1969",
+  },
+  "pheruman-sikhitihas": {
+    keyPoints: [
+      "Pheruman led a shahidi jatha at Jaito in 1924, sat in the Rajya Sabha, and died on 27 October 1969 after 74 days without food.",
+      "He said a Sikh is bound by what he says in Ardas before his Guru — and accused Akali leaders of breaking that word over Chandigarh.",
+    ],
+    whyItMatters:
+      "The incomplete 1966 settlement killed a freedom fighter. The later Punjab crisis did not invent Chandigarh.",
+  },
+  "kaka-pdl": {
+    keyPoints: [
+      "Panjab Digital Library accession PH-014088 is catalogued as the first martyr of the Punjabi Suba movement: Kaka Inderjit Singh, Karnal.",
+      "He was killed on 21 September 1960 after raising a banned slogan. He was twelve.",
+    ],
+    whyItMatters:
+      "The photograph is in a public archive. The first shaheed of Punjabi Suba is not a later slogan; his portrait is a record.",
+  },
+  "commons-tara": {
+    keyPoints: [
+      "Master Tara Singh photographed at Tarn Taran in March 1956, during the Punjabi Suba years.",
+      "Three years earlier he had told the All India Sikh Conference that Sikh liberty had not come.",
+    ],
+    whyItMatters: "The face of the demand that produced a state without a capital.",
+    image: "/media/tara-singh.jpg",
+    imageAlt: "Master Tara Singh at Tarn Taran, March 1956",
+    imageCredit: "Wikimedia Commons.",
+  },
+  "commons-granth": {
+    keyPoints: [
+      "A handwritten Guru Granth Sahib manuscript was pierced by a bullet during Operation Blue Star.",
+      "The Army assault on Harmandir Sahib in June 1984 overlapped Guru Arjan’s martyrdom days. Pilgrims were in the complex.",
+    ],
+    whyItMatters: "The wound is not only architectural. The scripture itself was shot.",
+    image: "/media/granth-bullet.jpg",
+    imageAlt: "Guru Granth Sahib manuscript hit by a bullet during Operation Blue Star",
+    imageCredit: "Wikimedia Commons.",
+  },
+  "jaito-photo": {
+    keyPoints: [
+      "About 1924: the 12th Shahidi Jatha takes blessing at the Akal Takht during the Jaito Morcha.",
+      "Unarmed jathas kept coming until the Sikh Gurdwaras Act of 1925.",
+    ],
+    whyItMatters: "Visual evidence of the campaign that took the Guru’s house from mahants.",
+    image: "/media/jaito-jatha.jpg",
+    imageAlt: "12th Shahidi Jatha at the Akal Takht, about 1924",
+    imageCredit: "Wikimedia Commons.",
   },
 };

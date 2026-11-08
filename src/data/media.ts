@@ -30,4 +30,29 @@ export const media = {
     alt: "Archive graphic for 2 November 1984 of the Sikh genocide",
     credit: "Day graphic: 1984 Sikh Archive, 2 November 1984.",
   },
+  tara: {
+    src: "/media/tara-singh.jpg",
+    alt: "Master Tara Singh at Tarn Taran, March 1956",
+    credit: "Master Tara Singh, Tarn Taran, March 1956. Wikimedia Commons.",
+  },
+  akal: {
+    src: "/media/akal-takht.jpg",
+    alt: "The Akal Takht and Sri Harmandir Sahib, Amritsar",
+    credit: "Akal Takht and Harmandir Sahib, Amritsar. Wikimedia Commons.",
+  },
+  granth: {
+    src: "/media/granth-bullet.jpg",
+    alt: "Handwritten Guru Granth Sahib manuscript pierced by a bullet during Operation Blue Star",
+    credit: "Manuscript hit by a bullet during Operation Blue Star, 1984. Wikimedia Commons.",
+  },
+  jaito: {
+    src: "/media/jaito-jatha.jpg",
+    alt: "The 12th Shahidi Jatha taking blessing at the Akal Takht during the Jaito Morcha, about 1924",
+    credit: "12th Shahidi Jatha at the Akal Takht, Jaito Morcha, c. 1924. Wikimedia Commons.",
+  },
+  chandigarh: {
+    src: "/media/chandigarh.jpg",
+    alt: "Palace of Assembly, Chandigarh, the capital still withheld from Punjab",
+    credit: "Palace of Assembly, Chandigarh. Wikimedia Commons.",
+  },
 } as const satisfies Record<string, MediaItem>;

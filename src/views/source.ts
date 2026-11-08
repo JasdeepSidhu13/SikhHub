@@ -3,7 +3,7 @@ import { sourceById, sources } from "../data/sources";
 import { KIND_LABEL } from "../data/types";
 import { chaptersFor, themesFor } from "../lib/lookup";
 import { esc } from "../lib/html";
-import { asset, href } from "../lib/paths";
+import { asset, href, routes } from "../lib/paths";
 import { kindChip } from "./layout";
 
 export function sourceView(id: string): string | null {
@@ -17,7 +17,6 @@ export function sourceView(id: string): string | null {
   return `
     <div class="page-hero">
       <div class="wrap">
-        <p class="kicker">Source brief</p>
         <p>${kindChip(source.kind)} <span class="meta-inline">${esc(KIND_LABEL[source.kind])}</span></p>
         <h1 class="page-title">${esc(source.title)}</h1>
         <p class="lede-page">${esc(source.creator)}${source.year ? ` · ${esc(source.year)}` : ""}</p>
@@ -38,7 +37,7 @@ export function sourceView(id: string): string | null {
             brief
               ? `<h2>Key information</h2><ul>${brief.keyPoints.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>
                  <aside class="callout"><strong>Why it matters</strong><p>${esc(brief.whyItMatters)}</p></aside>`
-              : `<aside class="callout"><strong>Why it is in the library</strong><p>${esc(source.note)}</p></aside>`
+              : `<aside class="callout"><strong>Why it is here</strong><p>${esc(source.note)}</p></aside>`
           }
           ${
             brief?.excerpt
@@ -52,14 +51,14 @@ export function sourceView(id: string): string | null {
         <aside class="side">
           <h3>In this archive</h3>
           <div class="event-mini">
-            ${chs.map((c) => `<a href="${href(`/narrative/${c.id}`)}"><h4>Chapter ${esc(c.number)}</h4><p>${esc(c.title)}</p></a>`).join("")}
-            ${ths.map((t) => `<a href="${href(`/issues/${t.id}`)}"><h4>${esc(t.title)}</h4><p>${esc(t.kicker)}</p></a>`).join("")}
+            ${chs.map((c) => `<a href="${href(routes.chapter(c.id))}"><h4>${esc(c.years)}</h4><p>${esc(c.title)}</p></a>`).join("")}
+            ${ths.map((t) => `<a href="${href(routes.issue(t.id))}"><h4>${esc(t.title)}</h4><p>${esc(t.kicker)}</p></a>`).join("")}
           </div>
           ${
             related.length
               ? `<h3 style="margin-top:1.6rem">Same type of record</h3>
                  <div class="event-mini">${related
-                   .map((s) => `<a href="${href(`/library/${s.id}`)}"><h4>${esc(s.title)}</h4><p>${esc(s.creator)}</p></a>`)
+                   .map((s) => `<a href="${href(routes.document(s.id))}"><h4>${esc(s.title)}</h4><p>${esc(s.creator)}</p></a>`)
                    .join("")}</div>`
               : ""
           }

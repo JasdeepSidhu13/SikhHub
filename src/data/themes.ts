@@ -17,8 +17,7 @@ export const themes: Theme[] = [
       "sahni-archive",
       "gurdwaras-act",
       "nankana-sikhitihas",
-      "sikhri-guru-ka-bagh",
-      "jaito-photo",
+      "jaito-photo"
     ],
     eventIds: ["mahant-era", "sgpc-formed", "nankana", "keys-jaito"],
   },
@@ -31,9 +30,9 @@ export const themes: Theme[] = [
     sikhReading:
       "If the Gurus' path is a Hindu sect, then a separate Panth, a separate electorate, and separate safeguards become communalism. Sikhs have insisted, in scripture, in the Khalsa, and in the Assembly, that they are not a variety of Hindu. Gandhi's own Collected Works are the evidence of the contrary claim.",
     evidence:
-      "CWMG vol. 28 item 153; vol. 72–73; vol. 97 item 412. These are primary texts, not later reconstructions.",
+      "Collected Works of Mahatma Gandhi, volume 28, item 153 (Internet Archive); later Harijan and prayer-meeting texts quoted in the history.",
     chapterIds: ["identity", "partition"],
-    sourceIds: ["cwmg-28", "cwmg-73", "cwmg-97", "sikh24-gandhi", "article-25"],
+    sourceIds: ["cwmg-28", "article-25"],
     eventIds: ["misguided-patriot", "gandhi-tara-1940", "gandhi-dec-1947"],
   },
   {
@@ -45,9 +44,9 @@ export const themes: Theme[] = [
     sikhReading:
       "Gurmukhi is the script of Guru Granth Sahib. Language politics in Punjab were never a neutral census technicality. They were a way to deny a Punjabi-speaking state, and a way to peel Sikh identity off the land.",
     evidence:
-      "Gandhi–Nehru letter, 3 August 1937 (CWMG 66); Bipan Chandra on language-and-religion campaigns; 1951 and 1961 census politics.",
+      "Gandhi–Nehru letter, 3 August 1937 (Collected Works, volume 66, Internet Archive); 1951 and 1961 census politics.",
     chapterIds: ["identity", "suba"],
-    sourceIds: ["cwmg-66", "bipan-chandra"],
+    sourceIds: ["cwmg-66"],
     eventIds: ["gandhi-gurmukhi", "src-rejects", "fasts-census"],
   },
   {
@@ -74,7 +73,7 @@ export const themes: Theme[] = [
       "These are two different sentences. The kirpan clause is a recognition. Explanation II is a classification Sikhs have objected to because it can be read as folding them into Hinduism for law. Do not use one to cancel the other.",
     evidence: "Constitution of India, Article 25, Explanations I and II — official text.",
     chapterIds: ["partition"],
-    sourceIds: ["article-25", "article-25-kanoon", "lokmarg-25"],
+    sourceIds: ["article-25" ],
     eventIds: ["hukam-singh-1949"],
   },
   {
@@ -100,8 +99,8 @@ export const themes: Theme[] = [
       "After Partition, Punjabi Suba was the remaining territorial expression of Sikh security in India. Nehru's private letters show that even an SGPC electoral mandate would not move him. The 1966 Act is therefore both a victory and a truncation.",
     evidence: "Nehru–Kairon correspondence; Punjab Reorganisation Act; Regional Formula; census studies.",
     chapterIds: ["suba"],
-    sourceIds: ["punjab-reorg", "nehru-archive", "bipan-chandra", "sikhitihas-1955"],
-    eventIds: ["punjabi-suba-demand", "reorg-act", "nehru-kairon-1959"],
+    sourceIds: ["punjab-reorg", "sikhitihas-1955", "kaka-pdl", "commons-tara"],
+    eventIds: ["punjabi-suba-demand", "kaka-inderjit", "reorg-act", "nehru-kairon-1959"],
   },
   {
     id: "chandigarh",
@@ -113,7 +112,7 @@ export const themes: Theme[] = [
       "Pheruman died on a fast for this. The Rajiv–Longowal Accord put a date on it. The date passed. A capital withheld is not a misunderstanding. It is a sequence of written commitments that were not performed.",
     evidence: "Punjab Reorganisation Act; Home Ministry 1969–70 (1970 announcement); Rajiv–Longowal Accord text.",
     chapterIds: ["suba", "bluestar"],
-    sourceIds: ["punjab-reorg", "longowal-accord", "truth-punjab"],
+    sourceIds: ["punjab-reorg", "longowal-accord", "truth-punjab", "pheruman-hindu", "pheruman-sikhitihas"],
     eventIds: ["reorg-act", "pheruman", "chandigarh-1970", "accord-1985"],
   },
   {
@@ -126,7 +125,7 @@ export const themes: Theme[] = [
       "Riparian principle is not mysticism. Punjab's rivers irrigate Punjab. The Dharam Yudh Morcha's water demand was the economic half of Anandpur, not a religious extra. Official narratives that ignore SYL misdescribe the agitation.",
     evidence: "Reorganisation Act §§78–80; SGPC white paper; Anandpur text; Kapoori chronology.",
     chapterIds: ["suba", "bluestar"],
-    sourceIds: ["punjab-reorg", "truth-punjab", "anandpur-satp"],
+    sourceIds: ["punjab-reorg", "truth-punjab" ],
     eventIds: ["reorg-act", "kapoori-syl", "dharam-yudh"],
   },
   {
@@ -139,7 +138,7 @@ export const themes: Theme[] = [
       "Anandpur is the political programme of unfinished 1966 business. Critics heard secession in “qaum.” The Accord of 1985 recorded the Akali position that the resolution was inside the Constitution and meant to strengthen the union by making it federal. That text is still available.",
     evidence: "Longowal-authenticated Anandpur text; Ludhiana 1978; Memorandum of Settlement clause 8.",
     chapterIds: ["bluestar"],
-    sourceIds: ["anandpur-satp", "anandpur-pdf", "longowal-accord", "truth-punjab"],
+    sourceIds: ["anandpur-pdf", "longowal-accord", "truth-punjab"],
     eventIds: ["anandpur-1973", "dharam-yudh"],
   },
   {
@@ -152,7 +151,7 @@ export const themes: Theme[] = [
       "The Akal Takht is the seat of Sikh temporal authority. An army assault on it, with pilgrims in the complex, is a wound to the Panth that no white paper can reclassify as a policing success. The SGPC paper insists the political issues were left unsolved on purpose.",
     evidence: "SGPC Truth About Punjab; GOI White Paper; HRW background; photographs of the destroyed Akal Takht.",
     chapterIds: ["bluestar"],
-    sourceIds: ["truth-punjab", "white-paper-goi", "hrw-dead-silence", "commons-akal-takht"],
+    sourceIds: ["truth-punjab", "white-paper-goi", "hrw-dead-silence", "commons-granth"],
     eventIds: ["blue-star", "presidents-rule"],
   },
   {
@@ -172,7 +171,7 @@ export const themes: Theme[] = [
       "hrw-1984",
       "express-sajjan-2025",
       "archive-1984",
-      "who-are-guilty",
+      "who-are-guilty"
     ],
     eventIds: ["november-1984", "sajjan-2018", "sajjan-2025"],
   },
@@ -201,7 +200,7 @@ export const themes: Theme[] = [
     chapterIds: ["shrine", "partition", "suba", "bluestar", "accounting"],
     sourceIds: ["nankana-sikhitihas", "sikhitihas-1955", "delhi-hc-2018", "hrw-killers"],
     eventIds: ["nankana", "golden-temple-1955", "blue-star", "november-1984", "khalra"],
-  },
+  }
 ];
 
 export const themeById = Object.fromEntries(themes.map((t) => [t.id, t]));

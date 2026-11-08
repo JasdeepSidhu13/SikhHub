@@ -1,6 +1,6 @@
 import { media } from "../data/media";
 import { esc } from "../lib/html";
-import { asset, href } from "../lib/paths";
+import { asset, href, routes } from "../lib/paths";
 
 export function genocideInfographic(): string {
   return `
@@ -20,7 +20,7 @@ export function genocideInfographic(): string {
         <li><time>2 Nov</time> The killing spreads through resettlement colonies and the northern “cow-belt.” Sikh businesses are selected while neighbours are left standing.</li>
         <li><time>3–4 Nov</time> Trilokpuri, Kalyanpuri, Sultanpuri, and other colonies are emptied of Sikh men. Widows and children are pushed into camps. Sexual violence is organised, not incidental.</li>
       </ol>
-      <p class="figure-credit">Sequence and figures drawn from the <a href="${href("/library/archive-1984")}">1984 Sikh Archive</a>, Delhi High Court 2018, and Geoffrey Robertson QC’s independent estimate of about eight thousand dead. Official counts have been lower.</p>
+      <p class="figure-credit">Sequence and figures drawn from the <a href="${href(routes.document("archive-1984"))}">1984 Sikh Archive</a>, Delhi High Court 2018, and Geoffrey Robertson QC’s independent estimate of about eight thousand dead. Official counts have been lower.</p>
     </section>
   `;
 }
@@ -48,6 +48,28 @@ export function figure(item: { src: string; alt: string; credit: string }, capti
       ${caption ? `<figcaption>${esc(caption)}</figcaption>` : ""}
       <p class="figure-credit">${esc(item.credit)}</p>
     </figure>
+  `;
+}
+
+export function pherumanInfographic(): string {
+  return `
+    <section class="infographic" aria-label="Darshan Singh Pheruman's 74-day fast">
+      <p class="kicker">15 August–27 October 1969</p>
+      <h2>Seventy-four days</h2>
+      <p class="ig-lead">Darshan Singh Pheruman, freedom fighter and former Rajya Sabha member, fasted unto death so Chandigarh and left-out Punjabi-speaking areas would go to Punjab. He died on day 74. The capital is still a Union Territory.</p>
+      <div class="ig-stats">
+        <div class="ig-stat"><b>1924</b><span>Led a shahidi jatha at Jaito</span></div>
+        <div class="ig-stat"><b>1966</b><span>Punjab created without Chandigarh</span></div>
+        <div class="ig-stat"><b>74</b><span>days without food</span></div>
+        <div class="ig-stat"><b>1986</b><span>Accord date that also passed</span></div>
+      </div>
+      <ol class="ig-days">
+        <li><time>15 Aug</time> Fast begins in custody after arrest under the Punjab Security Act. He had announced it from Independence Day, to redeem an ardas sworn at the Akal Takht.</li>
+        <li><time>27 Aug</time> Moved to the Government Hospital, Amritsar, under police guard. He refuses all feeding.</li>
+        <li><time>27 Oct</time> Day 74. He writes to the Prime Minister that a Sikh is bound by Ardas. Sant Fateh Singh visits with flowers. Pheruman dies the same day.</li>
+        <li><time>28 Oct</time> Hartal across Punjab. The Hindu records closed offices, mourning processions, and an army alert “as a routine precaution.”</li>
+      </ol>
+    </section>
   `;
 }
 

@@ -61,7 +61,7 @@ export const events: TimelineEvent[] = [
     significance:
       "The massacre at the Guru's birthplace made gurdwara reform a Panth-wide cause. The SGPC already existed; Nankana intensified it.",
     evidence: "High Court retrospective (p. 511); Sahni; Sikhitihas event record. The Home Ministry PDF misdates the massacre in a subsection heading.",
-    sourceIds: ["nankana-sikhitihas", "sahni-archive", "nankana-express", "sikhri-nankana"],
+    sourceIds: ["nankana-sikhitihas", "sahni-archive", "nankana-express" ],
     themeIds: ["shrine-control", "state-violence"],
     tags: ["Nankana", "shaheedi"],
   },
@@ -77,7 +77,7 @@ export const events: TimelineEvent[] = [
     significance:
       "Sympathy for the dead did not become recognition of Sikhism as a separate religion. Hold the 1921 visit and the 1925–47 writings together.",
     evidence: "CWMG vol. 19; GandhiServe chronology.",
-    sourceIds: ["cwmg-19", "cwmg-portal"],
+    sourceIds: [],
     themeIds: ["identity-hinduism", "shrine-control"],
     tags: ["Gandhi", "Nankana"],
   },
@@ -93,7 +93,7 @@ export const events: TimelineEvent[] = [
     significance:
       "A legal victory paid for in jathas. Representative management of covered shrines gained a statutory basis.",
     evidence: "Sahni; India Code / Kanoon text of the Act; SikhRI on Guru Ka Bagh; Jaito photograph.",
-    sourceIds: ["gurdwaras-act", "sahni-pdf", "sikhri-guru-ka-bagh", "jaito-photo"],
+    sourceIds: ["gurdwaras-act", "sahni-pdf", "jaito-photo"],
     themeIds: ["shrine-control"],
     tags: ["1925 Act", "Jaito"],
   },
@@ -109,7 +109,7 @@ export const events: TimelineEvent[] = [
     significance:
       "The original remark, Sikh objections, and Gandhi's explanation belong together. The October text is the document for his religious view, not a rumour.",
     evidence: "CWMG vol. 28, item 153 (1 October 1925).",
-    sourceIds: ["cwmg-28", "cwmg-28-pdf", "sikh24-gandhi"],
+    sourceIds: ["cwmg-28" ],
     themeIds: ["identity-hinduism"],
     tags: ["Gandhi", "Guru Gobind Singh"],
   },
@@ -125,7 +125,7 @@ export const events: TimelineEvent[] = [
     significance:
       "Hukam Singh's 1949 protest is unintelligible without the prior assurances. Political language of fairness was not converted into constitutional safeguards.",
     evidence: "CWMG vol. 51; Khushwant Singh, A History of the Sikhs, vol. 2.",
-    sourceIds: ["cwmg-portal", "khushwant"],
+    sourceIds: ["khushwant"],
     themeIds: ["assurances"],
     tags: ["Congress", "Sis Ganj"],
   },
@@ -141,7 +141,7 @@ export const events: TimelineEvent[] = [
     significance:
       "The letter simultaneously recognises Sikh attachment to Punjabi and disparages its script — and treats that attachment as a problem of Hindu unity.",
     evidence: "Located CWMG vol. 66 letter; archive.org scan of the printed volume.",
-    sourceIds: ["cwmg-66", "cwmg-portal"],
+    sourceIds: ["cwmg-66" ],
     themeIds: ["gurmukhi", "identity-hinduism"],
     tags: ["Gurmukhi", "Nehru"],
   },
@@ -157,7 +157,7 @@ export const events: TimelineEvent[] = [
     significance:
       "The phrase shows a paternalistic stance even as Gandhi described friendly relations with Sikhs. Community self-preservation was recast as communalism.",
     evidence: "CWMG vol. 72, item 441; “Sikhs and the Sword,” vol. 73, item 35.",
-    sourceIds: ["cwmg-72", "cwmg-73"],
+    sourceIds: [],
     themeIds: ["identity-hinduism", "assurances"],
     tags: ["Tara Singh", "Harijan"],
   },
@@ -189,7 +189,7 @@ export const events: TimelineEvent[] = [
     significance:
       "This directly documents his religious view at the moment of independence — after Sikh sacrifices in the freedom movement and amid the wreckage of Partition.",
     evidence: "CWMG vol. 97, items 341 and 412.",
-    sourceIds: ["cwmg-97"],
+    sourceIds: [],
     themeIds: ["identity-hinduism"],
     tags: ["Gandhi", "1947"],
   },
@@ -205,7 +205,7 @@ export const events: TimelineEvent[] = [
     significance:
       "Direct evidence of government action against Akali organising in the early republic's formative period.",
     evidence: "Nehru to provincial premiers, 9 March 1949; Selected Works vol. 9.",
-    sourceIds: ["nehru-archive"],
+    sourceIds: [],
     themeIds: ["assurances", "state-violence"],
     tags: ["Nehru", "Tara Singh"],
   },
@@ -221,7 +221,7 @@ export const events: TimelineEvent[] = [
     significance:
       "Master Tara Singh named the settlement after 1947 as a change of masters, not emancipation. That diagnosis frames Punjabi Suba, Anandpur, and the later accounting.",
     evidence: "Master Tara Singh, All India Sikh Conference, 28 March 1953; Bazaz, 1954; Sarsfield foreword, 1946.",
-    sourceIds: ["sarsfield", "nehru-archive"],
+    sourceIds: ["sarsfield" ],
     themeIds: ["assurances", "identity-hinduism"],
     tags: ["Master Tara Singh", "1953"],
   },
@@ -253,7 +253,7 @@ export const events: TimelineEvent[] = [
     significance:
       "Language was never only language. After Partition, a Punjabi-speaking state was the remaining territorial expression of Sikh political security.",
     evidence: "Movement studies; Fauja Singh's Tara Singh biography.",
-    sourceIds: ["nehru-archive", "bipan-chandra"],
+    sourceIds: [],
     themeIds: ["punjabi-suba"],
     tags: ["Punjabi Suba", "PEPSU"],
   },
@@ -269,7 +269,7 @@ export const events: TimelineEvent[] = [
     significance:
       "Establishes Nehru's instruction and his preferred policy scope. The archival letter is evidence of the Centre's posture, not a later accusation.",
     evidence: "Nehru Archive letter to Katju, 12 October 1953 (Selected Works); related Prasad correspondence.",
-    sourceIds: ["nehru-katju-1953", "nehru-archive"],
+    sourceIds: ["nehru-katju-1953" ],
     themeIds: ["assurances"],
     tags: ["Nehru", "Scheduled Castes"],
   },
@@ -301,7 +301,7 @@ export const events: TimelineEvent[] = [
     significance:
       "“Insufficient agreement” was produced in part by campaigns encouraging Punjabi-speaking Hindus to return Hindi on the census — tying language to religious identity.",
     evidence: "Punjabi Suba press study; Nehru to Kairon, 24 November, Selected Works vol. 31.",
-    sourceIds: ["nehru-archive", "bipan-chandra"],
+    sourceIds: [],
     themeIds: ["punjabi-suba", "gurmukhi"],
     tags: ["SRC", "census"],
   },
@@ -317,7 +317,7 @@ export const events: TimelineEvent[] = [
     significance:
       "A holding pattern, not a settlement. Akali politics continued to treat a Punjabi-speaking state as unfinished.",
     evidence: "High Court retrospective; language-census studies.",
-    sourceIds: ["bipan-chandra", "punjab-reorg"],
+    sourceIds: ["punjab-reorg"],
     themeIds: ["punjabi-suba"],
     tags: ["Regional Formula"],
   },
@@ -333,7 +333,7 @@ export const events: TimelineEvent[] = [
     significance:
       "Private correspondence shows that SGPC electoral legitimacy would not move the Centre's opposition to a Punjabi-speaking state.",
     evidence: "Selected Works: Nehru–Tara Singh 1958–59; Nehru to Kairon, May 1959, vol. 49, p. 305.",
-    sourceIds: ["nehru-archive"],
+    sourceIds: [],
     themeIds: ["punjabi-suba", "assurances"],
     tags: ["Nehru", "Kairon"],
   },
@@ -341,15 +341,15 @@ export const events: TimelineEvent[] = [
     id: "kaka-inderjit",
     date: "21 September 1960",
     sort: "1960-09-21",
-    title: "Kaka Inderjit Singh killed in Karnal",
+    title: "Kaka Inderjit Singh, first shaheed of Punjabi Suba",
     period: "1955–1961",
     chapterId: "suba",
     summary:
-      "Sikh Research Institute remembers Inderjit as a 12-year-old fifth-grade student and the first shaheed of the Punjabi Suba movement. Harjinder Singh Dilgeer dates his killing by police to 21 September. Later accounts vary on his age and on how he was killed. No contemporary police or inquest record was located for the source chronology.",
+      "A 12-year-old fifth-grade student in Karnal was killed after raising Punjabi Suba Zindabad, a slogan banned in 1955. Police beat him and threw him into a well. The SGPC Gazette records the date and the well. Sikh Research Institute names him the first shaheed of the movement. The Panjab Digital Library holds his portrait.",
     significance:
-      "The age of 12 and the first-shaheed designation are attributed here to SikhRI as community remembrance. The date is also in Dilgeer's chronology.",
-    evidence: "SikhRI commemoration; Dilgeer, Who Are the Sikhs?; conflicting later accounts.",
-    sourceIds: ["sikhri"],
+      "The first blood of Punjabi Suba was a child’s. The state that arrived in 1966 still did not include its capital.",
+    evidence: "SGPC Gazette, September 2016; SikhRI commemoration; Dilgeer; PDL accession PH-014088.",
+    sourceIds: ["kaka-pdl"],
     themeIds: ["punjabi-suba", "state-violence"],
     tags: ["Inderjit Singh", "remembrance"],
   },
@@ -365,7 +365,7 @@ export const events: TimelineEvent[] = [
     significance:
       "Census returns record declarations, which historians distinguish from everyday usage. The “insufficient agreement” used against Punjabi Suba was partly manufactured.",
     evidence: "Nehru–Kairon letters; Nehru Archive; census tables; language-census studies.",
-    sourceIds: ["nehru-archive", "bipan-chandra"],
+    sourceIds: [],
     themeIds: ["punjabi-suba", "gurmukhi"],
     tags: ["census", "fast"],
   },
@@ -381,7 +381,7 @@ export const events: TimelineEvent[] = [
     significance:
       "Read it alongside Akali correspondence for the competing accounts of what “discrimination” meant.",
     evidence: "Nehru Archive, Punjab Commission report.",
-    sourceIds: ["nehru-archive"],
+    sourceIds: [],
     themeIds: ["punjabi-suba"],
     tags: ["commission"],
   },
@@ -421,15 +421,15 @@ export const events: TimelineEvent[] = [
     id: "pheruman",
     date: "15 August–27 October 1969",
     sort: "1969-10-27",
-    title: "Darshan Singh Pheruman's hunger strike",
+    title: "Darshan Singh Pheruman dies on the 74th day",
     period: "1962–1970",
     chapterId: "suba",
     summary:
-      "The veteran freedom fighter began a fast over Chandigarh, Punjabi-speaking areas left outside the state, and related Punjab claims. He died on 27 October. Fauja Singh, Ganda Singh and the SGPC white paper count 74 days. An SGPC Gazette chronology lists 78, so the count is attributed to the named histories.",
+      "The Jaito veteran and former Rajya Sabha member began a fast unto death on 15 August 1969 so Chandigarh would go to Punjab. He died in Amritsar on 27 October, the 74th day. The Hindu recorded a statewide hartal the next morning.",
     significance:
-      "A Congress-era freedom fighter dying on a fast for the incomplete 1966 settlement — evidence that the withheld capital was not a later militant invention.",
-    evidence: "Fauja Singh biography; Ganda Singh; SGPC Gazette, October 2020.",
-    sourceIds: ["truth-punjab"],
+      "A freedom fighter died for a capital the 1966 Act had withheld. The 1970 announcement and the 1985 Accord repeated the promise. It was not kept.",
+    evidence: "The Hindu, 29 October 1969; Sikhitihas biography; Fauja Singh; Ganda Singh.",
+    sourceIds: ["pheruman-hindu", "pheruman-sikhitihas", "pheruman-express", "truth-punjab"],
     themeIds: ["chandigarh", "punjabi-suba"],
     tags: ["Pheruman", "Chandigarh"],
   },
@@ -461,7 +461,7 @@ export const events: TimelineEvent[] = [
     significance:
       "From a Sikh reading, Anandpur is the political programme of unfinished 1966 business plus centre–state federalism — not a secession document. Critics read “qaum” and “bolbala” otherwise. The 1985 Accord itself recorded the Akali claim that Anandpur was within the Constitution.",
     evidence: "Text authenticated by Harchand Singh Longowal; Ludhiana 1978 resolutions.",
-    sourceIds: ["anandpur-satp", "anandpur-pdf", "anandpur-archive", "longowal-accord"],
+    sourceIds: ["anandpur-pdf", "anandpur-archive", "longowal-accord"],
     themeIds: ["autonomy", "chandigarh", "waters"],
     tags: ["Anandpur"],
   },
@@ -477,7 +477,7 @@ export const events: TimelineEvent[] = [
     significance:
       "Religious injury and the autonomy programme began to occupy the same political field.",
     evidence: "Grewal, The Sikhs of the Punjab; Ludhiana resolutions, 28–29 October.",
-    sourceIds: ["grewals", "anandpur-satp"],
+    sourceIds: [],
     themeIds: ["autonomy"],
     tags: ["1978", "Bhindranwale"],
   },
@@ -493,7 +493,7 @@ export const events: TimelineEvent[] = [
     significance:
       "Violence against officials and civilians escalated. Distinguishing arrest, accusation, and proof remains necessary.",
     evidence: "Press chronologies; Grewal.",
-    sourceIds: ["grewals", "truth-punjab"],
+    sourceIds: ["truth-punjab"],
     themeIds: ["autonomy"],
     tags: ["1981"],
   },
@@ -509,7 +509,7 @@ export const events: TimelineEvent[] = [
     significance:
       "The 1966 Act's centralised river arrangements were now being built on the ground. Water was not a symbolic add-on to the Dharam Yudh Morcha.",
     evidence: "Water/SYL chronologies; SGPC account.",
-    sourceIds: ["punjab-reorg", "truth-punjab", "anandpur-satp"],
+    sourceIds: ["punjab-reorg", "truth-punjab" ],
     themeIds: ["waters", "autonomy"],
     tags: ["SYL", "Kapoori"],
   },
@@ -525,7 +525,7 @@ export const events: TimelineEvent[] = [
     significance:
       "The SGPC white paper's list of basic issues is the Akali case: SYL, boundaries, Chandigarh, centre–state relations. The Government white paper starts the clock in 1981.",
     evidence: "SGPC white paper; Government white paper; Dublin City University research.",
-    sourceIds: ["truth-punjab", "white-paper-goi", "anandpur-satp"],
+    sourceIds: ["truth-punjab", "white-paper-goi" ],
     themeIds: ["autonomy", "chandigarh", "waters"],
     tags: ["Dharam Yudh", "Longowal"],
   },
@@ -541,7 +541,7 @@ export const events: TimelineEvent[] = [
     significance:
       "The conflict had become lethal for state officers as well as for Sikh agitators and civilians. Both facts belong on the record.",
     evidence: "SGPC account; press chronology.",
-    sourceIds: ["truth-punjab", "grewals"],
+    sourceIds: ["truth-punjab" ],
     themeIds: ["autonomy"],
     tags: ["1983"],
   },
@@ -557,7 +557,7 @@ export const events: TimelineEvent[] = [
     significance:
       "1983 closed amid escalating violence, unresolved negotiations, and tighter central control — the immediate prelude to June 1984.",
     evidence: "India Today, October 1983; historical studies of the December move.",
-    sourceIds: ["india-today-1983", "truth-punjab", "hrw-dead-silence"],
+    sourceIds: ["truth-punjab", "hrw-dead-silence"],
     themeIds: ["autonomy", "bluestar-1984"],
     tags: ["President's Rule", "Akal Takht"],
   },
@@ -573,7 +573,7 @@ export const events: TimelineEvent[] = [
     significance:
       "From a Sikh reading, an army assault on Harmandir Sahib and the Akal Takht is not reducible to a police action against militants. The SGPC white paper insists that the crisis was kept alive by the failure to settle Chandigarh, waters, and autonomy.",
     evidence: "SGPC white paper; Government white paper; HRW background; Grewal.",
-    sourceIds: ["truth-punjab", "white-paper-goi", "hrw-dead-silence", "commons-akal-takht"],
+    sourceIds: ["truth-punjab", "white-paper-goi", "hrw-dead-silence" ],
     themeIds: ["bluestar-1984", "state-violence"],
     tags: ["Blue Star", "Akal Takht"],
   },
@@ -672,7 +672,7 @@ export const events: TimelineEvent[] = [
     sourceIds: ["express-sajjan-2025", "hindu-sajjan-2025"],
     themeIds: ["november-1984"],
     tags: ["Sajjan Kumar", "2025"],
-  },
+  }
 ];
 
 export const periods = [
@@ -683,5 +683,5 @@ export const periods = [
   "1962–1970",
   "1973–1983",
   "1984–1985",
-  "1985–2025",
+  "1985–2025"
 ];
