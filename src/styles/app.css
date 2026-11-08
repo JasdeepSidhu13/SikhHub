@@ -956,7 +956,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 }
 .founder-frame figcaption {
   margin: 0;
-  padding: 0.85rem 0.15rem 0.2rem;
+  padding: 0.7rem 0.15rem 0.15rem;
   text-align: center;
   font-family: var(--serif);
   font-size: 1.05rem;
@@ -996,8 +996,9 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   text-transform: none;
   letter-spacing: 0.01em;
 }
-.kicker .org {
-  letter-spacing: 0.04em;
+.kicker .org,
+.founder-kicker .org {
+  letter-spacing: 0.02em;
 }
 .founder-copy .lede {
   font-size: 1.18rem;
