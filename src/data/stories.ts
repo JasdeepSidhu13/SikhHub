@@ -27,10 +27,10 @@ export const stories: Story[] = [
     lede:
       "The first police action at Harmandir Sahib in independent India. DIG Ashwani Kumar led Punjab Police into the complex under Chief Minister Bhim Sen Sachar. Langar was stopped. Sleeping pilgrims were taken away in trucks. Tear-gas shells fell in the marble walk and in the sarovar.",
     body: [
-      "On 6 April 1955 the Amritsar district magistrate banned the slogan Punjabi Suba Zindabad. Master Tara Singh courted arrest on 10 May. Every morning jathas prayed at the Akal Takht and walked out to be jailed. About twelve thousand men and women were arrested in sixty-four days.",
-      "At midnight on 3–4 July police arrested the Head Granthi, Giani Bhupinder Singh, and the Akal Takht Jathedar, Giani Achhar Singh, at their homes. At three or four in the morning armed police raided Guru Ram Das Sarai and took hundreds of sleeping pilgrims and volunteers in trucks. They occupied the SGPC and Akali offices. They closed the Guru ka Langar and took the utensils.",
-      "At 4 a.m. DIG Ashwani Kumar led police into the premises in shoes. At midday they advanced on Manji Sahib with lathis, guns and tear gas while thousands of Sikhs sat down in their path. Shells fell in the parikrama; some fell in the holy tank. The Akali Dal’s general secretary said at least two Sikhs were killed by police fire. The SGPC history says nobody denied it. Police put the day’s arrests at 237.",
-      "The slogan ban was lifted on 12 July. No judicial inquiry followed. An Akali committee charged the government on ten counts, including tear gas in the parikrama and entering Manji Sahib in shoes. Sachar later apologised at the Akal Takht. Dilgeer called the raid a dress rehearsal for June 1984.",
+      "On 6 April 1955 the Amritsar district magistrate banned the slogan Punjabi Suba Zindabad under Section 144. The order named the jaikara itself as a threat to order: “Sine vich goli khavange, Punjabi Suba banavange.” Master Tara Singh courted arrest on 10 May. Every morning jathas prayed at the Akal Takht and walked out to be jailed. The government cancelled weapon licences at the Akal Takht. The SGPC refused to surrender the traditional arms.",
+      "At midnight on 3–4 July police arrested the Head Granthi, Giani Bhupinder Singh, and the Akal Takht Jathedar, Giani Achhar Singh, at their homes. At three or four in the morning armed police raided Guru Ram Das Sarai and took five or six hundred sleeping pilgrims and volunteers in trucks. They occupied the SGPC and Akali offices. They closed the Guru ka Langar, cut the supplies, and took the utensils. Grewal records that the police entered when the SGPC would not surrender those arms.",
+      "At 4 a.m. DIG Ashwani Kumar led police into the premises in shoes. A flag march was ordered through the bazars around the shrine. At midday police advanced on Manji Sahib with lathis, guns and tear gas while thousands of Sikhs sat down in their path. Shells fell in the parikrama; some fell in the holy tank. Hukam Singh and Bawa Harkishan Singh, who were running the morcha from the complex, were confined. The Akali Dal’s general secretary said at least two Sikhs were killed by police fire. The SGPC history says nobody denied it, and that no policeman had a bullet wound. Police put that day’s arrests at 237.",
+      "The raid lasted a day. It did not end the morcha. About eight thousand volunteers were jailed in the first week of July; about twelve thousand in sixty-four days, 417 of them women in the SGPC count. The slogan ban was lifted on 12 July. Master Tara Singh was released in September. No judicial inquiry followed. An Akali committee charged the government on ten counts, including tear gas in the parikrama and entering Manji Sahib in shoes. Sachar apologised at the Akal Takht on 10 November 1955. Dilgeer called the raid a dress rehearsal for June 1984. The SGPC later displayed the tear-gas shells themselves at Manji Sahib.",
     ],
     quote: {
       text: "Sine vich goli khavange, Punjabi Suba banavange.",
@@ -39,7 +39,7 @@ export const stories: Story[] = [
     image: media.causeway.src,
     imageAlt: media.causeway.alt,
     imageCredit: media.causeway.credit,
-    href: "/issues/state-violence",
+    href: "/issues/golden-temple-1955",
     cta: "Open the 1955 raid",
     further: { href: "/documents/express-1955", cta: "The Indian Express reconstruction" },
   },

@@ -17,9 +17,8 @@ export const themes: Theme[] = [
       "sahni-archive",
       "gurdwaras-act",
       "nankana-sikhitihas",
+      "nankana-express",
       "jaito-photo",
-      "sikhitihas-1955",
-      "express-1955",
     ],
     eventIds: ["mahant-era", "sgpc-formed", "nankana", "keys-jaito"],
   },
@@ -101,8 +100,8 @@ export const themes: Theme[] = [
       "After Partition, Punjabi Suba was the remaining territorial expression of Sikh security in India. Nehru's private letters show that even an SGPC electoral mandate would not move him. The 1966 Act is therefore both a victory and a truncation.",
     evidence: "Nehru–Kairon correspondence; Punjab Reorganisation Act; Regional Formula; census studies.",
     chapterIds: ["suba"],
-    sourceIds: ["punjab-reorg", "sikhitihas-1955", "express-1955", "kaka-pdl", "commons-tara"],
-    eventIds: ["punjabi-suba-demand", "golden-temple-1955", "kaka-inderjit", "reorg-act", "nehru-kairon-1959"],
+    sourceIds: ["punjab-reorg", "kaka-pdl", "commons-tara"],
+    eventIds: ["punjabi-suba-demand", "kaka-inderjit", "reorg-act", "nehru-kairon-1959"],
   },
   {
     id: "chandigarh",
@@ -116,6 +115,28 @@ export const themes: Theme[] = [
     chapterIds: ["suba", "bluestar"],
     sourceIds: ["punjab-reorg", "longowal-accord", "truth-punjab", "pheruman-hindu", "pheruman-sikhitihas", "pheruman-portrait"],
     eventIds: ["reorg-act", "pheruman", "chandigarh-1970", "accord-1985"],
+  },
+  {
+    id: "golden-temple-1955",
+    title: "The 1955 raid on Harmandir Sahib",
+    kicker: "3–4 July 1955",
+    summary:
+      "Punjab Police entered Sri Harmandir Sahib in shoes, stopped the langar, and fired tear gas into the parikrama and the sarovar. It was the first police action at the Golden Temple in independent India. No judicial inquiry followed.",
+    sikhReading:
+      "The night of 3–4 July 1955 is its own crime, eight years after independence, under Chief Minister Bhim Sen Sachar. DIG Ashwani Kumar led police onto the marble in shoes. The Head Granthi and the Akal Takht Jathedar were taken from their homes. Guru Ram Das Sarai was emptied of sleeping pilgrims. Langar was stopped. Tear-gas shells fell in the parikrama and in the holy tank. The Tribune called it the first such action since independence. Sangat Singh called it the first sacrilege by a Congress government. Dilgeer later called it a dress rehearsal for June 1984. The Akali demand for a judicial inquiry was refused. Sachar’s apology at the Akal Takht did not produce one. The raid has its own papers. Read those before folding 1955 into Nankana 1921 or into June 1984.",
+    evidence:
+      "SGPC history of the 1955 morcha (Karam Singh Zakhmi, revised by Harjinder Singh Dilgeer); Gurmit Singh; J. S. Grewal; Sangat Singh; The Tribune; The Indian Express reconstruction of 4 July 2021; Sikhitihas sourced event pages.",
+    chapterIds: ["partition", "suba"],
+    sourceIds: [
+      "sikhitihas-1955",
+      "sikhitihas-morcha-1955",
+      "express-1955",
+      "express-1955-shells",
+      "tribune-1955",
+      "zakhmi-pdl",
+      "commons-aerial",
+    ],
+    eventIds: ["slogan-ban-1955", "golden-temple-1955", "slogan-lift-1955", "sachar-apology-1955"],
   },
   {
     id: "waters",

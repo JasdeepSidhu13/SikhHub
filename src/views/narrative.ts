@@ -5,9 +5,9 @@ import { esc } from "../lib/html";
 import { href, routes } from "../lib/paths";
 import { eventsFor, sourcesFor, themesFor } from "../lib/lookup";
 import { sourceCard } from "./layout";
-import { figure, genocideInfographic, pherumanInfographic, raid1955Gallery, raid1955Infographic, reorgInfographic } from "./infographics";
+import { figure, genocideInfographic, pherumanInfographic, raid1955Infographic, reorgInfographic } from "./infographics";
 import { media } from "../data/media";
-import { clipping, letter, storyFeature } from "./exhibits";
+import { clipping, furtherLinks, letter, storyFeature } from "./exhibits";
 
 function renderBlock(block: Block): string {
   if (block.type === "p") return `<p>${esc(block.text)}</p>`;
@@ -61,19 +61,35 @@ function chapterExtras(id: string): string {
     });
   }
   if (id === "partition") {
-    const raid1955 = stories.find((s) => s.id === "golden-temple-1955")!;
     return `${figure(media.tara, "Master Tara Singh, Tarn Taran, March 1956.")}${letter({
       from: "Sardar Hukam Singh",
       date: "21 November 1949",
       body: "My community cannot subscribe its assent to this historic document.",
       cite: "Constituent Assembly Debates.",
-    })}${storyFeature(raid1955)}${raid1955Gallery()}`;
+    })}${furtherLinks([
+      {
+        href: "/issues/golden-temple-1955",
+        title: "The 1955 raid on Harmandir Sahib",
+        note: "The chapter closes with police in the parikrama. Open the raid’s own papers: the Section 144 order, the night sequence, the shells at Manji Sahib.",
+      },
+      {
+        href: "/documents/cad-21-nov",
+        title: "The Assembly record, 21 November 1949",
+        note: "Hukam Singh’s dissent, five days before the Constitution was adopted.",
+      },
+    ])}`;
   }
   if (id === "suba") {
     const raid1955 = stories.find((s) => s.id === "golden-temple-1955")!;
     const kaka = stories.find((s) => s.id === "kaka-inderjit")!;
     const pheruman = stories.find((s) => s.id === "pheruman")!;
-    return `${figure(media.tara, "Master Tara Singh, 1956.")}${storyFeature(raid1955)}${raid1955Infographic()}${storyFeature(kaka)}${reorgInfographic()}${pherumanInfographic()}${storyFeature(pheruman)}${clipping({
+    return `${figure(media.tara, "Master Tara Singh, 1956.")}${storyFeature(raid1955)}${raid1955Infographic()}${furtherLinks([
+      {
+        href: "/issues/golden-temple-1955",
+        title: "Open the 1955 raid",
+        note: "The night of 3–4 July, in its own papers: shoes, tear gas, the Section 144 order, the shells at Manji Sahib.",
+      },
+    ])}${storyFeature(kaka)}${reorgInfographic()}${pherumanInfographic()}${storyFeature(pheruman)}${clipping({
       masthead: "The Hindu",
       date: "29 October 1969",
       headline: "Hartal to mourn Pheruman",

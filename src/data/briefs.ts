@@ -267,18 +267,57 @@ export const briefs: Record<string, SourceBrief> = {
     ],
     whyItMatters:
       "Blue Star was not the first state entry. 1955 is the dress rehearsal: shoes on marble, gas in the holy tank, priests in custody.",
+    image: "/media/parikrama-causeway.jpg",
+    imageAlt: "The marble causeway to Harmandir Sahib, the path police walked in shoes on 4 July 1955",
+    imageCredit: "Wikimedia Commons. On 4 July 1955 police entered this complex in shoes.",
   },
   "express-1955": {
     keyPoints: [
       "4 a.m., 4 July 1955: DIG Ashwani Kumar led police with shoes on inside the Golden Temple.",
       "Langar was captured and stopped. Utensils were taken. Guru Ram Das Sarai was raided. Head priests were arrested.",
       "Tear-gas shells were used in the parikrama. Police put that day’s arrests at 237. About 12,000 were jailed in the slogan-ban morcha.",
+      "Prints the Amritsar Section 144 order of 6 April 1955, which named the Punjabi Suba jaikara as a threat to order.",
     ],
     whyItMatters:
       "A clear, dated reconstruction of how Sikhs were treated in their own shrine for shouting the name of a linguistic state.",
     excerpt:
       "It was at 4 am on July 4, 1955 that Deputy Inspector General of Police Ashwani Kumar led the police with shoes on inside the Golden Temple premises.",
     excerptCite: "The Indian Express, 4 July 2021",
+  },
+  "sikhitihas-morcha-1955": {
+    keyPoints: [
+      "The first mass Punjabi Suba morcha ran from 10 May to 12 July 1955 against the slogan ban.",
+      "About 12,000 men and women were jailed in 64 days; the SGPC count includes 417 women.",
+      "The 3–4 July raid sits inside that morcha, not as a later, separate war.",
+      "Sachar lifted the ban on 12 July and apologised at the Akal Takht on 10 November 1955.",
+    ],
+    whyItMatters:
+      "The raid has a before and after: a banned slogan, a 64-day jail, no inquiry. The state that was demanded still had no capital eleven years later.",
+  },
+  "tribune-1955": {
+    keyPoints: [
+      "The Tribune reports the SGPC congregation at Manji Sahib marking 4 July 1955 as a police attack on Harmandir Sahib.",
+      "The paper records the attack as eight years after independence, during the Punjabi Suba morcha.",
+    ],
+    whyItMatters:
+      "A contemporary Indian newspaper treating 1955 as its own assault on the Guru’s house — not as a footnote to 1984, and not as 1921.",
+  },
+  "express-1955-shells": {
+    keyPoints: [
+      "In 2021 the SGPC held its first public commemoration of the 4 July 1955 police entry.",
+      "The tear-gas shells fired in the Darbar Sahib complex were displayed on the stage at Gurdwara Manji Sahib.",
+      "The Indian Express recorded the 1955 entry as the first police force inside the Golden Temple since Mughal rule ended.",
+    ],
+    whyItMatters:
+      "The shells are physical evidence the Panth kept. The raid is not only a paragraph in a later war.",
+  },
+  "zakhmi-pdl": {
+    keyPoints: [
+      "Karam Singh Zakhmi, editor of the daily Akali, compiled a date-by-date history of the 1955 morcha the same year.",
+      "The Panjab Digital Library holds the scan (BK-000131). The SGPC later issued a revised edition as Punjabi Sube De Morche Di Twarikh.",
+    ],
+    whyItMatters:
+      "The raid was written down in 1955, from inside the morcha. Later reconstructions rest on this compilation.",
   },
   "jaito-photo": {
     keyPoints: [

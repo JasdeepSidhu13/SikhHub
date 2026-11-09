@@ -1,7 +1,7 @@
 import { briefs } from "../data/briefs";
-import { sourceById, sources } from "../data/sources";
+import { sourceById } from "../data/sources";
 import { KIND_LABEL } from "../data/types";
-import { chaptersFor, themesFor } from "../lib/lookup";
+import { chaptersFor, relatedSources, themesFor } from "../lib/lookup";
 import { esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
 import { kindChip } from "./layout";
@@ -12,7 +12,7 @@ export function sourceView(id: string): string | null {
   const brief = briefs[id];
   const chs = chaptersFor(source.chapterIds);
   const ths = themesFor(source.themeIds);
-  const related = sources.filter((s) => s.id !== id && s.kind === source.kind).slice(0, 4);
+  const related = relatedSources(source);
 
   return `
     <div class="page-hero">
@@ -56,7 +56,7 @@ export function sourceView(id: string): string | null {
           </div>
           ${
             related.length
-              ? `<h3 style="margin-top:1.6rem">Same type of record</h3>
+              ? `<h3 style="margin-top:1.6rem">Further on this subject</h3>
                  <div class="event-mini">${related
                    .map((s) => `<a href="${href(routes.document(s.id))}"><h4>${esc(s.title)}</h4><p>${esc(s.creator)}</p></a>`)
                    .join("")}</div>`

@@ -274,6 +274,22 @@ export const events: TimelineEvent[] = [
     tags: ["Nehru", "Scheduled Castes"],
   },
   {
+    id: "slogan-ban-1955",
+    date: "6 April 1955",
+    sort: "1955-04-06",
+    title: "Punjabi Suba Zindabad is made a crime",
+    period: "1955–1961",
+    chapterId: "suba",
+    summary:
+      "The Amritsar district magistrate banned slogans for Punjabi Suba and Maha-Punjab under Section 144. The order named “Sine vich goli khavange, Punjabi Suba banavange” as a threat to public order. On 24 April the Akali Dal resolved to court arrest if the ban stood. Master Tara Singh courted arrest on 10 May. Each morning jathas prayed at the Akal Takht and walked out to be jailed.",
+    significance:
+      "The 4 July raid was the state’s answer to a slogan, not to an armed occupation. The morcha that followed jailed about twelve thousand men and women in sixty-four days.",
+    evidence: "The Indian Express reconstruction of the Section 144 order; SGPC history of the 1955 morcha; Sikhitihas.",
+    sourceIds: ["express-1955", "sikhitihas-morcha-1955", "sikhitihas-1955"],
+    themeIds: ["golden-temple-1955", "punjabi-suba"],
+    tags: ["1955", "Punjabi Suba"],
+  },
+  {
     id: "golden-temple-1955",
     date: "Night of 3–4 July 1955",
     sort: "1955-07-04",
@@ -285,9 +301,25 @@ export const events: TimelineEvent[] = [
     significance:
       "The first police action at Harmandir Sahib in independent India. Sangat Singh called it the first sacrilege by a Congress government. Dilgeer called it a dress rehearsal for June 1984. Sachar later apologised at the Akal Takht. No judicial inquiry followed.",
     evidence: "SGPC history of the 1955 morcha; Gurmit Singh; Grewal; The Tribune; Indian Express, 4 July 2021.",
-    sourceIds: ["sikhitihas-1955", "express-1955", "commons-aerial"],
-    themeIds: ["state-violence", "punjabi-suba"],
+    sourceIds: ["sikhitihas-1955", "express-1955", "sikhitihas-morcha-1955", "commons-aerial"],
+    themeIds: ["golden-temple-1955", "state-violence", "punjabi-suba"],
     tags: ["1955", "Golden Temple"],
+  },
+  {
+    id: "slogan-lift-1955",
+    date: "12 July 1955",
+    sort: "1955-07-12",
+    title: "The slogan ban is lifted. There is still no inquiry.",
+    period: "1955–1961",
+    chapterId: "suba",
+    summary:
+      "Sixty-four days after the morcha began, the Punjab government lifted the ban on Punjabi Suba slogans. About twelve thousand men and women had been jailed. The Akali demand for a judicial inquiry into the 4 July raid was not met. Master Tara Singh remained in jail until September.",
+    significance:
+      "The right to shout the slogan was restored. The raid itself was never tried. The linguistic state was still eleven years away, and would arrive without its capital.",
+    evidence: "SGPC history of the 1955 morcha; Indian Express; Sikhitihas; Sangat Singh.",
+    sourceIds: ["sikhitihas-morcha-1955", "express-1955", "sikhitihas-1955"],
+    themeIds: ["golden-temple-1955", "punjabi-suba"],
+    tags: ["1955", "Punjabi Suba"],
   },
   {
     id: "src-rejects",
@@ -304,6 +336,22 @@ export const events: TimelineEvent[] = [
     sourceIds: [],
     themeIds: ["punjabi-suba", "gurmukhi"],
     tags: ["SRC", "census"],
+  },
+  {
+    id: "sachar-apology-1955",
+    date: "10 November 1955",
+    sort: "1955-11-10",
+    title: "Sachar apologises at the Akal Takht",
+    period: "1955–1961",
+    chapterId: "suba",
+    summary:
+      "After meeting an SGPC delegation in Chandigarh in September, Chief Minister Bhim Sen Sachar came to the Akal Takht and apologised for the 4 July police action. The SGPC history dates the apology 10 November 1955. Kairon replaced him as Chief Minister in January 1956. No judicial inquiry had been held.",
+    significance:
+      "An apology without an inquiry left the facts on the Panth’s record and off the state’s. The tear-gas shells were later displayed at Manji Sahib. The raid was never tried.",
+    evidence: "SGPC history of the 1955 morcha; Indian Express, 4 July 2021.",
+    sourceIds: ["sikhitihas-1955", "express-1955", "tribune-1955"],
+    themeIds: ["golden-temple-1955", "state-violence"],
+    tags: ["1955", "Golden Temple", "Sachar"],
   },
   {
     id: "regional-formula",

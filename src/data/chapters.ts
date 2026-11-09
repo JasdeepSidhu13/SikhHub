@@ -185,7 +185,7 @@ export const chapters: Chapter[] = [
       "nehru-sc-tara",
       "golden-temple-1955"
     ],
-    themeIds: ["partition-citizenship", "assurances", "article-25"],
+    themeIds: ["partition-citizenship", "assurances", "article-25", "golden-temple-1955"],
   },
   {
     id: "suba",
@@ -257,7 +257,7 @@ export const chapters: Chapter[] = [
       "pheruman",
       "chandigarh-1970"
     ],
-    themeIds: ["punjabi-suba", "chandigarh", "waters", "gurmukhi"],
+    themeIds: ["punjabi-suba", "chandigarh", "waters", "gurmukhi", "golden-temple-1955"],
   },
   {
     id: "bluestar",
