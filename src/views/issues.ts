@@ -39,6 +39,11 @@ function extras(id: string): string {
         title: "The archive brief",
         note: "How this site reads the 1984 Sikh Archive, and why the word is genocide.",
       },
+      {
+        href: "/documents/archive-1984-toll",
+        title: "The body count",
+        note: "Official 2,733 in Delhi. Independent estimates from about 8,000 to about 17,000. Even 8,000 may understate.",
+      },
     ])}`;
   }
   if (id === "bluestar-1984") {

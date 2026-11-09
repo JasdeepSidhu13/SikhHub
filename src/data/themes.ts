@@ -194,6 +194,7 @@ export const themes: Theme[] = [
       "hrw-1984",
       "express-sajjan-2025",
       "archive-1984",
+      "archive-1984-toll",
       "who-are-guilty"
     ],
     eventIds: ["november-1984", "sajjan-2018", "sajjan-2025"],

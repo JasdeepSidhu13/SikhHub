@@ -446,6 +446,18 @@ export const sources: Source[] = [
     tags: ["1984", "archive", "genocide"],
   },
   {
+    id: "archive-1984-toll",
+    title: "Body count — 1984 Sikh Archive",
+    creator: "1984 Sikh Archive",
+    year: "ongoing",
+    kind: "institutional",
+    url: "https://1984sikh-archive.org/crimes/death-toll/",
+    note: "Official Delhi count 2,733 (Ahuja Committee). Sikh Forum: 3,870 in Delhi. Romesh Thapar: 6,000–8,000 in Delhi alone. Khushwant Singh: 10,000 would not be an exaggeration. The Economist (2013): at least 8,000 nationwide, which the Archive says may still understate trains, other cities, and mass cremations.",
+    chapterIds: ["bluestar", "accounting"],
+    themeIds: ["november-1984"],
+    tags: ["1984", "archive", "genocide"],
+  },
+  {
     id: "who-are-guilty",
     title: "Who Are the Guilty?",
     creator: "PUCL / PUDR, hosted by the 1984 Sikh Archive",

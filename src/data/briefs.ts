@@ -14,6 +14,7 @@ export const briefs: Record<string, SourceBrief> = {
       "A digital archive of the 1984 Sikh genocide: survivor testimony, photographs, affidavits, press, and court records.",
       "It documents 31 October–4 November 1984 as organised massacre, not spontaneous riot: prepared lists, kerosene, police assistance, and Congress politicians named in later judgments.",
       "Independent voices in the archive — Khushwant Singh, Cynthia Keppley Mahmood, Geoffrey Robertson QC, and Justice R. K. Gauba — use the words pogrom and genocide.",
+      "On the death toll: official Delhi count 2,733. Robertson wrote of eight thousand butchered and burned. Khushwant Singh wrote that 10,000 would not be an exaggeration. The Archive’s body-count page treats even 8,000 nationwide as possibly still low.",
       "Day-by-day pages reconstruct 31 October (assassination and the first attacks), 1–2 November (Delhi and the cow-belt), and the camps, widows, and sexual violence that followed.",
     ],
     whyItMatters:
@@ -24,6 +25,17 @@ export const briefs: Record<string, SourceBrief> = {
     image: "/media/1984-witnesses.jpg",
     imageAlt: "Widows of Sikhs killed in Delhi during the 1984 Sikh genocide",
     imageCredit: "Widows of Sikhs killed in Delhi, November 1984. Via 1984 Sikh Archive.",
+  },
+  "archive-1984-toll": {
+    keyPoints: [
+      "Official Delhi count: 2,733 (Ahuja Committee, 1987). The Sikh Forum, working with families, listed 3,870 dead in Delhi alone.",
+      "Romesh Thapar, writing in December 1984, put Delhi at 6,000–8,000. Khushwant Singh later wrote that 10,000 nationwide would not be an exaggeration.",
+      "The Economist (2013) used at least 8,000 nationwide. The Archive says even that may understate: trains, Kanpur, Bokaro, villages, and mass cremations were left out of the official books.",
+    ],
+    whyItMatters:
+      "There is no single independent number. Official counts were written down to hide the scale. Independent estimates are a range, starting around 8,000 and running higher.",
+    excerpt: "The figure of 10,000 Sikhs killed (more than half of them in the capital) would not be an exaggeration.",
+    excerptCite: "Khushwant Singh, A History of the Sikhs, vol. 2, quoted by the 1984 Sikh Archive",
   },
   "delhi-hc-2018": {
     keyPoints: [

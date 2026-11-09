@@ -10,7 +10,7 @@ export function genocideInfographic(): string {
       <p class="ig-lead">Organised massacre of Sikhs, 31 October–4 November 1984, after the assassination of Indira Gandhi. Not a riot. The Delhi High Court called it a crime against humanity. Justice R. K. Gauba recorded that genocide had been proved.</p>
       <div class="ig-stats">
         <div class="ig-stat"><b>4 days</b><span>31 Oct–4 Nov 1984</span></div>
-        <div class="ig-stat"><b>~8,000</b><span>killed, independent estimates</span></div>
+        <div class="ig-stat"><b>8–17k</b><span>killed, independent estimates</span></div>
         <div class="ig-stat"><b>Marked lists</b><span>Sikh homes and shops targeted</span></div>
         <div class="ig-stat"><b>40 years</b><span>to a 2025 life sentence</span></div>
       </div>
@@ -20,7 +20,7 @@ export function genocideInfographic(): string {
         <li><time>2 Nov</time> The killing spreads through resettlement colonies and the northern “cow-belt.” Sikh businesses are selected while neighbours are left standing.</li>
         <li><time>3–4 Nov</time> Trilokpuri, Kalyanpuri, Sultanpuri, and other colonies are emptied of Sikh men. Widows and children are pushed into camps. Sexual violence is organised, not incidental.</li>
       </ol>
-      <p class="figure-credit">Sequence and figures drawn from the <a href="${href(routes.document("archive-1984"))}">1984 Sikh Archive</a>, Delhi High Court 2018, and Geoffrey Robertson QC’s independent estimate of about eight thousand dead. Official counts have been lower.</p>
+      <p class="figure-credit">Sequence from the <a href="${href(routes.document("archive-1984"))}">1984 Sikh Archive</a> and Delhi High Court 2018. Independent death estimates are a range, not a single figure: about 8,000 (Geoffrey Robertson QC; <em>The Economist</em>), about 10,000 (Khushwant Singh), and as high as about 17,000. Official Delhi count: 2,733. The Archive records that trains, other cities, and mass cremations were left out of that count, so even 8,000 may understate.</p>
     </section>
   `;
 }
