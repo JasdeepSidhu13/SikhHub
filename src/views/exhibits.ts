@@ -90,7 +90,7 @@ export function storyFeature(story: Story, reverse = false, currentPath?: string
         ${story.body.map((p) => `<p>${esc(p)}</p>`).join("")}
         ${
           story.quote
-            ? `<blockquote class="pull">${esc(story.quote.text)}<cite>${esc(story.quote.cite)}</cite></blockquote>`
+            ? `<blockquote class="pull"${story.quote.lang ? ` lang="${esc(story.quote.lang)}"` : ""}>${esc(story.quote.text)}<cite>${esc(story.quote.cite)}</cite></blockquote>`
             : ""
         }
         ${ctaButton(story, currentPath)}

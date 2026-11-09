@@ -281,7 +281,7 @@ export const events: TimelineEvent[] = [
     period: "1955–1961",
     chapterId: "suba",
     summary:
-      "The Amritsar district magistrate banned slogans for Punjabi Suba and Maha-Punjab under Section 144. The order named “Sine vich goli khavange, Punjabi Suba banavange” as a threat to public order. On 24 April the Akali Dal resolved to court arrest if the ban stood. Master Tara Singh courted arrest on 10 May. Each morning jathas prayed at the Akal Takht and walked out to be jailed.",
+      "The Amritsar district magistrate banned slogans for Punjabi Suba and Maha-Punjab under Section 144. The order named “ਸੀਨੇ ਵਿੱਚ ਗੋਲੀ ਖਾਵਾਂਗੇ, ਪੰਜਾਬੀ ਸੂਬਾ ਬਣਾਵਾਂਗੇ” as a threat to public order. On 24 April the Akali Dal resolved to court arrest if the ban stood. Master Tara Singh courted arrest on 10 May. Each morning jathas prayed at the Akal Takht and walked out to be jailed.",
     significance:
       "The 4 July raid was the state’s answer to a slogan, not to an armed occupation. The morcha that followed jailed about twelve thousand men and women in sixty-four days.",
     evidence: "The Indian Express reconstruction of the Section 144 order; SGPC history of the 1955 morcha; Sikhitihas.",

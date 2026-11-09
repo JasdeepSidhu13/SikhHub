@@ -17,7 +17,7 @@
   --radius: 18px;
   --max: 1180px;
   --serif: "Fraunces", "Palatino Linotype", Palatino, serif;
-  --sans: "Source Sans 3", "Segoe UI", sans-serif;
+  --sans: "Source Sans 3", "Noto Sans Gurmukhi", "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 
@@ -351,6 +351,12 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   font-size: 1.35rem;
   line-height: 1.4;
   font-style: italic;
+}
+.pull[lang="pa"] {
+  font-family: "Noto Sans Gurmukhi", var(--serif), sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.65;
 }
 .pull cite, .note, .callout p { font-family: var(--sans); font-style: normal; }
 .pull cite {
@@ -803,7 +809,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   color: var(--muted);
 }
 .clipping {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Times New Roman", "Noto Sans Gurmukhi", Times, serif;
   column-gap: 1.2rem;
   border-top: 6px solid var(--navy);
 }

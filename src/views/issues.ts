@@ -174,7 +174,7 @@ function extras(id: string): string {
       date: "6 April 1955 · Section 144",
       headline: "The slogan itself was the offence",
       deck: "Punjabi Suba Zindabad was banned as a threat to order. The raid in July was the state’s answer to that slogan.",
-      body: "It is suspected that slogans like Punjabi Suba or Maha-Punjab Amar Rahe, or Punjabi Suba Zindabad, or Sine vich goli khavange, Punjabi Suba banavange, can violate the law and order. Hence such slogans are banned under Section 144.",
+      body: "It is suspected that slogans like Punjabi Suba or Maha-Punjab Amar Rahe, or Punjabi Suba Zindabad, or ਸੀਨੇ ਵਿੱਚ ਗੋਲੀ ਖਾਵਾਂਗੇ, ਪੰਜਾਬੀ ਸੂਬਾ ਬਣਾਵਾਂਗੇ, can violate the law and order. Hence such slogans are banned under Section 144.",
       cite: "Amritsar district order of 6 April 1955, as printed by The Indian Express, 4 July 2021.",
     })}${furtherLinks([
       {
