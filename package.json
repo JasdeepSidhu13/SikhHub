@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "SikhHub — a sourced educational archive of Sikh political history, 1920–2025.",
+  "description": "SikhHub — a sourced educational archive of Sikh political history, 1920–2026.",
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",

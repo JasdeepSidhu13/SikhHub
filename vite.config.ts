@@ -2,10 +2,9 @@ import { copyFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 import { defineConfig } from "vite";
 
-const isPages = process.env.GITHUB_PAGES === "true";
-
 export default defineConfig({
-  base: isPages ? "/SikhHub/" : "/",
+  // Custom domain sikhhub.org is served at the site root. github.io redirects there.
+  base: "/",
   publicDir: "public",
   build: {
     outDir: "dist",
