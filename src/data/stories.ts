@@ -200,7 +200,7 @@ export const stories: Story[] = [
     title: "They say the Khanda is not in Guru Granth Sahib. They want the Khalsa without a flag.",
     years: "1606–present",
     lede:
-      "A Hindu and “secular Sikh” talking point says the Nishan Sahib with the Khanda is unacceptable because it is not printed in Guru Granth Sahib. The test is built to fail. Then the flag comes down, and a people without a flag can be folded into Hinduism.",
+      "A Hindu talking point, taken up by bemukh Sikhs — Sikhs who have turned their face from the Guru — says the Nishan Sahib with the Khanda is unacceptable because it is not printed in Guru Granth Sahib. The test is built to fail. Then the flag comes down, and a people without a flag can be folded into Hinduism.",
     body: [
       "Guru Granth Sahib is shabad. It does not print the Akal Takht. It does not print rumalas. It does not print a photograph of a kirpan. The Constitution of India still names the kirpan as part of professing the Sikh religion. Khande di pahul — the birth of the Khalsa — is performed with a khanda in the presence of Guru Granth Sahib. If “not drawn in the Granth” were the test of Sikh life, the Takht, the initiation, and the visible Khalsa would all be unscriptural. That is the point of the test.",
       "Guru Hargobind raised the first Nishan over the Akal Takht in 1606: Akal Dhuja, Satguru ka Nishan. Guru Gobind Singh made the Khalsa by stirring amrit with a khanda on Baisakhi 1699. Khalsa armies marched behind nishanchis. One misl was named Nishananwali because it carried the standards. In 1714 a Nishan Sahib was painted inside a Guru Granth Sahib manuscript now at Takht Kesgarh Sahib. The claim “it is not in Guru Granth Sahib” is not only a category error. On that page, it is false.",
