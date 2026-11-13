@@ -170,7 +170,7 @@ function extras(id: string): string {
       {
         href: "/issues/nishan-khanda",
         title: "The Nishan Sahib they want taken down",
-        note: "The flag of the Guru’s house. The smear that would take it down is an argument against that house.",
+        note: "The Nishan that flies at Harmandir Sahib. Raised at the Akal Takht in 1606. Required by the Rehat at every gurdwara.",
       },
       {
         href: "/documents/nankana-sikhitihas",
@@ -309,7 +309,7 @@ function extras(id: string): string {
       {
         href: "/issues/nishan-khanda",
         title: "The Nishan Sahib they want taken down",
-        note: "The same Hindu-folding project, dressed as piety: if the Khanda is not a verse, take down the Khalsa’s flag.",
+        note: "Guru Hargobind raised it in 1606. A 1714 Guru Granth Sahib already bears a Nishan. The Rehat puts a Khanda on the post.",
       },
       {
         href: "/documents/cwmg-66",
@@ -333,7 +333,7 @@ function extras(id: string): string {
       {
         href: "/issues/nishan-khanda",
         title: "The Nishan Sahib they want taken down",
-        note: "Same family as the attack on Gurmukhi: first the script of the Granth, then the flag of the Guru’s house.",
+        note: "Guru Hargobind raised it in 1606. A 1714 Guru Granth Sahib already bears a Nishan. The Rehat puts a Khanda on the post.",
       },
       {
         href: "/documents/cwmg-66",
@@ -357,7 +357,7 @@ function extras(id: string): string {
       {
         href: "/issues/nishan-khanda",
         title: "The Nishan Sahib they want taken down",
-        note: "The Constitution names the kirpan. The smear now names the Khanda as unscriptural. Same work: keep the Sikh visible only as a Hindu with a dagger clause.",
+        note: "The Constitution names the kirpan. The Rehat names the Khanda on the Nishan. Both are steel of the same Khalsa.",
       },
       {
         href: "/documents/article-25",
@@ -368,7 +368,7 @@ function extras(id: string): string {
   }
   if (id === "nishan-khanda") {
     const nishan = stories.find((s) => s.id === "nishan-khanda")!;
-    return `${nishanKhandaInfographic()}${figure(media.nishanFolio, "A Nishan Sahib painted inside a Guru Granth Sahib manuscript dated 1714, now at Takht Kesgarh Sahib.")}${figure(media.nishanHarmandir, "The Nishan Sahib at Sri Harmandir Sahib — the flag the talking point would take down.")}${letter({
+    return `${nishanKhandaInfographic()}${figure(media.nishanFolio, "A Nishan Sahib painted inside a Guru Granth Sahib manuscript dated 1714, now at Takht Kesgarh Sahib.")}${figure(media.nishanHarmandir, "The Nishan Sahib at Sri Harmandir Sahib, Amritsar.")}${letter({
       from: "Sikh Rehat Maryada",
       date: "SGPC · official English",
       body: "At a high-level site in every Gurdwara should be installed the nishan sahib (Sikh flag). The cloth of the flag should be either of xanthic or of greyish blue colour and on top of the flag post, there should either be a spearhead or a Khanda.",
