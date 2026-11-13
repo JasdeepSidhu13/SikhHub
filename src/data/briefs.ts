@@ -347,12 +347,12 @@ export const briefs: Record<string, SourceBrief> = {
   "encyclopedia-nishan": {
     keyPoints: [
       "Nishan Sahib is the Sikh flag at every gurdwara: saffron, sometimes blue for Nihangs, with the emblem of khanda, chakra and two kirpans.",
-      "The origin is traced to Guru Hargobind, who hoisted Akal Dhuja / Satguru ka Nishan over the Akal Takht in 1606.",
+      "The origin is traced to Guru Hargobind, who hoisted Akal Dhuja / Satguru ka Nishan Sahib over the Akal Takht in 1606.",
       "Sikh armies marched behind nishanchis. One misl was named Nishananwali because it carried the standards.",
       "Ardas recalls nishanaan dhaamaan di kamaai and asks: chauktaan, jhande, bunge jugo jug atal — may choirs, standards and citadels flourish forever.",
     ],
     whyItMatters:
-      "The Nishan is a Guru’s act at the Akal Takht, not a modern extra waiting for a verse in Guru Granth Sahib. The encyclopaedia is the sourced account of that origin.",
+      "The Nishan Sahib is a Guru’s act at the Akal Takht, not a modern extra waiting for a verse in Guru Granth Sahib. The encyclopaedia is the sourced account of that origin.",
   },
   "encyclopedia-pahul": {
     keyPoints: [
@@ -378,9 +378,9 @@ export const briefs: Record<string, SourceBrief> = {
       "The Ardas in the same code asks that hymn-singing parties, flags and hostels abide from age to age.",
     ],
     whyItMatters:
-      "The Panth’s own Maryada puts the Khanda on the Nishan. Calling that flag unscriptural is a revolt against the code, dressed as fidelity to the Granth.",
+      "The Panth’s own Maryada puts the Khanda on the Nishan Sahib. Calling that flag unscriptural is a revolt against the code, dressed as fidelity to the Granth.",
     excerpt:
-      "At a high-level site in every Gurdwara should be installed the nishan sahib (Sikh flag). The cloth of the flag should be either of xanthic or of greyish blue colour and on top of the flag post, there should either be a spearhead or a Khanda.",
+      "At a high-level site in every Gurdwara should be installed the Nishan Sahib (Sikh flag). The cloth of the flag should be either of xanthic or of greyish blue colour and on top of the flag post, there should either be a spearhead or a Khanda.",
     excerptCite: "Sikh Rehat Maryada, official English, gurdwara article",
   },
   "commons-nishan-folio": {
@@ -390,7 +390,7 @@ export const briefs: Record<string, SourceBrief> = {
       "The work is a public-domain manuscript illumination: scribes put the flag in the Granth.",
     ],
     whyItMatters:
-      "The smear says the Nishan is not in Guru Granth Sahib. This page was painted inside a Guru Granth Sahib. The claim is not only a category error. On this evidence it is false.",
+      "The smear says the Nishan Sahib is not in Guru Granth Sahib. This page was painted inside a Guru Granth Sahib. The claim is not only a category error. On this evidence it is false.",
     image: "/media/nishan-folio-1714.jpg",
     imageAlt: "Illustrated folio of a Nishan Sahib from a 1714 Guru Granth Sahib manuscript",
     imageCredit: "Takht Kesgarh Sahib manuscript, 1714. Via Wikimedia Commons / Mohinder Singh, Shabad Guru (2011).",
@@ -411,7 +411,7 @@ export const briefs: Record<string, SourceBrief> = {
       "Bhai Kahn Singh Nabha’s Gurmat Martand and Mahan Kosh give the account of Guru Hargobind’s first flag at the Akal Bunga, saffron, with a spear-like khanda on the post.",
     ],
     whyItMatters:
-      "Eighteenth-century Sikh chronicle and twentieth-century lexicons agree: the Nishan is a Khalsa standard, not a late extra.",
+      "Eighteenth-century Sikh chronicle and twentieth-century lexicons agree: the Nishan Sahib is a Khalsa standard, not a late extra.",
   },
   "jaito-photo": {
     keyPoints: [

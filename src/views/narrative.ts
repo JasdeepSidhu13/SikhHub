@@ -63,7 +63,7 @@ function chapterExtras(id: string): string {
       {
         href: "/issues/nishan-khanda",
         title: "The Nishan Sahib they want taken down",
-        note: "Guru Hargobind raised it in 1606. A 1714 Guru Granth Sahib already bears a Nishan. The Rehat puts a Khanda on the post.",
+        note: "Guru Hargobind raised it in 1606. A 1714 Guru Granth Sahib already bears a Nishan Sahib. The Rehat puts a Khanda on the post.",
       },
     ])}`;
   }

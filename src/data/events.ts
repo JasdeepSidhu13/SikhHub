@@ -5,13 +5,13 @@ export const events: TimelineEvent[] = [
     id: "nishan-1606",
     date: "1606",
     sort: "1606-06-15",
-    title: "Guru Hargobind raises the Nishan at the Akal Takht",
+    title: "Guru Hargobind raises the Nishan Sahib at the Akal Takht",
     period: "Before 1920",
     chapterId: "identity",
     summary:
-      "The Encyclopaedia of Sikhism traces the Nishan Sahib to Guru Hargobind, who hoisted a flag over the Akal Takht (Akal Bunga) as it was erected in 1606. The flag was called Akal Dhuja — the immortal flag — or Satguru ka Nishan, the standard of the true Guru.",
+      "The Encyclopaedia of Sikhism traces the Nishan Sahib to Guru Hargobind, who hoisted a flag over the Akal Takht (Akal Bunga) as it was erected in 1606. The flag was called Akal Dhuja — the immortal flag — or Satguru ka Nishan Sahib, the standard of the true Guru.",
     significance:
-      "The Nishan is a Guru’s act at the seat of Sikh temporal authority. It does not wait on a printed drawing in Guru Granth Sahib. The talking point that would take it down is an argument against Guru Hargobind.",
+      "The Nishan Sahib is a Guru’s act at the seat of Sikh temporal authority. It does not wait on a printed drawing in Guru Granth Sahib. The talking point that would take it down is an argument against Guru Hargobind.",
     evidence: "Encyclopaedia of Sikhism, “Nishan Sahib”; Bhai Kahn Singh Nabha as discussed by Sikh Museum.",
     sourceIds: ["encyclopedia-nishan", "sikhmuseum-nishan"],
     themeIds: ["nishan-khanda", "identity-hinduism"],
@@ -37,13 +37,13 @@ export const events: TimelineEvent[] = [
     id: "nishan-folio-1714",
     date: "1714",
     sort: "1714-01-01",
-    title: "A Nishan painted inside Guru Granth Sahib",
+    title: "A Nishan Sahib painted inside Guru Granth Sahib",
     period: "Before 1920",
     chapterId: "identity",
     summary:
       "A Guru Granth Sahib manuscript housed at Takht Kesgarh Sahib, Anandpur, dated 1771 B.S. (1714 C.E.), contains an illustrated folio of a Nishan Sahib. The photograph is published in Mohinder Singh’s Shabad Guru catalogue.",
     significance:
-      "The claim “the Nishan is not in Guru Granth Sahib” is not only a category error — scripture is shabad, not a picture book. It is also historically false. Scribes put the flag in the Granth.",
+      "The claim “the Nishan Sahib is not in Guru Granth Sahib” is not only a category error — scripture is shabad, not a picture book. It is also historically false. Scribes put the flag in the Granth.",
     evidence: "Wikimedia Commons folio; Mohinder Singh, Shabad Guru, vol. 1 (2011), p. 21.",
     sourceIds: ["commons-nishan-folio"],
     themeIds: ["nishan-khanda"],
@@ -59,7 +59,7 @@ export const events: TimelineEvent[] = [
     summary:
       "The SGPC approved the Sikh Rehat Maryada. The official English requires a Nishan Sahib at a high-level site in every gurdwara, xanthic or greyish-blue cloth, and “on top of the flag post, there should either be a spearhead or a Khanda.” The Ardas in the same code asks that the flags abide from age to age.",
     significance:
-      "The Panth’s own code puts the Khanda on the Nishan. Calling that flag unscriptural is a revolt against the Maryada, dressed as fidelity to the Granth.",
+      "The Panth’s own code puts the Khanda on the Nishan Sahib. Calling that flag unscriptural is a revolt against the Maryada, dressed as fidelity to the Granth.",
     evidence: "Sikh Rehat Maryada, official English text of the gurdwara article.",
     sourceIds: ["rehat-maryada"],
     themeIds: ["nishan-khanda", "identity-hinduism"],

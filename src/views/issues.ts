@@ -170,7 +170,7 @@ function extras(id: string): string {
       {
         href: "/issues/nishan-khanda",
         title: "The Nishan Sahib they want taken down",
-        note: "The Nishan that flies at Harmandir Sahib. Raised at the Akal Takht in 1606. Required by the Rehat at every gurdwara.",
+        note: "The Nishan Sahib that flies at Harmandir Sahib. Raised at the Akal Takht in 1606. Required by the Rehat at every gurdwara.",
       },
       {
         href: "/documents/nankana-sikhitihas",
@@ -309,7 +309,7 @@ function extras(id: string): string {
       {
         href: "/issues/nishan-khanda",
         title: "The Nishan Sahib they want taken down",
-        note: "Guru Hargobind raised it in 1606. A 1714 Guru Granth Sahib already bears a Nishan. The Rehat puts a Khanda on the post.",
+        note: "Guru Hargobind raised it in 1606. A 1714 Guru Granth Sahib already bears a Nishan Sahib. The Rehat puts a Khanda on the post.",
       },
       {
         href: "/documents/cwmg-66",
@@ -333,7 +333,7 @@ function extras(id: string): string {
       {
         href: "/issues/nishan-khanda",
         title: "The Nishan Sahib they want taken down",
-        note: "Guru Hargobind raised it in 1606. A 1714 Guru Granth Sahib already bears a Nishan. The Rehat puts a Khanda on the post.",
+        note: "Guru Hargobind raised it in 1606. A 1714 Guru Granth Sahib already bears a Nishan Sahib. The Rehat puts a Khanda on the post.",
       },
       {
         href: "/documents/cwmg-66",
@@ -357,7 +357,7 @@ function extras(id: string): string {
       {
         href: "/issues/nishan-khanda",
         title: "The Nishan Sahib they want taken down",
-        note: "The Constitution names the kirpan. The Rehat names the Khanda on the Nishan. Both are steel of the same Khalsa.",
+        note: "The Constitution names the kirpan. The Rehat names the Khanda on the Nishan Sahib. Both are steel of the same Khalsa.",
       },
       {
         href: "/documents/article-25",
@@ -371,13 +371,13 @@ function extras(id: string): string {
     return `${nishanKhandaInfographic()}${figure(media.nishanFolio, "A Nishan Sahib painted inside a Guru Granth Sahib manuscript dated 1714, now at Takht Kesgarh Sahib.")}${figure(media.nishanHarmandir, "The Nishan Sahib at Sri Harmandir Sahib, Amritsar.")}${letter({
       from: "Sikh Rehat Maryada",
       date: "SGPC · official English",
-      body: "At a high-level site in every Gurdwara should be installed the nishan sahib (Sikh flag). The cloth of the flag should be either of xanthic or of greyish blue colour and on top of the flag post, there should either be a spearhead or a Khanda.",
+      body: "At a high-level site in every Gurdwara should be installed the Nishan Sahib (Sikh flag). The cloth of the flag should be either of xanthic or of greyish blue colour and on top of the flag post, there should either be a spearhead or a Khanda.",
       cite: "Panthic code. The Khanda on the post is not a fashion. It is the Maryada.",
     })}${storyFeature(nishan, false, here)}${furtherLinks([
       {
         href: "/documents/commons-nishan-folio",
         title: "The 1714 folio",
-        note: "A Nishan painted inside Guru Granth Sahib. The smear says it is not there. Open the page.",
+        note: "A Nishan Sahib painted inside Guru Granth Sahib. The smear says it is not there. Open the page.",
       },
       {
         href: "/documents/rehat-maryada",
@@ -387,7 +387,7 @@ function extras(id: string): string {
       {
         href: "/documents/encyclopedia-nishan",
         title: "Encyclopaedia of Sikhism: Nishan Sahib",
-        note: "Guru Hargobind, 1606: Akal Dhuja, Satguru ka Nishan. Nishanchis. The Ardas for the flags.",
+        note: "Guru Hargobind, 1606: Akal Dhuja, Satguru ka Nishan Sahib. Nishanchis. The Ardas for the flags.",
       },
       {
         href: "/issues/identity-hinduism",

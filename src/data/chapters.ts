@@ -104,7 +104,7 @@ export const chapters: Chapter[] = [
       },
       {
         type: "p",
-        text: "The claim that the Nishan Sahib with the Khanda is unacceptable because it is not printed in Guru Granth Sahib fails on the record. Guru Granth Sahib is shabad. It does not print the Akal Takht, rumalas, or a drawing of a kirpan. Guru Hargobind raised the first Nishan at the Akal Takht in 1606. Guru Gobind Singh made the Khalsa by stirring amrit with a khanda. In 1714 a Nishan was painted inside a Guru Granth Sahib manuscript. The Sikh Rehat Maryada requires the flag at every gurdwara, with a spear or a Khanda on the post. Sikhs pray for the flags to stand forever.",
+        text: "The claim that the Nishan Sahib with the Khanda is unacceptable because it is not printed in Guru Granth Sahib fails on the record. Guru Granth Sahib is shabad. It does not print the Akal Takht, rumalas, or a drawing of a kirpan. Guru Hargobind raised the first Nishan Sahib at the Akal Takht in 1606. Guru Gobind Singh made the Khalsa by stirring amrit with a khanda. In 1714 a Nishan Sahib was painted inside a Guru Granth Sahib manuscript. The Sikh Rehat Maryada requires the flag at every gurdwara, with a spear or a Khanda on the post. Sikhs pray for the flags to stand forever.",
       },
       {
         type: "callout",

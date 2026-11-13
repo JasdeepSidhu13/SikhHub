@@ -152,14 +152,14 @@ export function nishanKhandaInfographic(): string {
       <div class="ig-stats">
         <div class="ig-stat"><b>1606</b><span>Guru Hargobind raises Akal Dhuja at the Akal Takht</span></div>
         <div class="ig-stat"><b>1699</b><span>The Khalsa is born by khande di pahul</span></div>
-        <div class="ig-stat"><b>1714</b><span>A Nishan painted in a Guru Granth Sahib manuscript</span></div>
+        <div class="ig-stat"><b>1714</b><span>A Nishan Sahib painted in a Guru Granth Sahib manuscript</span></div>
         <div class="ig-stat"><b>1945</b><span>Rehat Maryada: a Khanda on the flagstaff</span></div>
       </div>
       <ol class="ig-days">
         <li><time>The bait</time> “Show us the Khanda in Guru Granth Sahib.” Scripture is word, not a picture book. The Akal Takht, the rumala, and a drawing of a kirpan are not printed there either.</li>
         <li><time>The steel</time> Khande di pahul is performed with a khanda in the presence of Guru Granth Sahib. The Constitution names the kirpan. The smear pretends to defend the Granth while attacking the initiation done before it.</li>
         <li><time>The page</time> In 1714 a Nishan Sahib was painted inside a Guru Granth Sahib manuscript at Takht Kesgarh Sahib. The claim “it is not in the Granth” is false on that folio.</li>
-        <li><time>The code</time> Sikhs ask in Ardas that the flags stand forever. The Rehat Maryada requires a Nishan at every gurdwara, with a spearhead or a Khanda on the post.</li>
+        <li><time>The code</time> Sikhs ask in Ardas that the flags stand forever. The Rehat Maryada requires a Nishan Sahib at every gurdwara, with a spearhead or a Khanda on the post.</li>
       </ol>
       <p class="figure-credit">Encyclopaedia of Sikhism; Sikh Rehat Maryada; Mohinder Singh, <em>Shabad Guru</em>, vol. 1 (2011), p. 21; Sikh Museum chronicle of Nishan Sahibs in <em>Prachin Panth Prakash</em>.</p>
     </section>
