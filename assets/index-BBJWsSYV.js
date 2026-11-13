@@ -669,7 +669,7 @@
         <div>
           <p class="kicker">The archive</p>
           <h2>Scholarship in the service of a public record</h2>
-          <p>Dr. Jasdeep Sidhu is a physicist, and in AI an engineer and founder. He received his Ph.D. in physics from the University of Florida in 2020, following an M.S. from San Francisco State University and a B.S. in engineering physics from the University of California, Berkeley. He is a NASA/JPL scholar, with earlier work in condensed-matter theory.</p>
+          <p>Dr. Jasdeep Sidhu is a physicist, an AI engineer and founder. He received his Ph.D. in physics from the University of Florida in 2020, following an M.S. from San Francisco State University and a B.S. in engineering physics from the University of California, Berkeley. He is a NASA/JPL scholar, with earlier work in condensed-matter theory.</p>
           <p>He established <span class="org">SikhHub</span> as an independent non-profit so that Sikh political history would be available to the public in a form equal to its gravity: documented, chronological, and independent of the versions that have been taught in their place. The archive covers the century from the gurdwara reform of the 1920s through Partition, Punjabi Suba, June 1984, the 1984 Sikh genocide, and the Punjab disappearances.</p>
           <p>Its purpose is education. Its method is evidence. Corrections, original documents, and family papers are invited. The archive is only as complete as the record it is given.</p>
         </div>
