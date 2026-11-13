@@ -404,13 +404,29 @@ function extras(id: string): string {
   return "";
 }
 
+function issueCards(list: typeof themes): string {
+  return list
+    .map(
+      (t) => `
+            <a class="card" href="${href(routes.issue(t.id))}">
+              <div class="num">${esc(t.kicker)}</div>
+              <h3>${esc(t.title)}</h3>
+              <p>${esc(t.summary)}</p>
+            </a>`,
+    )
+    .join("");
+}
+
 export function issuesIndexView(): string {
   const rest = themes.filter((t) => !featuredIds.has(t.id));
+  const antiSikhIds = ["nishan-khanda", "identity-hinduism", "gurmukhi", "article-25"];
+  const antiSikh = antiSikhIds.map((id) => rest.find((t) => t.id === id)).filter((t): t is (typeof themes)[number] => Boolean(t));
+  const other = rest.filter((t) => !antiSikhIds.includes(t.id));
   return `
     <div class="page-hero">
       <div class="wrap">
         <h1 class="page-title">The record</h1>
-        <p class="lede-page">The 1984 Sikh genocide. Blue Star. A state without its capital. A constitution two Sikhs would not sign. The Guru’s house. The cremation registers. The Nishan Sahib they want taken down. Start with the issue. The papers follow.</p>
+        <p class="lede-page">The 1984 Sikh genocide. Blue Star. A state without its capital. A constitution two Sikhs would not sign. The Guru’s house. The cremation registers. Start with the issue. The papers follow.</p>
       </div>
     </div>
     <section class="section">
@@ -432,18 +448,13 @@ export function issuesIndexView(): string {
             })
             .join("")}
         </div>
+        <h2 class="rest-head">Anti-Sikh narratives</h2>
+        <div class="issue-grid compact">
+          ${issueCards(antiSikh)}
+        </div>
         <h2 class="rest-head">Also in this archive</h2>
         <div class="issue-grid compact">
-          ${rest
-            .map(
-              (t) => `
-            <a class="card" href="${href(routes.issue(t.id))}">
-              <div class="num">${esc(t.kicker)}</div>
-              <h3>${esc(t.title)}</h3>
-              <p>${esc(t.summary)}</p>
-            </a>`,
-            )
-            .join("")}
+          ${issueCards(other)}
         </div>
       </div>
     </section>
