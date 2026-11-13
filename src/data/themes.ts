@@ -29,12 +29,34 @@ export const themes: Theme[] = [
     summary:
       "Gandhi repeatedly described Sikhism as part of Hinduism — in 1925, in 1940, and in December 1947 — after having condemned the Nankana massacre.",
     sikhReading:
-      "If the Gurus' path is a Hindu sect, then a separate Panth, a separate electorate, and separate safeguards become communalism. Sikhs have insisted, in scripture, in the Khalsa, and in the Assembly, that they are not a variety of Hindu. Gandhi's own Collected Works are the evidence of the contrary claim.",
+      "If the Gurus' path is a Hindu sect, then a separate Panth, a separate electorate, and separate safeguards become communalism. Sikhs have insisted, in scripture, in the Khalsa, and in the Assembly, that they are not a variety of Hindu. Gandhi's own Collected Works are the evidence of the contrary claim. The same folding now arrives dressed as piety: if the Khanda is not a verse, take down the Nishan Sahib.",
     evidence:
       "Collected Works of Mahatma Gandhi, volume 28, item 153 (Internet Archive); later Harijan and prayer-meeting texts quoted in the history.",
     chapterIds: ["identity", "partition"],
     sourceIds: ["cwmg-28", "article-25"],
     eventIds: ["misguided-patriot", "gandhi-tara-1940", "gandhi-dec-1947"],
+  },
+  {
+    id: "nishan-khanda",
+    title: "The Nishan Sahib they want taken down",
+    kicker: "Anti-Sikh narrative",
+    summary:
+      "A Hindu and “secular Sikh” talking point says the Nishan Sahib with the Khanda is unacceptable because it is not printed in Guru Granth Sahib. The test is a trap. It is built to make the Khalsa invisible.",
+    sikhReading:
+      "The talking point is simple, and it is a trap. Hindus and some self-described secular Sikhs say the Nishan Sahib with the Khanda is unacceptable because it is not in Guru Granth Sahib. Guru Granth Sahib is shabad — the Guru’s word. It is not a catalogue of buildings, rumalas, flagstaffs, or drawings. The Akal Takht is not printed there. The rumala is not printed there. A picture of a kirpan is not printed there. The Constitution of India still names the kirpan as part of professing the Sikh religion. Khande di pahul — the birth of the Khalsa — is performed with a khanda, in the presence of Guru Granth Sahib. If the test were honest, it would abolish the Takht, the flag, the initiation, and the visible Khalsa. That is the point. Guru Hargobind raised the first Nishan over the Akal Takht in 1606: Akal Dhuja, Satguru ka Nishan. Guru Gobind Singh made the Khalsa by stirring amrit with a khanda on Baisakhi 1699. Khalsa armies marched behind nishanchis. One misl was named Nishananwali because it carried the standards. In 1714 a Nishan Sahib was painted inside a Guru Granth Sahib manuscript now at Takht Kesgarh Sahib. Sikhs ask every day in Ardas that the flags stand forever. The Sikh Rehat Maryada requires a Nishan Sahib at every gurdwara, xanthic or greyish-blue, with a spearhead or a Khanda on the post. The emblem on the cloth — khanda, chakra, two kirpans — is miri-piri in steel. This is the same project as Gandhi’s claim that Sikhism is a variety of Hinduism, his disparagement of Gurmukhi, and Article 25 Explanation II. First deny that Sikhs are a people. Then deny them the flag that marks the Guru’s house from the road. A Panth without a Nishan is a sect waiting to be folded.",
+    evidence:
+      "Encyclopaedia of Sikhism (Nishan Sahib; Pahul); Sikh Rehat Maryada, official English (Nishan Sahib and Khanda on the post); 1714 Guru Granth Sahib manuscript folio at Takht Kesgarh Sahib; Sikh Museum chronicle of Nishan Sahibs in Prachin Panth Prakash.",
+    chapterIds: ["identity"],
+    sourceIds: [
+      "encyclopedia-nishan",
+      "encyclopedia-pahul",
+      "encyclopedia-symbols",
+      "rehat-maryada",
+      "commons-nishan-folio",
+      "commons-nishan-harmandir",
+      "sikhmuseum-nishan",
+    ],
+    eventIds: ["nishan-1606", "khande-pahul-1699", "nishan-folio-1714", "rehat-nishan-1945"],
   },
   {
     id: "gurmukhi",

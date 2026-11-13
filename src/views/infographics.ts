@@ -143,6 +143,29 @@ export function disappearancesGallery(): string {
   `;
 }
 
+export function nishanKhandaInfographic(): string {
+  return `
+    <section class="infographic" aria-label="The Nishan Sahib and the Khanda">
+      <p class="kicker">The trap</p>
+      <h2>If it is not a verse, erase the Khalsa</h2>
+      <p class="ig-lead">The talking point says the Nishan Sahib with the Khanda is unacceptable because it is not printed in Guru Granth Sahib. Guru Granth Sahib is shabad. Apply the same test to the rest of Sikh life and the Khalsa disappears. That is the point of the test.</p>
+      <div class="ig-stats">
+        <div class="ig-stat"><b>1606</b><span>Guru Hargobind raises Akal Dhuja at the Akal Takht</span></div>
+        <div class="ig-stat"><b>1699</b><span>The Khalsa is born by khande di pahul</span></div>
+        <div class="ig-stat"><b>1714</b><span>A Nishan painted in a Guru Granth Sahib manuscript</span></div>
+        <div class="ig-stat"><b>1945</b><span>Rehat Maryada: a Khanda on the flagstaff</span></div>
+      </div>
+      <ol class="ig-days">
+        <li><time>The bait</time> “Show us the Khanda in Guru Granth Sahib.” Scripture is word, not a picture book. The Akal Takht, the rumala, and a drawing of a kirpan are not printed there either.</li>
+        <li><time>The steel</time> Khande di pahul is performed with a khanda in the presence of Guru Granth Sahib. The Constitution names the kirpan. The smear pretends to defend the Granth while attacking the initiation done before it.</li>
+        <li><time>The page</time> In 1714 a Nishan Sahib was painted inside a Guru Granth Sahib manuscript at Takht Kesgarh Sahib. The claim “it is not in the Granth” is false on that folio.</li>
+        <li><time>The project</time> Same work as Gandhi’s Hindu fold, the disparagement of Gurmukhi, and Article 25 Explanation II: deny that Sikhs are a people, then take down the flag that marks the Guru’s house from the road.</li>
+      </ol>
+      <p class="figure-credit">Encyclopaedia of Sikhism; Sikh Rehat Maryada; Mohinder Singh, <em>Shabad Guru</em>, vol. 1 (2011), p. 21; Sikh Museum chronicle of Nishan Sahibs in <em>Prachin Panth Prakash</em>.</p>
+    </section>
+  `;
+}
+
 export function genocideGallery(): string {
   return `
     <div class="gallery">

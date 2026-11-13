@@ -6,7 +6,7 @@ import { media } from "../data/media";
 import { esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
 import { sourceCard } from "./layout";
-import { figure, genocideInfographic, raid1955Infographic } from "./infographics";
+import { figure, genocideInfographic, nishanKhandaInfographic, raid1955Infographic } from "./infographics";
 import { clipping, letter, storyFeature } from "./exhibits";
 
 export function homeView(): string {
@@ -19,6 +19,7 @@ export function homeView(): string {
   const hukam = stories.find((s) => s.id === "hukam-singh")!;
   const nankana = stories.find((s) => s.id === "nankana")!;
   const khalra = stories.find((s) => s.id === "khalra")!;
+  const nishan = stories.find((s) => s.id === "nishan-khanda")!;
 
   return `
     <section class="hero hero-impact">
@@ -94,6 +95,20 @@ export function homeView(): string {
           deck: "Offices closed across Punjab. Army alerted as “a routine precaution.”",
           body: "Hartal was observed throughout Punjab today in memory of Mr. Darshan Singh Pheruman, who died in Amritsar yesterday on the 74th day of his fast for the inclusion of Chandigarh in Punjab. The last rites were performed at his village. Chandigarh shops closed too.",
           cite: "The Hindu, 29 October 1969, from the paper’s archive reprint.",
+        })}
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="wrap">
+        ${storyFeature(nishan)}
+        ${nishanKhandaInfographic()}
+        ${figure(media.nishanFolio, "A Nishan Sahib painted inside a Guru Granth Sahib manuscript dated 1714, at Takht Kesgarh Sahib.")}
+        ${letter({
+          from: "Sikh Rehat Maryada",
+          date: "SGPC · official English",
+          body: "At a high-level site in every Gurdwara should be installed the nishan sahib (Sikh flag). The cloth of the flag should be either of xanthic or of greyish blue colour and on top of the flag post, there should either be a spearhead or a Khanda.",
+          cite: "The Panth’s code puts the Khanda on the flagstaff. The smear calls that flag unscriptural.",
         })}
       </div>
     </section>

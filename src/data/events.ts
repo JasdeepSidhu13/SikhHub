@@ -2,6 +2,70 @@ import type { TimelineEvent } from "./types";
 
 export const events: TimelineEvent[] = [
   {
+    id: "nishan-1606",
+    date: "1606",
+    sort: "1606-06-15",
+    title: "Guru Hargobind raises the Nishan at the Akal Takht",
+    period: "Before 1920",
+    chapterId: "identity",
+    summary:
+      "The Encyclopaedia of Sikhism traces the Nishan Sahib to Guru Hargobind, who hoisted a flag over the Akal Takht (Akal Bunga) as it was erected in 1606. The flag was called Akal Dhuja — the immortal flag — or Satguru ka Nishan, the standard of the true Guru.",
+    significance:
+      "The Nishan is a Guru’s act at the seat of Sikh temporal authority. It does not wait on a printed drawing in Guru Granth Sahib. The talking point that would take it down is an argument against Guru Hargobind.",
+    evidence: "Encyclopaedia of Sikhism, “Nishan Sahib”; Bhai Kahn Singh Nabha as discussed by Sikh Museum.",
+    sourceIds: ["encyclopedia-nishan", "sikhmuseum-nishan"],
+    themeIds: ["nishan-khanda", "identity-hinduism"],
+    tags: ["Nishan Sahib", "Akal Takht", "Guru Hargobind"],
+  },
+  {
+    id: "khande-pahul-1699",
+    date: "30 March 1699",
+    sort: "1699-03-30",
+    title: "The Khalsa is born by the khanda",
+    period: "Before 1920",
+    chapterId: "identity",
+    summary:
+      "On Baisakhi 1699 Guru Gobind Singh instituted khande di pahul: amrit stirred with a khanda, the double-edged sword, and administered to the Panj Piare. The ceremony is still performed in the presence of Guru Granth Sahib. The Khalsa’s name, discipline, and steel begin here.",
+    significance:
+      "A smear that calls the Khanda unscriptural is a smear against the initiation that makes a Sikh a Khalsa — performed before the Guru Granth Sahib the smear pretends to defend.",
+    evidence: "Encyclopaedia of Sikhism, “Pahul.”",
+    sourceIds: ["encyclopedia-pahul", "encyclopedia-symbols"],
+    themeIds: ["nishan-khanda"],
+    tags: ["Khanda", "Khalsa", "Pahul"],
+  },
+  {
+    id: "nishan-folio-1714",
+    date: "1714",
+    sort: "1714-01-01",
+    title: "A Nishan painted inside Guru Granth Sahib",
+    period: "Before 1920",
+    chapterId: "identity",
+    summary:
+      "A Guru Granth Sahib manuscript housed at Takht Kesgarh Sahib, Anandpur, dated 1771 B.S. (1714 C.E.), contains an illustrated folio of a Nishan Sahib. The photograph is published in Mohinder Singh’s Shabad Guru catalogue.",
+    significance:
+      "The claim “the Nishan is not in Guru Granth Sahib” is not only a category error — scripture is shabad, not a picture book. It is also historically false. Scribes put the flag in the Granth.",
+    evidence: "Wikimedia Commons folio; Mohinder Singh, Shabad Guru, vol. 1 (2011), p. 21.",
+    sourceIds: ["commons-nishan-folio"],
+    themeIds: ["nishan-khanda"],
+    tags: ["Nishan Sahib", "Guru Granth Sahib manuscript", "1714"],
+  },
+  {
+    id: "rehat-nishan-1945",
+    date: "3 February 1945",
+    sort: "1945-02-03",
+    title: "Rehat Maryada: a Khanda on the flagstaff",
+    period: "1925–1947",
+    chapterId: "identity",
+    summary:
+      "The SGPC approved the Sikh Rehat Maryada. The official English requires a Nishan Sahib at a high-level site in every gurdwara, xanthic or greyish-blue cloth, and “on top of the flag post, there should either be a spearhead or a Khanda.” The Ardas in the same code asks that the flags abide from age to age.",
+    significance:
+      "The Panth’s own code puts the Khanda on the Nishan. Calling that flag unscriptural is a revolt against the Maryada, dressed as fidelity to the Granth.",
+    evidence: "Sikh Rehat Maryada, official English text of the gurdwara article.",
+    sourceIds: ["rehat-maryada"],
+    themeIds: ["nishan-khanda", "identity-hinduism"],
+    tags: ["Nishan Sahib", "Khanda", "Rehat Maryada"],
+  },
+  {
     id: "mahant-era",
     date: "Before 1920",
     sort: "1920-01-01",
@@ -756,6 +820,7 @@ export const events: TimelineEvent[] = [
 ];
 
 export const periods = [
+  "Before 1920",
   "1920–1925",
   "1925–1947",
   "1949–1956",

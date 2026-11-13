@@ -344,6 +344,75 @@ export const briefs: Record<string, SourceBrief> = {
     whyItMatters:
       "The raid was written down in 1955, from inside the morcha. Later reconstructions rest on this compilation.",
   },
+  "encyclopedia-nishan": {
+    keyPoints: [
+      "Nishan Sahib is the Sikh flag at every gurdwara: saffron, sometimes blue for Nihangs, with the emblem of khanda, chakra and two kirpans.",
+      "The origin is traced to Guru Hargobind, who hoisted Akal Dhuja / Satguru ka Nishan over the Akal Takht in 1606.",
+      "Sikh armies marched behind nishanchis. One misl was named Nishananwali because it carried the standards.",
+      "Ardas recalls nishanaan dhaamaan di kamaai and asks: chauktaan, jhande, bunge jugo jug atal — may choirs, standards and citadels flourish forever.",
+    ],
+    whyItMatters:
+      "The Nishan is a Guru’s act at the Akal Takht, not a modern extra waiting for a verse in Guru Granth Sahib. The encyclopaedia is the sourced account of that origin.",
+  },
+  "encyclopedia-pahul": {
+    keyPoints: [
+      "On Baisakhi 1699 Guru Gobind Singh instituted khande di pahul: amrit stirred with a khanda.",
+      "The ceremony is still performed in the presence of Guru Granth Sahib, with five Sikhs administering the rites.",
+      "The Khalsa’s name, the five Ks, and the steel of the khanda begin in this initiation.",
+    ],
+    whyItMatters:
+      "A talking point that calls the Khanda unscriptural is a talking point against the birth of the Khalsa — done before the Guru Granth Sahib the smear pretends to defend.",
+  },
+  "encyclopedia-symbols": {
+    keyPoints: [
+      "The Sikh crest is the composite khanda, chakra and two swords: strength and sovereignty of the Khalsa.",
+      "The Nishan Sahib is a high-flying pennant, yellow, saffron or dark blue, with a khanda atop its flagpost, in the gurdwara compound.",
+    ],
+    whyItMatters:
+      "The emblem on the flag is not a later Hindu borrowing. It is the Khalsa’s own crest, described in the same encyclopaedia that describes the five Ks.",
+  },
+  "rehat-maryada": {
+    keyPoints: [
+      "The SGPC’s Sikh Rehat Maryada is the Panthic code of conduct.",
+      "Official English: at a high-level site in every gurdwara the Nishan Sahib must be installed; the cloth xanthic or greyish-blue; on top of the flag post, a spearhead or a Khanda.",
+      "The Ardas in the same code asks that hymn-singing parties, flags and hostels abide from age to age.",
+    ],
+    whyItMatters:
+      "The Panth’s own Maryada puts the Khanda on the Nishan. Calling that flag unscriptural is a revolt against the code, dressed as fidelity to the Granth.",
+    excerpt:
+      "At a high-level site in every Gurdwara should be installed the nishan sahib (Sikh flag). The cloth of the flag should be either of xanthic or of greyish blue colour and on top of the flag post, there should either be a spearhead or a Khanda.",
+    excerptCite: "Sikh Rehat Maryada, official English, gurdwara article",
+  },
+  "commons-nishan-folio": {
+    keyPoints: [
+      "A Guru Granth Sahib manuscript at Takht Kesgarh Sahib, Anandpur, dated 1771 B.S. (1714 C.E.), contains an illustrated folio of a Nishan Sahib.",
+      "The photograph is published in Mohinder Singh, Shabad Guru: Illustrated Catalogue of Rare Guru Granth Sahib Manuscripts, volume I (2011), page 21.",
+      "The work is a public-domain manuscript illumination: scribes put the flag in the Granth.",
+    ],
+    whyItMatters:
+      "The smear says the Nishan is not in Guru Granth Sahib. This page was painted inside a Guru Granth Sahib. The claim is not only a category error. On this evidence it is false.",
+    image: "/media/nishan-folio-1714.jpg",
+    imageAlt: "Illustrated folio of a Nishan Sahib from a 1714 Guru Granth Sahib manuscript",
+    imageCredit: "Takht Kesgarh Sahib manuscript, 1714. Via Wikimedia Commons / Mohinder Singh, Shabad Guru (2011).",
+  },
+  "commons-nishan-harmandir": {
+    keyPoints: [
+      "The Nishan Sahib flying at Sri Harmandir Sahib, Amritsar.",
+      "The Encyclopaedia of Sikhism records two flags of about forty metres between Harmandir and the Akal Takht.",
+    ],
+    whyItMatters: "This is the flag the talking point would take down from the Guru’s house.",
+    image: "/media/nishan-harmandir.jpg",
+    imageAlt: "The Nishan Sahib flying at Sri Harmandir Sahib, Amritsar",
+    imageCredit: "Amarpreet.singh.in, Wikimedia Commons.",
+  },
+  "sikhmuseum-nishan": {
+    keyPoints: [
+      "Rattan Singh Bhangu’s Prachin Panth Prakash records Khalsa standards planted at Muktsar, unfurled for Banda Singh Bahadur, and hoisted at Panipat and Amritsar.",
+      "Bhai Kahn Singh Nabha’s Gurmat Martand and Mahan Kosh give the account of Guru Hargobind’s first flag at the Akal Bunga, saffron, with a spear-like khanda on the post.",
+    ],
+    whyItMatters:
+      "Eighteenth-century Sikh chronicle and twentieth-century lexicons agree: the Nishan is a Khalsa standard, not a late extra.",
+  },
   "jaito-photo": {
     keyPoints: [
       "About 1924: the 12th Shahidi Jatha takes blessing at the Akal Takht during the Jaito Morcha.",

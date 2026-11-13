@@ -14,6 +14,7 @@ import {
   raid1955Gallery,
   raid1955Infographic,
   reorgInfographic,
+  nishanKhandaInfographic,
   figure,
 } from "./infographics";
 import { clipping, furtherLinks, letter, storyFeature } from "./exhibits";
@@ -167,6 +168,11 @@ function extras(id: string): string {
     const nankana = stories.find((s) => s.id === "nankana")!;
     return `${figure(media.harmandir, "Sri Harmandir Sahib — the house whose management the Panth took from mahants.")}${figure(media.jaito, "A shahidi jatha at the Akal Takht during the Jaito Morcha, about 1924.")}${storyFeature(nankana, false, here)}${furtherLinks([
       {
+        href: "/issues/nishan-khanda",
+        title: "The Nishan Sahib they want taken down",
+        note: "The flag of the Guru’s house. The smear that would take it down is an argument against that house.",
+      },
+      {
         href: "/documents/nankana-sikhitihas",
         title: "Saka Nankana Sahib, 20 February 1921",
         note: "The sourced event record: mahant, hired men, Bhai Lachhman Singh’s jatha, the High Court recital.",
@@ -293,13 +299,42 @@ function extras(id: string): string {
       },
     ])}`;
   }
-  if (id === "identity-hinduism" || id === "gurmukhi") {
+  if (id === "identity-hinduism") {
     return `${letter({
       from: "M. K. Gandhi to Jawaharlal Nehru",
       date: "3 August 1937",
       body: "The Sikhs will die for Punjabi written in Gurmukhi. There is no elegance about that script.",
       cite: "Collected Works of Mahatma Gandhi, volume 66.",
     })}${furtherLinks([
+      {
+        href: "/issues/nishan-khanda",
+        title: "The Nishan Sahib they want taken down",
+        note: "The same Hindu-folding project, dressed as piety: if the Khanda is not a verse, take down the Khalsa’s flag.",
+      },
+      {
+        href: "/documents/cwmg-66",
+        title: "The 1937 letter",
+        note: "Gandhi’s own words to Nehru on Gurmukhi, from the Collected Works scan.",
+      },
+      {
+        href: "/documents/cwmg-28",
+        title: "“Sikhism,” October 1925",
+        note: "The published reply that placed Sikhism inside Hinduism after Nankana.",
+      },
+    ])}`;
+  }
+  if (id === "gurmukhi") {
+    return `${letter({
+      from: "M. K. Gandhi to Jawaharlal Nehru",
+      date: "3 August 1937",
+      body: "The Sikhs will die for Punjabi written in Gurmukhi. There is no elegance about that script.",
+      cite: "Collected Works of Mahatma Gandhi, volume 66.",
+    })}${furtherLinks([
+      {
+        href: "/issues/nishan-khanda",
+        title: "The Nishan Sahib they want taken down",
+        note: "Same family as the attack on Gurmukhi: first the script of the Granth, then the flag of the Guru’s house.",
+      },
       {
         href: "/documents/cwmg-66",
         title: "The 1937 letter",
@@ -320,9 +355,49 @@ function extras(id: string): string {
       cite: "Two sentences. They do not cancel each other.",
     })}${furtherLinks([
       {
+        href: "/issues/nishan-khanda",
+        title: "The Nishan Sahib they want taken down",
+        note: "The Constitution names the kirpan. The smear now names the Khanda as unscriptural. Same work: keep the Sikh visible only as a Hindu with a dagger clause.",
+      },
+      {
         href: "/documents/article-25",
         title: "Article 25, official text",
         note: "Explanation I (kirpan) and Explanation II (the grouping). Hold both on the table.",
+      },
+    ])}`;
+  }
+  if (id === "nishan-khanda") {
+    const nishan = stories.find((s) => s.id === "nishan-khanda")!;
+    return `${nishanKhandaInfographic()}${figure(media.nishanFolio, "A Nishan Sahib painted inside a Guru Granth Sahib manuscript dated 1714, now at Takht Kesgarh Sahib.")}${figure(media.nishanHarmandir, "The Nishan Sahib at Sri Harmandir Sahib — the flag the talking point would take down.")}${letter({
+      from: "Sikh Rehat Maryada",
+      date: "SGPC · official English",
+      body: "At a high-level site in every Gurdwara should be installed the nishan sahib (Sikh flag). The cloth of the flag should be either of xanthic or of greyish blue colour and on top of the flag post, there should either be a spearhead or a Khanda.",
+      cite: "Panthic code. The Khanda on the post is not a fashion. It is the Maryada.",
+    })}${storyFeature(nishan, false, here)}${furtherLinks([
+      {
+        href: "/documents/commons-nishan-folio",
+        title: "The 1714 folio",
+        note: "A Nishan painted inside Guru Granth Sahib. The smear says it is not there. Open the page.",
+      },
+      {
+        href: "/documents/rehat-maryada",
+        title: "The Rehat Maryada",
+        note: "Every gurdwara. A Nishan Sahib. A spear or a Khanda on the post.",
+      },
+      {
+        href: "/documents/encyclopedia-nishan",
+        title: "Encyclopaedia of Sikhism: Nishan Sahib",
+        note: "Guru Hargobind, 1606: Akal Dhuja, Satguru ka Nishan. Nishanchis. The Ardas for the flags.",
+      },
+      {
+        href: "/issues/identity-hinduism",
+        title: "Sikhism as a separate religion",
+        note: "The parent smear: Gandhi’s claim that Sikhism is a variety of Hinduism. This flag argument is the same project.",
+      },
+      {
+        href: "/issues/article-25",
+        title: "Article 25: kirpan and Explanation II",
+        note: "The Constitution names the kirpan. Explanation II still tries to fold Sikhs into Hindu law.",
       },
     ])}`;
   }
@@ -335,7 +410,7 @@ export function issuesIndexView(): string {
     <div class="page-hero">
       <div class="wrap">
         <h1 class="page-title">The record</h1>
-        <p class="lede-page">The 1984 Sikh genocide. Blue Star. A state without its capital. A constitution two Sikhs would not sign. The Guru’s house. The cremation registers. Start with the issue. The papers follow.</p>
+        <p class="lede-page">The 1984 Sikh genocide. Blue Star. A state without its capital. A constitution two Sikhs would not sign. The Guru’s house. The cremation registers. The Nishan Sahib they want taken down. Start with the issue. The papers follow.</p>
       </div>
     </div>
     <section class="section">
@@ -385,6 +460,7 @@ export function issueView(id: string): string | null {
   const issueHero: Record<string, string> = {
     "golden-temple-1955": "/media/parikrama-causeway.jpg",
     "shrine-control": "/media/harmandir.jpg",
+    "nishan-khanda": "/media/nishan-harmandir.jpg",
   };
   const hero = poster?.image ?? issueHero[id];
   const extra = extras(id);

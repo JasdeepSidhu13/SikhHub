@@ -194,6 +194,30 @@ export const stories: Story[] = [
     cta: "Open the disappearances record",
     further: { href: "https://www.ensaaf.org/article/our-voices-matter", cta: "Ensaaf: Our Voices Matter" },
   },
+  {
+    id: "nishan-khanda",
+    kicker: "Anti-Sikh narrative",
+    title: "They say the Khanda is not in Guru Granth Sahib. They want the Khalsa without a flag.",
+    years: "1606–present",
+    lede:
+      "A Hindu and “secular Sikh” talking point says the Nishan Sahib with the Khanda is unacceptable because it is not printed in Guru Granth Sahib. The test is built to fail. Then the flag comes down, and a people without a flag can be folded into Hinduism.",
+    body: [
+      "Guru Granth Sahib is shabad. It does not print the Akal Takht. It does not print rumalas. It does not print a photograph of a kirpan. The Constitution of India still names the kirpan as part of professing the Sikh religion. Khande di pahul — the birth of the Khalsa — is performed with a khanda in the presence of Guru Granth Sahib. If “not drawn in the Granth” were the test of Sikh life, the Takht, the initiation, and the visible Khalsa would all be unscriptural. That is the point of the test.",
+      "Guru Hargobind raised the first Nishan over the Akal Takht in 1606: Akal Dhuja, Satguru ka Nishan. Guru Gobind Singh made the Khalsa by stirring amrit with a khanda on Baisakhi 1699. Khalsa armies marched behind nishanchis. One misl was named Nishananwali because it carried the standards. In 1714 a Nishan Sahib was painted inside a Guru Granth Sahib manuscript now at Takht Kesgarh Sahib. The claim “it is not in Guru Granth Sahib” is not only a category error. On that page, it is false.",
+      "Sikhs ask every day in Ardas that the flags stand forever. The Sikh Rehat Maryada requires a Nishan Sahib at every gurdwara, xanthic or greyish-blue, with a spearhead or a Khanda on the post. The emblem on the cloth — khanda, chakra, two kirpans — is miri-piri in steel. This is the same project as Gandhi’s claim that Sikhism is a variety of Hinduism, his disparagement of Gurmukhi, and Article 25 Explanation II. First deny that Sikhs are a people. Then deny them the flag that marks the Guru’s house from the road.",
+    ],
+    quote: {
+      text: "ਝੰਡੇ ਬੁੰਗੇ ਜੁਗੋ ਜੁਗ ਅਟਲ",
+      cite: "Ardas, as given in the Sikh Rehat Maryada — “May the flags and hostels abide from age to age.” Encyclopaedia of Sikhism: chauktaan, jhande, bunge jugo jug atal.",
+      lang: "pa",
+    },
+    image: media.nishanHarmandir.src,
+    imageAlt: media.nishanHarmandir.alt,
+    imageCredit: media.nishanHarmandir.credit,
+    href: "/issues/nishan-khanda",
+    cta: "Open the case against the smear",
+    further: { href: "/documents/commons-nishan-folio", cta: "The 1714 folio in Guru Granth Sahib" },
+  },
 ];
 
 export const storyById = Object.fromEntries(stories.map((s) => [s.id, s]));

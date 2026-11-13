@@ -111,4 +111,15 @@ export const media = {
     alt: "The square in front of the Akal Takht, about 1924",
     credit: "Square before the Akal Takht, c. 1924. Wikimedia Commons. In 1955 the Head Granthi and the Jathedar were arrested at their homes before the raid.",
   },
+  nishanHarmandir: {
+    src: "/media/nishan-harmandir.jpg",
+    alt: "The Nishan Sahib flying at Sri Harmandir Sahib, Amritsar",
+    credit: "Nishan Sahib at Harmandir Sahib, Amritsar. Photograph: Amarpreet.singh.in, Wikimedia Commons (GFDL / CC BY-SA).",
+  },
+  nishanFolio: {
+    src: "/media/nishan-folio-1714.jpg",
+    alt: "Illustrated folio of a Nishan Sahib from a 1714 Guru Granth Sahib manuscript at Takht Kesgarh Sahib",
+    credit:
+      "Illustrated Nishan Sahib folio from a Guru Granth Sahib manuscript dated 1771 B.S. (1714 C.E.), Takht Kesgarh Sahib, Anandpur. Photographed in Mohinder Singh, Shabad Guru, vol. 1 (2011), p. 21. Wikimedia Commons.",
+  },
 } as const satisfies Record<string, MediaItem>;

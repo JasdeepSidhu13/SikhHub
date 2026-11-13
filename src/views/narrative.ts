@@ -5,7 +5,7 @@ import { esc } from "../lib/html";
 import { href, routes } from "../lib/paths";
 import { eventsFor, sourcesFor, themesFor } from "../lib/lookup";
 import { sourceCard } from "./layout";
-import { figure, genocideInfographic, pherumanInfographic, raid1955Infographic, reorgInfographic } from "./infographics";
+import { figure, genocideInfographic, nishanKhandaInfographic, pherumanInfographic, raid1955Infographic, reorgInfographic } from "./infographics";
 import { media } from "../data/media";
 import { clipping, furtherLinks, letter, storyFeature } from "./exhibits";
 
@@ -53,12 +53,19 @@ function chapterExtras(id: string): string {
     return `${figure(media.harmandir, "Sri Harmandir Sahib.")}${figure(media.jaito, "A shahidi jatha at the Akal Takht during the Jaito Morcha, about 1924.")}${storyFeature(nankana)}`;
   }
   if (id === "identity") {
-    return letter({
+    const nishan = stories.find((s) => s.id === "nishan-khanda")!;
+    return `${letter({
       from: "M. K. Gandhi to Jawaharlal Nehru",
       date: "3 August 1937",
       body: "The Sikhs will die for Punjabi written in Gurmukhi. There is no elegance about that script.",
       cite: "Collected Works of Mahatma Gandhi, volume 66.",
-    });
+    })}${nishanKhandaInfographic()}${storyFeature(nishan)}${furtherLinks([
+      {
+        href: "/issues/nishan-khanda",
+        title: "The Nishan Sahib they want taken down",
+        note: "The same Hindu-folding project, dressed as piety: if the Khanda is not a verse, take down the Khalsa’s flag.",
+      },
+    ])}`;
   }
   if (id === "partition") {
     return `${figure(media.tara, "Master Tara Singh, Tarn Taran, March 1956.")}${letter({

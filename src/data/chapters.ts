@@ -97,12 +97,29 @@ export const chapters: Chapter[] = [
       {
         type: "p",
         text: "Congress assurances at Lahore and at Sis Ganj would be invoked by Sikh members of the Constituent Assembly. The religious view documented here is the backdrop to the constitutional view documented in the next chapter: if Sikhs are a variety of Hindu, minority safeguards can be withdrawn as an internal Hindu matter.",
+      },
+      {
+        type: "h2",
+        text: "The next erasure: the Nishan Sahib",
+      },
+      {
+        type: "p",
+        text: "The same folding now arrives dressed as piety. Hindus and some self-described secular Sikhs say the Nishan Sahib with the Khanda is unacceptable because it is not in Guru Granth Sahib. Guru Granth Sahib is shabad. It does not print the Akal Takht, rumalas, or a drawing of a kirpan. The test is built so the Khalsa fails it. Then a people without a flag can be folded into Hinduism. Guru Hargobind raised the first Nishan at the Akal Takht in 1606. Guru Gobind Singh made the Khalsa by stirring amrit with a khanda. In 1714 a Nishan was painted inside a Guru Granth Sahib manuscript. The Sikh Rehat Maryada requires the flag at every gurdwara, with a spear or a Khanda on the post. Sikhs pray for the flags to stand forever. The smear is not a textual dispute. It is the Hindu-folding project continued by other means.",
+      },
+      {
+        type: "callout",
+        title: "The trap",
+        text: "If “not printed in Guru Granth Sahib” were the test of Sikh life, the Akal Takht would be unscriptural, the rumala would be unscriptural, and khande di pahul — performed with a khanda in the presence of Guru Granth Sahib — would be unscriptural. The people who run this test do not want a more faithful Granth. They want a Sikhism that cannot be seen from the road.",
       }
     ],
     sourceIds: [
       "cwmg-28",
       "cwmg-66",
-      "khushwant"
+      "khushwant",
+      "encyclopedia-nishan",
+      "encyclopedia-pahul",
+      "rehat-maryada",
+      "commons-nishan-folio"
     ],
     eventIds: [
       "gandhi-nankana",
@@ -111,9 +128,13 @@ export const chapters: Chapter[] = [
       "gandhi-gurmukhi",
       "gandhi-tara-1940",
       "partition-1947",
-      "gandhi-dec-1947"
+      "gandhi-dec-1947",
+      "nishan-1606",
+      "khande-pahul-1699",
+      "nishan-folio-1714",
+      "rehat-nishan-1945"
     ],
-    themeIds: ["identity-hinduism", "gurmukhi", "assurances"],
+    themeIds: ["identity-hinduism", "gurmukhi", "assurances", "nishan-khanda"],
   },
   {
     id: "partition",
