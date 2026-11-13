@@ -10,7 +10,7 @@ import { figure, genocideInfographic, raid1955Infographic } from "./infographics
 import { clipping, letter, storyFeature } from "./exhibits";
 
 export function homeView(): string {
-  const featuredDocs = ["delhi-hc-2018", "cad-21-nov", "cwmg-66", "archive-1984", "sarsfield", "hrw-killers"]
+  const featuredDocs = ["archive-1984-tandoors", "delhi-hc-2018", "cad-21-nov", "cwmg-66", "archive-1984", "hrw-killers"]
     .map((id) => sources.find((s) => s.id === id))
     .filter(Boolean);
   const raid1955 = stories.find((s) => s.id === "golden-temple-1955")!;
@@ -25,13 +25,13 @@ export function homeView(): string {
       <img class="hero-bg" src="${asset(media.witnesses.src)}" alt="" />
       <div class="hero-inner">
         <p class="kicker">Sikh political history · 1920–2026</p>
-        <h1>It was not a riot. It was genocide.</h1>
-        <p class="lede">A capital withheld. A constitution they would not sign. Police in shoes in the Guru’s house in 1955. A schoolboy thrown in a well for a banned slogan. A freedom fighter dead on the seventy-fourth day of a fast. Then June 1984, and the 1984 Sikh genocide. The documents are here.</p>
+        <h1>They roasted Sikhs alive in tandoors.</h1>
+        <p class="lede">Affidavits to the Misra Commission from Nand Nagri name the ovens. A 2,000-strong mob, led by Congress workers, killed 119 Sikhs in that settlement. Children were put head-down into tandoors. This was the 1984 Sikh genocide. Not a riot. The papers are here.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="${href(routes.issues)}">The record</a>
           <a class="btn btn-ghost" href="${href(routes.issue("november-1984"))}">1984 Sikh genocide</a>
         </div>
-        <blockquote class="hero-quote">“The English-man has gone, but our liberty has not come. For us the so-called liberty is simply a change of masters, black for white.”<cite>Master Tara Singh, 28 March 1953</cite></blockquote>
+        <blockquote class="hero-quote">“The English-man has gone, but our [Sikh] liberty has not come. For us the so-called liberty is simply a change of masters, black for white. Under the garb of democracy and secularism, our Panth, our liberty, and our religion are being crushed.”<cite>Master Tara Singh, All India Sikh Conference, 28 March 1953</cite></blockquote>
       </div>
     </section>
 
@@ -138,7 +138,15 @@ export function homeView(): string {
       <div class="wrap">
         ${figure(media.witnesses, "Widows of Sikhs killed in Delhi during the 1984 Sikh genocide.")}
         ${genocideInfographic()}
-        <p><a class="btn btn-primary" href="${href(routes.issue("november-1984"))}">1984 Sikh genocide</a></p>
+        ${clipping({
+          masthead: "1984 Sikh Archive",
+          date: "13 November 2026 · Nand Nagri affidavits, 1985",
+          headline: "They roasted Sikhs alive in ovens and tandoors",
+          deck: "Pav Singh recovered three Misra Commission affidavits from Block A, Nand Nagri. 119 Sikhs killed. Congress workers named. The local police recorded nothing.",
+          body: "Many were put in the unheated Tandoors with their heads down and then – they were burnt after sprinkling kerosene on them. The dear one’s were cut into pieces in front of the womenfolk, who were raped so that they should realise the consequences of their beings and called a Sikh.",
+          cite: "Affidavit of Gurdayal Singh, President of Gurdwara Shri Guru Singh Sabha, Nand Nagri. Published by the 1984 Sikh Archive, 13 November 2026.",
+        })}
+        <p><a class="btn btn-primary" href="${href(routes.document("archive-1984-tandoors"))}">The Nand Nagri affidavits</a> <a class="btn btn-navy ext" href="https://1984sikh-archive.org/2026/11/13/new-study-reveals-victims-of-november-1984-sikh-genocide-were-roasted-alive-in-large-ovens-and-tandoors/" rel="noopener noreferrer" target="_blank">Open the original</a></p>
       </div>
     </section>
 

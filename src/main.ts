@@ -39,7 +39,7 @@ function paint(): void {
   let body = "";
 
   if (route.name === "home") {
-    title = "SikhHub — 1984 Sikh genocide, Punjabi Suba, and the record";
+    title = "SikhHub — They roasted Sikhs alive in tandoors";
     body = homeView();
   } else if (route.name === "narrative") {
     title = "History — SikhHub";

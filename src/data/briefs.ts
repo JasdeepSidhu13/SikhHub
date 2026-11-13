@@ -37,6 +37,19 @@ export const briefs: Record<string, SourceBrief> = {
     excerpt: "The figure of 10,000 Sikhs killed (more than half of them in the capital) would not be an exaggeration.",
     excerptCite: "Khushwant Singh, A History of the Sikhs, vol. 2, quoted by the 1984 Sikh Archive",
   },
+  "archive-1984-tandoors": {
+    keyPoints: [
+      "Pav Singh recovered three written affidavits submitted to the Misra Commission, the first official inquiry into what Rajiv Gandhi’s government called ‘anti-Sikh riots.’",
+      "All three concern Block A, Nand Nagri, 25 km northeast of Delhi, on 1 November 1984. A mob of about 2,000, led by twelve Congress Party workers, attacked the gurdwara and Sikh homes.",
+      "Raghubir Kaur: the mob “established a big oven in which bodies of the slain Sikhs were half-roasted and then thrown out.” Forty-eight Sikhs from Block A were killed. Police recorded nothing.",
+      "Gurdayal Singh, gurdwara president, whose two sons were killed: many were put head-down into unheated tandoors, then burned with kerosene. Girls and boys were killed this way. Surviving women and girls were gang-raped. 119 Sikhs were killed in Nand Nagri.",
+    ],
+    whyItMatters:
+      "This is not later rhetoric. It is what survivors wrote to the state’s own commission. An oven in a Delhi settlement is the method of the 1984 Sikh genocide, not a riot that got out of hand.",
+    excerpt:
+      "Many were put in the unheated Tandoors with their heads down and then – they were burnt after sprinkling kerosene on them. The dear one’s were cut into pieces in front of the womenfolk, who were raped so that they should realise the consequences of their beings and called a Sikh.",
+    excerptCite: "Affidavit of Gurdayal Singh, Nand Nagri, published by the 1984 Sikh Archive, 13 November 2026",
+  },
   "delhi-hc-2018": {
     keyPoints: [
       "Delhi High Court, 17 December 2018 (Muralidhar and Goel JJ.): reverses Sajjan Kumar’s acquittal for the Palam Colony killings and the burning of a gurdwara.",

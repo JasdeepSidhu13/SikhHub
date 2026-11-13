@@ -318,6 +318,7 @@ export const chapters: Chapter[] = [
       "hrw-1984",
       "livelaw-cah",
       "archive-1984",
+      "archive-1984-tandoors",
       "who-are-guilty",
       "1984-living-history",
       "commons-granth",
@@ -385,6 +386,7 @@ export const chapters: Chapter[] = [
       "hindu-sajjan-2025",
       "nanavati",
       "archive-1984",
+      "archive-1984-tandoors",
       "who-are-guilty",
       "1984-living-history"
     ],

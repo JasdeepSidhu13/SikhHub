@@ -23,7 +23,25 @@ const featuredIds = new Set<string>(keyIssues.map((k) => k.id));
 function extras(id: string): string {
   const here = `/issues/${id}`;
   if (id === "november-1984") {
-    return `${genocideInfographic()}${genocideGallery()}${furtherLinks([
+    return `${genocideInfographic()}${clipping({
+      masthead: "1984 Sikh Archive",
+      date: "13 November 2026 · Nand Nagri affidavits, 1985",
+      headline: "They roasted Sikhs alive in ovens and tandoors",
+      deck: "Three affidavits to the Misra Commission. 119 Sikhs killed in Nand Nagri. Congress workers named.",
+      body: "Many were put in the unheated Tandoors with their heads down and then – they were burnt after sprinkling kerosene on them. The dear one’s were cut into pieces in front of the womenfolk, who were raped so that they should realise the consequences of their beings and called a Sikh.",
+      cite: "Affidavit of Gurdayal Singh, Nand Nagri. Pav Singh / 1984 Sikh Archive, 13 November 2026.",
+    })}${clipping({
+      masthead: "Affidavit of Raghubir Kaur",
+      date: "Nand Nagri · Block A · 1 November 1984",
+      headline: "A big oven",
+      body: "Established a big oven in which bodies of the slain Sikhs were half-roasted and then thrown out.",
+      cite: "Affidavit of Raghubir Kaur, wife of Jaswant Singh, Nand Nagri. Her son Jaspal Singh was also killed. The police recorded nothing.",
+    })}${genocideGallery()}${furtherLinks([
+      {
+        href: "https://1984sikh-archive.org/2026/11/13/new-study-reveals-victims-of-november-1984-sikh-genocide-were-roasted-alive-in-large-ovens-and-tandoors/",
+        title: "The Nand Nagri affidavits",
+        note: "Pav Singh’s 2026 study: ovens, tandoors, named Congress workers, 119 dead. Open the original.",
+      },
       {
         href: "https://1984sikh-archive.org/",
         title: "1984 Sikh Archive",
@@ -33,6 +51,11 @@ function extras(id: string): string {
         href: "/documents/delhi-hc-2018",
         title: "Delhi High Court, 17 December 2018",
         note: "The judgment that named the killings crimes against humanity, engineered with police assistance.",
+      },
+      {
+        href: "/documents/archive-1984-tandoors",
+        title: "Ovens and tandoors",
+        note: "The three Nand Nagri affidavits, in this archive: Raghubir Kaur, Surjit Kaur, Gurdayal Singh.",
       },
       {
         href: "/documents/archive-1984",

@@ -649,11 +649,11 @@ export const events: TimelineEvent[] = [
     period: "1984–1985",
     chapterId: "bluestar",
     summary:
-      "Organised mobs, incited by Congress politicians and aided by the police, killed Sikhs across Delhi and other cities from 1–4 November. Homes and shops were marked in advance. The Delhi High Court described the killings as crimes against humanity. Justice R. K. Gauba recorded that genocide had been proved. Official Delhi count: 2,733. Independent estimates run from about 8,000 (Geoffrey Robertson QC) to about 10,000 (Khushwant Singh) and as high as about 17,000.",
+      "Organised mobs, incited by Congress politicians and aided by the police, killed Sikhs across Delhi and other cities from 1–4 November. Homes and shops were marked in advance. Affidavits from Nand Nagri name ovens and tandoors: Sikhs half-roasted, children burned head-down. The Delhi High Court described the killings as crimes against humanity. Justice R. K. Gauba recorded that genocide had been proved. Official Delhi count: 2,733. Independent estimates run from about 8,000 to about 17,000.",
     significance:
       "This was the 1984 Sikh genocide — not a riot. The word is required. Official framing as “riots” hid lists, kerosene, and police assistance. Justice was delayed for decades.",
     evidence: "Delhi High Court, 17 December 2018, §367.1; Nanavati; HRW; 1984 Sikh Archive death-toll page; Khushwant Singh, A History of the Sikhs, vol. 2.",
-    sourceIds: ["delhi-hc-2018", "livelaw-cah", "nanavati", "hrw-1984", "archive-1984", "archive-1984-toll", "who-are-guilty"],
+    sourceIds: ["delhi-hc-2018", "livelaw-cah", "nanavati", "hrw-1984", "archive-1984", "archive-1984-toll", "archive-1984-tandoors", "who-are-guilty"],
     themeIds: ["november-1984", "state-violence"],
     tags: ["1984", "Sikh genocide", "crimes against humanity"],
   },

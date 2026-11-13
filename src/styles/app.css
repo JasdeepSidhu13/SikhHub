@@ -682,7 +682,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 .hero-impact .hero-inner { z-index: 2; padding-bottom: 4.5rem; }
 .hero-quote {
   margin: 2.2rem 0 0;
-  max-width: 38rem;
+  max-width: 46rem;
   font-family: var(--serif);
   font-size: 1.2rem;
   font-style: italic;

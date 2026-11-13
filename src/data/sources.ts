@@ -458,6 +458,18 @@ export const sources: Source[] = [
     tags: ["1984", "archive", "genocide"],
   },
   {
+    id: "archive-1984-tandoors",
+    title: "Victims of the 1984 Sikh genocide were roasted alive in ovens and tandoors",
+    creator: "1984 Sikh Archive / Pav Singh",
+    year: "2026",
+    kind: "archival",
+    url: "https://1984sikh-archive.org/2026/11/13/new-study-reveals-victims-of-november-1984-sikh-genocide-were-roasted-alive-in-large-ovens-and-tandoors/",
+    note: "Pav Singh recovered three affidavits submitted to the Misra Commission from Block A, Nand Nagri. Raghubir Kaur describes a big oven in which slain Sikhs were half-roasted. Gurdayal Singh records children put head-down into unheated tandoors, then burned with kerosene. 119 Sikhs killed. Congress workers named. The local police recorded nothing.",
+    chapterIds: ["bluestar", "accounting"],
+    themeIds: ["november-1984"],
+    tags: ["1984", "archive", "genocide", "Nand Nagri"],
+  },
+  {
     id: "who-are-guilty",
     title: "Who Are the Guilty?",
     creator: "PUCL / PUDR, hosted by the 1984 Sikh Archive",
