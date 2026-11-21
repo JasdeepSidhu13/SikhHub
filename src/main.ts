@@ -7,6 +7,8 @@ import { chapterView, narrativeIndexView } from "./views/narrative";
 import { timelineView } from "./views/timeline";
 import { libraryView } from "./views/library";
 import { issueView, issuesIndexView } from "./views/issues";
+import { achievementsIndexView, heroView } from "./views/achievements";
+import { heroById } from "./data/heroes";
 import { methodView } from "./views/method";
 import { searchView } from "./views/search";
 import { sourceView } from "./views/source";
@@ -27,7 +29,7 @@ function notFound(): string {
       <div class="wrap">
         <p class="kicker">404</p>
         <h1 class="page-title">This page is not in the archive</h1>
-        <p class="lede-page">The path does not match an issue, chapter, or document.</p>
+        <p class="lede-page">The path does not match an issue, achievement, chapter, or document.</p>
         <p><a class="btn btn-navy" href="${href("/")}">Back to SikhHub</a></p>
       </div>
     </div>
@@ -70,8 +72,20 @@ function paint(): void {
       body = view;
     }
   } else if (route.name === "issues") {
-    title = "The record — SikhHub";
+    title = "Sikh issues — SikhHub";
     body = issuesIndexView();
+  } else if (route.name === "achievements") {
+    title = "Sikh achievements — SikhHub";
+    body = achievementsIndexView();
+  } else if (route.name === "achievement") {
+    const view = heroView(route.id);
+    if (!view) {
+      title = "Not found — SikhHub";
+      body = notFound();
+    } else {
+      title = `${heroById[route.id]?.name ?? "Achievement"} — SikhHub`;
+      body = view;
+    }
   } else if (route.name === "issue") {
     const view = issueView(route.id);
     if (!view) {

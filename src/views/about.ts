@@ -19,7 +19,7 @@ export function aboutView(): string {
           <p class="lede"><span class="org">SikhHub</span> was founded to place Sikh history in public view — not as a slogan, and not as the official account, but as a sourced record a reader can open, cite, and teach.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="${href("/about")}#contact">Write to SikhHub</a>
-            <a class="btn btn-ghost" href="${href(routes.issues)}">Open the record</a>
+            <a class="btn btn-ghost" href="${href(routes.issues)}">Open Sikh issues</a>
           </div>
         </div>
       </div>

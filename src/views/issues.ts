@@ -422,20 +422,46 @@ function issueCards(list: typeof themes): string {
     .join("");
 }
 
+export function issuesLandingHero(mode: "page" | "section" = "page"): string {
+  const isSection = mode === "section";
+  const primary = isSection
+    ? { href: routes.issues, label: "Open Sikh issues" }
+    : { href: routes.issue("november-1984"), label: "1984 Sikh genocide" };
+  const secondary = isSection
+    ? { href: routes.issue("november-1984"), label: "1984 Sikh genocide" }
+    : { href: routes.document("archive-1984-tandoors"), label: "The Nand Nagri affidavits" };
+  return `
+    <section class="hero hero-impact${isSection ? " is-section" : ""}" id="sikh-issues">
+      <img class="hero-bg" src="${asset(media.witnesses.src)}" alt="${esc(media.witnesses.alt)}" />
+      <div class="hero-inner">
+        <p class="kicker">${isSection ? "Sikh issues · 1984" : "Sikh issues · 1920–2026"}</p>
+        <h1>They roasted Sikhs alive in tandoors.</h1>
+        <p class="lede">Affidavits to the Misra Commission from Nand Nagri name the ovens. A 2,000-strong mob, led by Congress workers, killed 119 Sikhs in that settlement. Children were put head-down into tandoors. This was the 1984 Sikh genocide. Not a riot. The papers are here.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="${href(primary.href)}">${esc(primary.label)}</a>
+          <a class="btn btn-ghost" href="${href(secondary.href)}">${esc(secondary.label)}</a>
+        </div>
+        <blockquote class="hero-quote">“The English-man has gone, but our [Sikh] liberty has not come. For us the so-called liberty is simply a change of masters, black for white. Under the garb of democracy and secularism, our Panth, our liberty, and our religion are being crushed.”<cite>Master Tara Singh, All India Sikh Conference, 28 March 1953</cite></blockquote>
+      </div>
+    </section>`;
+}
+
 export function issuesIndexView(): string {
   const rest = themes.filter((t) => !featuredIds.has(t.id));
   const antiSikhIds = ["nishan-khanda", "identity-hinduism", "gurmukhi", "article-25"];
   const antiSikh = antiSikhIds.map((id) => rest.find((t) => t.id === id)).filter((t): t is (typeof themes)[number] => Boolean(t));
   const other = rest.filter((t) => !antiSikhIds.includes(t.id));
   return `
-    <div class="page-hero">
-      <div class="wrap">
-        <h1 class="page-title">The record</h1>
-        <p class="lede-page">The 1984 Sikh genocide. Blue Star. A state without its capital. A constitution two Sikhs would not sign. The Guru’s house. The cremation registers. Start with the issue. The papers follow.</p>
-      </div>
-    </div>
+    ${issuesLandingHero("page")}
     <section class="section">
       <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">The record</p>
+            <h2>Start with the issue. The papers follow.</h2>
+            <p>The 1984 Sikh genocide. Blue Star. A state without its capital. A constitution two Sikhs would not sign. The Guru’s house. The cremation registers.</p>
+          </div>
+        </div>
         <div class="poster-grid">
           ${keyIssues
             .map((item) => {

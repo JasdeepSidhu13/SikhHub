@@ -58,7 +58,7 @@ export function newsDeskPreview(): string {
           <a class="btn btn-navy" href="${href(routes.news)}">The news desk</a>
         </div>
         ${newsWeekBlock(week)}
-        <p class="news-note">Edited weekly from a Sikh standpoint. Each item opens the original. The archive below is the same fight, dated.</p>
+        <p class="news-note">Edited weekly from a Sikh standpoint. Each item opens the original. Sikh issues, below, is the same fight — dated.</p>
       </div>
     </section>`;
 }
@@ -92,7 +92,7 @@ export function newsIndexView(): string {
     <section class="section">
       <div class="wrap">
         <p class="news-note">SikhHub is a non-profit archive. The desk is edited by hand each week from published originals. It does not replace the papers. It sits beside them.</p>
-        <p><a class="btn btn-navy" href="${href(routes.issues)}">Open the record</a> <a class="btn btn-ghost" href="${href(routes.about)}#contact" style="color:var(--navy);border-color:var(--navy)">Send a story</a></p>
+        <p><a class="btn btn-navy" href="${href(routes.issues)}">Open Sikh issues</a> <a class="btn btn-ghost" href="${href(routes.about)}#contact" style="color:var(--navy);border-color:var(--navy)">Send a story</a></p>
       </div>
     </section>`;
 }

@@ -11,6 +11,7 @@ export function searchView(q = ""): string {
     results.events.length +
     results.sources.length +
     results.themes.length +
+    results.heroes.length +
     results.news.length;
 
   return `
@@ -28,8 +29,18 @@ export function searchView(q = ""): string {
       <div class="wrap">
         ${
           q.trim().length < 2
-            ? `<p class="empty">Type at least two characters. Try “Kartarpur”, “Nankana”, “Hukam Singh”, “Blue Star”, or “cremation”.</p>`
+            ? `<p class="empty">Type at least two characters. Try “Ranjit”, “Kartarpur”, “Nankana”, “Hukam Singh”, “Blue Star”, or “cremation”.</p>`
             : `<p class="lede-page">${total} result${total === 1 ? "" : "s"} for “${esc(q)}”</p>`
+        }
+        ${
+          results.heroes.length
+            ? `<h2>Achievements</h2><div class="issue-grid">${results.heroes
+                .map(
+                  (h) =>
+                    `<a class="card" href="${href(routes.achievement(h.id))}"><h3>${esc(h.name)}</h3><p>${esc(h.lede)}</p></a>`,
+                )
+                .join("")}</div>`
+            : ""
         }
         ${
           results.themes.length

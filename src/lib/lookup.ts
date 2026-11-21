@@ -1,5 +1,6 @@
 import { chapters, chapterById } from "../data/chapters";
 import { events } from "../data/events";
+import { heroes, type Hero } from "../data/heroes";
 import { newsWeeks, type NewsItem } from "../data/news";
 import { sources, sourceById } from "../data/sources";
 import { themes, themeById } from "../data/themes";
@@ -50,6 +51,7 @@ export function searchAll(query: string) {
       sources: [] as Source[],
       themes: [] as Theme[],
       news: [] as NewsItem[],
+      heroes: [] as Hero[],
     };
   }
   const hit = (parts: Array<string | undefined>) => parts.filter(Boolean).join(" ").toLowerCase().includes(q);
@@ -63,5 +65,8 @@ export function searchAll(query: string) {
     sources: sources.filter((s) => hit([s.title, s.creator, s.note, s.year, ...s.tags])),
     themes: themes.filter((t) => hit([t.title, t.summary, t.sikhReading, t.evidence, t.kicker])),
     news: news.filter((n) => hit([n.headline, n.dek, n.source, n.date, n.kind])),
+    heroes: heroes.filter((h) =>
+      hit([h.name, h.native, h.years, h.kicker, h.field, h.lede, ...h.body, h.quote?.text, h.quote?.cite]),
+    ),
   };
 }

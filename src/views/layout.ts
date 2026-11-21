@@ -24,10 +24,10 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
         </a>
         <button class="menu-toggle" type="button" data-menu>Menu</button>
         <nav class="nav" data-nav>
-          ${navItem(routes.issues, "The record", on("issues") || on("issue"))}
+          ${navItem(routes.achievements, "Achievements", on("achievements") || on("achievement"))}
+          ${navItem(routes.issues, "Issues", on("issues") || on("issue"))}
           ${navItem(routes.news, "This week", on("news"))}
           ${navItem(routes.history, "History", on("narrative") || on("chapter"))}
-          ${navItem(routes.chronology, "Chronology", on("timeline"))}
           ${navItem(routes.documents, "Documents", on("library") || on("source"))}
           ${navItem(routes.about, "About", on("about") || on("contact"))}
           <button class="search-btn" type="button" data-search>Search</button>
@@ -39,12 +39,13 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
       <div class="footer-inner footer-grid">
         <div>
           <h2 class="org">SikhHub</h2>
-          <p>A Sikh public square: the century on paper, and the week as it happens. Gurdwara reform to the 1984 Sikh genocide, the disappearances, and the live issues — labelled, sourced, unfinished.</p>
+          <p>A Sikh public square: the character, the achievement, the week, and the issues. Gurdwara reform to the 1984 Sikh genocide, the disappearances, and the live fight — labelled, sourced, unfinished.</p>
         </div>
         <div>
           <h2>Read</h2>
           <ul>
-            <li><a href="${href(routes.issues)}">The record</a></li>
+            <li><a href="${href(routes.achievements)}">Sikh achievements</a></li>
+            <li><a href="${href(routes.issues)}">Sikh issues</a></li>
             <li><a href="${href(routes.news)}">This week</a></li>
             <li><a href="${href(routes.history)}">History, 1920–2026</a></li>
             <li><a href="${href(routes.chronology)}">Chronology</a></li>

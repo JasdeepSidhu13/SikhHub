@@ -821,6 +821,119 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   font-size: 0.85rem;
   color: var(--gold-soft);
 }
+.hero-impact.is-section { min-height: 86vh; }
+.hero-impact.is-section .hero-inner { padding-bottom: 5.5rem; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.8rem;
+}
+.hero-tile {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #f6efe2;
+  box-shadow: var(--shadow);
+  background: var(--navy);
+}
+.hero-tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  filter: grayscale(0.12) contrast(1.05);
+  transition: transform 0.45s ease, filter 0.45s ease;
+}
+.hero-tile:hover img { transform: scale(1.06); filter: grayscale(0) contrast(1.08); }
+.hero-tile-copy {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  padding: 2.4rem 0.9rem 0.95rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(16, 24, 32, 0.92) 72%);
+}
+.hero-tile-copy span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.28rem;
+}
+.hero-tile-copy strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+.hero-tile-copy em {
+  display: block;
+  margin-top: 0.22rem;
+  font-style: normal;
+  font-size: 0.78rem;
+  color: #d8cbb5;
+}
+.hero-native {
+  font-family: "Noto Sans Gurmukhi", var(--sans);
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin: -0.2rem 0 0.6rem;
+}
+.hero-profile {
+  display: grid;
+  grid-template-columns: minmax(240px, 380px) 1fr;
+  gap: 2.6rem;
+  align-items: start;
+}
+.hero-portrait {
+  margin: 0;
+  background: var(--navy);
+  padding: 8px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+.hero-portrait img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 18%;
+  border-radius: 10px;
+}
+.hero-portrait figcaption {
+  padding: 0.7rem 0.35rem 0.25rem;
+  font-size: 0.82rem;
+  color: var(--gold-soft);
+}
+.lede-inline {
+  font-size: 1.18rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+.hero-story-quote {
+  margin: 1.6rem 0;
+  padding: 0 0 0 1rem;
+  border-left: 3px solid var(--kesari);
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+.hero-story-quote cite {
+  display: block;
+  margin-top: 0.7rem;
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  color: var(--muted);
+}
 
 .poster-grid {
   display: grid;
@@ -1258,12 +1371,18 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 .contact-status.is-ok { color: var(--gold-soft); }
 .contact-status.is-error { color: #f0b4a4; }
 
+@media (max-width: 1100px) {
+  .hero-grid { grid-template-columns: repeat(3, 1fr); }
+}
 @media (max-width: 880px) {
   .stats, .chapter-grid, .issue-grid, .split, .method-grid, .footer-grid, .card-grid, .further-grid,
   .ig-stats, .ig-map, .gallery, .poster-grid, .story, .story.is-reverse, .split-exhibits, .chapter-strip,
   .founder-hero-grid, .founder-pillars, .founder-bio, .founder-home, .contact-grid,
-  .hero-entrance-grid, .news-spread {
+  .hero-entrance-grid, .news-spread, .hero-profile {
     grid-template-columns: 1fr;
+  }
+  .hero-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .video-plate.is-entrance {
     justify-self: center;

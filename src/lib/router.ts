@@ -9,6 +9,8 @@ export type Route =
   | { name: "source"; id: string }
   | { name: "issues" }
   | { name: "issue"; id: string }
+  | { name: "achievements" }
+  | { name: "achievement"; id: string }
   | { name: "news" }
   | { name: "method" }
   | { name: "search"; q: string }
@@ -36,6 +38,8 @@ export function parseRoute(): Route {
   if ((parts[0] === "documents" || parts[0] === "library") && parts[1]) return { name: "source", id: parts[1] };
   if (parts[0] === "issues" && parts.length === 1) return { name: "issues" };
   if (parts[0] === "issues" && parts[1]) return { name: "issue", id: parts[1] };
+  if (parts[0] === "achievements" && parts.length === 1) return { name: "achievements" };
+  if (parts[0] === "achievements" && parts[1]) return { name: "achievement", id: parts[1] };
   if (parts[0] === "news") return { name: "news" };
   if (parts[0] === "method") return { name: "method" };
   if (parts[0] === "about") return { name: "about" };
