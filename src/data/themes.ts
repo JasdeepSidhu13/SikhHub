@@ -33,7 +33,7 @@ export const themes: Theme[] = [
     evidence:
       "Collected Works of Mahatma Gandhi, volume 28, item 153 (Internet Archive); later Harijan and prayer-meeting texts quoted in the history.",
     chapterIds: ["identity", "partition"],
-    sourceIds: ["cwmg-28", "article-25"],
+    sourceIds: ["cwmg-28", "article-25", "osho-last-testament-sikhs"],
     eventIds: ["misguided-patriot", "gandhi-tara-1940", "gandhi-dec-1947"],
   },
   {

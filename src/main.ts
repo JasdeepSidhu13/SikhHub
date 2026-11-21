@@ -7,10 +7,13 @@ import { chapterView, narrativeIndexView } from "./views/narrative";
 import { timelineView } from "./views/timeline";
 import { libraryView } from "./views/library";
 import { issueView, issuesIndexView } from "./views/issues";
+import { achievementsIndexView, heroView } from "./views/achievements";
+import { heroById } from "./data/heroes";
 import { methodView } from "./views/method";
 import { searchView } from "./views/search";
 import { sourceView } from "./views/source";
 import { aboutView } from "./views/about";
+import { newsIndexView } from "./views/news";
 import { sendMessage } from "./lib/contact";
 import { sourceById } from "./data/sources";
 import { chapterById } from "./data/chapters";
@@ -26,7 +29,7 @@ function notFound(): string {
       <div class="wrap">
         <p class="kicker">404</p>
         <h1 class="page-title">This page is not in the archive</h1>
-        <p class="lede-page">The path does not match an issue, chapter, or document.</p>
+        <p class="lede-page">The path does not match an issue, achievement, chapter, or document.</p>
         <p><a class="btn btn-navy" href="${href("/")}">Back to SikhHub</a></p>
       </div>
     </div>
@@ -39,7 +42,7 @@ function paint(): void {
   let body = "";
 
   if (route.name === "home") {
-    title = "SikhHub — They roasted Sikhs alive in tandoors";
+    title = "SikhHub — the Panth, on the record";
     body = homeView();
   } else if (route.name === "narrative") {
     title = "History — SikhHub";
@@ -69,8 +72,20 @@ function paint(): void {
       body = view;
     }
   } else if (route.name === "issues") {
-    title = "The record — SikhHub";
+    title = "Sikh issues — SikhHub";
     body = issuesIndexView();
+  } else if (route.name === "achievements") {
+    title = "Sikh achievements — SikhHub";
+    body = achievementsIndexView();
+  } else if (route.name === "achievement") {
+    const view = heroView(route.id);
+    if (!view) {
+      title = "Not found — SikhHub";
+      body = notFound();
+    } else {
+      title = `${heroById[route.id]?.name ?? "Achievement"} — SikhHub`;
+      body = view;
+    }
   } else if (route.name === "issue") {
     const view = issueView(route.id);
     if (!view) {
@@ -80,6 +95,9 @@ function paint(): void {
       title = `${themeById[route.id]?.title ?? "Issue"} — SikhHub`;
       body = view;
     }
+  } else if (route.name === "news") {
+    title = "This week in the Panth — SikhHub";
+    body = newsIndexView();
   } else if (route.name === "method") {
     title = "Sources — SikhHub";
     body = methodView();
@@ -95,6 +113,7 @@ function paint(): void {
   }
 
   root.innerHTML = shell(route, title, body);
+  bindEntranceVideo(root);
   const hash = location.hash.slice(1) || (route.name === "contact" ? "contact" : "");
   if (hash) {
     const el = document.getElementById(hash);
@@ -102,6 +121,15 @@ function paint(): void {
   } else {
     window.scrollTo(0, 0);
   }
+}
+
+function bindEntranceVideo(root: HTMLElement): void {
+  const video = root.querySelector<HTMLVideoElement>("[data-entrance-video]");
+  if (!video) return;
+  video.muted = true;
+  video.loop = true;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduced) void video.play().catch(() => undefined);
 }
 
 function currentKind(): string {

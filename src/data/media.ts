@@ -122,4 +122,9 @@ export const media = {
     credit:
       "Illustrated Nishan Sahib folio from a Guru Granth Sahib manuscript dated 1771 B.S. (1714 C.E.), Takht Kesgarh Sahib, Anandpur. Photographed in Mohinder Singh, Shabad Guru, vol. 1 (2011), p. 21. Wikimedia Commons.",
   },
+  osho: {
+    src: "/media/osho-sikhs.jpg",
+    alt: "Osho answering a question about Sikhs in a recorded interview",
+    credit: "Osho, The Last Testament, Volume 1. Clip circulating from a 1985 interview.",
+  },
 } as const satisfies Record<string, MediaItem>;

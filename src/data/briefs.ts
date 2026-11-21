@@ -6,6 +6,10 @@ export interface SourceBrief {
   image?: string;
   imageAlt?: string;
   imageCredit?: string;
+  video?: string;
+  videoPoster?: string;
+  alsoHref?: string;
+  alsoLabel?: string;
 }
 
 export const briefs: Record<string, SourceBrief> = {
@@ -422,5 +426,25 @@ export const briefs: Record<string, SourceBrief> = {
     image: "/media/jaito-jatha.jpg",
     imageAlt: "12th Shahidi Jatha at the Akal Takht, about 1924",
     imageCredit: "Wikimedia Commons.",
+  },
+  "osho-last-testament-sikhs": {
+    keyPoints: [
+      "The interviewer asks: what are your opinions of Sikhism, and of Sikh extremist elements?",
+      "Osho does not take the bait. He answers about Sikhs as a people: beautiful, the one community in India you can rely upon — trustworthy, not cunning, courageous, unafraid.",
+      "Asked next whether he favours separate statehood for Punjab, he says India was never one nation, and that if Sikhs want their own nation they have every right to it.",
+      "The published text is The Last Testament, Volume 1, from a 29 July 1985 interview. The clip is that exchange.",
+    ],
+    whyItMatters:
+      "An outsider, asked a loaded question, named Sikhs as the one community in India he would rely upon. The record keeps his words, not a later paraphrase.",
+    excerpt:
+      "Sikhs are beautiful people. Perhaps the community of the Sikhs is the only community in the whole of India you can rely upon for something. They are simple, courageous people — most trustworthy, reliable, not cunning. They are unafraid of anything; otherwise, the Indians are cowards.",
+    excerptCite: "Osho, The Last Testament, Volume 1, 1985",
+    image: "/media/osho-sikhs.jpg",
+    imageAlt: "Osho answering a question about Sikhs in a recorded interview",
+    imageCredit: "Osho, The Last Testament, Volume 1. Interview clip, 1985.",
+    video: "/media/osho-sikhs.mp4",
+    videoPoster: "/media/osho-sikhs.jpg",
+    alsoHref: "https://x.com/Panjaab131313/status/2124011353086300619",
+    alsoLabel: "The clip as posted",
   },
 };

@@ -805,6 +805,18 @@ export const sources: Source[] = [
     themeIds: ["nishan-khanda"],
     tags: ["Nishan Sahib", "Khalsa"],
   },
+  {
+    id: "osho-last-testament-sikhs",
+    title: "Osho: Sikhs are beautiful people",
+    creator: "Osho (Bhagwan Shree Rajneesh), The Last Testament, Volume 1",
+    year: "1985",
+    kind: "media",
+    url: "https://oshosearch.net/Convert/Articles_Osho/The_Last_Testament_Volume_1/Osho-The-Last-Testament-Volume-1-00000012.html",
+    note: "Asked what he thought of Sikhism, Osho answered that Sikhs are beautiful people — the one community in India you can rely upon: simple, courageous, unafraid. The published interview is The Last Testament, Volume 1. The clip on this page is the same exchange as circulated on 21 November 2026.",
+    chapterIds: ["identity"],
+    themeIds: ["identity-hinduism"],
+    tags: ["Osho", "Sikhs", "interview"],
+  },
 ];
 
 export const sourceById = Object.fromEntries(sources.map((s) => [s.id, s]));
