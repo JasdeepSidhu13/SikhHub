@@ -136,6 +136,14 @@ function currentKind(): string {
   return document.querySelector<HTMLButtonElement>("[data-kind].is-on")?.dataset.kind ?? "all";
 }
 
+function currentHeroField(): string {
+  return document.querySelector<HTMLButtonElement>("[data-hero-field].is-on")?.dataset.heroField ?? "all";
+}
+
+function currentFeatField(): string {
+  return document.querySelector<HTMLButtonElement>("[data-feat-field].is-on")?.dataset.featField ?? "all";
+}
+
 root.addEventListener("click", (event) => {
   const target = (event.target as HTMLElement | null)?.closest<HTMLElement>("button, [data-menu], [data-search]");
   if (!target) return;
@@ -150,6 +158,14 @@ root.addEventListener("click", (event) => {
     const q = (root.querySelector("#libq") as HTMLInputElement | null)?.value ?? "";
     const main = root.querySelector("main");
     if (main) main.innerHTML = libraryView(target.dataset.kind, q);
+  } else if (target.dataset.heroField) {
+    const main = root.querySelector("main");
+    if (main) main.innerHTML = achievementsIndexView(target.dataset.heroField, currentFeatField());
+    document.getElementById("fifty")?.scrollIntoView({ block: "start" });
+  } else if (target.dataset.featField) {
+    const main = root.querySelector("main");
+    if (main) main.innerHTML = achievementsIndexView(currentHeroField(), target.dataset.featField);
+    document.getElementById("panth")?.scrollIntoView({ block: "start" });
   }
 });
 
