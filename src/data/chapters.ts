@@ -43,7 +43,7 @@ export const chapters: Chapter[] = [
       {
         type: "p",
         text: "From a Sikh perspective this is the founding political fact of the twentieth century: the Panth asserted that Sikh sacred space is not a private franchise. Everything that follows — who defines Sikhism, who speaks for Punjab, who may enter Harmandir Sahib with arms of the state — is a fight over that assertion.",
-      },
+      }
     ],
     sourceIds: [
       "sgpc-about",
@@ -53,11 +53,8 @@ export const chapters: Chapter[] = [
       "malhotra-sgpc",
       "nankana-sikhitihas",
       "nankana-express",
-      "sikhri-nankana",
-      "sikhri-guru-ka-bagh",
-      "jaito-photo",
-      "cwmg-19",
-    ],
+      "jaito-photo"
+      ],
     eventIds: ["mahant-era", "sgpc-formed", "tarn-taran", "nankana", "gandhi-nankana", "keys-jaito"],
     themeIds: ["shrine-control", "state-violence"],
   },
@@ -101,18 +98,28 @@ export const chapters: Chapter[] = [
         type: "p",
         text: "Congress assurances at Lahore and at Sis Ganj would be invoked by Sikh members of the Constituent Assembly. The religious view documented here is the backdrop to the constitutional view documented in the next chapter: if Sikhs are a variety of Hindu, minority safeguards can be withdrawn as an internal Hindu matter.",
       },
+      {
+        type: "h2",
+        text: "The next erasure: the Nishan Sahib",
+      },
+      {
+        type: "p",
+        text: "The claim that the Nishan Sahib with the Khanda is unacceptable because it is not printed in Guru Granth Sahib fails on the record. Guru Granth Sahib is shabad. It does not print the Akal Takht, rumalas, or a drawing of a kirpan. Guru Hargobind raised the first Nishan Sahib at the Akal Takht in 1606. Guru Gobind Singh made the Khalsa by stirring amrit with a khanda. In 1714 a Nishan Sahib was painted inside a Guru Granth Sahib manuscript. The Sikh Rehat Maryada requires the flag at every gurdwara, with a spear or a Khanda on the post. Sikhs pray for the flags to stand forever.",
+      },
+      {
+        type: "callout",
+        title: "The trap",
+        text: "If “not printed in Guru Granth Sahib” were the test of Sikh life, the Akal Takht would be unscriptural, the rumala would be unscriptural, and khande di pahul — performed with a khanda in the presence of Guru Granth Sahib — would be unscriptural. The people who run this test do not want a more faithful Granth. They want a Sikhism that cannot be seen from the road.",
+      }
     ],
     sourceIds: [
-      "cwmg-19",
       "cwmg-28",
-      "cwmg-28-pdf",
       "cwmg-66",
-      "cwmg-72",
-      "cwmg-73",
-      "cwmg-97",
-      "cwmg-portal",
-      "sikh24-gandhi",
       "khushwant",
+      "encyclopedia-nishan",
+      "encyclopedia-pahul",
+      "rehat-maryada",
+      "commons-nishan-folio"
     ],
     eventIds: [
       "gandhi-nankana",
@@ -122,8 +129,12 @@ export const chapters: Chapter[] = [
       "gandhi-tara-1940",
       "partition-1947",
       "gandhi-dec-1947",
+      "nishan-1606",
+      "khande-pahul-1699",
+      "nishan-folio-1714",
+      "rehat-nishan-1945"
     ],
-    themeIds: ["identity-hinduism", "gurmukhi", "assurances"],
+    themeIds: ["identity-hinduism", "gurmukhi", "assurances", "nishan-khanda"],
   },
   {
     id: "partition",
@@ -158,31 +169,34 @@ export const chapters: Chapter[] = [
       },
       {
         type: "h2",
-        text: "The Centre and Master Tara Singh",
+        text: "Police in the Guru’s house, 1955",
       },
       {
         type: "p",
-        text: "In October 1953 Nehru asked Home Minister K. N. Katju to consider barring Tara Singh from Delhi and arresting him if he attempted entry. Nehru also favoured limiting the question of Sikh Scheduled Caste recognition to Punjab. On the night of 3–4 July 1955, Punjab Police raided premises in the Golden Temple complex and fired tear gas into the parikrama during the Punjabi Suba agitation. The archival letter establishes Nehru's position on Tara Singh. The accounts of the raid identify a Punjab Police operation under Chief Minister Bhim Sen Sachar; they do not establish that Nehru personally ordered it.",
+        text: "In October 1953 Nehru asked Home Minister K. N. Katju to consider barring Tara Singh from Delhi and arresting him if he attempted entry. On 6 April 1955 the Amritsar magistrate banned the slogan Punjabi Suba Zindabad. Master Tara Singh courted arrest on 10 May. About twelve thousand men and women were jailed in sixty-four days.",
+      },
+      {
+        type: "p",
+        text: "On the night of 3–4 July, Punjab Police under DIG Ashwani Kumar and Chief Minister Bhim Sen Sachar entered Sri Harmandir Sahib in shoes. They arrested the Head Granthi and the Akal Takht Jathedar at home. They raided Guru Ram Das Sarai and took hundreds of sleeping pilgrims away in trucks. They stopped the langar and took the utensils. At midday they fired tear gas into the parikrama; some shells fell in the sarovar. The Tribune called it the first police action at the Golden Temple in independent India. Sangat Singh called it the first sacrilege by a Congress government since independence. The Akali Dal said at least two Sikhs were killed by police fire. No judicial inquiry followed. Sachar later apologised at the Akal Takht.",
       },
       {
         type: "callout",
         title: "A Sikh reading of “secularism”",
         text: "When Sikh leaders said that secularism was being used to crush the Panth, they were not rejecting equal citizenship. They were describing a pattern: Muslim minority anxiety produced Pakistan; Sikh minority anxiety produced advice to trust the majority, a constitution they would not sign, and police in the parikrama. The next chapter is what that pattern did to language and territory.",
-      },
+      }
     ],
     sourceIds: [
       "sarsfield",
       "cad-21-nov",
       "cad-14-oct",
       "article-25",
-      "article-25-kanoon",
       "theprint-hukam",
       "sikhitihas-constitution",
       "nehru-katju-1953",
-      "nehru-archive",
       "sikhitihas-1955",
-      "lokmarg-25",
-    ],
+      "express-1955",
+      "commons-aerial",
+      ],
     eventIds: [
       "partition-1947",
       "akali-conference-1949",
@@ -190,9 +204,9 @@ export const chapters: Chapter[] = [
       "hukam-singh-1949",
       "punjabi-suba-demand",
       "nehru-sc-tara",
-      "golden-temple-1955",
+      "golden-temple-1955"
     ],
-    themeIds: ["partition-citizenship", "assurances", "article-25"],
+    themeIds: ["partition-citizenship", "assurances", "article-25", "golden-temple-1955"],
   },
   {
     id: "suba",
@@ -210,7 +224,7 @@ export const chapters: Chapter[] = [
       },
       {
         type: "p",
-        text: "On 21 September 1960, Kaka Inderjit Singh was killed in Karnal. Sikh Research Institute remembers him as a 12-year-old schoolboy and the movement's first shaheed. Dilgeer's chronology identifies the same date and attributes the killing to police. Later accounts differ on his age and how he died. The first-shaheed designation is given here as Sikh community remembrance; no contemporary police or inquest record was located for the source chronology.",
+        text: "On 21 September 1960, Kaka Inderjit Singh was killed in Karnal. He was a 12-year-old fifth-grade student, walking home, shouting Punjabi Suba Zindabad — a slogan the state had criminalised in 1955. Police beat him and threw him into a well. The SGPC Gazette records that his body was dumped there because he had raised the slogan. Sikh Research Institute names him the first shaheed of Punjabi Suba. The Panjab Digital Library holds his portrait. A child died for a linguistic state that, when it finally arrived, still had no capital.",
       },
       {
         type: "h2",
@@ -230,22 +244,26 @@ export const chapters: Chapter[] = [
       },
       {
         type: "p",
-        text: "Darshan Singh Pheruman, a veteran of the freedom movement, died on 27 October 1969 after a hunger strike over Chandigarh, Punjabi-speaking areas left outside the state, and related Punjab claims. Fauja Singh and Ganda Singh give the duration of his fast as 74 days. In January 1970 the Union government announced a Chandigarh transfer linked to territorial adjustments involving Haryana. This was a later commitment, distinct from what the 1966 Act delivered. It went unimplemented.",
+        text: "Darshan Singh Pheruman had led a shahidi jatha at Jaito in 1924 and sat in the Rajya Sabha. On 15 August 1969 he began a fast unto death so Chandigarh and left-out Punjabi-speaking areas would go to Punjab — and so an ardas sworn at the Akal Takht would not be a dead letter. Arrested, he fasted in custody, then in hospital, refusing all food. He died on 27 October 1969, the 74th day. The Hindu recorded a hartal across Punjab the next morning. In January 1970 the Union announced a transfer. The 1985 Accord dated it 26 January 1986. Both dates passed. Chandigarh is still a Union Territory.",
       },
       {
         type: "callout",
         title: "Three stages, one default",
         text: "The 1966 statute, the 1970 announcement, and the Akali demands that followed are three different stages of the same dispute. The 1985 Rajiv–Longowal Accord would add a fourth promise and a second default. When later official narratives begin the Punjab crisis in 1981, they omit this ledger.",
-      },
+      }
     ],
     sourceIds: [
-      "bipan-chandra",
-      "nehru-archive",
-      "sikhri",
-      "sikhri-x",
       "punjab-reorg",
       "truth-punjab",
       "sikhitihas-1955",
+      "express-1955",
+      "commons-aerial",
+      "kaka-pdl",
+      "pheruman-sikhitihas",
+      "pheruman-hindu",
+      "pheruman-express",
+      "pheruman-portrait",
+      "commons-tara",
     ],
     eventIds: [
       "golden-temple-1955",
@@ -258,9 +276,9 @@ export const chapters: Chapter[] = [
       "reorg-principle",
       "reorg-act",
       "pheruman",
-      "chandigarh-1970",
+      "chandigarh-1970"
     ],
-    themeIds: ["punjabi-suba", "chandigarh", "waters", "gurmukhi"],
+    themeIds: ["punjabi-suba", "chandigarh", "waters", "gurmukhi", "golden-temple-1955"],
   },
   {
     id: "bluestar",
@@ -308,14 +326,12 @@ export const chapters: Chapter[] = [
       {
         type: "p",
         text: "Human Rights Watch also documented murders and other serious abuses by militants, including attacks on Hindu and Sikh civilians. A Sikh accounting that tells the truth about state crime does not need to deny militant crime. It does need to refuse the official story that Blue Star and the 1984 Sikh genocide were unfortunate side-effects of a security problem that began in 1981.",
-      },
+      }
     ],
     sourceIds: [
-      "anandpur-satp",
       "anandpur-pdf",
       "truth-punjab",
       "white-paper-goi",
-      "grewals",
       "longowal-accord",
       "delhi-hc-2018",
       "nanavati",
@@ -323,10 +339,10 @@ export const chapters: Chapter[] = [
       "hrw-1984",
       "livelaw-cah",
       "archive-1984",
+      "archive-1984-tandoors",
       "who-are-guilty",
       "1984-living-history",
-      "commons-akal-takht",
-      "sgpc-x",
+      "commons-granth",
     ],
     eventIds: [
       "anandpur-1973",
@@ -339,7 +355,7 @@ export const chapters: Chapter[] = [
       "blue-star",
       "indira-assassination",
       "november-1984",
-      "accord-1985",
+      "accord-1985"
     ],
     themeIds: ["autonomy", "bluestar-1984", "november-1984", "chandigarh", "waters"],
   },
@@ -347,8 +363,8 @@ export const chapters: Chapter[] = [
     id: "accounting",
     number: "06",
     title: "The long wait for an accounting",
-    kicker: "1985–2025",
-    years: "1985–2025",
+    kicker: "1985–2026",
+    years: "1985–2026",
     question: "If families and investigators had to reconstruct cremation registers themselves, what kind of republic was keeping the books?",
     summary:
       "HRW documented disappearances, torture and executions in Punjab, and militant abuses. Khalra was murdered for using cremation records. A 2025 life sentence in a 1984 case arrived more than forty years late.",
@@ -372,31 +388,32 @@ export const chapters: Chapter[] = [
       {
         type: "quote",
         text: "Across those decades, people demanding an accounting repeatedly had to put the evidence on the record themselves.",
-        cite: "SikhHub narrative, chapter 06 — the pattern from 1920 to 2025",
+        cite: "The pattern from 1920 to 2026",
       },
       {
         type: "p",
         text: "In 1920, Sikh reformers created a body to govern their shrines. In 1949, Hukam Singh put his objections in the Assembly record. In the 1990s, families searching for the disappeared depended on investigators piecing together cremation registers. The method of this site follows that method: archival letters, statutes, judgments, and named histories, each labelled for what it is. The Sikh case does not require inflating the record. The record, read honestly, is the case.",
-      },
+      }
     ],
     sourceIds: [
       "hrw-killers",
       "hrw-dead-silence",
       "hrw-1984",
-      "hrw-failure",
       "ensaaf",
+      "ensaaf-stories",
+      "ensaaf-voices",
       "delhi-hc-2018",
       "express-sajjan-2025",
       "hindu-sajjan-2025",
       "nanavati",
       "archive-1984",
+      "archive-1984-tandoors",
       "who-are-guilty",
-      "ensaaf-x",
-      "1984-living-history",
+      "1984-living-history"
     ],
-    eventIds: ["khalra", "sajjan-2018", "sajjan-2025", "accord-1985", "november-1984"],
+    eventIds: ["khalra", "cremation-records-1995", "cbi-cremations-1996", "sajjan-2018", "sajjan-2025", "accord-1985", "november-1984"],
     themeIds: ["disappearances", "november-1984", "state-violence"],
-  },
+  }
 ];
 
 export const chapterById = Object.fromEntries(chapters.map((c) => [c.id, c]));

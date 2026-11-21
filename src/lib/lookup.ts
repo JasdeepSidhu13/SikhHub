@@ -24,6 +24,22 @@ export function chaptersFor(ids: string[]): Chapter[] {
   return ids.map((id) => chapterById[id]).filter(Boolean);
 }
 
+export function relatedSources(source: Source, limit = 4): Source[] {
+  return sources
+    .filter((s) => s.id !== source.id)
+    .map((s) => {
+      const tags = s.tags.filter((t) => source.tags.includes(t)).length;
+      const themeHits = s.themeIds.filter((t) => source.themeIds.includes(t)).length;
+      const chapters = s.chapterIds.filter((c) => source.chapterIds.includes(c)).length;
+      const score = tags * 4 + themeHits * 2 + chapters;
+      return { s, score };
+    })
+    .filter((row) => row.score >= 4)
+    .sort((a, b) => b.score - a.score || a.s.title.localeCompare(b.s.title))
+    .slice(0, limit)
+    .map((row) => row.s);
+}
+
 export function searchAll(query: string) {
   const q = query.trim().toLowerCase();
   if (q.length < 2) {

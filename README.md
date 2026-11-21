@@ -1,13 +1,13 @@
 # SikhHub
 
-A professional educational archive of **Sikh struggles over faith, language and power**, from gurdwara reform (1920) through Partition, Punjabi Suba, 1984, and the search for justice through 2025.
+A professional educational archive of **Sikh struggles over faith, language and power**, from gurdwara reform (1920) through Partition, Punjabi Suba, 1984, and the search for justice through 2026.
 
 The site is a static, data-driven app designed for **GitHub Pages**. Chapters, the chronology, the library, and issue dossiers all read from typed records in `src/data/`. Adding a source, event, or theme does not require a redesign.
 
 ## Contents
 
 - **Narrative** — six sourced chapters matching the attached chronology
-- **Timeline** — dated events, 1920–2025, with source notes and cautions
+- **Timeline** — dated events, 1920–2026, with source notes and cautions
 - **Library** — books, statutes, judgments, commission reports, press, images
 - **Issues** — thematic dossiers (shrine control, identity, Gurmukhi, Article 25, Chandigarh, rivers, Blue Star, November 1984, disappearances)
 - **Method** — how archival, legal, historical, and commemorative evidence is labelled

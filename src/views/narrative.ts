@@ -1,11 +1,13 @@
 import type { Block } from "../data/types";
 import { chapterById, chapters } from "../data/chapters";
+import { stories } from "../data/stories";
 import { esc } from "../lib/html";
-import { href } from "../lib/paths";
+import { href, routes } from "../lib/paths";
 import { eventsFor, sourcesFor, themesFor } from "../lib/lookup";
 import { sourceCard } from "./layout";
-import { figure, genocideInfographic, reorgInfographic } from "./infographics";
+import { figure, genocideInfographic, nishanKhandaInfographic, pherumanInfographic, raid1955Infographic, reorgInfographic } from "./infographics";
 import { media } from "../data/media";
+import { clipping, furtherLinks, letter, storyFeature } from "./exhibits";
 
 function renderBlock(block: Block): string {
   if (block.type === "p") return `<p>${esc(block.text)}</p>`;
@@ -24,9 +26,8 @@ export function narrativeIndexView(): string {
   return `
     <div class="page-hero">
       <div class="wrap">
-        <p class="kicker">Narrative</p>
-        <h1 class="page-title">Sikh struggles over faith, language and power</h1>
-        <p class="lede-page">A sourced narrative from colonial Punjab to 2025. The chapters are written from a Sikh standpoint and disciplined by the documents: what is in the archive, what a court has found, and what is remembered.</p>
+        <h1 class="page-title">History, 1920–2026</h1>
+        <p class="lede-page">From mahant control of the Guru’s house to a 2025 life sentence in a 1984 Sikh genocide case. Six chapters, written from a Sikh standpoint and held to the documents.</p>
       </div>
     </div>
     <section class="section">
@@ -34,17 +35,83 @@ export function narrativeIndexView(): string {
         ${chapters
           .map(
             (c) => `
-          <a class="card" href="${href(`/narrative/${c.id}`)}">
-            <div class="num">${esc(c.number)} / ${esc(c.years)}</div>
+          <a class="card" href="${href(routes.chapter(c.id))}">
+            <div class="num">${esc(c.years)}</div>
             <h3>${esc(c.title)}</h3>
             <p>${esc(c.question)}</p>
-            <div class="years">${esc(c.summary)}</div>
           </a>`,
           )
           .join("")}
       </div>
     </section>
   `;
+}
+
+function chapterExtras(id: string): string {
+  if (id === "shrine") {
+    const nankana = stories.find((s) => s.id === "nankana")!;
+    return `${figure(media.harmandir, "Sri Harmandir Sahib.")}${figure(media.jaito, "A shahidi jatha at the Akal Takht during the Jaito Morcha, about 1924.")}${storyFeature(nankana)}`;
+  }
+  if (id === "identity") {
+    const nishan = stories.find((s) => s.id === "nishan-khanda")!;
+    return `${letter({
+      from: "M. K. Gandhi to Jawaharlal Nehru",
+      date: "3 August 1937",
+      body: "The Sikhs will die for Punjabi written in Gurmukhi. There is no elegance about that script.",
+      cite: "Collected Works of Mahatma Gandhi, volume 66.",
+    })}${nishanKhandaInfographic()}${storyFeature(nishan)}${furtherLinks([
+      {
+        href: "/issues/nishan-khanda",
+        title: "The Nishan Sahib they want taken down",
+        note: "Guru Hargobind raised it in 1606. A 1714 Guru Granth Sahib already bears a Nishan Sahib. The Rehat puts a Khanda on the post.",
+      },
+    ])}`;
+  }
+  if (id === "partition") {
+    return `${figure(media.tara, "Master Tara Singh, Tarn Taran, March 1956.")}${letter({
+      from: "Sardar Hukam Singh",
+      date: "21 November 1949",
+      body: "My community cannot subscribe its assent to this historic document.",
+      cite: "Constituent Assembly Debates.",
+    })}${furtherLinks([
+      {
+        href: "/issues/golden-temple-1955",
+        title: "The 1955 raid on Harmandir Sahib",
+        note: "The chapter closes with police in the parikrama. Open the raid’s own papers: the Section 144 order, the night sequence, the shells at Manji Sahib.",
+      },
+      {
+        href: "/documents/cad-21-nov",
+        title: "The Assembly record, 21 November 1949",
+        note: "Hukam Singh’s dissent, five days before the Constitution was adopted.",
+      },
+    ])}`;
+  }
+  if (id === "suba") {
+    const raid1955 = stories.find((s) => s.id === "golden-temple-1955")!;
+    const kaka = stories.find((s) => s.id === "kaka-inderjit")!;
+    const pheruman = stories.find((s) => s.id === "pheruman")!;
+    return `${figure(media.tara, "Master Tara Singh, 1956.")}${storyFeature(raid1955)}${raid1955Infographic()}${furtherLinks([
+      {
+        href: "/issues/golden-temple-1955",
+        title: "Open the 1955 raid",
+        note: "The night of 3–4 July, in its own papers: shoes, tear gas, the Section 144 order, the shells at Manji Sahib.",
+      },
+    ])}${storyFeature(kaka)}${reorgInfographic()}${pherumanInfographic()}${storyFeature(pheruman)}${clipping({
+      masthead: "The Hindu",
+      date: "29 October 1969",
+      headline: "Hartal to mourn Pheruman",
+      body: "Hartal was observed throughout Punjab in memory of Mr. Darshan Singh Pheruman, who died in Amritsar yesterday on the 74th day of his fast for the inclusion of Chandigarh in Punjab.",
+      cite: "The Hindu, 29 October 1969.",
+    })}`;
+  }
+  if (id === "bluestar") {
+    return `${figure(media.granth, "Guru Granth Sahib manuscript pierced in Operation Blue Star.")}${figure(media.witnesses, "Widows of the 1984 Sikh genocide in Delhi.")}${genocideInfographic()}`;
+  }
+  if (id === "accounting") {
+    const khalra = stories.find((s) => s.id === "khalra")!;
+    return `${figure(media.day1, "1 November 1984 — reconstructed by the 1984 Sikh Archive.")}${storyFeature(khalra)}`;
+  }
+  return "";
 }
 
 export function chapterView(id: string): string | null {
@@ -56,47 +123,44 @@ export function chapterView(id: string): string | null {
   const idx = chapters.findIndex((c) => c.id === id);
   const prev = chapters[idx - 1];
   const next = chapters[idx + 1];
+  const extra = chapterExtras(id);
 
   return `
     <div class="page-hero">
       <div class="wrap">
-        <p class="kicker">${esc(chapter.number)} · ${esc(chapter.kicker)} · ${esc(chapter.years)}</p>
+        <p class="kicker">${esc(chapter.years)}</p>
         <h1 class="page-title">${esc(chapter.title)}</h1>
         <p class="lede-page">${esc(chapter.question)}</p>
       </div>
     </div>
     <section class="section">
+      ${extra ? `<div class="wrap exhibit-band">${extra}</div>` : ""}
       <div class="wrap split">
         <article class="prose">
-          ${id === "shrine" ? figure(media.harmandir, "Sri Harmandir Sahib, the Guru's house whose management the Panth fought to take from mahants.") : ""}
-          ${id === "suba" ? reorgInfographic() : ""}
-          ${id === "bluestar" ? `${figure(media.witnesses, "Widows of the 1984 Sikh genocide in Delhi.")}${genocideInfographic()}` : ""}
-          ${id === "accounting" ? figure(media.day1, "1 November 1984 — the second day of the Sikh genocide, as reconstructed by the 1984 Sikh Archive.") : ""}
           ${chapter.blocks.map(renderBlock).join("")}
-          <p class="note">Read the linked sources. Community remembrance and later histories are labelled as such in the library.</p>
         </article>
         <aside class="side">
-          <h3>Read the sources</h3>
+          <h3>Documents</h3>
           <div class="source-list">${srcs.map(sourceCard).join("")}</div>
-          <h3 style="margin-top:1.6rem">On the timeline</h3>
+          <h3 style="margin-top:1.6rem">On the chronology</h3>
           <div class="event-mini">
             ${evs
               .map(
-                (e) => `<a href="${href("/timeline")}#${esc(e.id)}"><h4>${esc(e.date)}</h4><p>${esc(e.title)}</p></a>`,
+                (e) => `<a href="${href(routes.chronology)}#${esc(e.id)}"><h4>${esc(e.date)}</h4><p>${esc(e.title)}</p></a>`,
               )
               .join("")}
           </div>
           <h3 style="margin-top:1.6rem">Related issues</h3>
           <div class="event-mini">
             ${ths
-              .map((t) => `<a href="${href(`/issues/${t.id}`)}"><h4>${esc(t.title)}</h4><p>${esc(t.kicker)}</p></a>`)
+              .map((t) => `<a href="${href(routes.issue(t.id))}"><h4>${esc(t.title)}</h4><p>${esc(t.kicker)}</p></a>`)
               .join("")}
           </div>
         </aside>
       </div>
       <div class="wrap" style="display:flex;justify-content:space-between;gap:1rem;margin-top:2rem">
-        ${prev ? `<a class="btn btn-navy" href="${href(`/narrative/${prev.id}`)}">← ${esc(prev.title)}</a>` : "<span></span>"}
-        ${next ? `<a class="btn btn-navy" href="${href(`/narrative/${next.id}`)}">${esc(next.title)} →</a>` : "<span></span>"}
+        ${prev ? `<a class="btn btn-navy" href="${href(routes.chapter(prev.id))}">← ${esc(prev.title)}</a>` : "<span></span>"}
+        ${next ? `<a class="btn btn-navy" href="${href(routes.chapter(next.id))}">${esc(next.title)} →</a>` : "<span></span>"}
       </div>
     </section>
   `;

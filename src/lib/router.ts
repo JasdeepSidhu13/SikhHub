@@ -11,6 +11,8 @@ export type Route =
   | { name: "issue"; id: string }
   | { name: "method" }
   | { name: "search"; q: string }
+  | { name: "about" }
+  | { name: "contact" }
   | { name: "notfound" };
 
 export function currentPath(): string {
@@ -26,14 +28,16 @@ export function parseRoute(): Route {
   const parts = path.split("/").filter(Boolean);
 
   if (parts.length === 0) return { name: "home" };
-  if (parts[0] === "narrative" && parts.length === 1) return { name: "narrative" };
-  if (parts[0] === "narrative" && parts[1]) return { name: "chapter", id: parts[1] };
-  if (parts[0] === "timeline") return { name: "timeline" };
-  if (parts[0] === "library" && parts.length === 1) return { name: "library" };
-  if (parts[0] === "library" && parts[1]) return { name: "source", id: parts[1] };
+  if ((parts[0] === "history" || parts[0] === "narrative") && parts.length === 1) return { name: "narrative" };
+  if ((parts[0] === "history" || parts[0] === "narrative") && parts[1]) return { name: "chapter", id: parts[1] };
+  if (parts[0] === "chronology" || parts[0] === "timeline") return { name: "timeline" };
+  if ((parts[0] === "documents" || parts[0] === "library") && parts.length === 1) return { name: "library" };
+  if ((parts[0] === "documents" || parts[0] === "library") && parts[1]) return { name: "source", id: parts[1] };
   if (parts[0] === "issues" && parts.length === 1) return { name: "issues" };
   if (parts[0] === "issues" && parts[1]) return { name: "issue", id: parts[1] };
   if (parts[0] === "method") return { name: "method" };
+  if (parts[0] === "about") return { name: "about" };
+  if (parts[0] === "contact") return { name: "contact" };
   if (parts[0] === "search") return { name: "search", q };
   return { name: "notfound" };
 }

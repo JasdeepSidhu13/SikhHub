@@ -1,6 +1,6 @@
 import { searchAll } from "../lib/lookup";
 import { esc } from "../lib/html";
-import { href } from "../lib/paths";
+import { href, routes } from "../lib/paths";
 import { sourceCard } from "./layout";
 
 export function searchView(q = ""): string {
@@ -11,8 +11,7 @@ export function searchView(q = ""): string {
   return `
     <div class="page-hero">
       <div class="wrap">
-        <p class="kicker">Search</p>
-        <h1 class="page-title">Search chapters, events, sources, issues</h1>
+        <h1 class="page-title">Search</h1>
         <form class="search-row" data-site-search>
           <label class="sr" for="q">Search</label>
           <input id="q" name="q" value="${esc(q)}" placeholder="e.g. Gurmukhi, Khalra, Article 25, Chandigarh" autofocus />
@@ -28,21 +27,21 @@ export function searchView(q = ""): string {
             : `<p class="lede-page">${total} result${total === 1 ? "" : "s"} for “${esc(q)}”</p>`
         }
         ${
-          results.chapters.length
-            ? `<h2>Chapters</h2><div class="chapter-grid">${results.chapters
+          results.themes.length
+            ? `<h2>Issues</h2><div class="issue-grid">${results.themes
                 .map(
-                  (c) =>
-                    `<a class="card" href="${href(`/narrative/${c.id}`)}"><h3>${esc(c.title)}</h3><p>${esc(c.summary)}</p></a>`,
+                  (t) =>
+                    `<a class="card" href="${href(routes.issue(t.id))}"><h3>${esc(t.title)}</h3><p>${esc(t.summary)}</p></a>`,
                 )
                 .join("")}</div>`
             : ""
         }
         ${
-          results.themes.length
-            ? `<h2>Issues</h2><div class="issue-grid">${results.themes
+          results.chapters.length
+            ? `<h2>History</h2><div class="chapter-grid">${results.chapters
                 .map(
-                  (t) =>
-                    `<a class="card" href="${href(`/issues/${t.id}`)}"><h3>${esc(t.title)}</h3><p>${esc(t.summary)}</p></a>`,
+                  (c) =>
+                    `<a class="card" href="${href(routes.chapter(c.id))}"><h3>${esc(c.title)}</h3><p>${esc(c.summary)}</p></a>`,
                 )
                 .join("")}</div>`
             : ""
@@ -52,14 +51,14 @@ export function searchView(q = ""): string {
             ? `<h2>Events</h2><div class="event-mini">${results.events
                 .map(
                   (e) =>
-                    `<a href="${href("/timeline")}#${esc(e.id)}"><h4>${esc(e.date)} — ${esc(e.title)}</h4><p>${esc(e.summary)}</p></a>`,
+                    `<a href="${href(routes.chronology)}#${esc(e.id)}"><h4>${esc(e.date)} — ${esc(e.title)}</h4><p>${esc(e.summary)}</p></a>`,
                 )
                 .join("")}</div>`
             : ""
         }
         ${
           results.sources.length
-            ? `<h2>Sources</h2><div class="card-grid">${results.sources.map(sourceCard).join("")}</div>`
+            ? `<h2>Documents</h2><div class="card-grid">${results.sources.map(sourceCard).join("")}</div>`
             : ""
         }
       </div>

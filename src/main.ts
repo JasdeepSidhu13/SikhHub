@@ -10,6 +10,8 @@ import { issueView, issuesIndexView } from "./views/issues";
 import { methodView } from "./views/method";
 import { searchView } from "./views/search";
 import { sourceView } from "./views/source";
+import { aboutView } from "./views/about";
+import { sendMessage } from "./lib/contact";
 import { sourceById } from "./data/sources";
 import { chapterById } from "./data/chapters";
 import { themeById } from "./data/themes";
@@ -24,7 +26,7 @@ function notFound(): string {
       <div class="wrap">
         <p class="kicker">404</p>
         <h1 class="page-title">This page is not in the archive</h1>
-        <p class="lede-page">The path does not match a chapter, issue, or tool. Start from the narrative or search.</p>
+        <p class="lede-page">The path does not match an issue, chapter, or document.</p>
         <p><a class="btn btn-navy" href="${href("/")}">Back to SikhHub</a></p>
       </div>
     </div>
@@ -37,10 +39,10 @@ function paint(): void {
   let body = "";
 
   if (route.name === "home") {
-    title = "SikhHub — sourced Sikh history, 1920–2025";
+    title = "SikhHub — They roasted Sikhs alive in tandoors";
     body = homeView();
   } else if (route.name === "narrative") {
-    title = "Narrative — SikhHub";
+    title = "History — SikhHub";
     body = narrativeIndexView();
   } else if (route.name === "chapter") {
     const view = chapterView(route.id);
@@ -52,10 +54,10 @@ function paint(): void {
       body = view;
     }
   } else if (route.name === "timeline") {
-    title = "Timeline — SikhHub";
+    title = "Chronology — SikhHub";
     body = timelineView("all");
   } else if (route.name === "library") {
-    title = "Library — SikhHub";
+    title = "Documents — SikhHub";
     body = libraryView("all", "");
   } else if (route.name === "source") {
     const view = sourceView(route.id);
@@ -67,7 +69,7 @@ function paint(): void {
       body = view;
     }
   } else if (route.name === "issues") {
-    title = "Issues — SikhHub";
+    title = "The record — SikhHub";
     body = issuesIndexView();
   } else if (route.name === "issue") {
     const view = issueView(route.id);
@@ -79,8 +81,11 @@ function paint(): void {
       body = view;
     }
   } else if (route.name === "method") {
-    title = "Method — SikhHub";
+    title = "Sources — SikhHub";
     body = methodView();
+  } else if (route.name === "about" || route.name === "contact") {
+    title = "About — SikhHub";
+    body = aboutView();
   } else if (route.name === "search") {
     title = "Search — SikhHub";
     body = searchView(route.q);
@@ -90,8 +95,9 @@ function paint(): void {
   }
 
   root.innerHTML = shell(route, title, body);
-  if (location.hash) {
-    const el = document.getElementById(location.hash.slice(1));
+  const hash = location.hash.slice(1) || (route.name === "contact" ? "contact" : "");
+  if (hash) {
+    const el = document.getElementById(hash);
     el?.scrollIntoView({ block: "start" });
   } else {
     window.scrollTo(0, 0);
@@ -130,8 +136,44 @@ root.addEventListener("submit", (event) => {
     const q = String(new FormData(form).get("q") ?? "");
     const main = root.querySelector("main");
     if (main) main.innerHTML = libraryView(currentKind(), q);
+  } else if (form.matches("[data-contact-form]")) {
+    event.preventDefault();
+    void handleContact(form);
   }
 });
+
+async function handleContact(form: HTMLFormElement): Promise<void> {
+  const status = form.querySelector<HTMLElement>("[data-contact-status]");
+  const button = form.querySelector<HTMLButtonElement>("button[type=submit]");
+  const data = new FormData(form);
+  if (button) button.disabled = true;
+  if (status) {
+    status.hidden = false;
+    status.classList.remove("is-error", "is-ok");
+    status.textContent = "Sending…";
+  }
+  try {
+    const result = await sendMessage({
+      name: String(data.get("name") ?? ""),
+      email: String(data.get("email") ?? ""),
+      topic: String(data.get("topic") ?? "Message"),
+      message: String(data.get("message") ?? ""),
+      website: String(data.get("website") ?? ""),
+    });
+    if (status) {
+      status.classList.add(result.ok ? "is-ok" : "is-error");
+      status.textContent = result.message;
+    }
+    if (result.ok) form.reset();
+  } catch {
+    if (status) {
+      status.classList.add("is-error");
+      status.textContent = "The message could not be sent. Please wait a moment and try again.";
+    }
+  } finally {
+    if (button) button.disabled = false;
+  }
+}
 
 document.addEventListener("click", (event) => {
   const target = event.target as HTMLElement | null;
