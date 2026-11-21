@@ -25,6 +25,7 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
         <button class="menu-toggle" type="button" data-menu>Menu</button>
         <nav class="nav" data-nav>
           ${navItem(routes.issues, "The record", on("issues") || on("issue"))}
+          ${navItem(routes.news, "This week", on("news"))}
           ${navItem(routes.history, "History", on("narrative") || on("chapter"))}
           ${navItem(routes.chronology, "Chronology", on("timeline"))}
           ${navItem(routes.documents, "Documents", on("library") || on("source"))}
@@ -38,12 +39,13 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
       <div class="footer-inner footer-grid">
         <div>
           <h2 class="org">SikhHub</h2>
-          <p>Sikh political history from gurdwara reform through the 1984 Sikh genocide and the Punjab disappearances. Judgments, letters, statutes, and photographs — labelled for what they are.</p>
+          <p>A Sikh public square: the century on paper, and the week as it happens. Gurdwara reform to the 1984 Sikh genocide, the disappearances, and the live issues — labelled, sourced, unfinished.</p>
         </div>
         <div>
           <h2>Read</h2>
           <ul>
-            <li><a href="${href(routes.issues)}">Key issues</a></li>
+            <li><a href="${href(routes.issues)}">The record</a></li>
+            <li><a href="${href(routes.news)}">This week</a></li>
             <li><a href="${href(routes.history)}">History, 1920–2026</a></li>
             <li><a href="${href(routes.chronology)}">Chronology</a></li>
             <li><a href="${href(routes.documents)}">Documents</a></li>

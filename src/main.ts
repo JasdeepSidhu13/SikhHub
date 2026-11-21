@@ -11,6 +11,7 @@ import { methodView } from "./views/method";
 import { searchView } from "./views/search";
 import { sourceView } from "./views/source";
 import { aboutView } from "./views/about";
+import { newsIndexView } from "./views/news";
 import { sendMessage } from "./lib/contact";
 import { sourceById } from "./data/sources";
 import { chapterById } from "./data/chapters";
@@ -39,7 +40,7 @@ function paint(): void {
   let body = "";
 
   if (route.name === "home") {
-    title = "SikhHub — Sikhs are beautiful people";
+    title = "SikhHub — the Panth, on the record";
     body = homeView();
   } else if (route.name === "narrative") {
     title = "History — SikhHub";
@@ -80,6 +81,9 @@ function paint(): void {
       title = `${themeById[route.id]?.title ?? "Issue"} — SikhHub`;
       body = view;
     }
+  } else if (route.name === "news") {
+    title = "This week in the Panth — SikhHub";
+    body = newsIndexView();
   } else if (route.name === "method") {
     title = "Sources — SikhHub";
     body = methodView();

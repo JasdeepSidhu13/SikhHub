@@ -1,5 +1,6 @@
 import { chapters, chapterById } from "../data/chapters";
 import { events } from "../data/events";
+import { newsWeeks, type NewsItem } from "../data/news";
 import { sources, sourceById } from "../data/sources";
 import { themes, themeById } from "../data/themes";
 import type { Source, TimelineEvent, Chapter, Theme } from "../data/types";
@@ -43,9 +44,16 @@ export function relatedSources(source: Source, limit = 4): Source[] {
 export function searchAll(query: string) {
   const q = query.trim().toLowerCase();
   if (q.length < 2) {
-    return { chapters: [] as Chapter[], events: [] as TimelineEvent[], sources: [] as Source[], themes: [] as Theme[] };
+    return {
+      chapters: [] as Chapter[],
+      events: [] as TimelineEvent[],
+      sources: [] as Source[],
+      themes: [] as Theme[],
+      news: [] as NewsItem[],
+    };
   }
   const hit = (parts: Array<string | undefined>) => parts.filter(Boolean).join(" ").toLowerCase().includes(q);
+  const news = newsWeeks.flatMap((week) => week.items);
 
   return {
     chapters: chapters.filter((c) =>
@@ -54,5 +62,6 @@ export function searchAll(query: string) {
     events: events.filter((e) => hit([e.title, e.summary, e.significance, e.date, e.evidence])),
     sources: sources.filter((s) => hit([s.title, s.creator, s.note, s.year, ...s.tags])),
     themes: themes.filter((t) => hit([t.title, t.summary, t.sikhReading, t.evidence, t.kicker])),
+    news: news.filter((n) => hit([n.headline, n.dek, n.source, n.date, n.kind])),
   };
 }

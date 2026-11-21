@@ -2,11 +2,16 @@ import { searchAll } from "../lib/lookup";
 import { esc } from "../lib/html";
 import { href, routes } from "../lib/paths";
 import { sourceCard } from "./layout";
+import { newsCard } from "./news";
 
 export function searchView(q = ""): string {
   const results = searchAll(q);
   const total =
-    results.chapters.length + results.events.length + results.sources.length + results.themes.length;
+    results.chapters.length +
+    results.events.length +
+    results.sources.length +
+    results.themes.length +
+    results.news.length;
 
   return `
     <div class="page-hero">
@@ -23,7 +28,7 @@ export function searchView(q = ""): string {
       <div class="wrap">
         ${
           q.trim().length < 2
-            ? `<p class="empty">Type at least two characters. Try “Nankana”, “Hukam Singh”, “Blue Star”, or “cremation”.</p>`
+            ? `<p class="empty">Type at least two characters. Try “Kartarpur”, “Nankana”, “Hukam Singh”, “Blue Star”, or “cremation”.</p>`
             : `<p class="lede-page">${total} result${total === 1 ? "" : "s"} for “${esc(q)}”</p>`
         }
         ${
@@ -54,6 +59,11 @@ export function searchView(q = ""): string {
                     `<a href="${href(routes.chronology)}#${esc(e.id)}"><h4>${esc(e.date)} — ${esc(e.title)}</h4><p>${esc(e.summary)}</p></a>`,
                 )
                 .join("")}</div>`
+            : ""
+        }
+        ${
+          results.news.length
+            ? `<h2>This week</h2><div class="news-stack">${results.news.map((item) => newsCard(item)).join("")}</div>`
             : ""
         }
         ${

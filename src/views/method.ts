@@ -17,6 +17,7 @@ export function methodView(): string {
       <div class="wrap split">
         <article class="prose">
           <p>The questions are Sikh questions: who owns the shrine, who has the right to define the religion, what “secularism” did to minority safeguards, why a linguistic state arrived without its capital, what an army did to the Akal Takht, why cremation registers had to be audited by families. Human Rights Watch documented state crime and militant crime. This archive links both.</p>
+          <p>The news desk is the same method, applied to the present. Three to five stories a week — pilgrimage, achievement, institutions, live issues — each tied to a published original. It is edited from a Sikh standpoint. It is not a wire service. Kartarpur, Bandi Singhs, Chandigarh, and 1984 are not “current affairs” beside the archive. They are the archive, still open.</p>
           <p>Kaka Inderjit Singh is named the first shaheed of Punjabi Suba by Sikh Research Institute and recorded in the SGPC Gazette (21 September 1960, Karnal). Darshan Singh Pheruman’s fast is counted at 74 days by Fauja Singh, Ganda Singh, and The Hindu. Gandhi’s words on Gurmukhi are in the Collected Works, volume 66, on the Internet Archive. Where a link no longer resolves, it has been removed.</p>
           <p><a class="btn btn-navy" href="${href(routes.documents)}">Open the documents</a></p>
         </article>

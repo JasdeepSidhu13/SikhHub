@@ -8,6 +8,7 @@ import { asset, href, routes } from "../lib/paths";
 import { sourceCard } from "./layout";
 import { figure, genocideInfographic, raid1955Infographic } from "./infographics";
 import { clipping, letter, storyFeature, videoPlate } from "./exhibits";
+import { newsDeskPreview } from "./news";
 
 export function homeView(): string {
   const featuredDocs = ["archive-1984-tandoors", "delhi-hc-2018", "cad-21-nov", "cwmg-66", "archive-1984", "hrw-killers"]
@@ -24,12 +25,18 @@ export function homeView(): string {
     <section class="hero hero-entrance">
       <div class="hero-entrance-grid">
         <div class="hero-entrance-copy">
-          <p class="kicker">Interview · 1985</p>
+          <p class="kicker">Opening exhibit · 1985 and 1953</p>
           <h1>Sikhs are beautiful people.</h1>
-          <p class="lede">Asked what he thought of Sikhism, Osho did not hedge. The Sikhs, he said, are the one community in the whole of India you can rely upon — simple, courageous, unafraid.</p>
-          <blockquote class="hero-quote">“Sikhs are beautiful people. Perhaps the community of the Sikhs is the only community in the whole of India you can rely upon for something. They are simple, courageous people — most trustworthy, reliable, not cunning. They are unafraid of anything.”<cite>Osho, The Last Testament, Volume 1</cite></blockquote>
+          <p class="lede">Asked about Sikhism, Osho named Sikhs as the one community in India you can rely upon: simple, courageous, unafraid. Thirty-two years earlier Master Tara Singh had already said what that courage was up against. Independence had come. Sikh liberty had not. This archive holds both — the character, and the cost. This week’s desk shows the argument is not over.</p>
+          ${letter({
+            from: "Master Tara Singh",
+            date: "All India Sikh Conference · 28 March 1953",
+            body: "The English-man has gone, but our [Sikh] liberty has not come. For us the so-called liberty is simply a change of masters, black for white. Under the garb of democracy and secularism, our Panth, our liberty, and our religion are being crushed.",
+            cite: "The same unfinished liberty runs through 1955, Punjabi Suba, Chandigarh, and the 1984 Sikh genocide.",
+          })}
           <div class="hero-actions">
-            <a class="btn btn-primary" href="${href(routes.document("osho-last-testament-sikhs"))}">The interview</a>
+            <a class="btn btn-primary" href="${href(routes.news)}">This week</a>
+            <a class="btn btn-ghost" href="${href(routes.document("osho-last-testament-sikhs"))}">The interview</a>
             <a class="btn btn-ghost" href="${href(routes.issues)}">The record</a>
           </div>
         </div>
@@ -37,25 +44,21 @@ export function homeView(): string {
           src: "/media/osho-sikhs.mp4",
           poster: media.osho.src,
           title: "Osho, asked about Sikhs",
-          caption: "Osho, asked about Sikhs. The Last Testament, 1985.",
+          caption: "Opening exhibit. Osho, The Last Testament, 1985.",
           entrance: true,
         })}
       </div>
     </section>
 
-    <section class="quote-band">
-      <div class="wrap">
-        <blockquote>“The English-man has gone, but our [Sikh] liberty has not come. For us the so-called liberty is simply a change of masters, black for white. Under the garb of democracy and secularism, our Panth, our liberty, and our religion are being crushed.”</blockquote>
-        <cite>Master Tara Singh, All India Sikh Conference, 28 March 1953</cite>
-      </div>
-    </section>
+    ${newsDeskPreview()}
 
     <section class="section">
       <div class="wrap">
         <div class="section-head">
           <div>
+            <p class="kicker">The century</p>
             <h2>Six facts the official story still avoids</h2>
-            <p>Each dossier is one issue, with photographs, judgments, and the original papers.</p>
+            <p>The week is not a break from the century. Each dossier is one issue, with photographs, judgments, and the original papers.</p>
           </div>
         </div>
         <div class="poster-grid">

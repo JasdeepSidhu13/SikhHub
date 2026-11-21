@@ -17,6 +17,7 @@ export const routes = {
   chronology: "/chronology",
   issues: "/issues",
   issue: (id: string) => `/issues/${id}`,
+  news: "/news",
   search: "/search",
   about: "/about",
   contact: "/about#contact",
