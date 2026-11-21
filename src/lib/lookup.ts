@@ -1,7 +1,9 @@
 import { chapters, chapterById } from "../data/chapters";
 import { events } from "../data/events";
 import { communityFeats, type CommunityFeat } from "../data/community";
+import { gurdwaras, type Gurdwara } from "../data/gurdwaras";
 import { heroes, type Hero } from "../data/heroes";
+import { liveStations, type LiveStation } from "../data/live";
 import { newsWeeks, type NewsItem } from "../data/news";
 import { sources, sourceById } from "../data/sources";
 import { themes, themeById } from "../data/themes";
@@ -54,6 +56,8 @@ export function searchAll(query: string) {
       news: [] as NewsItem[],
       heroes: [] as Hero[],
       feats: [] as CommunityFeat[],
+      gurdwaras: [] as Gurdwara[],
+      live: [] as LiveStation[],
     };
   }
   const hit = (parts: Array<string | undefined>) => parts.filter(Boolean).join(" ").toLowerCase().includes(q);
@@ -71,5 +75,9 @@ export function searchAll(query: string) {
       hit([h.name, h.native, h.years, h.kicker, h.field, h.lede, ...h.body, h.quote?.text, h.quote?.cite]),
     ),
     feats: communityFeats.filter((f) => hit([f.title, f.kicker, f.field, f.year, f.lede])),
+    gurdwaras: gurdwaras.filter((g) =>
+      hit([g.name, g.native, g.region, g.place, g.founded, g.kicker, g.story]),
+    ),
+    live: liveStations.filter((s) => hit([s.name, s.place, s.kicker, s.blurb])),
   };
 }

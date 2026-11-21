@@ -8,7 +8,10 @@ import { timelineView } from "./views/timeline";
 import { libraryView } from "./views/library";
 import { issueView, issuesIndexView } from "./views/issues";
 import { achievementsIndexView, heroView } from "./views/achievements";
+import { gurdwaraView, gurdwarasIndexView } from "./views/gurdwaras";
+import { listenView } from "./views/listen";
 import { heroById } from "./data/heroes";
+import { gurdwaraById } from "./data/gurdwaras";
 import { methodView } from "./views/method";
 import { searchView } from "./views/search";
 import { sourceView } from "./views/source";
@@ -29,7 +32,7 @@ function notFound(): string {
       <div class="wrap">
         <p class="kicker">404</p>
         <h1 class="page-title">This page is not in the archive</h1>
-        <p class="lede-page">The path does not match an issue, achievement, chapter, or document.</p>
+        <p class="lede-page">The path does not match an issue, achievement, gurdwara, chapter, or document.</p>
         <p><a class="btn btn-navy" href="${href("/")}">Back to SikhHub</a></p>
       </div>
     </div>
@@ -86,6 +89,21 @@ function paint(): void {
       title = `${heroById[route.id]?.name ?? "Achievement"} — SikhHub`;
       body = view;
     }
+  } else if (route.name === "gurdwaras") {
+    title = "Historic gurdwaras — SikhHub";
+    body = gurdwarasIndexView();
+  } else if (route.name === "gurdwara") {
+    const view = gurdwaraView(route.id);
+    if (!view) {
+      title = "Not found — SikhHub";
+      body = notFound();
+    } else {
+      title = `${gurdwaraById[route.id]?.name ?? "Gurdwara"} — SikhHub`;
+      body = view;
+    }
+  } else if (route.name === "listen") {
+    title = "Live kirtan — SikhHub";
+    body = listenView();
   } else if (route.name === "issue") {
     const view = issueView(route.id);
     if (!view) {
@@ -166,6 +184,10 @@ root.addEventListener("click", (event) => {
     const main = root.querySelector("main");
     if (main) main.innerHTML = achievementsIndexView(currentHeroField(), target.dataset.featField);
     document.getElementById("panth")?.scrollIntoView({ block: "start" });
+  } else if (target.dataset.gurdwaraRegion) {
+    const main = root.querySelector("main");
+    if (main) main.innerHTML = gurdwarasIndexView(target.dataset.gurdwaraRegion);
+    document.getElementById("map")?.scrollIntoView({ block: "start" });
   }
 });
 

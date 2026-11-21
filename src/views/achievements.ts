@@ -25,11 +25,14 @@ function featCard(feat: CommunityFeat): string {
       : `<a href="${href(feat.further.href)}">${esc(feat.further.label)}</a>`
     : "";
   return `
-    <article class="feat-card" id="${esc(feat.id)}">
-      <p class="feat-meta">${esc(feat.field)} · ${esc(feat.year)}</p>
-      <h3>${esc(feat.title)}</h3>
-      <p>${esc(feat.lede)}</p>
-      ${link ? `<p class="feat-more">${link}</p>` : ""}
+    <article class="cover-card feat-cover" id="${esc(feat.id)}">
+      <img src="${asset(feat.image)}" alt="${esc(feat.imageAlt)}" />
+      <div class="cover-card-copy">
+        <p class="feat-meta">${esc(feat.field)} · ${esc(feat.year)}</p>
+        <h3>${esc(feat.title)}</h3>
+        <p>${esc(feat.lede)}</p>
+        ${link ? `<p class="feat-more">${link}</p>` : ""}
+      </div>
     </article>`;
 }
 
@@ -41,11 +44,11 @@ export function achievementsSpotlight(): string {
           <div>
             <p class="kicker">Sikh achievements</p>
             <h2>Fifty lives, and the Panth in the world</h2>
-            <p>A spotlight of ten, then the full fifty. Below them, forty facts of Sikhism as a public force — langar, a state, a script, a kitchen on the highway.</p>
+            <p>A spotlight of ten, then the full fifty. Below them, fifty facts of Sikhism as a public force — langar, a state, a script, a kitchen on the highway.</p>
           </div>
           <a class="btn btn-navy" href="${href(routes.achievements)}">Open the room</a>
         </div>
-        <div class="hero-grid">
+        <div class="hero-grid hero-grid-spot">
           ${featuredHeroes.map(heroTile).join("")}
         </div>
       </div>
@@ -56,14 +59,16 @@ export function achievementsIndexView(heroField = "all", featField = "all"): str
   const people = heroField === "all" ? heroes : heroes.filter((h) => h.field === heroField);
   const feats = featField === "all" ? communityFeats : communityFeats.filter((f) => f.field === featField);
   return `
-    <div class="page-hero">
-      <div class="wrap">
+    <div class="cinema">
+      <img class="cinema-bg" src="${asset("/media/harmandir-aerial.jpg")}" alt="" />
+      <div class="cinema-shade"></div>
+      <div class="wrap cinema-copy">
         <p class="kicker">Sikh achievements</p>
         <h1 class="page-title">The Panth, in the open</h1>
-        <p class="lede-page">Fifty Sikhs whose lives are on the public record — empire, the battlefield, letters, science, rights, seva. And forty achievements of Sikhism as a community: a kitchen, a scripture, a state, a diaspora that would not cut its hair.</p>
+        <p class="lede-page">Fifty Sikhs whose lives are on the public record — empire, the battlefield, letters, science, rights, seva. And fifty achievements of Sikhism as a community: a kitchen, a scripture, a state, a diaspora that would not cut its hair.</p>
         <p class="hero-actions" style="margin-top:1.2rem">
           <a class="btn btn-primary" href="#panth">The Panth in the world</a>
-          <a class="btn btn-navy" href="#fifty">Fifty Sikhs</a>
+          <a class="btn btn-ghost" href="#fifty">Fifty Sikhs</a>
         </p>
       </div>
     </div>
@@ -83,7 +88,7 @@ export function achievementsIndexView(heroField = "all", featField = "all"): str
               `<button type="button" data-feat-field="${esc(f)}" class="${featField === f ? "is-on" : ""}">${esc(f)}</button>`,
           ).join("")}
         </div>
-        <div class="feat-grid">
+        <div class="cover-grid cover-grid-feats">
           ${feats.map(featCard).join("")}
         </div>
       </div>

@@ -166,6 +166,9 @@ export const heroes: Hero[] = [
       "Kapany was born in Moga, Punjab, in 1926. At Imperial College London in the 1950s he showed, with Harold Hopkins, that a bundle of glass fibres could carry an image. He named the field fibre optics, founded companies in the United States, and held more than a hundred patents.",
       "He endowed Sikh art collections, taught, and remained a public Sikh in American science. Optics journals called him the father of the field. The Panth can name him without borrowing a neighbour’s Nobel.",
     ],
+    image: "/media/heroes/kapany.jpg",
+    imageAlt: "Narinder Singh Kapany with an optical-fibre bundle",
+    imageCredit: "Narinder Singh Kapany. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Narinder_Singh_Kapany", label: "Open the biography" },
   },
   {
@@ -252,6 +255,9 @@ export const heroes: Hero[] = [
       "Karorsinghia misl sardar Baghel Singh entered Delhi in 1783 with a Sikh army. The Mughal emperor agreed to let him raise shrines at Chandni Chowk and on the Yamuna bank where Guru Tegh Bahadur and Guru Gobind Singh’s children were remembered.",
       "The capital of the empire that had killed Gurus now had Sikh gurdwaras in its streets. That is the achievement. The buildings remain.",
     ],
+    image: "/media/heroes/baghel.jpg",
+    imageAlt: "Later painting of Sardar Baghel Singh",
+    imageCredit: "Baghel Singh. Later painting via Wikimedia Commons. No lifetime photograph is established.",
     further: { href: "https://en.wikipedia.org/wiki/Baghel_Singh", label: "Open the biography" },
   },
   {
@@ -334,6 +340,9 @@ export const heroes: Hero[] = [
       "Mani Singh is remembered as a companion of Guru Gobind Singh, a copyist of Guru Granth Sahib, and the granthi who kept Harmandir Sahib’s diwan alive under persecution. He sought permission for Diwali and Vaisakhi gatherings, then refused the fine when the state turned the festival into a trap.",
       "In 1737 Zakariya Khan had him executed at Nakhas, Lahore, piece by piece. The gurdwara at that site still names the method.",
     ],
+    image: "/media/heroes/mani.jpg",
+    imageAlt: "Later painting of Bhai Mani Singh writing",
+    imageCredit: "Bhai Mani Singh. Later painting via Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Bhai_Mani_Singh", label: "Open the biography" },
   },
   {
@@ -399,6 +408,9 @@ export const heroes: Hero[] = [
       "Bura, later Buddha, met Guru Nanak as a boy and was named for the old soul in a young body. He witnessed the Gurus from Nanak to Hargobind and installed Guru Arjan’s Granth in the Harmandir Sahib.",
       "He is the continuity of the early Panth in one life: from Kartarpur’s fields to Amritsar’s sarovar. Sikhs still take his name at Akal Takht ceremonies.",
     ],
+    image: "/media/heroes/buddha.jpg",
+    imageAlt: "Fresco of Baba Buddha",
+    imageCredit: "Baba Buddha, fresco labelled in Gurmukhi. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Baba_Buddha", label: "Open the biography" },
   },
   {
@@ -417,6 +429,9 @@ export const heroes: Hero[] = [
       text: "Ham Hindu Nahin.",
       cite: "Bhai Kahn Singh Nabha, 1898",
     },
+    image: "/media/heroes/nabha.jpg",
+    imageAlt: "Bhai Kahn Singh of Nabha seated with his books",
+    imageCredit: "Posed photograph of Kahn Singh of Nabha. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Kahn_Singh_Nabha", label: "Open the biography" },
   },
   {
@@ -482,6 +497,9 @@ export const heroes: Hero[] = [
       "Sarabha left Ludhiana for Berkeley, then for the Ghadar press and the attempt to raise revolt in Punjab during the First World War. Caught in the Lahore conspiracy case, he was executed on 16 November 1915.",
       "The Ghadar was a Sikh-majority overseas revolt with a secular masthead. Sarabha is the face of how young that revolt was.",
     ],
+    image: "/media/heroes/sarabha.jpg",
+    imageAlt: "Kartar Singh Sarabha",
+    imageCredit: "Kartar Singh Sarabha. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Kartar_Singh_Sarabha", label: "Open the biography" },
   },
   {
@@ -496,6 +514,9 @@ export const heroes: Hero[] = [
       "Gulab Kaur of Bakshiwala went to Manila, joined the Ghadar network, and returned to organise villages while men of the party were hanged. She served terms in Lahore and Kamalpur jails.",
       "She died in obscurity in 1941. The file is thin. The fact is not: a Sikh woman in the first overseas war against the Raj.",
     ],
+    image: "/media/heroes/gulab.jpg",
+    imageAlt: "Bibi Gulab Kaur",
+    imageCredit: "Bibi Gulab Kaur. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Gulab_Kaur", label: "Open the biography" },
   },
   {
@@ -510,6 +531,9 @@ export const heroes: Hero[] = [
       "Thind came from Amritsar district to study at Berkeley, joined the U.S. Army in 1918, and applied for citizenship as a veteran. United States v. Bhagat Singh Thind ended with a unanimous ruling against him and a wave of denaturalisations.",
       "He later became a writer and lecturer. The turban in that photograph is the point of the law that tried to erase it.",
     ],
+    image: "/media/heroes/thind.jpg",
+    imageAlt: "Bhagat Singh Thind in U.S. Army uniform, with rifle",
+    imageCredit: "Bhagat Singh Thind, U.S. Army. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/United_States_v._Bhagat_Singh_Thind", label: "The judgment" },
   },
   {
@@ -592,6 +616,9 @@ export const heroes: Hero[] = [
       "Baldev Singh, from a steel family in central Punjab, led Akali negotiations in the 1940s and took the defence portfolio in 1947. He held it through the first Kashmir war.",
       "A Sikh at the defence desk at the founding is part of the record. So is the Constitution his colleagues Hukam Singh and Bhupinder Singh Mann refused.",
     ],
+    image: "/media/heroes/baldev.jpg",
+    imageAlt: "Baldev Singh (centre) walking with Jawaharlal Nehru",
+    imageCredit: "Baldev Singh with Jawaharlal Nehru. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Baldev_Singh", label: "Open the biography" },
   },
   {
@@ -623,6 +650,9 @@ export const heroes: Hero[] = [
       "Aurora, born in Jhelum, commanded Eastern Command in 1971. On 16 December he sat with Niazi at the Racecourse and signed the instrument of surrender that created Bangladesh.",
       "The photograph is one of the most reproduced in South Asian military history. The man in it is a Sikh.",
     ],
+    image: "/media/heroes/aurora.jpg",
+    imageAlt: "Lieutenant General Jagjit Singh Aurora signing the instrument of surrender, 16 December 1971",
+    imageCredit: "Lt Gen J. S. Aurora, Dhaka, 16 December 1971. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Jagjit_Singh_Aurora", label: "Open the biography" },
   },
   {
@@ -637,6 +667,9 @@ export const heroes: Hero[] = [
       "Commissioned in 1964 into the 9 Maratha Light Infantry, he fought in 1965 and 1971 and later commanded a corps. As COAS he was the first Sikh to hold the post.",
       "General Bikram Singh later became the second. The first is the one that had to exist.",
     ],
+    image: "/media/heroes/jj.jpg",
+    imageAlt: "General Joginder Jaswant Singh in service dress",
+    imageCredit: "General J. J. Singh. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Joginder_Jaswant_Singh", label: "Open the biography" },
   },
   {
@@ -651,6 +684,9 @@ export const heroes: Hero[] = [
       "At Haidari Kach in April 1921, Ishar Singh was hit and still brought ammunition and water under fire, then took a Lewis gun. King George V pinned the Cross.",
       "He later served as a captain in the Indian Army. The medal is a British honour on a Sikh chest. The act is the achievement.",
     ],
+    image: "/media/heroes/ishar.jpg",
+    imageAlt: "Captain Ishar Singh, Victoria Cross",
+    imageCredit: "Ishar Singh VC. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Ishar_Singh", label: "Open the biography" },
   },
   {
@@ -665,6 +701,9 @@ export const heroes: Hero[] = [
       "Khush was born in Punjab, trained at the University of California, Davis, and spent decades at the International Rice Research Institute in the Philippines. His breeding of IR36 and later lines is credited with feeding hundreds of millions.",
       "He kept the Sikh name on the highest agricultural honour the century gave. The Green Revolution had Sikh farmers at one end and a Sikh scientist at the other.",
     ],
+    image: "/media/heroes/khush.jpg",
+    imageAlt: "Gurdev Singh Khush receiving an honorary doctorate at Panjab University, 2017",
+    imageCredit: "Prof. G. S. Khush at the 66th Panjab University convocation, 2017. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Gurdev_Khush", label: "Open the biography" },
   },
   {
@@ -679,6 +718,9 @@ export const heroes: Hero[] = [
       "Gill took a doctorate at Chicago and researched with Compton. He returned to India, taught, and worked on cosmic-ray and nuclear problems in a young republic that needed physicists with laboratories, not only speeches.",
       "He is one of the first Sikh names in that scientific founding generation. Kapany made light. Gill measured what the century split.",
     ],
+    image: "/media/heroes/gill.jpg",
+    imageAlt: "Piara Singh Gill",
+    imageCredit: "Piara Singh Gill. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Piara_Singh_Gill", label: "Open the biography" },
   },
   {
@@ -710,6 +752,9 @@ export const heroes: Hero[] = [
       "Balbir Singh Dosanjh of Haripur was the inside-forward who announced that a partitioned country still owned the game it had learned under the Empire. He captained and later coached.",
       "Sikh hockey players filled those sides. He is the name on the medals the republic still cites when it talks of a golden age.",
     ],
+    image: "/media/heroes/balbir.jpg",
+    imageAlt: "Balbir Singh Sr on the Olympic podium",
+    imageCredit: "Balbir Singh Sr. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Balbir_Singh_Sr.", label: "Open the biography" },
   },
   {
@@ -724,6 +769,9 @@ export const heroes: Hero[] = [
       "Bedi, from Amritsar, made left-arm orthodox a world craft and led India in the 1970s. He later coached, quarrelled with boards, and stayed a public Sikh in whites.",
       "Cricket’s memory files him with Chandra, Prasanna, and Venkat. The Panth files the patka at Lord’s.",
     ],
+    image: "/media/heroes/bedi.jpg",
+    imageAlt: "Bishan Singh Bedi (right) with Major H. P. S. Ahluwalia",
+    imageCredit: "Bishan Singh Bedi. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Bishan_Singh_Bedi", label: "Open the biography" },
   },
   {
@@ -738,6 +786,9 @@ export const heroes: Hero[] = [
       "Son of Sir Sobha Singh, Khushwant trained as a lawyer, turned to history and fiction, and published Train to Pakistan in 1956. A History of the Sikhs remains a standard English account — argued with, still used.",
       "He was no granthi. He was a Sikh who made the community legible in a language the state preferred, without asking permission.",
     ],
+    image: "/media/heroes/khushwant.jpg",
+    imageAlt: "Khushwant Singh receiving an award in New Delhi",
+    imageCredit: "Khushwant Singh. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Khushwant_Singh", label: "Open the biography" },
   },
   {
@@ -752,6 +803,9 @@ export const heroes: Hero[] = [
       "Sobha Singh trained in the British academic style and then spent decades in Himachal making the faces through which a generation met the Gurus. Sohni Mahiwal and the Gurus were his public.",
       "Calendar art is easy to sneer at. It is also how a people without a state kept a face. His studio at Andretta still stands.",
     ],
+    image: "/media/heroes/sobha.jpg",
+    imageAlt: "The painter Sobha Singh",
+    imageCredit: "Sobha Singh. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Sobha_Singh_(painter)", label: "Open the biography" },
   },
   {
@@ -766,6 +820,9 @@ export const heroes: Hero[] = [
       "Ravi Singh, a British Sikh, started Khalsa Aid after watching refugees on television. The organisation became the overseas face of Sikh disaster seva: turbans in wreckage, kitchens on motorways.",
       "It is Bhai Kanhaiya’s water, scaled. The achievement is an institution, not a moment.",
     ],
+    image: "/media/heroes/ravi.jpg",
+    imageAlt: "Ravi Singh of Khalsa Aid (centre) at a relief stall",
+    imageCredit: "Ravi Singh, Khalsa Aid. Wikimedia Commons.",
     further: { href: "https://www.khalsaaid.org/", label: "Khalsa Aid" },
   },
   {
@@ -780,6 +837,9 @@ export const heroes: Hero[] = [
       "Indarjit Singh, an engineer by training, spent decades making Sikh thought audible in British public religion — not as folklore, as argument. In 2011 he was made a life peer.",
       "A Sikh bench in the Lords is a civic fact the community in Southall had earned over fifty years.",
     ],
+    image: "/media/heroes/indarjit.jpg",
+    imageAlt: "Official portrait of Lord Singh of Wimbledon",
+    imageCredit: "Official portrait, House of Lords. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Indarjit_Singh", label: "Open the biography" },
   },
   {
@@ -794,6 +854,9 @@ export const heroes: Hero[] = [
       "Ganda Singh served in the First World War, then trained as a historian. His work on eighteenth-century Punjab and his Directories of sources are still the shelf professional historians reach for.",
       "SikhHub’s method — label the paper, name the date — sits in that line. He is why this archive can exist without inventing a past.",
     ],
+    image: "/media/heroes/ganda.jpg",
+    imageAlt: "Ganda Singh as a young historian",
+    imageCredit: "Ganda Singh. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Ganda_Singh_(historian)", label: "Open the biography" },
   },
   {
@@ -808,6 +871,9 @@ export const heroes: Hero[] = [
       "Puran Singh taught chemistry, ran a distillery’s science, and wrote as a Sikh who had read Whitman and the Gurus together. He is not Bhagat Puran Singh of Pingalwara. He is the other fire.",
       "Punjabi modernism starts on his pages as much as on Bhai Vir Singh’s. The Panth had two Purans. Both count.",
     ],
+    image: "/media/heroes/puranpoet.jpg",
+    imageAlt: "Professor Puran Singh",
+    imageCredit: "Professor Puran Singh. Wikimedia Commons.",
     further: { href: "https://en.wikipedia.org/wiki/Puran_Singh", label: "Open the biography" },
   },
   {
