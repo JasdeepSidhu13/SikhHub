@@ -39,7 +39,7 @@ function paint(): void {
   let body = "";
 
   if (route.name === "home") {
-    title = "SikhHub — They roasted Sikhs alive in tandoors";
+    title = "SikhHub — Sikhs are beautiful people";
     body = homeView();
   } else if (route.name === "narrative") {
     title = "History — SikhHub";
@@ -95,6 +95,7 @@ function paint(): void {
   }
 
   root.innerHTML = shell(route, title, body);
+  bindEntranceVideo(root);
   const hash = location.hash.slice(1) || (route.name === "contact" ? "contact" : "");
   if (hash) {
     const el = document.getElementById(hash);
@@ -102,6 +103,15 @@ function paint(): void {
   } else {
     window.scrollTo(0, 0);
   }
+}
+
+function bindEntranceVideo(root: HTMLElement): void {
+  const video = root.querySelector<HTMLVideoElement>("[data-entrance-video]");
+  if (!video) return;
+  video.muted = true;
+  video.loop = true;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduced) void video.play().catch(() => undefined);
 }
 
 function currentKind(): string {

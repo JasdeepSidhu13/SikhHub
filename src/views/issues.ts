@@ -312,6 +312,11 @@ function extras(id: string): string {
         note: "Guru Hargobind raised it in 1606. A 1714 Guru Granth Sahib already bears a Nishan Sahib. The Rehat puts a Khanda on the post.",
       },
       {
+        href: "/documents/osho-last-testament-sikhs",
+        title: "Osho: Sikhs are beautiful people",
+        note: "Asked about Sikhism, he named Sikhs as the one community in India you can rely upon.",
+      },
+      {
         href: "/documents/cwmg-66",
         title: "The 1937 letter",
         note: "Gandhi’s own words to Nehru on Gurmukhi, from the Collected Works scan.",

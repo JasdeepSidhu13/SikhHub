@@ -2,6 +2,31 @@ import type { Story } from "../data/stories";
 import { esc } from "../lib/html";
 import { asset, href } from "../lib/paths";
 
+export function videoPlate(opts: {
+  src: string;
+  poster: string;
+  title: string;
+  caption: string;
+  entrance?: boolean;
+}): string {
+  const src = asset(opts.src);
+  const poster = asset(opts.poster);
+  return `
+    <figure class="video-plate${opts.entrance ? " is-entrance" : ""}">
+      <video
+        ${opts.entrance ? "data-entrance-video muted loop" : ""}
+        controls
+        playsinline
+        preload="${opts.entrance ? "auto" : "metadata"}"
+        poster="${esc(poster)}"
+        title="${esc(opts.title)}"
+      >
+        <source src="${esc(src)}" type="video/mp4" />
+      </video>
+      <figcaption>${esc(opts.caption)}</figcaption>
+    </figure>`;
+}
+
 export function letter(opts: { from: string; date: string; body: string; cite: string }): string {
   return `
     <figure class="letter">

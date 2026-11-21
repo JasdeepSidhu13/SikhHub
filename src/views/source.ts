@@ -5,6 +5,7 @@ import { chaptersFor, relatedSources, themesFor } from "../lib/lookup";
 import { esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
 import { kindChip } from "./layout";
+import { videoPlate } from "./exhibits";
 
 export function sourceView(id: string): string | null {
   const source = sourceById[id];
@@ -26,10 +27,17 @@ export function sourceView(id: string): string | null {
       <div class="wrap split">
         <article class="prose">
           ${
-            brief?.image
-              ? `<figure class="photo"><img src="${esc(asset(brief.image))}" alt="${esc(brief.imageAlt ?? source.title)}" />
+            brief?.video
+              ? videoPlate({
+                  src: brief.video,
+                  poster: brief.videoPoster ?? brief.image ?? "",
+                  title: source.title,
+                  caption: brief.imageCredit ?? source.creator,
+                })
+              : brief?.image
+                ? `<figure class="photo"><img src="${esc(asset(brief.image))}" alt="${esc(brief.imageAlt ?? source.title)}" />
                  <p class="figure-credit">${esc(brief.imageCredit ?? "")}</p></figure>`
-              : ""
+                : ""
           }
           <h2>What this record is</h2>
           <p>${esc(source.note)}</p>
@@ -46,6 +54,11 @@ export function sourceView(id: string): string | null {
           }
           <p>
             <a class="btn btn-primary ext" href="${esc(source.url)}" rel="noopener noreferrer" target="_blank">Further exploration — open the original</a>
+            ${
+              brief?.alsoHref
+                ? ` <a class="btn btn-navy ext" href="${esc(brief.alsoHref)}" rel="noopener noreferrer" target="_blank">${esc(brief.alsoLabel ?? "Open the clip")}</a>`
+                : ""
+            }
           </p>
         </article>
         <aside class="side">

@@ -7,7 +7,7 @@ import { esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
 import { sourceCard } from "./layout";
 import { figure, genocideInfographic, raid1955Infographic } from "./infographics";
-import { clipping, letter, storyFeature } from "./exhibits";
+import { clipping, letter, storyFeature, videoPlate } from "./exhibits";
 
 export function homeView(): string {
   const featuredDocs = ["archive-1984-tandoors", "delhi-hc-2018", "cad-21-nov", "cwmg-66", "archive-1984", "hrw-killers"]
@@ -21,17 +21,32 @@ export function homeView(): string {
   const khalra = stories.find((s) => s.id === "khalra")!;
 
   return `
-    <section class="hero hero-impact">
-      <img class="hero-bg" src="${asset(media.witnesses.src)}" alt="" />
-      <div class="hero-inner">
-        <p class="kicker">Sikh political history · 1920–2026</p>
-        <h1>They roasted Sikhs alive in tandoors.</h1>
-        <p class="lede">Affidavits to the Misra Commission from Nand Nagri name the ovens. A 2,000-strong mob, led by Congress workers, killed 119 Sikhs in that settlement. Children were put head-down into tandoors. This was the 1984 Sikh genocide. Not a riot. The papers are here.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="${href(routes.issues)}">The record</a>
-          <a class="btn btn-ghost" href="${href(routes.issue("november-1984"))}">1984 Sikh genocide</a>
+    <section class="hero hero-entrance">
+      <div class="hero-entrance-grid">
+        <div class="hero-entrance-copy">
+          <p class="kicker">Interview · 1985</p>
+          <h1>Sikhs are beautiful people.</h1>
+          <p class="lede">Asked what he thought of Sikhism, Osho did not hedge. The Sikhs, he said, are the one community in the whole of India you can rely upon — simple, courageous, unafraid.</p>
+          <blockquote class="hero-quote">“Sikhs are beautiful people. Perhaps the community of the Sikhs is the only community in the whole of India you can rely upon for something. They are simple, courageous people — most trustworthy, reliable, not cunning. They are unafraid of anything.”<cite>Osho, The Last Testament, Volume 1</cite></blockquote>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="${href(routes.document("osho-last-testament-sikhs"))}">The interview</a>
+            <a class="btn btn-ghost" href="${href(routes.issues)}">The record</a>
+          </div>
         </div>
-        <blockquote class="hero-quote">“The English-man has gone, but our [Sikh] liberty has not come. For us the so-called liberty is simply a change of masters, black for white. Under the garb of democracy and secularism, our Panth, our liberty, and our religion are being crushed.”<cite>Master Tara Singh, All India Sikh Conference, 28 March 1953</cite></blockquote>
+        ${videoPlate({
+          src: "/media/osho-sikhs.mp4",
+          poster: media.osho.src,
+          title: "Osho, asked about Sikhs",
+          caption: "Osho, asked about Sikhs. The Last Testament, 1985.",
+          entrance: true,
+        })}
+      </div>
+    </section>
+
+    <section class="quote-band">
+      <div class="wrap">
+        <blockquote>“The English-man has gone, but our [Sikh] liberty has not come. For us the so-called liberty is simply a change of masters, black for white. Under the garb of democracy and secularism, our Panth, our liberty, and our religion are being crushed.”</blockquote>
+        <cite>Master Tara Singh, All India Sikh Conference, 28 March 1953</cite>
       </div>
     </section>
 
