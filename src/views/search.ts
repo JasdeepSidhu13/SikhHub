@@ -37,7 +37,7 @@ export function searchView(q = ""): string {
         }
         ${
           results.heroes.length
-            ? `<h2>Fifty Sikhs</h2><div class="issue-grid">${results.heroes
+            ? `<h2>Lives</h2><div class="issue-grid">${results.heroes
                 .map(
                   (h) =>
                     `<a class="card" href="${href(routes.achievement(h.id))}"><h3>${esc(h.name)}</h3><p>${esc(h.lede)}</p></a>`,
@@ -47,17 +47,17 @@ export function searchView(q = ""): string {
         }
         ${
           results.feats.length
-            ? `<h2>The Panth in the world</h2><div class="issue-grid">${results.feats
+            ? `<h2>Works</h2><div class="issue-grid">${results.feats
                 .map(
                   (f) =>
-                    `<a class="card" href="${href(routes.achievements)}#${esc(f.id)}"><h3>${esc(f.title)}</h3><p>${esc(f.lede)}</p></a>`,
+                    `<a class="card" href="${href(routes.feat(f.id))}"><h3>${esc(f.title)}</h3><p>${esc(f.lede)}</p></a>`,
                 )
                 .join("")}</div>`
             : ""
         }
         ${
           results.gurdwaras.length
-            ? `<h2>Historic gurdwaras</h2><div class="issue-grid">${results.gurdwaras
+            ? `<h2>Gurdwaras</h2><div class="issue-grid">${results.gurdwaras
                 .map(
                   (g) =>
                     `<a class="card" href="${href(routes.gurdwara(g.id))}"><h3>${esc(g.name)}</h3><p>${esc(g.place)} — ${esc(g.kicker)}</p></a>`,

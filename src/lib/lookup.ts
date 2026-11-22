@@ -1,7 +1,9 @@
 import { chapters, chapterById } from "../data/chapters";
 import { events } from "../data/events";
 import { communityFeats, type CommunityFeat } from "../data/community";
+import { featArticles } from "../data/feat-articles";
 import { gurdwaras, type Gurdwara } from "../data/gurdwaras";
+import { gurdwaraArticles } from "../data/gurdwara-articles";
 import { heroes, type Hero } from "../data/heroes";
 import { liveStations, type LiveStation } from "../data/live";
 import { newsWeeks, type NewsItem } from "../data/news";
@@ -74,9 +76,27 @@ export function searchAll(query: string) {
     heroes: heroes.filter((h) =>
       hit([h.name, h.native, h.years, h.kicker, h.field, h.lede, ...h.body, h.quote?.text, h.quote?.cite]),
     ),
-    feats: communityFeats.filter((f) => hit([f.title, f.kicker, f.field, f.year, f.lede])),
+    feats: communityFeats.filter((f) =>
+      hit([
+        f.title,
+        f.kicker,
+        f.field,
+        f.year,
+        f.lede,
+        ...(featArticles[f.id] ?? []).flatMap((s) => [s.heading, ...s.paragraphs]),
+      ]),
+    ),
     gurdwaras: gurdwaras.filter((g) =>
-      hit([g.name, g.native, g.region, g.place, g.founded, g.kicker, g.story]),
+      hit([
+        g.name,
+        g.native,
+        g.region,
+        g.place,
+        g.founded,
+        g.kicker,
+        g.story,
+        ...(gurdwaraArticles[g.id] ?? []).flatMap((s) => [s.heading, ...s.paragraphs]),
+      ]),
     ),
     live: liveStations.filter((s) => hit([s.name, s.place, s.kicker, s.blurb])),
   };

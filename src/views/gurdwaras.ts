@@ -1,5 +1,6 @@
 import { GURDWARA_REGIONS, featuredGurdwaras, gurdwaraById, gurdwaras, type Gurdwara } from "../data/gurdwaras";
-import { esc } from "../lib/html";
+import { gurdwaraArticles } from "../data/gurdwara-articles";
+import { articleHtml, esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
 
 function cover(g: Gurdwara, className = "cover-card"): string {
@@ -11,6 +12,7 @@ function cover(g: Gurdwara, className = "cover-card"): string {
         <p class="feat-meta">${esc(g.region)} · ${esc(g.founded)}</p>
         <h3>${esc(g.name)}</h3>
         <p>${esc(g.place)}</p>
+        <p class="read-on">Read the article</p>
       </div>
     </a>`;
 }
@@ -21,11 +23,11 @@ export function gurdwarasSpotlight(): string {
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="kicker">Historic gurdwaras</p>
-            <h2>One hundred houses of the Guru</h2>
-            <p>Takhts, janam asthans, shaheedi asthans, and the first halls of the diaspora — with the story, the place, and the photograph the archive could keep.</p>
+            <p class="kicker">Gurdwaras</p>
+            <h2>A hundred houses</h2>
+            <p>Takhts, janam asthans, shaheedi asthans, and the first halls of the diaspora. Each card opens the house: place, date, and the article.</p>
           </div>
-          <a class="btn btn-navy" href="${href(routes.gurdwaras)}">Open the map</a>
+          <a class="btn btn-navy" href="${href(routes.gurdwaras)}">The map</a>
         </div>
         <div class="mosaic">
           ${featuredGurdwaras.map((g, i) => cover(g, i === 0 ? "cover-card is-lead" : "cover-card")).join("")}
@@ -41,9 +43,9 @@ export function gurdwarasIndexView(region = "all"): string {
       <img class="cinema-bg" src="${asset("/media/harmandir-aerial.jpg")}" alt="" />
       <div class="cinema-shade"></div>
       <div class="wrap cinema-copy">
-        <p class="kicker">Historic gurdwaras</p>
+        <p class="kicker">Gurdwaras</p>
         <h1 class="page-title">A hundred Nishan Sahibs</h1>
-        <p class="lede-page">From Harmandir Sahib to Nankana, Kartarpur, the five Takhts, Delhi’s shaheedi asthans, Hemkund, Bidar, Stockton, Abbotsford, and Gravesend. Each house has a place, a date, a story, and a photograph.</p>
+        <p class="lede-page">From Harmandir Sahib to Nankana, Kartarpur, the five Takhts, Delhi’s shaheedi asthans, Hemkund, Bidar, Stockton, Abbotsford, and Gravesend. Each house opens an article: the founding, the event, the later years, what still stands.</p>
         <p class="hero-actions" style="margin-top:1.2rem">
           <a class="btn btn-primary" href="#map">The hundred</a>
           <a class="btn btn-ghost" href="${href(routes.listen)}">Kirtan</a>
@@ -55,7 +57,7 @@ export function gurdwarasIndexView(region = "all"): string {
         <div class="section-head">
           <div>
             <p class="kicker">Eight to begin</p>
-            <h2>The houses the world already knows — and should know properly</h2>
+            <h2>Known, and still unread</h2>
           </div>
         </div>
         <div class="mosaic">
@@ -68,7 +70,7 @@ export function gurdwarasIndexView(region = "all"): string {
         <div class="section-head">
           <div>
             <p class="kicker">${gurdwaras.length} on the record</p>
-            <h2>By region</h2>
+            <h2>The map</h2>
             <p>Punjab and the Pakistan janam asthans, Delhi, the Himalaya, the Deccan, and the first diaspora halls.</p>
           </div>
         </div>
@@ -103,7 +105,7 @@ export function gurdwaraView(id: string): string | null {
       <img class="cinema-bg" src="${asset(g.images[0])}" alt="" />
       <div class="cinema-shade"></div>
       <div class="wrap cinema-copy">
-        <p class="kicker"><a href="${href(routes.gurdwaras)}">Historic gurdwaras</a> · ${esc(g.region)}</p>
+        <p class="kicker"><a href="${href(routes.gurdwaras)}">Gurdwaras</a> · ${esc(g.region)}</p>
         <h1 class="page-title">${esc(g.name)}</h1>
         ${g.native ? `<p class="hero-native" style="color:var(--gold-soft)">${esc(g.native)}</p>` : ""}
         <p class="lede-page">${esc(g.kicker)} · ${esc(g.place)} · ${esc(g.founded)}</p>
@@ -112,11 +114,12 @@ export function gurdwaraView(id: string): string | null {
     <section class="section">
       <div class="wrap guru-profile">
         <div class="guru-gallery">${gallery}</div>
-        <article class="prose">
+        <article class="prose article-prose">
           <p class="lede-inline">${esc(g.story)}</p>
-          <p class="feat-meta" style="margin-top:1.2rem">${esc(g.imageCredit)}</p>
+          ${articleHtml(gurdwaraArticles[g.id])}
+          <p class="feat-meta" style="margin-top:1.6rem">${esc(g.imageCredit)}</p>
           <p>
-            <a class="btn btn-navy" href="${href(routes.gurdwaras)}#map">All hundred</a>
+            <a class="btn btn-navy" href="${href(routes.gurdwaras)}#map">The map</a>
             <a class="btn btn-ghost" href="${href(routes.listen)}" style="color:var(--navy);border-color:var(--navy)">Kirtan</a>
           </p>
         </article>
@@ -126,7 +129,7 @@ export function gurdwaraView(id: string): string | null {
       related.length
         ? `<section class="section section-cream">
       <div class="wrap">
-        <div class="section-head"><div><p class="kicker">${esc(g.region)}</p><h2>Alongside</h2></div></div>
+        <div class="section-head"><div><p class="kicker">${esc(g.region)}</p><h2>Same country</h2></div></div>
         <div class="cover-grid">${related.map((x) => cover(x)).join("")}</div>
       </div>
     </section>`

@@ -34,8 +34,8 @@ export function homeView(): string {
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="kicker">Four rooms</p>
-            <h2>Walk in. Stay.</h2>
+            <p class="kicker">Rooms</p>
+            <h2>Lives. Houses. Shabad. The record.</h2>
           </div>
         </div>
         <div class="rooms">

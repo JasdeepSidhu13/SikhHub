@@ -19,6 +19,7 @@ export const routes = {
   issue: (id: string) => `/issues/${id}`,
   achievements: "/achievements",
   achievement: (id: string) => `/achievements/${id}`,
+  feat: (id: string) => `/achievements/${id}`,
   gurdwaras: "/gurdwaras",
   gurdwara: (id: string) => `/gurdwaras/${id}`,
   listen: "/listen",
