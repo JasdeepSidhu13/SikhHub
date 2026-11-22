@@ -68,7 +68,7 @@ export function newsIndexView(): string {
     <div class="page-hero">
       <div class="wrap">
         <p class="kicker">News</p>
-        <h1 class="page-title">The Panth, this week</h1>
+        <h1 class="page-title">On the desk</h1>
         <p class="lede-page">Pro-Sikh news, updated weekly: achievement, pilgrimage, institutions, and the live issues — Kartarpur, Bandi Singhs, Chandigarh, 1984. Not a wire. A desk. Every item is sourced.</p>
       </div>
     </div>

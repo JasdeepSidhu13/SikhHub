@@ -1,6 +1,7 @@
 import { featuredHeroes, heroFields, heroes, heroById, type Hero } from "../data/heroes";
-import { COMMUNITY_FIELDS, communityFeats, type CommunityFeat } from "../data/community";
-import { esc } from "../lib/html";
+import { COMMUNITY_FIELDS, communityFeats, communityById, type CommunityFeat } from "../data/community";
+import { featArticles } from "../data/feat-articles";
+import { articleHtml, esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
 
 export function heroTile(hero: Hero): string {
@@ -19,21 +20,16 @@ export function heroTile(hero: Hero): string {
 }
 
 function featCard(feat: CommunityFeat): string {
-  const link = feat.further
-    ? feat.further.href.startsWith("http")
-      ? `<a class="ext" href="${esc(feat.further.href)}" rel="noopener noreferrer" target="_blank">${esc(feat.further.label)}</a>`
-      : `<a href="${href(feat.further.href)}">${esc(feat.further.label)}</a>`
-    : "";
   return `
-    <article class="cover-card feat-cover" id="${esc(feat.id)}">
+    <a class="cover-card feat-cover" id="${esc(feat.id)}" href="${href(routes.feat(feat.id))}">
       <img src="${asset(feat.image)}" alt="${esc(feat.imageAlt)}" />
       <div class="cover-card-copy">
         <p class="feat-meta">${esc(feat.field)} · ${esc(feat.year)}</p>
         <h3>${esc(feat.title)}</h3>
         <p>${esc(feat.lede)}</p>
-        ${link ? `<p class="feat-more">${link}</p>` : ""}
+        <p class="read-on">Read the article</p>
       </div>
-    </article>`;
+    </a>`;
 }
 
 export function achievementsSpotlight(): string {
@@ -43,10 +39,10 @@ export function achievementsSpotlight(): string {
         <div class="section-head">
           <div>
             <p class="kicker">Lives</p>
-            <h2>Fifty lives, and the Panth in the world</h2>
-            <p>A spotlight of ten, then the full fifty. Below them, fifty facts of Sikhism as a public force — langar, a state, a script, a kitchen on the highway.</p>
+            <h2>Fifty names. Fifty works.</h2>
+            <p>A spotlight of ten, then the full fifty. Below them, fifty public works of the Panth — langar, a state, a script, a kitchen on the highway. Each opens an article.</p>
           </div>
-          <a class="btn btn-navy" href="${href(routes.achievements)}">All fifty</a>
+          <a class="btn btn-navy" href="${href(routes.achievements)}">Open Lives</a>
         </div>
         <div class="hero-grid hero-grid-spot">
           ${featuredHeroes.map(heroTile).join("")}
@@ -64,11 +60,11 @@ export function achievementsIndexView(heroField = "all", featField = "all"): str
       <div class="cinema-shade"></div>
       <div class="wrap cinema-copy">
         <p class="kicker">Lives</p>
-        <h1 class="page-title">The Panth, in the open</h1>
-        <p class="lede-page">Fifty Sikhs whose lives are on the public record — empire, the battlefield, letters, science, rights, seva. And fifty achievements of Sikhism as a community: a kitchen, a scripture, a state, a diaspora that would not cut its hair.</p>
+        <h1 class="page-title">Fifty names. Fifty works.</h1>
+        <p class="lede-page">Fifty Sikhs on the public record — empire, the field, letters, science, rights, seva. And fifty works of the Panth as a people: a kitchen, a scripture, a state, a diaspora that would not cut its hair. Every card opens an article.</p>
         <p class="hero-actions" style="margin-top:1.2rem">
-          <a class="btn btn-primary" href="#panth">The Panth in the world</a>
-          <a class="btn btn-ghost" href="#fifty">Fifty Sikhs</a>
+          <a class="btn btn-primary" href="#panth">Fifty works</a>
+          <a class="btn btn-ghost" href="#fifty">Fifty lives</a>
         </p>
       </div>
     </div>
@@ -76,9 +72,9 @@ export function achievementsIndexView(heroField = "all", featField = "all"): str
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="kicker">${communityFeats.length} on the record</p>
-            <h2>What the Panth built</h2>
-            <p>Not a person. A people. Langar, Gurmukhi, the Khalsa, a sovereign Punjab, the regiment, the corridor to Kartarpur, the kitchen on the Delhi border.</p>
+            <p class="kicker">${communityFeats.length} works</p>
+            <h2>The work, not the portrait</h2>
+            <p>Not a person. A people. Langar, Gurmukhi, the Khalsa, a sovereign Punjab, the regiment, the corridor to Kartarpur, the kitchen on the Delhi border. Open any card.</p>
           </div>
         </div>
         <div class="filters">
@@ -98,8 +94,8 @@ export function achievementsIndexView(heroField = "all", featField = "all"): str
         <div class="section-head">
           <div>
             <p class="kicker">${heroes.length} lives</p>
-            <h2>Fifty Sikhs</h2>
-            <p>Each name opens a story. Portraits where the archive has one. The rest stand on the record of the work.</p>
+            <h2>The names</h2>
+            <p>Each portrait opens a life. The rest stand on the record of the work.</p>
           </div>
         </div>
         <div class="filters">
@@ -153,7 +149,7 @@ export function heroView(id: string): string | null {
           }
           <p>
             <a class="btn btn-navy${furtherExternal ? " ext" : ""}" href="${esc(furtherHref)}"${furtherAttrs}>${esc(hero.further.label)}</a>
-            <a class="btn btn-ghost" href="${href(routes.achievements)}#fifty" style="color:var(--navy);border-color:var(--navy)">All fifty</a>
+            <a class="btn btn-ghost" href="${href(routes.achievements)}#fifty" style="color:var(--navy);border-color:var(--navy)">The names</a>
           </p>
         </article>
       </div>
@@ -163,7 +159,7 @@ export function heroView(id: string): string | null {
         <div class="section-head">
           <div>
             <p class="kicker">${esc(hero.field)}</p>
-            <h2>Alongside</h2>
+            <h2>Same field</h2>
           </div>
         </div>
         <div class="hero-grid">
@@ -171,4 +167,55 @@ export function heroView(id: string): string | null {
         </div>
       </div>
     </section>`;
+}
+
+export function featView(id: string): string | null {
+  const feat = communityById[id];
+  if (!feat) return null;
+  const article = featArticles[feat.id];
+  const related = communityFeats.filter((f) => f.id !== feat.id && f.field === feat.field).slice(0, 6);
+  const further = feat.further;
+  const furtherExternal = further ? further.href.startsWith("http") : false;
+  const furtherHref = further ? (furtherExternal ? further.href : href(further.href)) : "";
+  const furtherAttrs = furtherExternal ? ' rel="noopener noreferrer" target="_blank"' : "";
+  return `
+    <div class="cinema cinema-profile">
+      <img class="cinema-bg" src="${asset(feat.image)}" alt="" />
+      <div class="cinema-shade"></div>
+      <div class="wrap cinema-copy">
+        <p class="kicker"><a href="${href(routes.achievements)}#panth">Works</a> · ${esc(feat.field)}</p>
+        <h1 class="page-title">${esc(feat.title)}</h1>
+        <p class="lede-page">${esc(feat.kicker)} · ${esc(feat.year)}</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="wrap guru-profile">
+        <figure class="guru-shot feat-shot">
+          <img src="${asset(feat.image)}" alt="${esc(feat.imageAlt)}" />
+          <figcaption>${esc(feat.imageCredit)}</figcaption>
+        </figure>
+        <article class="prose article-prose">
+          <p class="lede-inline">${esc(feat.lede)}</p>
+          ${articleHtml(article)}
+          <p>
+            ${
+              further
+                ? `<a class="btn btn-navy${furtherExternal ? " ext" : ""}" href="${esc(furtherHref)}"${furtherAttrs}>${esc(further.label)}</a>`
+                : ""
+            }
+            <a class="btn btn-ghost" href="${href(routes.achievements)}#panth" style="color:var(--navy);border-color:var(--navy)">All fifty works</a>
+          </p>
+        </article>
+      </div>
+    </section>
+    ${
+      related.length
+        ? `<section class="section section-cream">
+      <div class="wrap">
+        <div class="section-head"><div><p class="kicker">${esc(feat.field)}</p><h2>Same field</h2></div></div>
+        <div class="cover-grid cover-grid-feats">${related.map(featCard).join("")}</div>
+      </div>
+    </section>`
+        : ""
+    }`;
 }

@@ -434,7 +434,7 @@ export function issuesLandingHero(mode: "page" | "section" = "page"): string {
     <section class="hero hero-impact${isSection ? " is-section" : ""}" id="sikh-issues">
       <img class="hero-bg" src="${asset(media.witnesses.src)}" alt="${esc(media.witnesses.alt)}" />
       <div class="hero-inner">
-        <p class="kicker">${isSection ? "Sikh issues · 1984" : "Sikh issues · 1920–2026"}</p>
+        <p class="kicker">${isSection ? "Issues · 1984" : "Issues"}</p>
         <h1>They roasted Sikhs alive in tandoors.</h1>
         <p class="lede">Affidavits to the Misra Commission from Nand Nagri name the ovens. A 2,000-strong mob, led by Congress workers, killed 119 Sikhs in that settlement. Children were put head-down into tandoors. This was the 1984 Sikh genocide. Not a riot. The papers are here.</p>
         <div class="hero-actions">
@@ -457,8 +457,8 @@ export function issuesIndexView(): string {
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="kicker">The record</p>
-            <h2>Start with the issue. The papers follow.</h2>
+            <p class="kicker">The docket</p>
+            <h2>The live fight</h2>
             <p>The 1984 Sikh genocide. Blue Star. A state without its capital. A constitution two Sikhs would not sign. The Guru’s house. The cremation registers.</p>
           </div>
         </div>
@@ -479,12 +479,32 @@ export function issuesIndexView(): string {
             })
             .join("")}
         </div>
-        <h2 class="rest-head">Anti-Sikh narratives</h2>
-        <div class="issue-grid compact">
+      </div>
+    </section>
+    <section class="section section-cream issue-band" id="narratives">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">The smear</p>
+            <h2>Anti-Sikh narratives</h2>
+            <p>The Nishan Sahib, the Granth, Gurmukhi, the kirpan in the Constitution — arguments built to make the Khalsa look like a sect of someone else.</p>
+          </div>
+        </div>
+        <div class="issue-grid">
           ${issueCards(antiSikh)}
         </div>
-        <h2 class="rest-head">Also in this archive</h2>
-        <div class="issue-grid compact">
+      </div>
+    </section>
+    <section class="section issue-band" id="also">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">The rest</p>
+            <h2>Also on the docket</h2>
+            <p>Rivers, the capital, the disappeared, the identity file — the same century, other rooms.</p>
+          </div>
+        </div>
+        <div class="issue-grid">
           ${issueCards(other)}
         </div>
       </div>

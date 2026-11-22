@@ -7,7 +7,8 @@ import { chapterView, narrativeIndexView } from "./views/narrative";
 import { timelineView } from "./views/timeline";
 import { libraryView } from "./views/library";
 import { issueView, issuesIndexView } from "./views/issues";
-import { achievementsIndexView, heroView } from "./views/achievements";
+import { achievementsIndexView, featView, heroView } from "./views/achievements";
+import { communityById } from "./data/community";
 import { gurdwaraView, gurdwarasIndexView } from "./views/gurdwaras";
 import { listenView } from "./views/listen";
 import { heroById } from "./data/heroes";
@@ -81,13 +82,17 @@ function paint(): void {
     title = "Lives — SikhHub";
     body = achievementsIndexView();
   } else if (route.name === "achievement") {
-    const view = heroView(route.id);
-    if (!view) {
+    const hero = heroView(route.id);
+    const feat = hero ? null : featView(route.id);
+    if (hero) {
+      title = `${heroById[route.id]?.name ?? "Lives"} — SikhHub`;
+      body = hero;
+    } else if (feat) {
+      title = `${communityById[route.id]?.title ?? "Works"} — SikhHub`;
+      body = feat;
+    } else {
       title = "Not found — SikhHub";
       body = notFound();
-    } else {
-      title = `${heroById[route.id]?.name ?? "Achievement"} — SikhHub`;
-      body = view;
     }
   } else if (route.name === "gurdwaras") {
     title = "Historic gurdwaras — SikhHub";
