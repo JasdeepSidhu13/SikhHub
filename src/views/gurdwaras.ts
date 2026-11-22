@@ -25,7 +25,7 @@ export function gurdwarasSpotlight(): string {
         <div class="section-head">
           <div>
             <p class="kicker">Gurdwaras</p>
-            <h2>A hundred houses</h2>
+            <h2>Where the Nishan still flies</h2>
             <p>Takhts, janam asthans, shaheedi asthans, and the first halls of the diaspora. Each card opens the house: place, date, and the article.</p>
           </div>
           <a class="btn btn-navy" href="${href(routes.gurdwaras)}#atlas">The atlas</a>
@@ -45,11 +45,11 @@ export function gurdwarasIndexView(region = "all", atlasMode: "subcontinent" | "
       <div class="cinema-shade"></div>
       <div class="wrap cinema-copy">
         <p class="kicker">Gurdwaras</p>
-        <h1 class="page-title">A hundred Nishan Sahibs</h1>
+        <h1 class="page-title">The Guru’s houses</h1>
         <p class="lede-page">From Harmandir Sahib to Nankana, Kartarpur, the five Takhts, Delhi’s shaheedi asthans, Hemkund, Bidar, Stockton, Abbotsford, and Gravesend. Each house opens an article: the founding, the event, the later years, what still stands.</p>
         <p class="hero-actions" style="margin-top:1.2rem">
           <a class="btn btn-primary" href="#atlas">The atlas</a>
-          <a class="btn btn-ghost" href="#map">The hundred</a>
+          <a class="btn btn-ghost" href="#map">Every house</a>
         </p>
       </div>
     </div>
@@ -57,7 +57,7 @@ export function gurdwarasIndexView(region = "all", atlasMode: "subcontinent" | "
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="kicker">${list.length} ${region === "all" ? "placed" : "in this country"}</p>
+            <p class="kicker">${region === "all" ? "Harmandir to Gravesend" : region}</p>
             <h2>The atlas</h2>
             <p>A plate, not a tourist map. Gold is a house in this archive. The subcontinent holds the Takhts. The world holds the first diaspora halls.</p>
           </div>
@@ -89,7 +89,7 @@ export function gurdwarasIndexView(region = "all", atlasMode: "subcontinent" | "
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="kicker">The same hundred</p>
+            <p class="kicker">The full plate</p>
             <h2>As covers</h2>
             <p>If you want the photograph before the pin.</p>
           </div>

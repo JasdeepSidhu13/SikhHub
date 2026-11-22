@@ -9,8 +9,8 @@ export function directoryPreview(): string {
         <div class="section-head">
           <div>
             <p class="kicker">Index</p>
-            <h2>A hundred doors</h2>
-            <p>Gurbani search, the SGPC, Ensaaf, the 1984 archive, live kirtan, museums, APIs. ${directory.length} doors. SikhHub is a desk. These are the papers it sits beside.</p>
+            <h2>The papers beside this desk</h2>
+            <p>Gurbani search, the SGPC, Ensaaf, the 1984 archive, live kirtan, museums, APIs. SikhHub is a desk. These are the papers it sits beside.</p>
           </div>
           <a class="btn btn-navy" href="${href(routes.directory)}">Open the index</a>
         </div>
@@ -29,14 +29,14 @@ export function directoryView(kind = "all"): string {
       <div class="wrap cinema-copy">
         <p class="kicker">Index</p>
         <h1 class="page-title">Where to read Sikhi</h1>
-        <p class="lede-page">${directory.length} doors: Gurbani, archives, institutions, rights desks, newsrooms, museums, seva, broadcasts, and the APIs that serve the Granth. SikhHub does not replace them. It points.</p>
+        <p class="lede-page">Gurbani, archives, institutions, rights desks, newsrooms, museums, seva, broadcasts, and the APIs that serve the Granth. SikhHub does not replace them. It points.</p>
       </div>
     </div>
     <section class="section" id="doors">
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="kicker">${list.length} on this plate</p>
+            <p class="kicker">Leave this site</p>
             <h2>Open the original</h2>
             <p>Each card leaves this site. Prefer a dated document over a primer. Prefer the Granth over a paraphrase.</p>
           </div>

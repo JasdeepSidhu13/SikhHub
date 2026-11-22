@@ -28,8 +28,8 @@ export function aboutView(): string {
     <section class="quote-band">
       <div class="wrap">
         <blockquote>
-          A nation may bury a people twice: once in the earth, and once in the record. This archive was founded so that the second burial does not succeed.
-          <cite>The founding purpose of SikhHub</cite>
+          I did not build this archive to look backward with better lighting. I built it so a Sikh child can see how far we have already come — and walk further, without asking anyone’s permission.
+          <cite>Dr. Jasdeep Sidhu, founder</cite>
         </blockquote>
       </div>
     </section>
