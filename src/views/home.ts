@@ -44,21 +44,21 @@ export function homeView(): string {
             <img src="${asset("/media/heroes/kapany.jpg")}" alt="Narinder Singh Kapany, father of fibre optics" />
             <div>
               <span>Lives</span>
-              <strong>Two hundred Sikhs. Fifty works of the Panth.</strong>
+              <strong>Kapany’s fibre. The Guru’s kitchen. Names that still stand.</strong>
             </div>
           </a>
           <a class="room" href="${href(routes.gurdwaras)}">
             <img src="${asset("/media/harmandir-aerial.jpg")}" alt="" />
             <div>
               <span>Gurdwaras</span>
-              <strong>A hundred houses, placed on an atlas.</strong>
+              <strong>Harmandir. Nankana. Stockton. The houses, on a map.</strong>
             </div>
           </a>
           <a class="room" href="${href(routes.listen)}">
             <img src="${asset("/media/harmandir.jpg")}" alt="" />
             <div>
               <span>Kirtan</span>
-              <strong>Live from Darbar Sahib and four more.</strong>
+              <strong>Darbar Sahib, live — then the other Takhts.</strong>
             </div>
           </a>
           <a class="room" href="${href(routes.issues)}">

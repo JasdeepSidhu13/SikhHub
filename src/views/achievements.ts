@@ -39,8 +39,8 @@ export function achievementsSpotlight(): string {
         <div class="section-head">
           <div>
             <p class="kicker">Lives</p>
-            <h2>Two hundred names. Fifty works.</h2>
-            <p>A spotlight of ten, then two hundred lives. Below them, fifty public works of the Panth — langar, a state, a script, a kitchen on the highway. Each opens an article.</p>
+            <h2>From the field, the lab, and the kitchen</h2>
+            <p>Mai Bhago, Ranjit Singh, Kapany, Bhagat Puran Singh — then the works a people made: langar, Gurmukhi, a state, a corridor to Kartarpur. Open any life. Open any work.</p>
           </div>
           <a class="btn btn-navy" href="${href(routes.achievements)}">Open Lives</a>
         </div>
@@ -60,11 +60,11 @@ export function achievementsIndexView(heroField = "all", featField = "all"): str
       <div class="cinema-shade"></div>
       <div class="wrap cinema-copy">
         <p class="kicker">Lives</p>
-        <h1 class="page-title">Two hundred names. Fifty works.</h1>
-        <p class="lede-page">Two hundred Sikhs on the public record — empire, the field, letters, science, rights, seva. And fifty works of the Panth as a people: a kitchen, a scripture, a state, a diaspora that would not cut its hair. Every card opens an article.</p>
+        <h1 class="page-title">Who they were. What the Panth built.</h1>
+        <p class="lede-page">Empire, the laboratory, the regiment, the rights desk, seva. Then the public works: a kitchen, a scripture, a state, a diaspora that would not cut its hair. Every card opens an article.</p>
         <p class="hero-actions" style="margin-top:1.2rem">
-          <a class="btn btn-primary" href="#panth">Fifty works</a>
-          <a class="btn btn-ghost" href="#names">Two hundred lives</a>
+          <a class="btn btn-primary" href="#panth">The work of the Panth</a>
+          <a class="btn btn-ghost" href="#names">The lives</a>
         </p>
       </div>
     </div>
@@ -72,7 +72,7 @@ export function achievementsIndexView(heroField = "all", featField = "all"): str
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="kicker">${communityFeats.length} works</p>
+            <p class="kicker">The Panth</p>
             <h2>The work, not the portrait</h2>
             <p>Not a person. A people. Langar, Gurmukhi, the Khalsa, a sovereign Punjab, the regiment, the corridor to Kartarpur, the kitchen on the Delhi border. Open any card.</p>
           </div>
@@ -93,7 +93,7 @@ export function achievementsIndexView(heroField = "all", featField = "all"): str
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="kicker">${heroes.length} lives</p>
+            <p class="kicker">On the public record</p>
             <h2>The names</h2>
             <p>Each name opens an article. Portraits where the archive has one. The rest stand on the work.</p>
           </div>
