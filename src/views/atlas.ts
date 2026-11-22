@@ -190,15 +190,15 @@ export function gurdwaraAtlas(region: string, mode: AtlasMode = "subcontinent"):
           <g class="atlas-labels">${labels}</g>
           <g class="atlas-pins">${pins}</g>
         </svg>
-        <p class="atlas-hint">Gold is a house in this archive. Hover to name it. Click for the article. Subcontinent holds the Takhts. World holds the first diaspora halls.</p>
+        <p class="atlas-hint">Gold is a gurdwara in this archive. Hover to name it. Click for the article. Subcontinent holds the Takhts. World holds the first diaspora halls.</p>
       </div>
       <aside class="atlas-panel">
-        <label class="sr" for="atlasq">Find a house</label>
+        <label class="sr" for="atlasq">Find a gurdwara</label>
         <input id="atlasq" data-atlas-q type="search" placeholder="Amritsar, Nankana, Stockton…" autocomplete="off" />
         <div class="atlas-card" data-atlas-card>
           <p class="kicker">The atlas</p>
-          <h3>Every house in this archive, placed</h3>
-          <p>Each mark is a house in this archive. Hover to name it. Click to open the article.</p>
+          <h3>Every gurdwara in this archive, placed</h3>
+          <p>Each mark is a gurdwara in this archive. Hover to name it. Click to open the article.</p>
         </div>
         <div class="atlas-list" data-atlas-list>
           ${list.map((g) => listRow(g)).join("")}
@@ -238,7 +238,7 @@ export function bindGurdwaraAtlas(root: HTMLElement): void {
     if (card) {
       card.innerHTML = g
         ? cardHtml(g)
-        : `<p class="kicker">The atlas</p><h3>Every house in this archive, placed</h3><p>Each mark is a house in this archive. Hover to name it. Click to open the article.</p>`;
+        : `<p class="kicker">The atlas</p><h3>Every gurdwara in this archive, placed</h3><p>Each mark is a gurdwara in this archive. Hover to name it. Click to open the article.</p>`;
     }
     if (id) {
       const row = atlas.querySelector<HTMLElement>(`.atlas-row[data-gid="${CSS.escape(id)}"]`);
