@@ -3,7 +3,6 @@ import { href } from "./lib/paths";
 import { go, parseRoute } from "./lib/router";
 import { shell } from "./views/layout";
 import { homeView } from "./views/home";
-import { bindEntrancePanorama } from "./views/panorama";
 import { chapterView, narrativeIndexView } from "./views/narrative";
 import { timelineView } from "./views/timeline";
 import { libraryView } from "./views/library";
@@ -142,7 +141,7 @@ function paint(): void {
   }
 
   root.innerHTML = shell(route, title, body);
-  bindEntrancePanorama(root);
+  bindEntranceVideo(root);
   bindGurdwaraAtlas(root);
   bindLivesFilter(root);
   const hash = location.hash.slice(1) || (route.name === "contact" ? "contact" : "");
@@ -154,6 +153,14 @@ function paint(): void {
   }
 }
 
+function bindEntranceVideo(root: HTMLElement): void {
+  const video = root.querySelector<HTMLVideoElement>("[data-entrance-video]");
+  if (!video) return;
+  video.muted = true;
+  video.loop = true;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduced) void video.play().catch(() => undefined);
+}
 
 function currentKind(): string {
   return document.querySelector<HTMLButtonElement>("[data-kind].is-on")?.dataset.kind ?? "all";
