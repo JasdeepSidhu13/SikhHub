@@ -17,14 +17,21 @@ export interface LiveStation {
   featured?: boolean;
 }
 
+/** Official SGPC live kirtan. The audio is their shoutcast; the page is the player they publish. */
+export const sgpcLive = {
+  stream: "https://live.sgpc.net:8443/live",
+  page: "https://sgpc.net/live-kirtan/",
+  youtube: "https://www.youtube.com/@SGPCSriAmritsar",
+} as const;
+
 export const liveStations: LiveStation[] = [
   {
     id: "darbar-sahib",
     name: "Darbar Sahib",
     place: "Sri Harmandir Sahib, Amritsar",
-    kicker: "Live kirtan from the Guru’s house",
+    kicker: "Live kirtan from Darbar Sahib",
     blurb:
-      "The ragi jatha in Harmandir Sahib, as the SGPC broadcasts it. SikhHub does not re-stream this shabad. The Shiromani Gurdwara Parbandhak Committee reserves the broadcast. Open their player.",
+      "The ragi jatha in Harmandir Sahib, as the SGPC broadcasts it. SikhHub embeds their official live player. It does not re-host the stream. The Shiromani Gurdwara Parbandhak Committee reserves the broadcast.",
     image: "/media/harmandir.jpg",
     imageAlt: "Sri Harmandir Sahib, Amritsar, on the sarovar",
     official: { href: "https://sgpc.net/live-kirtan/", label: "SGPC live kirtan" },

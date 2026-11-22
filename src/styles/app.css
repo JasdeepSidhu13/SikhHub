@@ -1688,6 +1688,68 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 .section-navy .section-head h2 { color: #f6efe2; }
 .section-navy .kicker { color: var(--gold); }
 
+.kirtan-header {
+  position: relative;
+  background: #070b10;
+  color: #f6efe2;
+  border-bottom: 1px solid rgba(201, 162, 39, 0.28);
+}
+.kirtan-stage {
+  position: relative;
+  height: min(46vh, 28rem);
+  min-height: 16rem;
+  overflow: hidden;
+  background: #000;
+}
+.kirtan-stage::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 42%;
+  background: linear-gradient(180deg, transparent, rgba(7, 11, 16, 0.78));
+  pointer-events: none;
+}
+.kirtan-stage.is-desk {
+  height: min(42vh, 24rem);
+  min-height: 16rem;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+.kirtan-stage img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 40%;
+  filter: saturate(0.92) contrast(1.08) brightness(0.72);
+}
+.kirtan-stage audio { display: none; }
+.kirtan-header.is-live .kirtan-stage img { filter: saturate(1) contrast(1.1) brightness(0.82); }
+.kirtan-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.1rem;
+  width: min(var(--max), calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1rem 0 1.15rem;
+}
+.kirtan-bar .live-pulse { margin: 0; }
+.kirtan-copy { flex: 1 1 14rem; min-width: 0; }
+.kirtan-copy .kicker { margin-bottom: 0.2rem; color: var(--gold); }
+.kirtan-copy h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  margin: 0;
+  line-height: 1.15;
+  color: #f6efe2;
+}
+.kirtan-bar .btn-ghost {
+  color: var(--gold-soft);
+  border-color: rgba(232, 213, 163, 0.4);
+}
+
 .live-lead {
   position: relative;
   display: grid;
@@ -1835,6 +1897,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   .live-pulse::before { animation: none; }
 }
 @media (max-width: 880px) {
+  .kirtan-stage { height: 48vw; min-height: 14rem; }
   .mosaic, .cover-grid, .cover-grid-feats, .live-grid, .rooms, .guru-profile, .live-stage, .live-lead, .atlas, .dir-grid {
     grid-template-columns: 1fr;
   }

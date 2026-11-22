@@ -12,7 +12,7 @@ import { communityById } from "./data/community";
 import { gurdwaraView, gurdwarasIndexView } from "./views/gurdwaras";
 import { bindGurdwaraAtlas } from "./views/atlas";
 import { directoryView } from "./views/directory";
-import { listenView } from "./views/listen";
+import { bindLiveKirtan, listenView } from "./views/listen";
 import { heroById } from "./data/heroes";
 import { gurdwaraById } from "./data/gurdwaras";
 import { methodView } from "./views/method";
@@ -142,6 +142,7 @@ function paint(): void {
 
   root.innerHTML = shell(route, title, body);
   bindEntranceVideo(root);
+  bindLiveKirtan(root);
   bindGurdwaraAtlas(root);
   bindLivesFilter(root);
   const hash = location.hash.slice(1) || (route.name === "contact" ? "contact" : "");
