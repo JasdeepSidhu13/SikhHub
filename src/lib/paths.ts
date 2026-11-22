@@ -23,6 +23,7 @@ export const routes = {
   gurdwaras: "/gurdwaras",
   gurdwara: (id: string) => `/gurdwaras/${id}`,
   listen: "/listen",
+  directory: "/directory",
   news: "/news",
   search: "/search",
   about: "/about",

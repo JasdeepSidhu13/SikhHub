@@ -2,6 +2,7 @@ import { GURDWARA_REGIONS, featuredGurdwaras, gurdwaraById, gurdwaras, type Gurd
 import { gurdwaraArticles } from "../data/gurdwara-articles";
 import { articleHtml, esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
+import { gurdwaraAtlas } from "./atlas";
 
 function cover(g: Gurdwara, className = "cover-card"): string {
   const src = g.images[0];
@@ -27,7 +28,7 @@ export function gurdwarasSpotlight(): string {
             <h2>A hundred houses</h2>
             <p>Takhts, janam asthans, shaheedi asthans, and the first halls of the diaspora. Each card opens the house: place, date, and the article.</p>
           </div>
-          <a class="btn btn-navy" href="${href(routes.gurdwaras)}">The map</a>
+          <a class="btn btn-navy" href="${href(routes.gurdwaras)}#atlas">The atlas</a>
         </div>
         <div class="mosaic">
           ${featuredGurdwaras.map((g, i) => cover(g, i === 0 ? "cover-card is-lead" : "cover-card")).join("")}
@@ -36,7 +37,7 @@ export function gurdwarasSpotlight(): string {
     </section>`;
 }
 
-export function gurdwarasIndexView(region = "all"): string {
+export function gurdwarasIndexView(region = "all", atlasMode: "subcontinent" | "world" = "subcontinent"): string {
   const list = region === "all" ? gurdwaras : gurdwaras.filter((g) => g.region === region);
   return `
     <div class="cinema">
@@ -47,11 +48,30 @@ export function gurdwarasIndexView(region = "all"): string {
         <h1 class="page-title">A hundred Nishan Sahibs</h1>
         <p class="lede-page">From Harmandir Sahib to Nankana, Kartarpur, the five Takhts, Delhi’s shaheedi asthans, Hemkund, Bidar, Stockton, Abbotsford, and Gravesend. Each house opens an article: the founding, the event, the later years, what still stands.</p>
         <p class="hero-actions" style="margin-top:1.2rem">
-          <a class="btn btn-primary" href="#map">The hundred</a>
-          <a class="btn btn-ghost" href="${href(routes.listen)}">Kirtan</a>
+          <a class="btn btn-primary" href="#atlas">The atlas</a>
+          <a class="btn btn-ghost" href="#map">The hundred</a>
         </p>
       </div>
     </div>
+    <section class="section section-cream" id="atlas">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="kicker">${list.length} ${region === "all" ? "placed" : "in this country"}</p>
+            <h2>The atlas</h2>
+            <p>A plate, not a tourist map. Gold is a house in this archive. The subcontinent holds the Takhts. The world holds the first diaspora halls.</p>
+          </div>
+        </div>
+        <div class="filters">
+          <button type="button" data-gurdwara-region="all" class="${region === "all" ? "is-on" : ""}">All</button>
+          ${GURDWARA_REGIONS.map(
+            (r) =>
+              `<button type="button" data-gurdwara-region="${esc(r)}" class="${region === r ? "is-on" : ""}">${esc(r)}</button>`,
+          ).join("")}
+        </div>
+        ${gurdwaraAtlas(region, atlasMode)}
+      </div>
+    </section>
     <section class="section" id="featured-gurdwaras">
       <div class="wrap">
         <div class="section-head">
@@ -65,21 +85,14 @@ export function gurdwarasIndexView(region = "all"): string {
         </div>
       </div>
     </section>
-    <section class="section section-cream" id="map">
+    <section class="section" id="map">
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="kicker">${gurdwaras.length} on the record</p>
-            <h2>The map</h2>
-            <p>Punjab and the Pakistan janam asthans, Delhi, the Himalaya, the Deccan, and the first diaspora halls.</p>
+            <p class="kicker">The same hundred</p>
+            <h2>As covers</h2>
+            <p>If you want the photograph before the pin.</p>
           </div>
-        </div>
-        <div class="filters">
-          <button type="button" data-gurdwara-region="all" class="${region === "all" ? "is-on" : ""}">All</button>
-          ${GURDWARA_REGIONS.map(
-            (r) =>
-              `<button type="button" data-gurdwara-region="${esc(r)}" class="${region === r ? "is-on" : ""}">${esc(r)}</button>`,
-          ).join("")}
         </div>
         <div class="cover-grid">
           ${list.map((g) => cover(g)).join("")}
@@ -119,7 +132,7 @@ export function gurdwaraView(id: string): string | null {
           ${articleHtml(gurdwaraArticles[g.id])}
           <p class="feat-meta" style="margin-top:1.6rem">${esc(g.imageCredit)}</p>
           <p>
-            <a class="btn btn-navy" href="${href(routes.gurdwaras)}#map">The map</a>
+            <a class="btn btn-navy" href="${href(routes.gurdwaras)}#atlas">The atlas</a>
             <a class="btn btn-ghost" href="${href(routes.listen)}" style="color:var(--navy);border-color:var(--navy)">Kirtan</a>
           </p>
         </article>

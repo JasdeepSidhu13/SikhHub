@@ -1,3 +1,7 @@
+import { heroesA } from "./heroes-a";
+import { heroesB } from "./heroes-b";
+import { heroesC } from "./heroes-c";
+
 export interface Hero {
   id: string;
   name: string;
@@ -15,7 +19,7 @@ export interface Hero {
   featured?: boolean;
 }
 
-export const heroes: Hero[] = [
+const coreHeroes: Hero[] = [
   {
     id: "ranjit-singh",
     name: "Maharaja Ranjit Singh",
@@ -891,6 +895,8 @@ export const heroes: Hero[] = [
     further: { href: "https://en.wikipedia.org/wiki/Didar_Singh_Bains", label: "Open the biography" },
   },
 ];
+
+export const heroes: Hero[] = [...coreHeroes, ...heroesA, ...heroesB, ...heroesC];
 
 export const heroById = Object.fromEntries(heroes.map((h) => [h.id, h]));
 export const featuredHeroes = [
