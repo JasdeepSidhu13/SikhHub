@@ -5,6 +5,7 @@ import { newsDeskPreview } from "./news";
 import { achievementsSpotlight } from "./achievements";
 import { issuesLandingHero } from "./issues";
 import { listenPreview } from "./listen";
+import { directoryPreview } from "./directory";
 
 export function homeView(): string {
   return `
@@ -43,14 +44,14 @@ export function homeView(): string {
             <img src="${asset("/media/heroes/kapany.jpg")}" alt="Narinder Singh Kapany, father of fibre optics" />
             <div>
               <span>Lives</span>
-              <strong>Fifty Sikhs. Fifty works of the Panth.</strong>
+              <strong>Two hundred Sikhs. Fifty works of the Panth.</strong>
             </div>
           </a>
           <a class="room" href="${href(routes.gurdwaras)}">
             <img src="${asset("/media/harmandir-aerial.jpg")}" alt="" />
             <div>
               <span>Gurdwaras</span>
-              <strong>A hundred historic houses of the Guru.</strong>
+              <strong>A hundred houses, placed on an atlas.</strong>
             </div>
           </a>
           <a class="room" href="${href(routes.listen)}">
@@ -76,6 +77,8 @@ export function homeView(): string {
     ${listenPreview()}
 
     ${newsDeskPreview()}
+
+    ${directoryPreview()}
 
     ${issuesLandingHero("section")}
   `;

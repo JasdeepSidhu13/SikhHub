@@ -29,6 +29,7 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
           ${navItem(routes.listen, "Kirtan", on("listen"))}
           ${navItem(routes.issues, "Issues", on("issues") || on("issue"))}
           ${navItem(routes.news, "News", on("news"))}
+          ${navItem(routes.directory, "Index", on("directory"))}
           ${navItem(routes.about, "About", on("about") || on("contact"))}
           <button class="search-btn" type="button" data-search>Search</button>
         </nav>
@@ -39,7 +40,7 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
       <div class="footer-inner footer-grid">
         <div>
           <h2 class="org">SikhHub</h2>
-          <p>A Sikh public square: lives, gurdwaras, kirtan, news, and the issues. Gurdwara reform to the 1984 Sikh genocide — labelled, sourced, unfinished.</p>
+          <p>A Sikh public square: lives, gurdwaras, kirtan, news, the issues, and an index of the Panth’s own doors. Gurdwara reform to the 1984 Sikh genocide — labelled, sourced, unfinished.</p>
         </div>
         <div>
           <h2>Read</h2>
@@ -49,6 +50,7 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
             <li><a href="${href(routes.listen)}">Kirtan</a></li>
             <li><a href="${href(routes.issues)}">Issues</a></li>
             <li><a href="${href(routes.news)}">News</a></li>
+            <li><a href="${href(routes.directory)}">Index</a></li>
             <li><a href="${href(routes.history)}">History</a></li>
             <li><a href="${href(routes.chronology)}">Chronology</a></li>
             <li><a href="${href(routes.documents)}">Documents</a></li>

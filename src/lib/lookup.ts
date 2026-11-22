@@ -5,6 +5,7 @@ import { featArticles } from "../data/feat-articles";
 import { gurdwaras, type Gurdwara } from "../data/gurdwaras";
 import { gurdwaraArticles } from "../data/gurdwara-articles";
 import { heroes, type Hero } from "../data/heroes";
+import { directory, type DirectoryEntry } from "../data/directory";
 import { liveStations, type LiveStation } from "../data/live";
 import { newsWeeks, type NewsItem } from "../data/news";
 import { sources, sourceById } from "../data/sources";
@@ -60,6 +61,7 @@ export function searchAll(query: string) {
       feats: [] as CommunityFeat[],
       gurdwaras: [] as Gurdwara[],
       live: [] as LiveStation[],
+      directory: [] as DirectoryEntry[],
     };
   }
   const hit = (parts: Array<string | undefined>) => parts.filter(Boolean).join(" ").toLowerCase().includes(q);
@@ -99,5 +101,6 @@ export function searchAll(query: string) {
       ]),
     ),
     live: liveStations.filter((s) => hit([s.name, s.place, s.kicker, s.blurb])),
+    directory: directory.filter((d) => hit([d.name, d.kind, d.note, d.place, d.url])),
   };
 }

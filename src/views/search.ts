@@ -15,7 +15,8 @@ export function searchView(q = ""): string {
     results.feats.length +
     results.gurdwaras.length +
     results.live.length +
-    results.news.length;
+    results.news.length +
+    results.directory.length;
 
   return `
     <div class="page-hero">
@@ -32,7 +33,7 @@ export function searchView(q = ""): string {
       <div class="wrap">
         ${
           q.trim().length < 2
-            ? `<p class="empty">Type at least two characters. Try “Ranjit”, “Kartarpur”, “Nankana”, “Hukam Singh”, “Blue Star”, or “cremation”.</p>`
+            ? `<p class="empty">Type at least two characters. Try “Ranjit”, “Kartarpur”, “Nankana”, “Hukam Singh”, “Blue Star”, “BaniDB”, or “cremation”.</p>`
             : `<p class="lede-page">${total} result${total === 1 ? "" : "s"} for “${esc(q)}”</p>`
         }
         ${
@@ -108,6 +109,16 @@ export function searchView(q = ""): string {
         ${
           results.news.length
             ? `<h2>News</h2><div class="news-stack">${results.news.map((item) => newsCard(item)).join("")}</div>`
+            : ""
+        }
+        ${
+          results.directory.length
+            ? `<h2>Index</h2><div class="dir-grid">${results.directory
+                .map(
+                  (d) =>
+                    `<a class="dir-card" href="${esc(d.url)}" rel="noopener noreferrer" target="_blank"><p class="feat-meta">${esc(d.kind)}${d.place ? ` · ${esc(d.place)}` : ""}</p><h3>${esc(d.name)}</h3><p>${esc(d.note)}</p><p class="read-on">Open the original</p></a>`,
+                )
+                .join("")}</div>`
             : ""
         }
         ${

@@ -10,6 +10,8 @@ import { issueView, issuesIndexView } from "./views/issues";
 import { achievementsIndexView, featView, heroView } from "./views/achievements";
 import { communityById } from "./data/community";
 import { gurdwaraView, gurdwarasIndexView } from "./views/gurdwaras";
+import { bindGurdwaraAtlas } from "./views/atlas";
+import { directoryView } from "./views/directory";
 import { listenView } from "./views/listen";
 import { heroById } from "./data/heroes";
 import { gurdwaraById } from "./data/gurdwaras";
@@ -33,7 +35,7 @@ function notFound(): string {
       <div class="wrap">
         <p class="kicker">404</p>
         <h1 class="page-title">This page is not in the archive</h1>
-        <p class="lede-page">The path does not match an issue, achievement, gurdwara, chapter, or document.</p>
+        <p class="lede-page">The path does not match an issue, life, gurdwara, chapter, document, or index door.</p>
         <p><a class="btn btn-navy" href="${href("/")}">Back to SikhHub</a></p>
       </div>
     </div>
@@ -109,6 +111,9 @@ function paint(): void {
   } else if (route.name === "listen") {
     title = "Kirtan — SikhHub";
     body = listenView();
+  } else if (route.name === "directory") {
+    title = "Index — SikhHub";
+    body = directoryView(new URLSearchParams(window.location.search).get("kind") ?? "all");
   } else if (route.name === "issue") {
     const view = issueView(route.id);
     if (!view) {
@@ -137,6 +142,8 @@ function paint(): void {
 
   root.innerHTML = shell(route, title, body);
   bindEntranceVideo(root);
+  bindGurdwaraAtlas(root);
+  bindLivesFilter(root);
   const hash = location.hash.slice(1) || (route.name === "contact" ? "contact" : "");
   if (hash) {
     const el = document.getElementById(hash);
@@ -167,6 +174,25 @@ function currentFeatField(): string {
   return document.querySelector<HTMLButtonElement>("[data-feat-field].is-on")?.dataset.featField ?? "all";
 }
 
+function currentGurdwaraRegion(): string {
+  return document.querySelector<HTMLButtonElement>("[data-gurdwara-region].is-on")?.dataset.gurdwaraRegion ?? "all";
+}
+
+function currentAtlasMode(): "subcontinent" | "world" {
+  return document.querySelector<HTMLElement>("[data-atlas]")?.dataset.atlasMode === "world" ? "world" : "subcontinent";
+}
+
+function bindLivesFilter(root: HTMLElement): void {
+  const q = root.querySelector<HTMLInputElement>("[data-lives-q]");
+  if (!q) return;
+  q.addEventListener("input", () => {
+    const needle = q.value.trim().toLowerCase();
+    root.querySelectorAll<HTMLElement>(".hero-grid .hero-tile").forEach((tile) => {
+      tile.hidden = Boolean(needle) && !(tile.textContent ?? "").toLowerCase().includes(needle);
+    });
+  });
+}
+
 root.addEventListener("click", (event) => {
   const target = (event.target as HTMLElement | null)?.closest<HTMLElement>("button, [data-menu], [data-search]");
   if (!target) return;
@@ -184,15 +210,27 @@ root.addEventListener("click", (event) => {
   } else if (target.dataset.heroField) {
     const main = root.querySelector("main");
     if (main) main.innerHTML = achievementsIndexView(target.dataset.heroField, currentFeatField());
-    document.getElementById("fifty")?.scrollIntoView({ block: "start" });
+    bindLivesFilter(root);
+    document.getElementById("names")?.scrollIntoView({ block: "start" });
   } else if (target.dataset.featField) {
     const main = root.querySelector("main");
     if (main) main.innerHTML = achievementsIndexView(currentHeroField(), target.dataset.featField);
+    bindLivesFilter(root);
     document.getElementById("panth")?.scrollIntoView({ block: "start" });
   } else if (target.dataset.gurdwaraRegion) {
     const main = root.querySelector("main");
-    if (main) main.innerHTML = gurdwarasIndexView(target.dataset.gurdwaraRegion);
-    document.getElementById("map")?.scrollIntoView({ block: "start" });
+    if (main) main.innerHTML = gurdwarasIndexView(target.dataset.gurdwaraRegion, currentAtlasMode());
+    bindGurdwaraAtlas(root);
+    document.getElementById("atlas")?.scrollIntoView({ block: "start" });
+  } else if (target.dataset.atlasMode) {
+    const main = root.querySelector("main");
+    if (main) main.innerHTML = gurdwarasIndexView(currentGurdwaraRegion(), target.dataset.atlasMode as "subcontinent" | "world");
+    bindGurdwaraAtlas(root);
+    document.getElementById("atlas")?.scrollIntoView({ block: "start" });
+  } else if (target.dataset.dirKind) {
+    const main = root.querySelector("main");
+    if (main) main.innerHTML = directoryView(target.dataset.dirKind);
+    document.getElementById("doors")?.scrollIntoView({ block: "start" });
   }
 });
 

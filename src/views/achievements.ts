@@ -39,8 +39,8 @@ export function achievementsSpotlight(): string {
         <div class="section-head">
           <div>
             <p class="kicker">Lives</p>
-            <h2>Fifty names. Fifty works.</h2>
-            <p>A spotlight of ten, then the full fifty. Below them, fifty public works of the Panth — langar, a state, a script, a kitchen on the highway. Each opens an article.</p>
+            <h2>Two hundred names. Fifty works.</h2>
+            <p>A spotlight of ten, then two hundred lives. Below them, fifty public works of the Panth — langar, a state, a script, a kitchen on the highway. Each opens an article.</p>
           </div>
           <a class="btn btn-navy" href="${href(routes.achievements)}">Open Lives</a>
         </div>
@@ -60,11 +60,11 @@ export function achievementsIndexView(heroField = "all", featField = "all"): str
       <div class="cinema-shade"></div>
       <div class="wrap cinema-copy">
         <p class="kicker">Lives</p>
-        <h1 class="page-title">Fifty names. Fifty works.</h1>
-        <p class="lede-page">Fifty Sikhs on the public record — empire, the field, letters, science, rights, seva. And fifty works of the Panth as a people: a kitchen, a scripture, a state, a diaspora that would not cut its hair. Every card opens an article.</p>
+        <h1 class="page-title">Two hundred names. Fifty works.</h1>
+        <p class="lede-page">Two hundred Sikhs on the public record — empire, the field, letters, science, rights, seva. And fifty works of the Panth as a people: a kitchen, a scripture, a state, a diaspora that would not cut its hair. Every card opens an article.</p>
         <p class="hero-actions" style="margin-top:1.2rem">
           <a class="btn btn-primary" href="#panth">Fifty works</a>
-          <a class="btn btn-ghost" href="#fifty">Fifty lives</a>
+          <a class="btn btn-ghost" href="#names">Two hundred lives</a>
         </p>
       </div>
     </div>
@@ -89,13 +89,13 @@ export function achievementsIndexView(heroField = "all", featField = "all"): str
         </div>
       </div>
     </section>
-    <section class="section section-cream" id="fifty">
+    <section class="section section-cream" id="names">
       <div class="wrap">
         <div class="section-head">
           <div>
             <p class="kicker">${heroes.length} lives</p>
             <h2>The names</h2>
-            <p>Each portrait opens a life. The rest stand on the record of the work.</p>
+            <p>Each name opens an article. Portraits where the archive has one. The rest stand on the work.</p>
           </div>
         </div>
         <div class="filters">
@@ -105,6 +105,8 @@ export function achievementsIndexView(heroField = "all", featField = "all"): str
               `<button type="button" data-hero-field="${esc(f)}" class="${heroField === f ? "is-on" : ""}">${esc(f)}</button>`,
           ).join("")}
         </div>
+        <label class="sr" for="livesq">Find a name</label>
+        <input id="livesq" class="atlas-find lives-find" data-lives-q type="search" placeholder="Find a name — Ranjit, Kapany, Mai Bhago…" autocomplete="off" />
         <div class="hero-grid">
           ${people.map(heroTile).join("")}
         </div>
@@ -123,7 +125,7 @@ export function heroView(id: string): string | null {
   return `
     <div class="page-hero">
       <div class="wrap">
-        <p class="kicker"><a href="${href(routes.achievements)}#fifty">Lives</a> · ${esc(hero.field)}</p>
+        <p class="kicker"><a href="${href(routes.achievements)}#names">Lives</a> · ${esc(hero.field)}</p>
         <h1 class="page-title">${esc(hero.name)}</h1>
         ${hero.native ? `<p class="hero-native">${esc(hero.native)}</p>` : ""}
         <p class="lede-page">${esc(hero.kicker)} · ${esc(hero.years)}</p>
@@ -149,7 +151,7 @@ export function heroView(id: string): string | null {
           }
           <p>
             <a class="btn btn-navy${furtherExternal ? " ext" : ""}" href="${esc(furtherHref)}"${furtherAttrs}>${esc(hero.further.label)}</a>
-            <a class="btn btn-ghost" href="${href(routes.achievements)}#fifty" style="color:var(--navy);border-color:var(--navy)">The names</a>
+            <a class="btn btn-ghost" href="${href(routes.achievements)}#names" style="color:var(--navy);border-color:var(--navy)">The names</a>
           </p>
         </article>
       </div>
