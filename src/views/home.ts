@@ -4,11 +4,13 @@ import { videoPlate } from "./exhibits";
 import { newsDeskPreview } from "./news";
 import { achievementsSpotlight } from "./achievements";
 import { issuesLandingHero } from "./issues";
-import { listenPreview } from "./listen";
+import { liveKirtanHeader, listenPreview } from "./listen";
 import { directoryPreview } from "./directory";
 
 export function homeView(): string {
   return `
+    ${liveKirtanHeader()}
+
     <section class="hero hero-entrance">
       <div class="hero-entrance-grid">
         <div class="hero-entrance-copy">

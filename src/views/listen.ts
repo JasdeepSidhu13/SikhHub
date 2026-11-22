@@ -1,6 +1,66 @@
-import { liveStations } from "../data/live";
+import { liveStations, sgpcLive } from "../data/live";
 import { esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
+
+function sgpcLiveAudio(): string {
+  return `
+    <audio data-sgpc-live preload="auto" playsinline>
+      <source src="${esc(sgpcLive.stream)}" type="audio/aac" />
+    </audio>`;
+}
+
+export function liveKirtanHeader(): string {
+  return `
+    <section class="kirtan-header" data-kirtan-header aria-label="Live kirtan from Darbar Sahib">
+      <div class="kirtan-stage">
+        <img src="${asset("/media/harmandir.jpg")}" alt="Sri Harmandir Sahib, Amritsar" />
+        ${sgpcLiveAudio()}
+      </div>
+      <div class="kirtan-bar">
+        <span class="live-pulse">Live</span>
+        <div class="kirtan-copy">
+          <p class="kicker">Sri Harmandir Sahib · SGPC</p>
+          <h2>Live kirtan from Darbar Sahib</h2>
+        </div>
+        <button type="button" class="btn btn-primary" data-kirtan-sound aria-pressed="false">Sound on</button>
+        <a class="btn btn-ghost ext" href="${esc(sgpcLive.page)}" rel="noopener noreferrer" target="_blank">sgpc.net</a>
+      </div>
+    </section>`;
+}
+
+export function bindLiveKirtan(root: HTMLElement): void {
+  const audio = root.querySelector<HTMLAudioElement>("[data-sgpc-live]");
+  const sound = root.querySelector<HTMLButtonElement>("[data-kirtan-sound]");
+  const header = root.querySelector<HTMLElement>("[data-kirtan-header], .live-stage");
+  if (!audio) return;
+  const player = audio;
+
+  function setPlaying(on: boolean): void {
+    sound?.setAttribute("aria-pressed", on ? "true" : "false");
+    if (sound) sound.textContent = on ? "Mute" : "Sound on";
+    header?.classList.toggle("is-live", on);
+    header?.classList.toggle("needs-gesture", !on);
+  }
+
+  function start(): void {
+    player.muted = false;
+    void player.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+  }
+
+  player.addEventListener("playing", () => setPlaying(true));
+  player.addEventListener("pause", () => {
+    if (player.muted || player.paused) setPlaying(false);
+  });
+  start();
+  sound?.addEventListener("click", () => {
+    const on = sound.getAttribute("aria-pressed") !== "true";
+    if (on) start();
+    else {
+      player.pause();
+      setPlaying(false);
+    }
+  });
+}
 
 export function listenPreview(): string {
   const lead = liveStations[0];
@@ -11,7 +71,7 @@ export function listenPreview(): string {
           <div>
             <p class="kicker">Kirtan</p>
             <h2>Live from the Gurdwaras</h2>
-            <p>Darbar Sahib first — the SGPC’s own player. Then Hazur Sahib, Patna Sahib, Bangla Sahib, and Sis Ganj. SikhHub links. It does not steal the stream.</p>
+            <p>Darbar Sahib first — the SGPC’s own live kirtan, playing on the homepage. Then Hazur Sahib, Patna Sahib, Bangla Sahib, and Sis Ganj. SikhHub does not re-host the stream.</p>
           </div>
           <a class="btn btn-primary" href="${href(routes.listen)}">Open the desk</a>
         </div>
@@ -38,20 +98,24 @@ export function listenView(): string {
       <div class="wrap cinema-copy">
         <p class="kicker">Live kirtan · radio</p>
         <h1 class="page-title">From the Takhts</h1>
-        <p class="lede-page">Live kirtan from Darbar Sahib, then four more Gurdwaras, and a worldwide radio desk. The SGPC reserves the Harmandir Sahib broadcast. Open their player. Do not expect a pirate copy on this site.</p>
+        <p class="lede-page">Live kirtan from Darbar Sahib, then four more Gurdwaras, and a worldwide radio desk. The SGPC reserves the Harmandir Sahib broadcast. This page plays their official stream. It does not copy it.</p>
       </div>
     </div>
     <section class="section section-navy">
       <div class="wrap">
         <article class="live-stage">
-          <img src="${asset(darbar.image)}" alt="${esc(darbar.imageAlt)}" />
+          <div class="kirtan-stage is-desk">
+            <img src="${asset(darbar.image)}" alt="${esc(darbar.imageAlt)}" />
+            ${sgpcLiveAudio()}
+          </div>
           <div>
             <span class="live-pulse">Live now</span>
             <p class="feat-meta">${esc(darbar.place)}</p>
             <h2>${esc(darbar.name)}</h2>
             <p>${esc(darbar.blurb)}</p>
             <p class="hero-actions">
-              <a class="btn btn-primary ext" href="${esc(darbar.official.href)}" rel="noopener noreferrer" target="_blank">${esc(darbar.official.label)}</a>
+              <button type="button" class="btn btn-primary" data-kirtan-sound aria-pressed="false">Sound on</button>
+              <a class="btn btn-ghost ext" href="${esc(darbar.official.href)}" rel="noopener noreferrer" target="_blank">${esc(darbar.official.label)}</a>
               ${darbar.also ? `<a class="btn btn-ghost ext" href="${esc(darbar.also.href)}" rel="noopener noreferrer" target="_blank">${esc(darbar.also.label)}</a>` : ""}
             </p>
             ${darbar.note ? `<p class="live-note">${esc(darbar.note)}</p>` : ""}
@@ -87,8 +151,8 @@ export function listenView(): string {
             )
             .join("")}
         </div>
-        <p class="live-legal">The Shiromani Gurdwara Parbandhak Committee states that live telecast of Gurbani from Sri Darbar Sahib is its reserved work. SikhHub therefore links to <a class="ext" href="https://sgpc.net/live-kirtan/" rel="noopener noreferrer" target="_blank">sgpc.net/live-kirtan</a> and the SGPC YouTube channel, and does not embed or re-host that audio. Other stations are linked to the Takht or to SikhNet Radio, which those houses use.</p>
-        <p><a class="btn btn-navy" href="${href(routes.gurdwaras)}">Historic gurdwaras</a></p>
+        <p class="live-legal">The Shiromani Gurdwara Parbandhak Committee reserves the live telecast of Gurbani from Sri Darbar Sahib. This site plays the Committee’s own stream at live.sgpc.net and links to <a class="ext" href="${esc(sgpcLive.page)}" rel="noopener noreferrer" target="_blank">sgpc.net/live-kirtan</a>. It does not re-host a copy. Other stations are linked to the Takht or to SikhNet Radio.</p>
+        <p><a class="btn btn-navy" href="${href(routes.gurdwaras)}">Gurdwaras</a></p>
       </div>
     </section>`;
 }
