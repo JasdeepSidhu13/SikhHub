@@ -78,7 +78,7 @@ function paint(): void {
     title = "Sikh issues — SikhHub";
     body = issuesIndexView();
   } else if (route.name === "achievements") {
-    title = "Sikh achievements — SikhHub";
+    title = "Lives — SikhHub";
     body = achievementsIndexView();
   } else if (route.name === "achievement") {
     const view = heroView(route.id);
@@ -102,7 +102,7 @@ function paint(): void {
       body = view;
     }
   } else if (route.name === "listen") {
-    title = "Live kirtan — SikhHub";
+    title = "Kirtan — SikhHub";
     body = listenView();
   } else if (route.name === "issue") {
     const view = issueView(route.id);
@@ -114,7 +114,7 @@ function paint(): void {
       body = view;
     }
   } else if (route.name === "news") {
-    title = "This week in the Panth — SikhHub";
+    title = "News — SikhHub";
     body = newsIndexView();
   } else if (route.name === "method") {
     title = "Sources — SikhHub";

@@ -32,7 +32,7 @@ export const newsWeeks: NewsWeek[] = [
     id: "2026-w47",
     start: "2026-11-16",
     label: "Week of 16 November 2026",
-    kicker: "This week in the Panth",
+    kicker: "News",
     summary:
       "Guru Nanak’s parkash is days away. Three thousand pilgrims are cleared for Nankana Sahib. Kartarpur is still shut. The SGPC house again named Bandi Singhs and Chandigarh. The century and the week are the same argument.",
     items: [

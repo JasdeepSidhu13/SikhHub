@@ -9,7 +9,7 @@ export function listenPreview(): string {
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="kicker">Live kirtan</p>
+            <p class="kicker">Kirtan</p>
             <h2>The shabad, as it is being sung</h2>
             <p>Darbar Sahib first — the SGPC’s own player. Then Hazur Sahib, Patna Sahib, Bangla Sahib, and Sis Ganj. SikhHub links. It does not steal the stream.</p>
           </div>

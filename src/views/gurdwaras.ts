@@ -46,7 +46,7 @@ export function gurdwarasIndexView(region = "all"): string {
         <p class="lede-page">From Harmandir Sahib to Nankana, Kartarpur, the five Takhts, Delhi’s shaheedi asthans, Hemkund, Bidar, Stockton, Abbotsford, and Gravesend. Each house has a place, a date, a story, and a photograph.</p>
         <p class="hero-actions" style="margin-top:1.2rem">
           <a class="btn btn-primary" href="#map">The hundred</a>
-          <a class="btn btn-ghost" href="${href(routes.listen)}">Live kirtan</a>
+          <a class="btn btn-ghost" href="${href(routes.listen)}">Kirtan</a>
         </p>
       </div>
     </div>
@@ -117,7 +117,7 @@ export function gurdwaraView(id: string): string | null {
           <p class="feat-meta" style="margin-top:1.2rem">${esc(g.imageCredit)}</p>
           <p>
             <a class="btn btn-navy" href="${href(routes.gurdwaras)}#map">All hundred</a>
-            <a class="btn btn-ghost" href="${href(routes.listen)}" style="color:var(--navy);border-color:var(--navy)">Live kirtan</a>
+            <a class="btn btn-ghost" href="${href(routes.listen)}" style="color:var(--navy);border-color:var(--navy)">Kirtan</a>
           </p>
         </article>
       </div>

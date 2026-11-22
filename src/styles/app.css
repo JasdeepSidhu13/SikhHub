@@ -1484,7 +1484,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 
 .cinema {
   position: relative;
-  min-height: 78vh;
+  min-height: 58vh;
   display: flex;
   align-items: flex-end;
   color: #f6efe2;
