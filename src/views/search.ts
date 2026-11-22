@@ -108,7 +108,7 @@ export function searchView(q = ""): string {
         }
         ${
           results.news.length
-            ? `<h2>News</h2><div class="news-stack">${results.news.map((item) => newsCard(item)).join("")}</div>`
+            ? `<h2>News</h2><div class="news-grid">${results.news.map((item) => newsCard(item)).join("")}</div>`
             : ""
         }
         ${

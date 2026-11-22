@@ -732,26 +732,57 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 
 .news-spread {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 1.1rem;
   align-items: stretch;
 }
-.news-stack {
+.news-stack, .news-grid {
   display: grid;
   gap: 1.1rem;
 }
+.news-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
 .news-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
   background: var(--paper);
   border: 1px solid var(--rule);
   border-radius: 16px;
-  padding: 1.15rem 1.25rem 1.05rem;
+  overflow: hidden;
   box-shadow: var(--shadow);
+  transition: transform 0.18s ease, border-color 0.18s ease;
 }
+.news-card:hover { transform: translateY(-3px); border-color: #d9c49a; }
+.news-cover {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #101820;
+  overflow: hidden;
+}
+.news-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: grayscale(0.08) contrast(1.06);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.news-card:hover .news-cover img { transform: scale(1.06); filter: grayscale(0) contrast(1.08); }
+.news-cover .kind {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  box-shadow: 0 8px 18px rgba(16, 24, 32, 0.18);
+}
+.news-copy { padding: 1.05rem 1.15rem 1.1rem; }
 .news-card.is-lead {
-  padding: 1.6rem 1.7rem 1.4rem;
-  background:
-    linear-gradient(180deg, #fffdf8, #fff7ea);
+  background: linear-gradient(180deg, #fffdf8, #fff7ea);
   border-color: #e0d0b0;
+}
+.news-card.is-lead .news-cover {
+  aspect-ratio: 4 / 3;
+  min-height: 16rem;
 }
 .news-card h3 {
   font-family: var(--serif);
@@ -762,13 +793,29 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 .news-card.is-lead h3 {
   font-size: clamp(1.6rem, 2.4vw, 2.1rem);
 }
-.news-card p { margin: 0; color: var(--muted); }
+.news-card .news-copy > p { margin: 0; color: var(--muted); }
+.news-stack .news-card {
+  grid-template-columns: 10.5rem 1fr;
+  grid-template-rows: auto;
+  min-height: 10.5rem;
+}
+.news-stack .news-cover {
+  aspect-ratio: auto;
+  min-height: 100%;
+  height: 100%;
+}
+.news-stack .news-copy p:not(.news-meta):not(.news-foot) {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .news-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.8rem;
-  margin: 0 0 0.7rem;
+  margin: 0 0 0.55rem;
   font-family: var(--mono);
   font-size: 0.72rem;
   letter-spacing: 0.04em;
@@ -778,7 +825,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem 1.2rem;
-  margin-top: 0.9rem !important;
+  margin-top: 0.85rem !important;
   font-size: 0.88rem;
   font-weight: 600;
 }
@@ -1440,13 +1487,22 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 
 @media (max-width: 1100px) {
   .hero-grid { grid-template-columns: repeat(3, 1fr); }
+  .news-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 880px) {
   .stats, .chapter-grid, .issue-grid, .split, .method-grid, .footer-grid, .card-grid, .further-grid,
   .ig-stats, .ig-map, .gallery, .poster-grid, .story, .story.is-reverse, .split-exhibits, .chapter-strip,
   .founder-hero-grid, .founder-pillars, .founder-bio, .founder-home, .contact-grid,
-  .hero-entrance-grid, .news-spread, .hero-profile, .feat-grid {
+  .hero-entrance-grid, .news-spread, .hero-profile, .feat-grid, .news-grid {
     grid-template-columns: 1fr;
+  }
+  .news-stack .news-card {
+    grid-template-columns: 1fr;
+  }
+  .news-stack .news-cover {
+    aspect-ratio: 16 / 10;
+    min-height: 0;
+    height: auto;
   }
   .hero-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1542,7 +1598,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   to { transform: scale(1.1) translate3d(-1.5%, -1%, 0); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .cinema-bg, .hero-tile img, .cover-card img, .room img { animation: none; transform: none; }
+  .cinema-bg, .hero-tile img, .cover-card img, .room img, .news-cover img { animation: none; transform: none; }
 }
 
 .rooms {
