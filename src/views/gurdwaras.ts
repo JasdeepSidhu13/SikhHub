@@ -26,7 +26,7 @@ export function gurdwarasSpotlight(): string {
           <div>
             <p class="kicker">Gurdwaras</p>
             <h2>Where the Nishan still flies</h2>
-            <p>Takhts, janam asthans, shaheedi asthans, and the first halls of the diaspora. Each card opens the house: place, date, and the article.</p>
+            <p>Takhts, janam asthans, shaheedi asthans, and the first halls of the diaspora. Each card opens the gurdwara: place, date, and the article.</p>
           </div>
           <a class="btn btn-navy" href="${href(routes.gurdwaras)}#atlas">The atlas</a>
         </div>
@@ -45,11 +45,11 @@ export function gurdwarasIndexView(region = "all", atlasMode: "subcontinent" | "
       <div class="cinema-shade"></div>
       <div class="wrap cinema-copy">
         <p class="kicker">Gurdwaras</p>
-        <h1 class="page-title">The Guru’s houses</h1>
-        <p class="lede-page">From Harmandir Sahib to Nankana, Kartarpur, the five Takhts, Delhi’s shaheedi asthans, Hemkund, Bidar, Stockton, Abbotsford, and Gravesend. Each house opens an article: the founding, the event, the later years, what still stands.</p>
+        <h1 class="page-title">Gurdwaras</h1>
+        <p class="lede-page">From Harmandir Sahib to Nankana, Kartarpur, the five Takhts, Delhi’s shaheedi asthans, Hemkund, Bidar, Stockton, Abbotsford, and Gravesend. Each gurdwara opens an article: the founding, the event, the later years, what still stands.</p>
         <p class="hero-actions" style="margin-top:1.2rem">
           <a class="btn btn-primary" href="#atlas">The atlas</a>
-          <a class="btn btn-ghost" href="#map">Every house</a>
+          <a class="btn btn-ghost" href="#map">Every gurdwara</a>
         </p>
       </div>
     </div>
@@ -59,7 +59,7 @@ export function gurdwarasIndexView(region = "all", atlasMode: "subcontinent" | "
           <div>
             <p class="kicker">${region === "all" ? "Harmandir to Gravesend" : region}</p>
             <h2>The atlas</h2>
-            <p>A plate, not a tourist map. Gold is a house in this archive. The subcontinent holds the Takhts. The world holds the first diaspora halls.</p>
+            <p>A plate, not a tourist map. Gold is a gurdwara in this archive. The subcontinent holds the Takhts. The world holds the first diaspora halls.</p>
           </div>
         </div>
         <div class="filters">

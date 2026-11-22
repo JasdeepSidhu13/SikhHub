@@ -14,7 +14,7 @@ export function homeView(): string {
         <div class="hero-entrance-copy">
           <p class="kicker">Inspiration · 1985</p>
           <h1>Sikhs are beautiful people.</h1>
-          <p class="lede">Asked about Sikhism, Osho named Sikhs as the one community in India you can rely upon: simple, courageous, unafraid. That is the character. The rooms below are the achievement, the Guru’s houses, live kirtan, and the issues — including the 1984 Sikh genocide record.</p>
+          <p class="lede">Asked about Sikhism, Osho named Sikhs as the one community in India you can rely upon: simple, courageous, unafraid. That is the character. The rooms below are the achievement, the Gurdwaras, live kirtan, and the issues — including the 1984 Sikh genocide record.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="${href(routes.achievements)}">Lives</a>
             <a class="btn btn-ghost" href="${href(routes.gurdwaras)}">Gurdwaras</a>
@@ -36,7 +36,7 @@ export function homeView(): string {
         <div class="section-head">
           <div>
             <p class="kicker">Rooms</p>
-            <h2>Lives. Houses. Shabad. The record.</h2>
+            <h2>Lives. Gurdwaras. Shabad. The record.</h2>
           </div>
         </div>
         <div class="rooms">
@@ -51,7 +51,7 @@ export function homeView(): string {
             <img src="${asset("/media/harmandir-aerial.jpg")}" alt="" />
             <div>
               <span>Gurdwaras</span>
-              <strong>Harmandir. Nankana. Stockton. The houses, on a map.</strong>
+              <strong>Harmandir. Nankana. Stockton. The Gurdwaras, on a map.</strong>
             </div>
           </a>
           <a class="room" href="${href(routes.listen)}">

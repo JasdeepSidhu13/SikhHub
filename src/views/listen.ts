@@ -10,7 +10,7 @@ export function listenPreview(): string {
         <div class="section-head">
           <div>
             <p class="kicker">Kirtan</p>
-            <h2>Live from the Guru’s house</h2>
+            <h2>Live from the Gurdwaras</h2>
             <p>Darbar Sahib first — the SGPC’s own player. Then Hazur Sahib, Patna Sahib, Bangla Sahib, and Sis Ganj. SikhHub links. It does not steal the stream.</p>
           </div>
           <a class="btn btn-primary" href="${href(routes.listen)}">Open the desk</a>
@@ -38,7 +38,7 @@ export function listenView(): string {
       <div class="wrap cinema-copy">
         <p class="kicker">Live kirtan · radio</p>
         <h1 class="page-title">From the Takhts</h1>
-        <p class="lede-page">Live kirtan from Darbar Sahib, then four more houses of the Guru, and a worldwide radio desk. The SGPC reserves the Harmandir Sahib broadcast. Open their player. Do not expect a pirate copy on this site.</p>
+        <p class="lede-page">Live kirtan from Darbar Sahib, then four more Gurdwaras, and a worldwide radio desk. The SGPC reserves the Harmandir Sahib broadcast. Open their player. Do not expect a pirate copy on this site.</p>
       </div>
     </div>
     <section class="section section-navy">
