@@ -42,11 +42,11 @@ export function achievementsSpotlight(): string {
       <div class="wrap">
         <div class="section-head">
           <div>
-            <p class="kicker">Sikh achievements</p>
+            <p class="kicker">Lives</p>
             <h2>Fifty lives, and the Panth in the world</h2>
             <p>A spotlight of ten, then the full fifty. Below them, fifty facts of Sikhism as a public force — langar, a state, a script, a kitchen on the highway.</p>
           </div>
-          <a class="btn btn-navy" href="${href(routes.achievements)}">Open the room</a>
+          <a class="btn btn-navy" href="${href(routes.achievements)}">All fifty</a>
         </div>
         <div class="hero-grid hero-grid-spot">
           ${featuredHeroes.map(heroTile).join("")}
@@ -63,7 +63,7 @@ export function achievementsIndexView(heroField = "all", featField = "all"): str
       <img class="cinema-bg" src="${asset("/media/harmandir-aerial.jpg")}" alt="" />
       <div class="cinema-shade"></div>
       <div class="wrap cinema-copy">
-        <p class="kicker">Sikh achievements</p>
+        <p class="kicker">Lives</p>
         <h1 class="page-title">The Panth, in the open</h1>
         <p class="lede-page">Fifty Sikhs whose lives are on the public record — empire, the battlefield, letters, science, rights, seva. And fifty achievements of Sikhism as a community: a kitchen, a scripture, a state, a diaspora that would not cut its hair.</p>
         <p class="hero-actions" style="margin-top:1.2rem">
@@ -127,7 +127,7 @@ export function heroView(id: string): string | null {
   return `
     <div class="page-hero">
       <div class="wrap">
-        <p class="kicker"><a href="${href(routes.achievements)}#fifty">Sikh achievements</a> · ${esc(hero.field)}</p>
+        <p class="kicker"><a href="${href(routes.achievements)}#fifty">Lives</a> · ${esc(hero.field)}</p>
         <h1 class="page-title">${esc(hero.name)}</h1>
         ${hero.native ? `<p class="hero-native">${esc(hero.native)}</p>` : ""}
         <p class="lede-page">${esc(hero.kicker)} · ${esc(hero.years)}</p>

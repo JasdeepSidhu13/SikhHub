@@ -893,6 +893,17 @@ export const heroes: Hero[] = [
 ];
 
 export const heroById = Object.fromEntries(heroes.map((h) => [h.id, h]));
-export const featuredHeroes = heroes.filter((h) => h.featured);
+export const featuredHeroes = [
+  "ranjit-singh",
+  "kapany",
+  "mai-bhago",
+  "hari-singh-nalwa",
+  "baba-deep-singh",
+  "banda-singh",
+  "bhagat-puran-singh",
+  "bhai-vir-singh",
+  "arjan-singh",
+  "milkha-singh",
+].map((id) => heroById[id]);
 export const heroFields = [...new Set(heroes.map((h) => h.field))];
 

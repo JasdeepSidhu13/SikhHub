@@ -15,9 +15,9 @@ export function homeView(): string {
           <h1>Sikhs are beautiful people.</h1>
           <p class="lede">Asked about Sikhism, Osho named Sikhs as the one community in India you can rely upon: simple, courageous, unafraid. That is the character. The rooms below are the achievement, the Guru’s houses, live kirtan, and the issues — including the 1984 Sikh genocide record.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="${href(routes.achievements)}">Sikh achievements</a>
+            <a class="btn btn-primary" href="${href(routes.achievements)}">Lives</a>
             <a class="btn btn-ghost" href="${href(routes.gurdwaras)}">Gurdwaras</a>
-            <a class="btn btn-ghost" href="${href(routes.listen)}">Live kirtan</a>
+            <a class="btn btn-ghost" href="${href(routes.listen)}">Kirtan</a>
           </div>
         </div>
         ${videoPlate({
@@ -40,10 +40,10 @@ export function homeView(): string {
         </div>
         <div class="rooms">
           <a class="room" href="${href(routes.achievements)}">
-            <img src="${asset("/media/heroes/ranjit.jpg")}" alt="" />
+            <img src="${asset("/media/heroes/kapany.jpg")}" alt="Narinder Singh Kapany, father of fibre optics" />
             <div>
-              <span>Achievements</span>
-              <strong>Fifty lives. Fifty works of the Panth.</strong>
+              <span>Lives</span>
+              <strong>Fifty Sikhs. Fifty works of the Panth.</strong>
             </div>
           </a>
           <a class="room" href="${href(routes.gurdwaras)}">
@@ -56,8 +56,8 @@ export function homeView(): string {
           <a class="room" href="${href(routes.listen)}">
             <img src="${asset("/media/harmandir.jpg")}" alt="" />
             <div>
-              <span>Listen</span>
-              <strong>Live kirtan from Darbar Sahib and four more.</strong>
+              <span>Kirtan</span>
+              <strong>Live from Darbar Sahib and four more.</strong>
             </div>
           </a>
           <a class="room" href="${href(routes.issues)}">

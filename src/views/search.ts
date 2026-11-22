@@ -67,7 +67,7 @@ export function searchView(q = ""): string {
         }
         ${
           results.live.length
-            ? `<h2>Live kirtan</h2><div class="issue-grid">${results.live
+            ? `<h2>Kirtan</h2><div class="issue-grid">${results.live
                 .map(
                   (s) =>
                     `<a class="card ext" href="${esc(s.official.href)}" rel="noopener noreferrer" target="_blank"><h3>${esc(s.name)}</h3><p>${esc(s.place)}</p></a>`,
@@ -107,7 +107,7 @@ export function searchView(q = ""): string {
         }
         ${
           results.news.length
-            ? `<h2>This week</h2><div class="news-stack">${results.news.map((item) => newsCard(item)).join("")}</div>`
+            ? `<h2>News</h2><div class="news-stack">${results.news.map((item) => newsCard(item)).join("")}</div>`
             : ""
         }
         ${
