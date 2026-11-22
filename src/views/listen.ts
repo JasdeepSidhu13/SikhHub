@@ -2,64 +2,56 @@ import { liveStations, sgpcLive } from "../data/live";
 import { esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
 
-function sgpcLiveAudio(): string {
-  return `
-    <audio data-sgpc-live preload="auto" playsinline>
-      <source src="${esc(sgpcLive.stream)}" type="audio/aac" />
-    </audio>`;
+const player = new Audio(sgpcLive.stream);
+player.preload = "auto";
+let pausedByUser = false;
+let playerBound = false;
+
+function syncKirtanUi(): void {
+  const on = !player.paused;
+  const sound = document.querySelector<HTMLButtonElement>("[data-kirtan-sound]");
+  const bar = document.querySelector<HTMLElement>("[data-kirtan-header]");
+  if (sound) {
+    sound.setAttribute("aria-pressed", on ? "true" : "false");
+    sound.textContent = on ? "Pause" : "Play";
+  }
+  bar?.classList.toggle("is-live", on);
 }
 
-export function liveKirtanHeader(): string {
+export function liveKirtanBar(): string {
+  const on = !player.paused;
   return `
-    <section class="kirtan-header" data-kirtan-header aria-label="Live kirtan from Darbar Sahib">
-      <div class="kirtan-stage">
-        <img src="${asset("/media/harmandir.jpg")}" alt="Sri Harmandir Sahib, Amritsar" />
-        ${sgpcLiveAudio()}
-      </div>
-      <div class="kirtan-bar">
-        <span class="live-pulse">Live</span>
-        <div class="kirtan-copy">
-          <p class="kicker">Sri Harmandir Sahib · SGPC</p>
-          <h2>Live kirtan from Darbar Sahib</h2>
-        </div>
-        <button type="button" class="btn btn-primary" data-kirtan-sound aria-pressed="false">Sound on</button>
-        <a class="btn btn-ghost ext" href="${esc(sgpcLive.page)}" rel="noopener noreferrer" target="_blank">sgpc.net</a>
-      </div>
-    </section>`;
+    <div class="kirtan-bar" data-kirtan-header role="status" aria-label="Live kirtan from Darbar Sahib, Amritsar">
+      <span class="live-pulse">Live</span>
+      <p>Live kirtan from Darbar Sahib, Amritsar</p>
+      <button type="button" class="kirtan-pause" data-kirtan-sound aria-pressed="${on ? "true" : "false"}">${on ? "Pause" : "Play"}</button>
+    </div>`;
 }
 
 export function bindLiveKirtan(root: HTMLElement): void {
-  const audio = root.querySelector<HTMLAudioElement>("[data-sgpc-live]");
   const sound = root.querySelector<HTMLButtonElement>("[data-kirtan-sound]");
-  const header = root.querySelector<HTMLElement>("[data-kirtan-header], .live-stage");
-  if (!audio) return;
-  const player = audio;
-
-  function setPlaying(on: boolean): void {
-    sound?.setAttribute("aria-pressed", on ? "true" : "false");
-    if (sound) sound.textContent = on ? "Mute" : "Sound on";
-    header?.classList.toggle("is-live", on);
-    header?.classList.toggle("needs-gesture", !on);
+  if (!playerBound) {
+    playerBound = true;
+    player.addEventListener("playing", syncKirtanUi);
+    player.addEventListener("pause", syncKirtanUi);
+    player.addEventListener("canplay", () => {
+      if (!pausedByUser && player.paused) void player.play().then(syncKirtanUi).catch(syncKirtanUi);
+    });
   }
-
-  function start(): void {
-    player.muted = false;
-    void player.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
-  }
-
-  player.addEventListener("playing", () => setPlaying(true));
-  player.addEventListener("pause", () => {
-    if (player.muted || player.paused) setPlaying(false);
-  });
-  start();
   sound?.addEventListener("click", () => {
-    const on = sound.getAttribute("aria-pressed") !== "true";
-    if (on) start();
-    else {
+    if (player.paused) {
+      pausedByUser = false;
+      void player.play().then(syncKirtanUi).catch(syncKirtanUi);
+    } else {
+      pausedByUser = true;
       player.pause();
-      setPlaying(false);
+      syncKirtanUi();
     }
   });
+  syncKirtanUi();
+  if (!pausedByUser && player.paused) {
+    void player.play().then(syncKirtanUi).catch(syncKirtanUi);
+  }
 }
 
 export function listenPreview(): string {
@@ -71,7 +63,7 @@ export function listenPreview(): string {
           <div>
             <p class="kicker">Kirtan</p>
             <h2>Live from the Gurdwaras</h2>
-            <p>Darbar Sahib first — the SGPC’s own live kirtan, playing on the homepage. Then Hazur Sahib, Patna Sahib, Bangla Sahib, and Sis Ganj. SikhHub does not re-host the stream.</p>
+            <p>Darbar Sahib first — live kirtan from Amritsar, in the header on every page. Then Hazur Sahib, Patna Sahib, Bangla Sahib, and Sis Ganj. SikhHub does not re-host the stream.</p>
           </div>
           <a class="btn btn-primary" href="${href(routes.listen)}">Open the desk</a>
         </div>
@@ -98,24 +90,20 @@ export function listenView(): string {
       <div class="wrap cinema-copy">
         <p class="kicker">Live kirtan · radio</p>
         <h1 class="page-title">From the Takhts</h1>
-        <p class="lede-page">Live kirtan from Darbar Sahib, then four more Gurdwaras, and a worldwide radio desk. The SGPC reserves the Harmandir Sahib broadcast. This page plays their official stream. It does not copy it.</p>
+        <p class="lede-page">Live kirtan from Darbar Sahib, then four more Gurdwaras, and a worldwide radio desk. The SGPC reserves the Harmandir Sahib broadcast. Pause it from the header. This site does not copy the stream.</p>
       </div>
     </div>
     <section class="section section-navy">
       <div class="wrap">
         <article class="live-stage">
-          <div class="kirtan-stage is-desk">
-            <img src="${asset(darbar.image)}" alt="${esc(darbar.imageAlt)}" />
-            ${sgpcLiveAudio()}
-          </div>
+          <img src="${asset(darbar.image)}" alt="${esc(darbar.imageAlt)}" />
           <div>
             <span class="live-pulse">Live now</span>
             <p class="feat-meta">${esc(darbar.place)}</p>
             <h2>${esc(darbar.name)}</h2>
             <p>${esc(darbar.blurb)}</p>
             <p class="hero-actions">
-              <button type="button" class="btn btn-primary" data-kirtan-sound aria-pressed="false">Sound on</button>
-              <a class="btn btn-ghost ext" href="${esc(darbar.official.href)}" rel="noopener noreferrer" target="_blank">${esc(darbar.official.label)}</a>
+              <a class="btn btn-primary ext" href="${esc(darbar.official.href)}" rel="noopener noreferrer" target="_blank">${esc(darbar.official.label)}</a>
               ${darbar.also ? `<a class="btn btn-ghost ext" href="${esc(darbar.also.href)}" rel="noopener noreferrer" target="_blank">${esc(darbar.also.label)}</a>` : ""}
             </p>
             ${darbar.note ? `<p class="live-note">${esc(darbar.note)}</p>` : ""}
