@@ -6,6 +6,7 @@ import { esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
 import type { Route } from "../lib/router";
 import khanda from "../assets/khanda.svg?url";
+import { liveKirtanBar } from "./listen";
 
 function navItem(hrefPath: string, label: string, current: boolean): string {
   return `<a href="${href(hrefPath)}" ${current ? 'aria-current="page"' : ""}>${esc(label)}</a>`;
@@ -34,6 +35,7 @@ export function shell(route: Route, title: string, body: string, extraClass = ""
           <button class="search-btn" type="button" data-search>Search</button>
         </nav>
       </div>
+      ${liveKirtanBar()}
     </header>
     <main id="main" class="${extraClass}">${body}</main>
     <footer class="footer">
