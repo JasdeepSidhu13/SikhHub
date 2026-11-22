@@ -1,14 +1,35 @@
+import { media } from "../data/media";
 import { asset, href, routes } from "../lib/paths";
+import { videoPlate } from "./exhibits";
 import { newsDeskPreview } from "./news";
 import { achievementsSpotlight } from "./achievements";
 import { issuesLandingHero } from "./issues";
 import { listenPreview } from "./listen";
 import { directoryPreview } from "./directory";
-import { entrancePanorama } from "./panorama";
 
 export function homeView(): string {
   return `
-    ${entrancePanorama()}
+    <section class="hero hero-entrance">
+      <div class="hero-entrance-grid">
+        <div class="hero-entrance-copy">
+          <p class="kicker">Inspiration · 1985</p>
+          <h1>Sikhs are beautiful people.</h1>
+          <p class="lede">Asked about Sikhism, Osho named Sikhs as the one community in India you can rely upon: simple, courageous, unafraid. That is the character. The rooms below are the achievement, the Guru’s houses, live kirtan, and the issues — including the 1984 Sikh genocide record.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="${href(routes.achievements)}">Lives</a>
+            <a class="btn btn-ghost" href="${href(routes.gurdwaras)}">Gurdwaras</a>
+            <a class="btn btn-ghost" href="${href(routes.listen)}">Kirtan</a>
+          </div>
+        </div>
+        ${videoPlate({
+          src: "/media/osho-sikhs.mp4",
+          poster: media.osho.src,
+          title: "Osho, asked about Sikhs",
+          caption: "Opening exhibit. Osho, The Last Testament, 1985.",
+          entrance: true,
+        })}
+      </div>
+    </section>
 
     <section class="section rooms-section">
       <div class="wrap">
