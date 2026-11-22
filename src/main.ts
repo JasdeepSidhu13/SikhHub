@@ -1,6 +1,6 @@
 import "./styles/app.css";
-import { href } from "./lib/paths";
-import { go, parseRoute } from "./lib/router";
+import { href, routes } from "./lib/paths";
+import { go, parseRoute, type Route } from "./lib/router";
 import { shell } from "./views/layout";
 import { homeView } from "./views/home";
 import { chapterView, narrativeIndexView } from "./views/narrative";
@@ -12,7 +12,7 @@ import { communityById } from "./data/community";
 import { gurdwaraView, gurdwarasIndexView } from "./views/gurdwaras";
 import { bindGurdwaraAtlas } from "./views/atlas";
 import { directoryView } from "./views/directory";
-import { bindLiveKirtan, listenView } from "./views/listen";
+import { bindLiveKirtan, ensureLiveKirtan, listenView } from "./views/listen";
 import { heroById } from "./data/heroes";
 import { gurdwaraById } from "./data/gurdwaras";
 import { methodView } from "./views/method";
@@ -140,9 +140,17 @@ function paint(): void {
     body = notFound();
   }
 
-  root.innerHTML = shell(route, title, body);
+  const header = root.querySelector("[data-kirtan-header]");
+  if (header) {
+    document.title = title;
+    const main = root.querySelector("#main");
+    if (main) main.innerHTML = body;
+    markNav(route);
+  } else {
+    root.innerHTML = shell(route, title, body);
+    bindLiveKirtan(root);
+  }
   bindEntranceVideo(root);
-  bindLiveKirtan(root);
   bindGurdwaraAtlas(root);
   bindLivesFilter(root);
   const hash = location.hash.slice(1) || (route.name === "contact" ? "contact" : "");
@@ -152,6 +160,32 @@ function paint(): void {
   } else {
     window.scrollTo(0, 0);
   }
+}
+
+function markNav(route: Route): void {
+  const nav = root.querySelector("[data-nav]");
+  if (!nav) return;
+  const current =
+    route.name === "achievements" || route.name === "achievement"
+      ? routes.achievements
+      : route.name === "gurdwaras" || route.name === "gurdwara"
+        ? routes.gurdwaras
+        : route.name === "listen"
+          ? routes.listen
+          : route.name === "issues" || route.name === "issue"
+            ? routes.issues
+            : route.name === "news"
+              ? routes.news
+              : route.name === "directory"
+                ? routes.directory
+                : route.name === "about" || route.name === "contact"
+                  ? routes.about
+                  : "";
+  const want = current ? href(current) : "";
+  nav.querySelectorAll("a").forEach((a) => {
+    if (want && a.getAttribute("href") === want) a.setAttribute("aria-current", "page");
+    else a.removeAttribute("aria-current");
+  });
 }
 
 function bindEntranceVideo(root: HTMLElement): void {
@@ -292,6 +326,7 @@ document.addEventListener("click", (event) => {
   if (a.target === "_blank" || a.hasAttribute("download")) return;
   const url = new URL(a.href, window.location.origin);
   if (url.origin !== window.location.origin) return;
+  ensureLiveKirtan(event);
   event.preventDefault();
   history.pushState({}, "", `${url.pathname}${url.search}${url.hash}`);
   window.dispatchEvent(new PopStateEvent("popstate"));
