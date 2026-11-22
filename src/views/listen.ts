@@ -4,11 +4,12 @@ import { asset, href, routes } from "../lib/paths";
 
 const player = new Audio(sgpcLive.stream);
 player.preload = "auto";
+player.autoplay = true;
 let pausedByUser = false;
 let playerBound = false;
 
 function syncKirtanUi(): void {
-  const on = !player.paused;
+  const on = !pausedByUser;
   const sound = document.querySelector<HTMLButtonElement>("[data-kirtan-sound]");
   const bar = document.querySelector<HTMLElement>("[data-kirtan-header]");
   if (sound) {
@@ -18,13 +19,19 @@ function syncKirtanUi(): void {
   bar?.classList.toggle("is-live", on);
 }
 
+export function ensureLiveKirtan(event?: Event): void {
+  if (pausedByUser) return;
+  const target = event?.target;
+  if (target instanceof Element && target.closest("[data-kirtan-sound]")) return;
+  void player.play().then(syncKirtanUi).catch(syncKirtanUi);
+}
+
 export function liveKirtanBar(): string {
-  const on = !player.paused;
   return `
-    <div class="kirtan-bar" data-kirtan-header role="status" aria-label="Live kirtan from Darbar Sahib, Amritsar">
+    <div class="kirtan-bar is-live" data-kirtan-header role="status" aria-label="Live kirtan from Darbar Sahib, Amritsar">
       <span class="live-pulse">Live</span>
       <p>Live kirtan from Darbar Sahib, Amritsar</p>
-      <button type="button" class="kirtan-pause" data-kirtan-sound aria-pressed="${on ? "true" : "false"}">${on ? "Pause" : "Play"}</button>
+      <button type="button" class="kirtan-pause" data-kirtan-sound aria-pressed="true">Pause</button>
     </div>`;
 }
 
@@ -33,15 +40,24 @@ export function bindLiveKirtan(root: HTMLElement): void {
   if (!playerBound) {
     playerBound = true;
     player.addEventListener("playing", syncKirtanUi);
-    player.addEventListener("pause", syncKirtanUi);
-    player.addEventListener("canplay", () => {
-      if (!pausedByUser && player.paused) void player.play().then(syncKirtanUi).catch(syncKirtanUi);
+    player.addEventListener("pause", () => {
+      if (!pausedByUser) void player.play().then(syncKirtanUi).catch(syncKirtanUi);
+      else syncKirtanUi();
     });
+    player.addEventListener("canplay", () => ensureLiveKirtan());
+    player.addEventListener("stalled", () => ensureLiveKirtan());
+    document.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "visible") ensureLiveKirtan();
+    });
+    for (const type of ["pointerdown", "keydown", "touchstart", "wheel"] as const) {
+      window.addEventListener(type, ensureLiveKirtan, { capture: true, passive: true });
+    }
   }
-  sound?.addEventListener("click", () => {
-    if (player.paused) {
+  sound?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (pausedByUser) {
       pausedByUser = false;
-      void player.play().then(syncKirtanUi).catch(syncKirtanUi);
+      ensureLiveKirtan();
     } else {
       pausedByUser = true;
       player.pause();
@@ -49,9 +65,7 @@ export function bindLiveKirtan(root: HTMLElement): void {
     }
   });
   syncKirtanUi();
-  if (!pausedByUser && player.paused) {
-    void player.play().then(syncKirtanUi).catch(syncKirtanUi);
-  }
+  ensureLiveKirtan();
 }
 
 export function listenPreview(): string {
