@@ -1295,48 +1295,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   color: #f6efe2;
   padding: 3.6rem 0 3.4rem;
 }
-.founder-hero-grid {
-  display: grid;
-  grid-template-columns: minmax(220px, 320px) 1fr;
-  gap: 3.2rem;
-  align-items: center;
-}
-.founder-frame {
-  margin: 0;
-  position: relative;
-  justify-self: start;
-  width: 100%;
-  max-width: 320px;
-  background: #0b1016;
-  padding: 9px;
-  border: 1px solid rgba(201, 162, 39, 0.55);
-  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.38);
-}
-.founder-frame img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center 12%;
-  display: block;
-  border-radius: 0;
-}
-.founder-frame figcaption {
-  margin: 0;
-  padding: 0.7rem 0.15rem 0.15rem;
-  text-align: center;
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  background: #0b1016;
-}
-.founder-frame figcaption span {
-  display: block;
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.2rem;
-}
+.founder-hero .founder-copy { max-width: 40rem; }
 .founder-kicker {
   font-family: var(--mono);
   font-size: 0.78rem;
@@ -1396,6 +1355,13 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   align-items: start;
 }
 .founder-bio p { color: var(--muted); }
+.founder-note {
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--rule);
+  max-width: 38rem;
+}
+.founder-note strong { color: var(--ink); }
 .founder-aside {
   background: var(--navy);
   color: #f6efe2;
@@ -1492,7 +1458,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 @media (max-width: 880px) {
   .stats, .chapter-grid, .issue-grid, .split, .method-grid, .footer-grid, .card-grid, .further-grid,
   .ig-stats, .ig-map, .gallery, .poster-grid, .story, .story.is-reverse, .split-exhibits, .chapter-strip,
-  .founder-hero-grid, .founder-pillars, .founder-bio, .founder-home, .contact-grid,
+  .founder-pillars, .founder-bio, .founder-home, .contact-grid,
   .hero-entrance-grid, .news-spread, .hero-profile, .feat-grid, .news-grid {
     grid-template-columns: 1fr;
   }
@@ -1514,7 +1480,6 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   }
   .hero-entrance-grid { padding: 3.2rem 0 2.4rem; }
   .video-plate video { max-height: 68vh; }
-  .founder-frame { justify-self: center; }
   .story.is-reverse .story-media { order: 0; }
   .hero-impact { min-height: 78vh; }
   .ig-days li { grid-template-columns: 1fr; }
