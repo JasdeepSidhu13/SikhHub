@@ -46,7 +46,7 @@ export function aboutView(): string {
         <p class="kicker">The archive</p>
         <h2>A sourced public record</h2>
         <p><span class="org">SikhHub</span> is an independent non-profit archive of Sikh political history, from the Gurus to the present. Every claim is tied to a document: a judgment, a letter, a statute, a contemporaneous newspaper, a photograph. Its purpose is education. Its method is evidence.</p>
-        <p>Dr. Jasdeep Sidhu is a physicist with a Ph.D. from the University of Florida. He has extensive experience as an AI/ML engineer and founder in the technology industry, and is a NASA/JPL scholar.</p>
+        <p><span class="org">SikhHub</span> is founded and managed by Dr. Jasdeep Sidhu. He is a physicist with a Ph.D. from the University of Florida. He has extensive experience as an AI/ML engineer and founder in the technology industry, and is a NASA/JPL scholar.</p>
       </div>
     </section>
   `;
