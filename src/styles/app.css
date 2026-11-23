@@ -1295,7 +1295,16 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   color: #f6efe2;
   padding: 3.6rem 0 3.4rem;
 }
-.founder-hero .founder-copy { max-width: 40rem; }
+.about-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.6rem;
+  align-items: start;
+}
+.founder-hero .founder-copy { max-width: 36rem; }
+.founder-hero .contact-form {
+  margin-top: 0.2rem;
+}
 .founder-kicker {
   font-family: var(--mono);
   font-size: 0.78rem;
@@ -1329,88 +1338,15 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   font-size: 1.18rem;
   color: #e8decc;
   max-width: 36rem;
-  margin: 0 0 1.6rem;
+  margin: 0;
 }
-.founder-pillars {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.4rem;
-}
-.founder-pillars article {
-  background: var(--paper);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  padding: 1.4rem 1.3rem 1.25rem;
-  box-shadow: var(--shadow);
-}
-.founder-pillars h2 {
-  font-size: 1.55rem;
-  margin-bottom: 0.5rem;
-}
-.founder-pillars p { margin: 0; color: var(--muted); }
-.founder-bio {
-  display: grid;
-  grid-template-columns: 1.35fr 0.85fr;
-  gap: 2.4rem;
-  align-items: start;
-}
-.founder-bio p { color: var(--muted); }
-.founder-note {
-  margin-top: 1.4rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--rule);
-  max-width: 38rem;
-}
-.founder-note strong { color: var(--ink); }
-.founder-aside {
-  background: var(--navy);
-  color: #f6efe2;
-  border-radius: var(--radius);
-  padding: 1.5rem 1.4rem 1.4rem;
-}
-.founder-aside .kicker,
-.founder-aside .founder-kicker { color: var(--gold); }
-.founder-aside-lead {
+.about-body { max-width: 40rem; }
+.about-body h2 {
   font-family: var(--serif);
-  font-size: 1.35rem;
-  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin: 0.2rem 0 0.9rem;
 }
-.founder-aside ul {
-  margin: 0 0 1.2rem;
-  padding-left: 1.1rem;
-  color: #d8cbb5;
-}
-.founder-aside li { margin: 0.35rem 0; }
-.founder-home {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.6rem;
-  align-items: center;
-}
-.founder-home img {
-  width: 128px;
-  height: 160px;
-  object-fit: cover;
-  object-position: center 12%;
-  border-radius: 0;
-  border: 1px solid rgba(201, 162, 39, 0.45);
-  padding: 5px;
-  background: #0b1016;
-  box-sizing: content-box;
-}
-.founder-home p { color: #cfc3ad; max-width: 40rem; }
-.contact-grid {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 2.4rem;
-  align-items: start;
-}
-.contact-grid > div p { color: #cfc3ad; max-width: 32rem; }
-.contact-points {
-  margin: 1.2rem 0 0;
-  padding-left: 1.1rem;
-  color: #e8decc;
-}
+.about-body p { color: var(--muted); }
 .contact-form {
   position: relative;
   display: grid;
@@ -1458,7 +1394,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 @media (max-width: 880px) {
   .stats, .chapter-grid, .issue-grid, .split, .method-grid, .footer-grid, .card-grid, .further-grid,
   .ig-stats, .ig-map, .gallery, .poster-grid, .story, .story.is-reverse, .split-exhibits, .chapter-strip,
-  .founder-pillars, .founder-bio, .founder-home, .contact-grid,
+  .about-split,
   .hero-entrance-grid, .news-spread, .hero-profile, .feat-grid, .news-grid {
     grid-template-columns: 1fr;
   }

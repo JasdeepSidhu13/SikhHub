@@ -1,86 +1,15 @@
-import { href, routes } from "../lib/paths";
-
 export function aboutView(): string {
   return `
-    <section class="founder-hero">
-      <div class="wrap founder-copy">
-        <p class="founder-kicker">Non-profit archive</p>
-        <h1>SikhHub</h1>
-        <p class="founder-role">The Panth, on the record</p>
-        <p class="lede"><span class="org">SikhHub</span> was founded to place Sikh history in public view — not as a slogan, and not as the official account, but as a sourced record a reader can open, cite, and teach.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="${href("/about")}#contact">Write to SikhHub</a>
-          <a class="btn btn-ghost" href="${href(routes.issues)}">Open Sikh issues</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="quote-band">
-      <div class="wrap">
-        <blockquote>
-          I did not build this archive to look backward with better lighting. I built it so a Sikh child can see how far we have already come — and walk further, without asking anyone’s permission.
-          <cite>Dr. Jasdeep Sidhu, founder</cite>
-        </blockquote>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <div class="founder-pillars">
-          <article>
-            <p class="kicker">01</p>
-            <h2>Awareness</h2>
-            <p><span class="org">SikhHub</span> is a non-profit organisation established to raise public awareness of Sikh political history — gurdwara reform, Partition, Punjabi Suba, June 1984, the 1984 Sikh genocide, and the Punjab disappearances — in a form a general reader can follow and a teacher can assign.</p>
-          </article>
-          <article>
-            <p class="kicker">02</p>
-            <h2>Evidence</h2>
-            <p>Every claim is tied to a document: a judgment, a letter, a statute, a contemporaneous newspaper, a photograph. The archive is written from a Sikh standpoint. It does not invent what the papers do not bear.</p>
-          </article>
-          <article>
-            <p class="kicker">03</p>
-            <h2>Transmission</h2>
-            <p>The work is for those who did not live these years, and for families who did. Names, dates, and papers are kept so that memory is not left to permission, and so that the next generation inherits a record rather than a rumour.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top:0">
-      <div class="wrap founder-bio">
-        <div>
-          <p class="kicker">The archive</p>
-          <h2>A public record, independently kept</h2>
-          <p><span class="org">SikhHub</span> is an independent non-profit so that Sikh political history is available to the public in a form equal to its gravity: documented, chronological, and independent of the versions that have been taught in their place. The archive runs from the Gurus to the present — gurdwara reform, Partition, Punjabi Suba, June 1984, the 1984 Sikh genocide, and the Punjab disappearances among the files.</p>
-          <p>Its purpose is education. Its method is evidence. Corrections, original documents, and family papers are invited. The archive is only as complete as the record it is given.</p>
-          <p class="founder-note"><strong>Dr. Jasdeep Sidhu</strong>, founder. A physicist with a Ph.D. from the University of Florida, an AI/ML engineer and founder in the technology industry, and a NASA/JPL scholar.</p>
-        </div>
-        <aside class="founder-aside">
-          <p class="founder-kicker"><span class="org">SikhHub</span></p>
-          <p class="founder-aside-lead">Non-profit · independent · sourced</p>
-          <ul>
-            <li>Sikh political history, from the Gurus to the present</li>
-            <li>Judgments, letters, photographs, chronology</li>
-            <li>No admission charged · no login required</li>
-          </ul>
-          <p><a class="btn btn-navy" href="${href(routes.documents)}">Open the documents</a></p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="contact">
-      <div class="wrap contact-grid">
-        <div>
-          <p class="kicker">Correspondence</p>
-          <h2>Write to SikhHub</h2>
-          <p>Feedback, questions, corrections, and documents for the archive. Messages are read in confidence. The mailbox is not published on this site.</p>
-          <ul class="contact-points">
-            <li>A question about a source or a date</li>
-            <li>A document, photograph, or family record</li>
-            <li>A correction the archive should make</li>
-          </ul>
+    <section class="founder-hero" id="contact">
+      <div class="wrap about-split">
+        <div class="founder-copy">
+          <p class="founder-kicker">Non-profit archive</p>
+          <h1>SikhHub</h1>
+          <p class="founder-role">The Panth, on the record</p>
+          <p class="lede"><span class="org">SikhHub</span> was founded to place Sikh history in public view — not as a slogan, and not as the official account, but as a sourced record a reader can open, cite, and teach.</p>
         </div>
         <form class="contact-form" data-contact-form novalidate>
+          <p class="founder-kicker">Write to SikhHub</p>
           <label>
             <span>Name</span>
             <input name="name" type="text" autocomplete="name" required maxlength="120" />
@@ -100,15 +29,24 @@ export function aboutView(): string {
           </label>
           <label>
             <span>Message</span>
-            <textarea name="message" rows="7" required maxlength="8000"></textarea>
+            <textarea name="message" rows="6" required maxlength="8000"></textarea>
           </label>
           <label class="honey" aria-hidden="true">
             <span>Website</span>
             <input name="website" type="text" tabindex="-1" autocomplete="off" />
           </label>
-          <button class="btn btn-primary" type="submit">Send the message</button>
+          <button class="btn btn-primary" type="submit">Write to SikhHub</button>
           <p class="contact-status" data-contact-status hidden></p>
         </form>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap about-body">
+        <p class="kicker">The archive</p>
+        <h2>A sourced public record</h2>
+        <p><span class="org">SikhHub</span> is an independent non-profit archive of Sikh political history, from the Gurus to the present. Every claim is tied to a document: a judgment, a letter, a statute, a contemporaneous newspaper, a photograph. Its purpose is education. Its method is evidence.</p>
+        <p>Dr. Jasdeep Sidhu is a physicist with a Ph.D. from the University of Florida. He has extensive experience as an AI/ML engineer and founder in the technology industry, and is a NASA/JPL scholar.</p>
       </div>
     </section>
   `;
