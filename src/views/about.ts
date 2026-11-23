@@ -1,26 +1,16 @@
-import { media } from "../data/media";
-import { esc } from "../lib/html";
-import { asset, href, routes } from "../lib/paths";
+import { href, routes } from "../lib/paths";
 
 export function aboutView(): string {
   return `
     <section class="founder-hero">
-      <div class="wrap founder-hero-grid">
-        <figure class="founder-frame">
-          <img src="${asset(media.jasdeep.src)}" alt="${esc(media.jasdeep.alt)}" />
-          <figcaption>
-            <span>Founder</span>
-          </figcaption>
-        </figure>
-        <div class="founder-copy">
-          <p class="founder-kicker"><span class="org">SikhHub</span> · non-profit archive</p>
-          <h1>Dr. Jasdeep Sidhu</h1>
-          <p class="founder-role">Founder and director</p>
-          <p class="lede"><span class="org">SikhHub</span> was founded to place Sikh history in public view — not as a slogan, and not as the official account, but as a sourced record a reader can open, cite, and teach.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="${href("/about")}#contact">Write to SikhHub</a>
-            <a class="btn btn-ghost" href="${href(routes.issues)}">Open Sikh issues</a>
-          </div>
+      <div class="wrap founder-copy">
+        <p class="founder-kicker">Non-profit archive</p>
+        <h1>SikhHub</h1>
+        <p class="founder-role">The Panth, on the record</p>
+        <p class="lede"><span class="org">SikhHub</span> was founded to place Sikh history in public view — not as a slogan, and not as the official account, but as a sourced record a reader can open, cite, and teach.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="${href("/about")}#contact">Write to SikhHub</a>
+          <a class="btn btn-ghost" href="${href(routes.issues)}">Open Sikh issues</a>
         </div>
       </div>
     </section>
@@ -60,10 +50,10 @@ export function aboutView(): string {
       <div class="wrap founder-bio">
         <div>
           <p class="kicker">The archive</p>
-          <h2>Scholarship in the service of a public record</h2>
-          <p>Dr. Jasdeep Sidhu is a physicist with a Ph.D. from the University of Florida. He has extensive experience as an AI/ML engineer and founder in the technology industry, and is a NASA/JPL scholar.</p>
-          <p>He established <span class="org">SikhHub</span> as an independent non-profit so that Sikh political history would be available to the public in a form equal to its gravity: documented, chronological, and independent of the versions that have been taught in their place. The archive runs from the Gurus to the present — gurdwara reform, Partition, Punjabi Suba, June 1984, the 1984 Sikh genocide, and the Punjab disappearances among the files.</p>
+          <h2>A public record, independently kept</h2>
+          <p><span class="org">SikhHub</span> is an independent non-profit so that Sikh political history is available to the public in a form equal to its gravity: documented, chronological, and independent of the versions that have been taught in their place. The archive runs from the Gurus to the present — gurdwara reform, Partition, Punjabi Suba, June 1984, the 1984 Sikh genocide, and the Punjab disappearances among the files.</p>
           <p>Its purpose is education. Its method is evidence. Corrections, original documents, and family papers are invited. The archive is only as complete as the record it is given.</p>
+          <p class="founder-note"><strong>Dr. Jasdeep Sidhu</strong>, founder. A physicist with a Ph.D. from the University of Florida, an AI/ML engineer and founder in the technology industry, and a NASA/JPL scholar.</p>
         </div>
         <aside class="founder-aside">
           <p class="founder-kicker"><span class="org">SikhHub</span></p>

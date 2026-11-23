@@ -55,11 +55,6 @@ export const media = {
     alt: "Palace of Assembly, Chandigarh, the capital still withheld from Punjab",
     credit: "Palace of Assembly, Chandigarh. Wikimedia Commons.",
   },
-  jasdeep: {
-    src: "/media/jasdeep-sidhu.jpg",
-    alt: "Portrait of the founder of SikhHub",
-    credit: "Founder of SikhHub.",
-  },
   khalra: {
     src: "/media/khalra.jpg",
     alt: "Jaswant Singh Khalra speaking, shortly before Punjab Police abducted and murdered him",

@@ -49,6 +49,6 @@ export async function sendMessage(payload: ContactPayload): Promise<{ ok: boolea
   return {
     ok: true,
     message:
-      "Thank you. The message has been received. If this is the first note sent from the site, the founder will confirm the mailbox and then it will arrive.",
+      "Thank you. The message has been received. If this is the first note sent from the site, SikhHub will confirm the mailbox and then it will arrive.",
   };
 }
