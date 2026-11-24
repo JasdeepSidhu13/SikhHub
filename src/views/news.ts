@@ -11,9 +11,9 @@ export function gurpurabCover(): string {
       <div class="wrap parkash-copy">
         <p class="parkash-kicker">557th Parkash Purab · 24 November 2026</p>
         <p class="parkash-eyebrow">Guru Nanak</p>
-        <h1>Still ahead of the world that thanks him.</h1>
-        <p class="parkash-lede">He is not a greeting. He is a verdict that has not expired. Ik Onkar. Then a kitchen. Then a floor where caste, purse, and throne end. Five hundred and fifty-seven years later the lamps are lit. The exam is the same.</p>
-        <blockquote class="parkash-strike">He did not wait for equality. He served it hot.</blockquote>
+        <h1>The world recites him. It has not sat with him.</h1>
+        <p class="parkash-lede">He was born at Talwandi in 1469, into a Punjab of caste, of priests, of two religions that held the Infinite as property. He answered with Ik Onkar — one God, no broker — walked out of the Bein at Sultanpur Lodhi as neither Hindu nor Musalman, and at Kartarpur he made langar the public law: sangat and pangat on one floor, kirat as worship, a woman not inferior, no second plate for a throne. That is not a festival thought. It is a constitution. Five hundred and fifty-seven years later the lamps are lit from Nankana Sahib to every Nishan that still stands. The row is still the test. Most of the world still fails it.</p>
+        <blockquote class="parkash-strike">Langar was not his charity. It was his proof.</blockquote>
         <div class="parkash-charges">
           <article>
             <p class="kicker">01 · The Name</p>
@@ -21,9 +21,9 @@ export function gurpurabCover(): string {
             <p>Priests had God in inventory. Nanak had one, without a middleman, and then he went to work. The Mul Mantar is not a hymn for a festival. It is a demolition of every franchise on the Infinite.</p>
           </article>
           <article>
-            <p class="kicker">02 · The floor</p>
-            <h2>The kitchen is the theology</h2>
-            <p>Kartarpur put sangat and pangat on one plane. Labour was holy. The idle rosary was a joke. Rank may exist on the road. It ends where the thali begins. That is not a metaphor. It is still the rule of every gurdwara.</p>
+            <p class="kicker">02 · The row</p>
+            <h2>Langar is the law</h2>
+            <p>Kartarpur put sangat and pangat on one plane. Labour was holy. The idle rosary was a joke. Rank may exist on the road. It ends in the row. That is not a metaphor. It is still the maryada of every gurdwara.</p>
           </article>
           <article>
             <p class="kicker">03 · The human being</p>
@@ -31,7 +31,7 @@ export function gurpurabCover(): string {
             <p>At Sultanpur Lodhi he refused both state religions as sufficient. Not Hindu, not Musalman — a third path. He asked why a woman should be called inferior when every king entered the world through her. Ahead of his time is too small. He is still ahead of ours.</p>
           </article>
         </div>
-        <p class="parkash-close">Tonight Harmandir Sahib is lit. Nankana Sahib is full. Kartarpur is a courtyard with a locked corridor. Light the lamps. Then sit down. That was the exam. It still is.</p>
+        <p class="parkash-close">Tonight Harmandir Sahib is lit. Nankana Sahib is full. Kartarpur is a courtyard with a locked corridor. Light the lamps. Then take your place in the row. That was the proof. It still is.</p>
         <div class="hero-actions parkash-actions">
           <a class="btn btn-primary" href="${href(routes.gurdwara("nankana-janam"))}">Nankana Sahib</a>
           <a class="btn btn-ghost" href="${href(routes.gurdwara("kartarpur"))}">Kartarpur</a>
