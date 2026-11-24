@@ -725,6 +725,118 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   margin: 0 0 1.5rem;
 }
 
+.parkash-cover {
+  position: relative;
+  color: #f6efe2;
+  overflow: hidden;
+  background: #070b10;
+  padding: 0 0 3.4rem;
+  scroll-margin-top: 7rem;
+}
+.parkash-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  filter: saturate(1.12) contrast(1.12);
+  transform: scale(1.06);
+  animation: cinema-drift 28s ease-in-out alternate infinite;
+}
+.parkash-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(7, 11, 16, 0.35) 0%, rgba(7, 11, 16, 0.55) 28%, rgba(7, 11, 16, 0.92) 72%, #070b10 100%),
+    radial-gradient(90% 60% at 100% 0%, rgba(196, 92, 38, 0.42), transparent 58%),
+    radial-gradient(70% 50% at 0% 100%, rgba(201, 162, 39, 0.22), transparent 50%);
+}
+.parkash-copy {
+  position: relative;
+  z-index: 2;
+  padding: 5.4rem 0 0;
+}
+.parkash-kicker {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 0.85rem;
+}
+.parkash-eyebrow {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  color: var(--gold-soft);
+  margin: 0 0 0.35rem;
+}
+.parkash-copy h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 7vw, 5.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: #fffaf1;
+  max-width: 16ch;
+  margin: 0 0 1.3rem;
+  text-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+.parkash-lede {
+  font-size: clamp(1.18rem, 2vw, 1.42rem);
+  line-height: 1.45;
+  color: #f0e4ce;
+  max-width: 40rem;
+  margin: 0 0 1.6rem;
+}
+.parkash-strike {
+  margin: 0 0 2.4rem;
+  padding: 0;
+  border: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  line-height: 1.25;
+  color: #ffe7b0;
+  max-width: 22ch;
+}
+.parkash-charges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 0 1.6rem;
+}
+.parkash-charges article {
+  background: rgba(255, 250, 241, 0.05);
+  border: 1px solid rgba(232, 213, 163, 0.22);
+  border-radius: 16px;
+  padding: 1.2rem 1.15rem 1.25rem;
+  backdrop-filter: blur(10px);
+}
+.parkash-charges .kicker { color: var(--gold); margin-bottom: 0.45rem; }
+.parkash-charges h2 {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  line-height: 1.15;
+  color: #fffaf1;
+  margin: 0 0 0.55rem;
+}
+.parkash-charges p { margin: 0; color: #d8cbb5; }
+.parkash-close {
+  max-width: 42rem;
+  color: #e8decc;
+  font-size: 1.08rem;
+  margin: 0 0 1.5rem;
+}
+.parkash-actions .btn-ghost {
+  color: #f6efe2;
+  border-color: rgba(232, 213, 163, 0.45);
+}
+.parkash-actions .btn-ghost:hover { background: rgba(255, 250, 241, 0.08); }
+
 .kind-news-issue { color: var(--press); border-color: #e4c7bf; background: #fbf4f1; }
 .kind-news-achievement { color: var(--green); border-color: #c5d9cf; background: #f1f7f4; }
 .kind-news-pilgrimage { color: var(--kesari-deep); border-color: #eccbb8; background: #fbf4ee; }
@@ -1394,7 +1506,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
 @media (max-width: 880px) {
   .stats, .chapter-grid, .issue-grid, .split, .method-grid, .footer-grid, .card-grid, .further-grid,
   .ig-stats, .ig-map, .gallery, .poster-grid, .story, .story.is-reverse, .split-exhibits, .chapter-strip,
-  .about-split,
+  .about-split, .parkash-charges,
   .hero-entrance-grid, .news-spread, .hero-profile, .feat-grid, .news-grid {
     grid-template-columns: 1fr;
   }
@@ -1499,7 +1611,7 @@ a.card:hover { transform: translateY(-3px); border-color: #d9c49a; }
   to { transform: scale(1.1) translate3d(-1.5%, -1%, 0); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .cinema-bg, .hero-tile img, .cover-card img, .room img, .news-cover img { animation: none; transform: none; }
+  .cinema-bg, .parkash-bg, .hero-tile img, .cover-card img, .room img, .news-cover img { animation: none; transform: none; }
 }
 
 .rooms {

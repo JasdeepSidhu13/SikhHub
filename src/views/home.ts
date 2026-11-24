@@ -1,7 +1,7 @@
 import { media } from "../data/media";
 import { asset, href, routes } from "../lib/paths";
 import { videoPlate } from "./exhibits";
-import { newsDeskPreview } from "./news";
+import { gurpurabCover, newsDeskPreview } from "./news";
 import { achievementsSpotlight } from "./achievements";
 import { issuesLandingHero } from "./issues";
 import { listenPreview } from "./listen";
@@ -30,6 +30,8 @@ export function homeView(): string {
         })}
       </div>
     </section>
+
+    ${gurpurabCover()}
 
     <section class="section rooms-section">
       <div class="wrap">
