@@ -3,6 +3,44 @@ import { themeById } from "../data/themes";
 import { esc } from "../lib/html";
 import { asset, href, routes } from "../lib/paths";
 
+export function gurpurabCover(): string {
+  return `
+    <section class="parkash-cover" id="gurpurab">
+      <img class="parkash-bg" src="${asset("/media/gurdwaras/nankana.jpg")}" alt="Gurdwara Janam Asthan, Nankana Sahib, the birthplace of Guru Nanak" />
+      <div class="parkash-shade"></div>
+      <div class="wrap parkash-copy">
+        <p class="parkash-kicker">557th Parkash Purab · 24 November 2026</p>
+        <p class="parkash-eyebrow">Guru Nanak</p>
+        <h1>Still ahead of the world that thanks him.</h1>
+        <p class="parkash-lede">He is not a greeting. He is a verdict that has not expired. Ik Onkar. Then a kitchen. Then a floor where caste, purse, and throne end. Five hundred and fifty-seven years later the lamps are lit. The exam is the same.</p>
+        <blockquote class="parkash-strike">He did not wait for equality. He served it hot.</blockquote>
+        <div class="parkash-charges">
+          <article>
+            <p class="kicker">01 · The Name</p>
+            <h2>Ik Onkar</h2>
+            <p>Priests had God in inventory. Nanak had one, without a middleman, and then he went to work. The Mul Mantar is not a hymn for a festival. It is a demolition of every franchise on the Infinite.</p>
+          </article>
+          <article>
+            <p class="kicker">02 · The floor</p>
+            <h2>The kitchen is the theology</h2>
+            <p>Kartarpur put sangat and pangat on one plane. Labour was holy. The idle rosary was a joke. Rank may exist on the road. It ends where the thali begins. That is not a metaphor. It is still the rule of every gurdwara.</p>
+          </article>
+          <article>
+            <p class="kicker">03 · The human being</p>
+            <h2>He walked out of the Bein</h2>
+            <p>At Sultanpur Lodhi he refused both state religions as sufficient. Not Hindu, not Musalman — a third path. He asked why a woman should be called inferior when every king entered the world through her. Ahead of his time is too small. He is still ahead of ours.</p>
+          </article>
+        </div>
+        <p class="parkash-close">Tonight Harmandir Sahib is lit. Nankana Sahib is full. Kartarpur is a courtyard with a locked corridor. Light the lamps. Then sit down. That was the exam. It still is.</p>
+        <div class="hero-actions parkash-actions">
+          <a class="btn btn-primary" href="${href(routes.gurdwara("nankana-janam"))}">Nankana Sahib</a>
+          <a class="btn btn-ghost" href="${href(routes.gurdwara("kartarpur"))}">Kartarpur</a>
+          <a class="btn btn-ghost" href="${href(routes.feat("sangat-pangat"))}">The floor is the test</a>
+        </div>
+      </div>
+    </section>`;
+}
+
 function kindChip(kind: NewsItem["kind"]): string {
   return `<span class="kind kind-news-${kind}">${esc(NEWS_KIND_LABEL[kind])}</span>`;
 }
@@ -71,15 +109,7 @@ export function newsDeskPreview(): string {
 
 export function newsIndexView(): string {
   return `
-    <div class="cinema">
-      <img class="cinema-bg" src="${asset("/media/harmandir-aerial.jpg")}" alt="" />
-      <div class="cinema-shade"></div>
-      <div class="wrap cinema-copy">
-        <p class="kicker">News</p>
-        <h1 class="page-title">On the desk</h1>
-        <p class="lede-page">Pro-Sikh news, extracted every Monday: achievement, pilgrimage, institutions, and the live issues — Kartarpur, Bandi Singhs, Chandigarh, 1984. Not a wire. A desk. Every story has a cover, and every item is sourced.</p>
-      </div>
-    </div>
+    ${gurpurabCover()}
     ${newsWeeks
       .map(
         (week, index) => `
