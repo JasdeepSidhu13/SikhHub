@@ -48,6 +48,9 @@ Append a record to:
 - `src/data/events.ts` — dated chronology entries
 - `src/data/chapters.ts` — narrative prose
 - `src/data/themes.ts` — issue dossiers
+- `src/data/news-weeks.json` — Monday news desk (five sourced stories)
+
+The news desk extracts every Monday (`npm run news:extract`, and `.github/workflows/weekly-news.yml`). The first item is the week’s lead — Gurpurab when it is the week. Review the pull request, then merge.
 
 Use a stable `id`, a `kind` from the evidence legend, and the chapter/theme ids the record belongs to. Rebuild; search and filters pick it up.
 
