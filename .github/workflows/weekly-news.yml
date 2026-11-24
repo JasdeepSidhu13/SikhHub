@@ -1,0 +1,44 @@
+name: Weekly news extract
+
+on:
+  schedule:
+    - cron: "15 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: weekly-news
+  cancel-in-progress: false
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Extract the week's Sikh news
+        run: node scripts/extract-weekly-news.mjs
+      - name: Open a pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet -- src/data/news-weeks.json; then
+            echo "No new week on the desk."
+            exit 0
+          fi
+          WEEK=$(node --input-type=module -e 'import { readFileSync } from "node:fs"; const w = JSON.parse(readFileSync("src/data/news-weeks.json","utf8")); process.stdout.write(w[0].id)')
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          BRANCH="cursor/news-${WEEK}-1d58"
+          git checkout -b "$BRANCH"
+          git add src/data/news-weeks.json
+          git commit -m "Extract the week's Sikh news (${WEEK})."
+          git push -u origin "$BRANCH"
+          gh pr create --base main --head "$BRANCH" \
+            --title "News desk: ${WEEK}" \
+            --body "Monday extract of the top five Sikh stories. Gurpurab leads when it is the week. Review the copy and the originals, then merge."

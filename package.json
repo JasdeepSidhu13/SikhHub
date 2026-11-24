@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview --host 127.0.0.1 --port 4173"
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "news:extract": "node scripts/extract-weekly-news.mjs"
   },
   "devDependencies": {
     "typescript": "^5.7.2",
